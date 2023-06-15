@@ -28,7 +28,8 @@ public class AnimationText implements Display {
         this.x = x;
         this.y = y;
         this.properties = properties;
-        properties.addAnimation(this);
+        if(properties != null)
+            properties.addAnimation(this);
     }
 
     @Override
