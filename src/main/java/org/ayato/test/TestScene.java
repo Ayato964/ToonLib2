@@ -2,6 +2,7 @@ package org.ayato.test;
 
 import org.ayato.main.TestMain;
 import org.ayato.system.AnimationText;
+import org.ayato.system.Component;
 import org.ayato.system.ExecuteScene;
 import org.ayato.system.properties.Properties;
 import org.ayato.util.IBaseScene;
@@ -22,6 +23,6 @@ public class TestScene implements IBaseScene {
 
     @Override
     public void setup(ExecuteScene scene) {
-        AnimationText.create(scene).draw("JIKAN", 400, 20, new Properties().size(64));
+        AnimationText.create(scene).draw(Component.get(this, "hello"), 400, 50, new Properties().size(64));
     }
 }

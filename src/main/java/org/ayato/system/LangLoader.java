@@ -1,7 +1,9 @@
 package org.ayato.system;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.awt.*;
 import java.io.*;
@@ -17,9 +19,11 @@ public class LangLoader {
     public static final String ENGLISH = list[1];
     public static final String CHINESE = list[2];
     private JsonNode lang;
+    private ObjectMapper MAPPER;
     public static String LANGUAGE;
     private final String directoryPath;
     private BufferedReader reader;
+    private File file;
     private static LangLoader INSTANCE;
 
     private LangLoader(String path, String lang){
@@ -29,7 +33,6 @@ public class LangLoader {
     private void loadFile(String lang){
         LANGUAGE = lang;
         URL filePath = getClass().getClassLoader().getResource(directoryPath + "/" + lang + ".json");
-        System.out.println(filePath + "!!!!!!!!!!!");
 
         if(filePath.toString().indexOf("jar:") != -1) {
             try(InputStream is = ClassLoader.getSystemResourceAsStream(directoryPath + "/" + lang + ".json")) {
@@ -39,7 +42,7 @@ public class LangLoader {
                 throw new RuntimeException(e);
             }
         }else {
-            File file = new File(filePath.getFile());
+            file = new File(filePath.getFile());
             readFile(file);
         }
 
@@ -54,7 +57,8 @@ public class LangLoader {
     }
     private void readFile() {
         try {
-            lang = new ObjectMapper().readTree(reader);
+            MAPPER = new ObjectMapper();
+            lang = MAPPER.readTree(reader);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -99,5 +103,25 @@ public class LangLoader {
 
     public static LangLoader getInstance() {
         return INSTANCE;
+    }
+
+    public void createLanguage(String key, String mes) {
+        ObjectNode node = lang.deepCopy();
+        node.put(key, mes);
+        //System.out.println("Hello WOlr");
+        try {
+            String w = MAPPER.writeValueAsString(node);
+            System.out.println(w);
+            FileWriter write = new FileWriter(file);
+            write.append(w);
+            write.close();
+            create(LANGUAGE);
+
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            System.out.println(e);
+            throw new RuntimeException(e);
+        }
     }
 }
