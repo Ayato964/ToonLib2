@@ -38,10 +38,11 @@ class DisplayThread {
                 sup.action();
 
             try {
-                Thread.sleep(10);
+                Thread.sleep(20);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+
             for (VoidSupplier v : endTask) v.action();
             endTask.clear();
         }
@@ -61,5 +62,12 @@ class DisplayThread {
                 displays.remove(i);
             }
 
+    }
+    public void removeDisplayClass(Class<?> cls){
+        for(int i = 0; i < displays.size(); i ++){
+            if(displays.get(i).getClass() == cls){
+                displays.remove(i);
+            }
+        }
     }
 }

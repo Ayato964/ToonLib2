@@ -17,6 +17,7 @@ class Background implements Display {
 
     @Override
     public void display(Graphics g) {
+
         Rectangle r = MASTER.FRAME.DESCTOP_BOUNDS;
         switch (mode) {
            // case COLOR_ANIMATION : g.drawImage(bgImage.get(), 0, 0, r.width, r.height, null);break;
@@ -24,6 +25,8 @@ class Background implements Display {
             case GRAY :g.setColor(Color.GRAY); g.fillRect(0, 0, r.width, r.height);break;
             case SKY:g.setColor(Color.CYAN);g.fillRect(0, 0, r.width, r.height);break;
         }
+
+
     }
     public enum BackgroundMode{
         COLOR_ANIMATION("detail.video.bg.def"),

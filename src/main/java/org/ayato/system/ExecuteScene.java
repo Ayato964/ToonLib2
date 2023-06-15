@@ -17,17 +17,21 @@ public class ExecuteScene {
         BACKGROUND = new Background(this);
         SCENE = DisplayThread.runThread(null, this);
         ANIMATION  = DisplayThread.runThread(null, this);
-        SCENE.addDisplay(BACKGROUND);
+        SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
     }
     public void changeScene(IBaseScene scene){
         if(MY_SCENE == null) {
-            scene.setup(GRAPHIC);
-            SCENE.addDisplay(scene);
-            MY_SCENE = scene;
+            SCENE.addEndTask(()->{
+                scene.setup(this);
+                SCENE.addDisplay(scene);
+                MY_SCENE = scene;
+            });
+
         }else{
             SCENE.addEndTask(()->{
                 SCENE.removeDisplay(MY_SCENE);
-                scene.setup(GRAPHIC);
+                SCENE.removeDisplayClass(AnimationText.class);
+                scene.setup(this);
                 SCENE.addDisplay(scene);
                 MY_SCENE = scene;
             });
