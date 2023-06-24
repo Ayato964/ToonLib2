@@ -4,25 +4,31 @@ import org.ayato.main.TestMain;
 import org.ayato.system.AnimationText;
 import org.ayato.system.Component;
 import org.ayato.system.ExecuteScene;
+import org.ayato.system.properties.IProperty;
 import org.ayato.system.properties.Properties;
 import org.ayato.util.IBaseScene;
 
 import java.awt.*;
+import java.awt.event.MouseListener;
 
 public class TestScene implements IBaseScene {
-    int i = 0;
     @Override
     public void display(Graphics g) {
-        g.setColor(Color.WHITE);
-        g.fillRect(0, 0, 200, 200);
-        i ++;
-        if(i > 500){
-            TestMain.MASTER1.changeScene(new TestScene2());
-        }
+
     }
 
     @Override
     public void setup(ExecuteScene scene) {
-        AnimationText.create(scene).draw(Component.get(this, "hello"), 400, 50, new Properties().size(64));
+        AnimationText.create(scene).draw(Component.get(this, "hello"), 10, 30,
+                new Properties().size(64)
+                        .frame(10, 30, 100, 20, new Color(0xFFFFFF), new Color(0, 10, 0, 50))
+                        .color(Color.BLUE)
+        );
+        AnimationText.create(scene).draw("Test Buttoon", 60, 30, new Properties().font(new Font("", Font.PLAIN, 32))
+
+                .button(60, 30, 120, 10, Color.BLACK, Color.WHITE, null,property->{
+                    TestMain.MASTER1.changeScene(new TestScene2());
+                    TestMain.MASTER1.FRAME.removeMouseListener((MouseListener) property);
+                }));
     }
 }

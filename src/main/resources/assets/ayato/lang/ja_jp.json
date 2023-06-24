@@ -1,4 +1,6 @@
 {
   "hello": "こんにちは!!!",
-  "excuse": "これはテストです！！"
+  "excuse": "これはテストです！！",
+  "org.ayato.test.TestScene.hello":"これはテストです！！",
+  "org.ayato.test.TestScene2.hello":"これはシーン２のテストです。"
 }

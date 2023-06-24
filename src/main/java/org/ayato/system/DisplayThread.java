@@ -58,7 +58,6 @@ class DisplayThread {
         System.out.println(displays.get(1));
         for(int i = 0; i < displays.size(); i ++)
             if(display.equals(displays.get(i))) {
-                System.out.println(displays.get(i).getSerialID());
                 displays.remove(i);
             }
 
@@ -66,7 +65,9 @@ class DisplayThread {
     public void removeDisplayClass(Class<?> cls){
         for(int i = 0; i < displays.size(); i ++){
             if(displays.get(i).getClass() == cls){
+                System.out.println("remove animation text");
                 displays.remove(i);
+                i = -1;
             }
         }
     }

@@ -1,4 +1,6 @@
 {
   "hello": "HelloEveryOne!!!",
-  "excuse": "ASASS"
+  "excuse": "ASASS",
+  "org.ayato.test.TestScene.hello":"This is a test!!",
+  "org.ayato.test.TestScene2.hello":"This is a Test Scene of two"
 }

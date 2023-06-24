@@ -8,7 +8,7 @@ import java.awt.*;
 public class AnimationText implements Display {
     private String mes;
     private int x, y;
-    private final ExecuteScene MASTER;
+    public final ExecuteScene MASTER;
     private Properties properties;
     private AnimationText(ExecuteScene scene){
         MASTER = scene;
@@ -37,7 +37,6 @@ public class AnimationText implements Display {
 
         if(properties != null)
             properties.runProp(g);
-        g.setColor(Color.RED);
-        g.drawString(mes, x, y);
+        g.drawString(mes, x * MASTER.FRAME.DW, y * MASTER.FRAME.DH);
     }
 }
