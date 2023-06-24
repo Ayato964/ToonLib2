@@ -39,4 +39,8 @@ public class AnimationText implements Display {
             properties.runProp(g);
         g.drawString(mes, x * MASTER.FRAME.DW, y * MASTER.FRAME.DH);
     }
+
+    public void setMSG(String s) {
+        mes = s;
+    }
 }

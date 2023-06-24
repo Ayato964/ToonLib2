@@ -7,7 +7,7 @@ import org.ayato.util.VoidSupplier;
 import java.awt.*;
 import java.util.ArrayList;
 
-class DisplayThread {
+public class DisplayThread {
     private boolean isExecute = true;
     private final Thread thread;
     private final VoidSupplier sup;

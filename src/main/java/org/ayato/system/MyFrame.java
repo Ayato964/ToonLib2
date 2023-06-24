@@ -15,6 +15,7 @@ public class MyFrame extends JFrame {
 
     public MyFrame(String title){
         //JOptionPane.showMessageDialog(new JFrame(), getClass().getClassLoader().getResource("assets/").toString());
+        setName(title);
         setTitle(title);
         this.setUndecorated(true);
         getRootPane().setWindowDecorationStyle(JRootPane.NONE);

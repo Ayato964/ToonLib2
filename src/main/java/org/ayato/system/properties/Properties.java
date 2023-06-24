@@ -1,6 +1,7 @@
 package org.ayato.system.properties;
 
 import org.ayato.system.AnimationText;
+import org.ayato.system.MyFrame;
 import org.ayato.util.VoidSupplier;
 
 import java.awt.*;
@@ -35,6 +36,10 @@ public class Properties {
     }
     public Properties font(Font font){
         properties.add(((g, properties1, text) -> g.setFont(font)));
+        return this;
+    }
+    public Properties talk(Object key, boolean stopAll, PropertyAction action, String ... strings){
+        properties.add(new Talk(strings, key, stopAll, action));
         return this;
     }
     public Properties frame(int bx, int by, int bw, int bh, Color frameCol, Color backColor){

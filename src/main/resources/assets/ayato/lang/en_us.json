@@ -2,5 +2,7 @@
   "hello": "HelloEveryOne!!!",
   "excuse": "ASASS",
   "org.ayato.test.TestScene.hello":"This is a test!!",
-  "org.ayato.test.TestScene2.hello":"This is a Test Scene of two"
+  "org.ayato.test.TestScene2.hello":"This is a Test Scene of two",
+  "org.ayato.test.TestScene2.mes1":"‰ï˜b‚Ì1‰ñ–Ú‚Å‚·",
+  "org.ayato.test.TestScene2.mes2":"‰ï˜b‚Ì2‰ñ–Ú‚Å‚·"
 }
