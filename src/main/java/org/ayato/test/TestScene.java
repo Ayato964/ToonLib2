@@ -4,7 +4,6 @@ import org.ayato.main.TestMain;
 import org.ayato.system.AnimationText;
 import org.ayato.system.Component;
 import org.ayato.system.ExecuteScene;
-import org.ayato.system.properties.IProperty;
 import org.ayato.system.properties.Properties;
 import org.ayato.util.IBaseScene;
 
@@ -30,5 +29,7 @@ public class TestScene implements IBaseScene {
                     TestMain.MASTER1.changeScene(new TestScene2());
                     TestMain.MASTER1.FRAME.removeMouseListener((MouseListener) property);
                 }));
+
+
     }
 }

@@ -4,12 +4,14 @@ import org.ayato.system.properties.Properties;
 import org.ayato.util.Display;
 
 import java.awt.*;
+import java.util.function.BooleanSupplier;
 
 public class AnimationText implements Display {
     private String mes;
     private int x, y;
     public final ExecuteScene MASTER;
     private Properties properties;
+    public BooleanSupplier bool;
     private AnimationText(ExecuteScene scene){
         MASTER = scene;
     }
@@ -28,16 +30,19 @@ public class AnimationText implements Display {
         this.x = x;
         this.y = y;
         this.properties = properties;
+        this.bool = ()->true;
+
         if(properties != null)
             properties.addAnimation(this);
     }
 
     @Override
     public void display(Graphics g) {
-
-        if(properties != null)
-            properties.runProp(g);
-        g.drawString(mes, x * MASTER.FRAME.DW, y * MASTER.FRAME.DH);
+        if(bool.getAsBoolean()) {
+            if (properties != null)
+                properties.runProp(g);
+            g.drawString(mes, x * MASTER.FRAME.DW, y * MASTER.FRAME.DH);
+        }
     }
 
     public void setMSG(String s) {
