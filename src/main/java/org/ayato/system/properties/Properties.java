@@ -1,6 +1,7 @@
 package org.ayato.system.properties;
 
 import org.ayato.system.AnimationText;
+import org.ayato.util.StringSupplier;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -33,6 +34,10 @@ public class Properties {
     }
     public Properties color(Color color){
         properties.add((g, properties1, text) -> g.setColor(color));
+        return this;
+    }
+    public Properties changeMessage(StringSupplier str){
+        properties.add((g, properties1, text) -> animationText.setMSG(str.getStringSupplier()));
         return this;
     }
     public Properties font(Font font){

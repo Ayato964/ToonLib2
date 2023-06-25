@@ -2,12 +2,12 @@ package org.ayato.system;
 
 public class Component {
     public static String get(Object o, String key){
-        return get(o, null,key);
+        return get(o, key, (String) null);
     }
-    public static String get(Object o, String[] v, String key){
+     public static String get(Object o, String key, String... values){
         StringBuilder objKey = new StringBuilder().append(o.getClass().toString()).append(".");
         objKey.delete(0, 6);
-        String str = LangLoader.getInstance().get(null, objKey + key);
+        String str = LangLoader.getInstance().get(values, objKey + key);
         if(str == null) {
             create(objKey + key," ");
             return objKey + key;
