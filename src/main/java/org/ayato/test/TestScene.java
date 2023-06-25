@@ -29,7 +29,10 @@ public class TestScene implements IBaseScene {
                     TestMain.MASTER1.changeScene(new TestScene2());
                     TestMain.MASTER1.FRAME.removeMouseListener((MouseListener) property);
                 }));
-
+        AnimationText.create(scene).draw("Press the message", 60, 60, new Properties().font(new Font("", Font.PLAIN, 64))
+                .color(Color.RED)
+                .input(60, 60, 100, 20, System.out::println)
+        );
 
     }
 }

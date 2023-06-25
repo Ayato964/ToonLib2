@@ -6,6 +6,8 @@ import org.ayato.util.StringSupplier;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.function.BooleanSupplier;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class Properties {
     private final ArrayList<IProperty> properties;
@@ -36,8 +38,8 @@ public class Properties {
         properties.add((g, properties1, text) -> g.setColor(color));
         return this;
     }
-    public Properties changeMessage(StringSupplier str){
-        properties.add((g, properties1, text) -> animationText.setMSG(str.getStringSupplier()));
+    public Properties changeMessage(Supplier<String> str){
+        properties.add((g, properties1, text) -> animationText.setMSG(str.get()));
         return this;
     }
     public Properties font(Font font){
@@ -58,6 +60,10 @@ public class Properties {
     }
     public Properties ifView(BooleanSupplier how){
         booleanSupplier = how;
+        return this;
+    }
+    public Properties input(int bx, int by, int bw, int bh, Consumer<String> stringConsumer){
+        properties.add(new Input(bx, by, bw, bh, stringConsumer));
         return this;
     }
 
