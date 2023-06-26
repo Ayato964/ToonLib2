@@ -33,7 +33,7 @@ public class TestScene2 implements IBaseScene {
         AnimationText.create(scene, Component.get(this, "hello"), 50, 60, new Properties()
                 .font(new Font("", 0, 32))
                         .color(Color.WHITE)
-                        .frame(50, 60, 120, 20, Color.WHITE, Color.GRAY)
+                        .frame(50, 60, 120, 20, ()->Color.WHITE, Color.GRAY)
                         .talk(this, true, property ->Objects.requireNonNull(Event.get(TestScene2.class, "test")).clear(), "mes1", "mes2")
         );
         AnimationText.create(scene,"Hello", 60, 30, new Properties()
@@ -49,7 +49,7 @@ public class TestScene2 implements IBaseScene {
         AnimationText.create(scene, Component.get(this, "nextmap"), 50, 60,
                 new Properties().font(new Font("", Font.PLAIN, 32))
                         .ifView(()-> Objects.requireNonNull(Event.get(TestScene2.class, "test")).getEvent())
-                        .button(50, 60, 120, 20, Color.WHITE,
+                        .button(50, 60, 120, 20, ()->Color.WHITE,
                                 new Color(127, 127, 127, 50), null, property -> scene.changeScene(new TestScene3()))
                         .color(Color.WHITE)
 

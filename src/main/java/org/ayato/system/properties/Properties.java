@@ -28,7 +28,7 @@ public class Properties {
         for(IProperty p : properties)
             p.runningProperty(g, this, animationText);
     }
-    public Properties button(int bx, int by, int bw, int bh, Color def, Color bg, PropertyAction insert, PropertyAction action){
+    public Properties button(int bx, int by, int bw, int bh, Supplier<Color> def, Color bg, PropertyAction insert, PropertyAction action){
         properties.add(new Frame(bx, by, bw, bh, def, bg));
         properties.add(new Button(bx, by, bw, bh, insert, action));
         return this;
@@ -45,7 +45,7 @@ public class Properties {
         properties.add(((g, properties1, text) -> g.setFont(font)));
         return this;
     }
-    public Properties frame(int bx, int by, int bw, int bh, Color frameCol, Color backColor){
+    public Properties frame(int bx, int by, int bw, int bh, Supplier<Color> frameCol, Color backColor){
         properties.add(new Frame(bx, by, bw, bh, frameCol, backColor));
         return this;
     }

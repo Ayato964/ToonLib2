@@ -6,6 +6,7 @@ import org.ayato.system.properties.PropertyAction;
 import java.util.ArrayList;
 
 public class AnimationList<T>{
+    public int id;
     protected final Properties properties;
     protected final ExecuteScene scene;
     private final ArrayList<AnimationList<T>> list;
@@ -27,15 +28,25 @@ public class AnimationList<T>{
     }
 
     public void add(T str, Properties p, PropertyAction a){
-        list.add(create(scene, str, p, setup, a));
+        list.add(create(scene, str, p, setup, a, list.size()));
     }
     public int length(){
         return list.size();
     }
 
+    private static <A> AnimationList<A> create(ExecuteScene scene, A str, Properties p, AnimationSetup<A> s, PropertyAction a, int id){
+        AnimationList<A> n = new AnimationList<>(scene, str, p);
+        n.list.add(n);
+        n.id = id;
+        n.setup = s;
+        n.action = a;
+        return n;
+    }
+
     public static <A> AnimationList<A> create(ExecuteScene scene, A str, Properties p, AnimationSetup<A> s, PropertyAction a){
         AnimationList<A> n = new AnimationList<>(scene, str, p);
         n.list.add(n);
+        n.id = 0;
         n.setup = s;
         n.action = a;
         return n;

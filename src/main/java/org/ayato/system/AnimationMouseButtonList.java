@@ -4,21 +4,17 @@ import java.awt.*;
 
 public class AnimationMouseButtonList<T extends AnimationList<?>>{
     T list;
-    private final int mx, my, mw, mh;
     private boolean visible = false;
 
     private AnimationMouseButtonList(T t, int bx, int by, int bw, int bh){
         list = t;
-        mx = bx;
-        my = by;
-        mw = bw;
-        mh = bh;
+        int mh = bh;
         bh = mh / list.length();
         for(int i = 0; i < list.length(); i ++){
-            list.get(i).setup(mx, my + bh * i, list.get(i).properties
+            list.get(i).setup(bx, by + bh * i, list.get(i).properties
                             .ifView(()->visible)
-                    .button(mx, my + bh * i, mw, bh,
-                            Color.WHITE,
+                    .button(bx, by + bh * i, bw, bh,
+                            ()->Color.WHITE,
                             new Color(127, 127, 127, 50),
                             null, list.get(i).action
                             ));
@@ -26,8 +22,7 @@ public class AnimationMouseButtonList<T extends AnimationList<?>>{
 
     }
     public static <L extends AnimationList<?>> AnimationMouseButtonList<L> generate(L l, int bx, int by, int bw, int bh){
-        AnimationMouseButtonList<L> g = new AnimationMouseButtonList<>(l, bx, by, bw, bh);
-        return g;
+        return new AnimationMouseButtonList<>(l, bx, by, bw, bh);
     }
 
     public void setVisible(boolean b) {
