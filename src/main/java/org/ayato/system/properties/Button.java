@@ -25,8 +25,8 @@ public class Button implements IProperty, MouseListener {
     public void runningProperty(Graphics g, Properties properties, AnimationText text) {
         if(isFirst){
             isFirst = false;
-            bx = (bx * text.MASTER.FRAME.DW);
-            by = (by * text.MASTER.FRAME.DH);
+            bx = (bx * text.MASTER.FRAME.DW );
+            by = (by * text.MASTER.FRAME.DH - g.getFontMetrics().getHeight());
             bw = (bw * text.MASTER.FRAME.DW);
             bh = (bh * text.MASTER.FRAME.DH);
             text.MASTER.FRAME.addMouseListener(this);
@@ -36,7 +36,7 @@ public class Button implements IProperty, MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {
-        if(mouseEvent.getX() >= bx && mouseEvent.getX() <= bx + bw && mouseEvent.getY() >= by - bh && mouseEvent.getY() <= by + bh){
+        if(mouseEvent.getX() >= bx && mouseEvent.getX() <= bx + bw && mouseEvent.getY() >= by && mouseEvent.getY() <= by + bh){
             action.action(this);
         }
     }

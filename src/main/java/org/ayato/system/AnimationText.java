@@ -36,14 +36,34 @@ public class AnimationText implements Display {
      * @param scene Use ExecuteScene's instance you defined
      * @return new Instance of AnimationText.
      */
+    @Deprecated(since = "0.4.5")
     public static AnimationText create(ExecuteScene scene){
         AnimationText text = new AnimationText(scene);
         scene.SCENE.addDisplay(text);
         return text;
     }
+
+    public static AnimationText create(ExecuteScene scene, String str, int bx, int by, Properties properties){
+        AnimationText t = new AnimationText(scene);
+        scene.SCENE.addDisplay(t);
+        t.mes = str;
+        t.x = bx;
+        t.y = by;
+        t.properties = properties;
+        t.bool = ()->true;
+
+        if(properties != null)
+            properties.addAnimation(t);
+        return t;
+    }
+
+
+    @Deprecated(since = "0.4.5")
     public void draw(String str, int x, int y){
         draw(str, x, y, null);
     }
+
+    @Deprecated(since = "0.4.5")
     public void draw(String str, int x, int y, Properties properties){
         mes = str;
         this.x = x;
@@ -67,5 +87,9 @@ public class AnimationText implements Display {
     public void setMSG(String s) {
         if(s != null)
             mes = s;
+    }
+
+    public String getMES() {
+        return mes;
     }
 }

@@ -2,6 +2,7 @@ package org.ayato.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 
 public class MyFrame extends JFrame {
@@ -29,6 +30,14 @@ public class MyFrame extends JFrame {
         pack();
         g = panel.getGraphics();
         repaint();
+    }
+
+    public void removeMouseListenerAll() {
+        MouseListener[] l = getMouseListeners();
+        for(MouseListener ll : l){
+            removeMouseListener(ll);
+        }
+
     }
 
     private class MainPanel extends JLabel{

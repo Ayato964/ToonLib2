@@ -1,7 +1,6 @@
 package org.ayato.system.properties;
 
 import org.ayato.system.AnimationText;
-import org.ayato.util.StringSupplier;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -67,4 +66,9 @@ public class Properties {
         return this;
     }
 
+    public Properties copy() {
+        Properties properties1 = new Properties();
+        properties1.properties.addAll((ArrayList<IProperty>) properties.clone());
+        return properties1;
+    }
 }

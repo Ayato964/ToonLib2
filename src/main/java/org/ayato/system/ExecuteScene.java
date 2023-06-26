@@ -31,6 +31,7 @@ public class ExecuteScene {
             SCENE.addEndTask(()->{
                 SCENE.removeDisplay(MY_SCENE);
                 SCENE.removeDisplayClass(AnimationText.class);
+                FRAME.removeMouseListenerAll();
                 scene.setup(this);
                 SCENE.addDisplay(scene);
                 MY_SCENE = scene;

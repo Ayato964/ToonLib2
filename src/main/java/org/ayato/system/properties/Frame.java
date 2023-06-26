@@ -20,7 +20,7 @@ public class Frame implements IProperty{
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, AnimationText text) {
+    public void runningProperty(Graphics g, Properties properties, AnimationText text){
         g.setColor(backCol);
         g.fillRect(bx * text.MASTER.FRAME.DW, by * text.MASTER.FRAME.DH  - g.getFontMetrics().getHeight(), bw * text.MASTER.FRAME.DW, bh* text.MASTER.FRAME.DH);
         g.setColor(frameCol);
