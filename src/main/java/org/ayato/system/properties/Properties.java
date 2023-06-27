@@ -33,6 +33,14 @@ public class Properties {
         properties.add(new Button(bx, by, bw, bh, insert, action));
         return this;
     }
+    public Properties center(){
+        properties.add(new Center());
+        return this;
+    }
+    public Properties centerFrame(int bw, int bh, Supplier<Color> frameCol, Color backColor){
+
+        return this;
+    }
     public Properties color(Color color){
         properties.add((g, properties1, text) -> g.setColor(color));
         return this;

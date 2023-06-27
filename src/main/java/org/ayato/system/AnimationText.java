@@ -92,4 +92,12 @@ public class AnimationText implements Display {
     public String getMES() {
         return mes;
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int i) {
+        x = i;
+    }
 }

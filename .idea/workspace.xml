@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.0.4.5&#10;&#10;&#10;AnimationList.java&#10;AnimationTextに関するオブジェクトをリスト化する。&#10;&#10;AnimationMouseButtonList.java&#10;AnimationList.javaに基づき、リスト構造を可視化。&#10;また、マウスのボタンに反応する。">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationKeyButtonList.java" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.0.4.7&#10;&#10;&#10;AnimationKeyButtonList.java&#10;AnimationList.javaのリスト構造を元に可視化し、キー入力に応じて選択を可能にする">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/properties/Center.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationMouseButtonList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationMouseButtonList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/properties/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/properties/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationText.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/properties/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/properties/Properties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687797581421</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Version.0.4.7&#10;&#10;&#10;AnimationKeyButtonList.java&#10;AnimationList.javaのリスト構造を元に可視化し、キー入力に応じて選択を可能にする">
+      <created>1687823418149</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687823418149</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,6 +214,7 @@
     <MESSAGE value="Version.0.4.4&#10;&#10;Properties.changeMessage&#10;メッセージの内容を書き換えることができるようになった。" />
     <MESSAGE value="Version.0.4.5&#10;&#10;Input.java&#10;プレイヤーから文字入力を受け付ける機能を追加した。" />
     <MESSAGE value="Version.0.4.5&#10;&#10;&#10;AnimationList.java&#10;AnimationTextに関するオブジェクトをリスト化する。&#10;&#10;AnimationMouseButtonList.java&#10;AnimationList.javaに基づき、リスト構造を可視化。&#10;また、マウスのボタンに反応する。" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.0.4.5&#10;&#10;&#10;AnimationList.java&#10;AnimationTextに関するオブジェクトをリスト化する。&#10;&#10;AnimationMouseButtonList.java&#10;AnimationList.javaに基づき、リスト構造を可視化。&#10;また、マウスのボタンに反応する。" />
+    <MESSAGE value="Version.0.4.7&#10;&#10;&#10;AnimationKeyButtonList.java&#10;AnimationList.javaのリスト構造を元に可視化し、キー入力に応じて選択を可能にする" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.0.4.7&#10;&#10;&#10;AnimationKeyButtonList.java&#10;AnimationList.javaのリスト構造を元に可視化し、キー入力に応じて選択を可能にする" />
   </component>
 </project>

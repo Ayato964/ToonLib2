@@ -25,7 +25,7 @@ public class TestScene implements IBaseScene {
                         .color(Color.BLUE));
 
         AnimationText.create(scene,"Test Buttoon", 60, 30, new Properties().font(new Font("", Font.PLAIN, 32))
-
+                        .center()
                 .button(60, 30, 120, 10, ()->Color.BLACK, Color.WHITE, null,property->{
                     TestMain.MASTER1.changeScene(new TestScene2());
                     TestMain.MASTER1.FRAME.removeMouseListener((MouseListener) property);
