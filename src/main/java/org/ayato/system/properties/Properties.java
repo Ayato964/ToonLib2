@@ -37,8 +37,8 @@ public class Properties {
         properties.add(new Center());
         return this;
     }
-    public Properties centerFrame(int bw, int bh, Supplier<Color> frameCol, Color backColor){
-
+    public Properties centerFrame(int by, int bw, int bh, Supplier<Color> frameCol, Color backColor){
+        properties.add(new CenterFrame(by, bw, bh, frameCol, backColor));
         return this;
     }
     public Properties color(Color color){
@@ -50,11 +50,11 @@ public class Properties {
         return this;
     }
     public Properties font(Font font){
-        properties.add(((g, properties1, text) -> g.setFont(font)));
+        properties.add(0, ((g, properties1, text) -> g.setFont(font)));
         return this;
     }
     public Properties frame(int bx, int by, int bw, int bh, Supplier<Color> frameCol, Color backColor){
-        properties.add(new Frame(bx, by, bw, bh, frameCol, backColor));
+        properties.add(0, new Frame(bx, by, bw, bh, frameCol, backColor));
         return this;
     }
     public Properties talk(Object key, boolean stopAll, PropertyAction action, String ... strings){

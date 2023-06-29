@@ -17,7 +17,7 @@ public class TestScene3 implements IBaseScene {
     public void setup(ExecuteScene scene) {
         AnimationList<String> animationList = AnimationList.create(scene, Component.get(this, "hello"),
                 new Properties().font(new Font("", Font.PLAIN, 32))
-                        .color(Color.BLACK), AnimationText::create, property -> System.out.println("hello"));
+                        .color(Color.RED), AnimationText::create, property -> System.out.println("hello"));
 
         animationList.add("APPLE", property -> System.out.println("APPLE"));
         animationList.add("LEMON", property -> System.out.println("LEMON"));

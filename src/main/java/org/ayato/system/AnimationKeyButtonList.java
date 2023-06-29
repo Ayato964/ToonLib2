@@ -18,7 +18,6 @@ public class AnimationKeyButtonList<T extends  AnimationList<?>> implements KeyL
 
     private AnimationKeyButtonList(T t, int bx, int by, int bw, int bh){
         list = t;
-        list.scene.FRAME.addKeyListener(this);
         int mh = bh / list.length();
         
         for(int i = 0; i < list.length(); i ++){
@@ -26,6 +25,7 @@ public class AnimationKeyButtonList<T extends  AnimationList<?>> implements KeyL
             final AnimationList<?> l = list.get(i);
 
             l.setup(bx, by + mh * i, l.properties
+                            .ifView(()->visible)
                     .frame(bx, by + mh * i, bw, mh,
                             ()->listCount == l.id ? CHOOSE : NORMAL,
                             new Color(127, 127, 127, 50)
@@ -58,6 +58,10 @@ public class AnimationKeyButtonList<T extends  AnimationList<?>> implements KeyL
     }
 
     public void setVisible(boolean b) {
-        
+        if(b)
+            list.scene.FRAME.addKeyListener(this);
+        else
+            list.scene.FRAME.removeKeyListener(this);
+        visible = b;
     }
 }
