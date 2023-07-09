@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ToonLib">
+    <output-path>$PROJECT_DIR$/out/artifacts/ToonLib</output-path>
+    <root id="archive" name="ToonLib.jar">
+      <element id="module-output" name="ToonLib.main" />
+      <element id="module-source" name="ToonLib.main" />
+    </root>
+  </artifact>
+</component>

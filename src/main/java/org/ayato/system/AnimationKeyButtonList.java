@@ -1,12 +1,9 @@
 package org.ayato.system;
 
-import org.ayato.system.properties.IProperty;
-import org.ayato.system.properties.Properties;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.function.Supplier;
 
 public class AnimationKeyButtonList<T extends  AnimationList<?>> implements KeyListener {
     T list;
