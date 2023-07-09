@@ -36,8 +36,7 @@ jobs:
     # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
       run : ./gradle gradlew
-      with:
-        arguments: publish
+
       env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
