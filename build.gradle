@@ -19,6 +19,7 @@ dependencies {
 // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.15.0-rc2'
 }
+
 jar{
     manifest {
         attributes 'Main-Class' : 'org.ayato.main.Main'

@@ -10,11 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.0.5.0&#10;&#10;&#10;CenterFrame.java&#10;ウィンドウを軸にフレームを中央ぞろえする&#10;&#10;AnimationKeyButtonList.java&#10;AnimationKeyButtonList.setVisibleで変更しても反映されなかった不具合を修正。">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ToonLib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationKeyButtonList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationKeyButtonList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688024236119</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Version.0.5.0&#10;&#10;&#10;CenterFrame.java&#10;ウィンドウを軸にフレームを中央ぞろえする&#10;&#10;AnimationKeyButtonList.java&#10;AnimationKeyButtonList.setVisibleで変更しても反映されなかった不具合を修正。">
+      <created>1688927196335</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688927196335</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
