@@ -18,7 +18,7 @@ public class MyFrame extends JFrame {
         //JOptionPane.showMessageDialog(new JFrame(), getClass().getClassLoader().getResource("assets/").toString());
         setName(title);
         setTitle(title);
-        this.setUndecorated(true);
+//        this.setUndecorated(true);
         getRootPane().setWindowDecorationStyle(JRootPane.NONE);
         NAME = title;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -30,6 +30,13 @@ public class MyFrame extends JFrame {
         pack();
         g = panel.getGraphics();
         repaint();
+    }
+
+    @Override
+    public void setSize(int width, int height) {
+        super.setSize(width, height);
+        DW = width / 198;
+        DH = height / 108;
     }
 
     public void removeMouseListenerAll() {

@@ -9,7 +9,8 @@ public class TestMain {
     public static void main(String[] args) {
         LangLoader.create("assets/ayato/lang", LangLoader.JAPANESE);
         System.out.println(LangLoader.getInstance().get(null, "hello"));
-        MASTER1 = new ExecuteScene("TOON_LIB_TEST");
+        MASTER1 = new ExecuteScene("TOON_LIB_TEST", 100, 100);
+        MASTER1.FRAME.setSize(1000, 1000);
         MASTER1.setVisible(true);
         MASTER1.changeScene(new TestScene());
     }

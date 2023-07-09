@@ -19,6 +19,15 @@ public class ExecuteScene {
         ANIMATION  = DisplayThread.runThread(null, this);
         SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
     }
+    public ExecuteScene(String str, int dw, int dh){
+        FRAME = new MyFrame(str);
+        FRAME.setSize(dw, dh);
+        GRAPHIC = FRAME.g;
+        BACKGROUND = new Background(this);
+        SCENE = DisplayThread.runThread(null, this);
+        ANIMATION  = DisplayThread.runThread(null, this);
+        SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
+    }
     public void changeScene(IBaseScene scene){
         if(MY_SCENE == null) {
             SCENE.addEndTask(()->{
