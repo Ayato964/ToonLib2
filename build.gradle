@@ -14,13 +14,12 @@ publish{
         maven {
             url = "https://maven.pkg.github.com/Ayato964/ToonLib2"
             credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("Ayato964")
-                password = project.findProperty("gpr.key") ?: System.getenv("9644")
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }
 }
-
 dependencies {
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
