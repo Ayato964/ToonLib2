@@ -8,14 +8,6 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    maven {
-        name = "GitHubPackages"
-        url = uri("https://maven.pkg.github.com/Ayato964/ToonLib2")
-        credentials {
-            username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
-            password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
-        }
-    }
 }
 publish{
     repositories {
@@ -42,9 +34,7 @@ dependencies {
 }
 
 jar{
-    manifest {
-        attributes 'Main-Class' : 'org.ayato.main.Main'
-    }
+
 }
 test {
     useJUnitPlatform()

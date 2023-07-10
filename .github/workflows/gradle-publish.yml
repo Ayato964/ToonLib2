@@ -40,3 +40,6 @@ jobs:
       with:
         name: My Artifact
         path: .
+
+    - name: Show Directory
+    run : ls -a
