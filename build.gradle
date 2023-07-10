@@ -28,6 +28,9 @@ publishing {
     }
 
 }
+tasks.withType(JavaCompile) {
+    options.debugOptions.debugLevel = "VERBOSE"
+}
 
 dependencies {
 

@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Build Update" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Build Update">
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,20 +163,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686754309708</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Version.0.1.0&#10;&#10;&#10;シーンの切り替えのプログラムを作成した。">
-      <created>1686771298374</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1686771298374</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Version.0.2.0&#10;&#10;Setup.java&#10;で、宣言する専用システムである、 AnimationText.javaを作成した。&#10;String形式のアニメーションをGraphicsを通してWindowに表示する。">
-      <created>1686799433497</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1686799433497</updated>
     </task>
     <task id="LOCAL-00004" summary="Version.0.2.5&#10;&#10;LangLoader.java&#10;言語変換システムの仮実装">
       <created>1686802817792</created>
@@ -505,7 +493,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689029257418</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Build Update">
+      <created>1689029398521</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1689029398521</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Build Update">
+      <created>1689029473889</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1689029473889</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
