@@ -79,7 +79,7 @@
       <recent name="org.ayato.system.properties" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ToonLib2 [publish]">
+  <component name="RunManager" selected="Gradle.ToonLib [jar]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.ayato.main.Main" />
       <module name="ToonLib.main" />
@@ -150,8 +150,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ToonLib2 [publish]" />
         <item itemvalue="Gradle.ToonLib [jar]" />
+        <item itemvalue="Gradle.ToonLib2 [publish]" />
         <item itemvalue="アプリケーション.TestMain" />
         <item itemvalue="アプリケーション.Main" />
       </list>
@@ -495,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689013471011</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Build Update">
+      <created>1689025168769</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1689025168769</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
