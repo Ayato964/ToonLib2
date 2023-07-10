@@ -29,9 +29,6 @@ jobs:
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
-    - name: Switch directory
-      run : ls -a
-
     - name: Build with Gradle
       run : chmod +x ./gradlew build.gradle
       working-directory : .
@@ -40,7 +37,8 @@ jobs:
     # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
       run: chmod +x ./gradlew build.gradle
-      working-directory : .
+      with :
+        path : .
       env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
