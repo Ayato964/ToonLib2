@@ -27,7 +27,7 @@ public class TestScene3 implements IBaseScene {
         //AnimationMouseButtonList<AnimationList<?>> list = AnimationMouseButtonList.generate(animationList, 50, 50, 120, 30);
         AnimationKeyButtonList<AnimationList<String>> list = AnimationKeyButtonList.generate(animationList, 50, 50, 60, 30);
         list.setVisible(true);
-        list.setVisible(false);
+        //list.setVisible(false);
 
     }
 }
