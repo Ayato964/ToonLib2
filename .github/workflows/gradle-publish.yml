@@ -33,13 +33,13 @@ jobs:
       run : ls -a
 
     - name: Build with Gradle
-      run : chmod +x ./gradlew build
+      run : chmod +x ./gradlew build.gradle
       working-directory : .
 
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
-      run: chmod +x ./gradlew build
+      run: chmod +x ./gradlew build.gradle
       working-directory : .
       env:
         USERNAME: ${{ github.actor }}
