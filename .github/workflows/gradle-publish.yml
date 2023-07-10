@@ -35,10 +35,8 @@ jobs:
 
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
-    - name: Publish to GitHub Packages
-      run: chmod +x ./gradlew build.gradle
-      with :
-        path : .
-      env:
-        USERNAME: ${{ github.actor }}
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: My Artifact
+        path: $GITHUB_WORKSPACE
