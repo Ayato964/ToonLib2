@@ -39,4 +39,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: My Artifact
-        path: $GITHUB_WORKSPACE
+        path: .
