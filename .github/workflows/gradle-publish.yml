@@ -29,15 +29,18 @@ jobs:
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
+    - name: Switch directory
+      run : cd $GITHUB_WORKSPACE
+
     - name: Build with Gradle
       run : chmod +x ./gradlew build
-      working-directory : ..
+      working-directory : .
 
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
       run: chmod +x ./gradlew build
-      working-directory : ..
+      working-directory : .
       env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
