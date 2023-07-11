@@ -48,7 +48,7 @@ jobs:
         workflow-job-context: null
       env:
         USERNAME: Ayato964
-        TOKEN: 9644
+        TOKEN: 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
 
 
     - name: Upload to GitHub Packages
