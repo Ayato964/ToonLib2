@@ -33,11 +33,6 @@ jobs:
       run : chmod +x ./gradlew build.gradle
       working-directory : .
 
-
-    - name: Show Gradle Build Log
-      run: cat ${GITHUB_WORKSPACE}/build/*.log
-
-
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
