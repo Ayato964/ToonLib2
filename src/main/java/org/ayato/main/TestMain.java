@@ -11,6 +11,7 @@ public class TestMain {
         System.out.println(LangLoader.getInstance().get(null, "hello"));
         MASTER1 = new ExecuteScene("TOON_LIB_TEST");
         MASTER1.setVisible(true);
+        System.out.println("Hello");
         MASTER1.changeScene(new TestScene());
     }
 }
