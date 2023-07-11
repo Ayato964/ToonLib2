@@ -22,7 +22,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/Ayato964/ToonLib2")
             credentials {
                 username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
-                password =  project.findProperty("gpr.key") ?: System.getenv("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")
+                password =  project.findProperty("gpr.key") ?: System.getenv("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")
             }
         }
     }

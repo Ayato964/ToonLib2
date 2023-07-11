@@ -166,13 +166,6 @@
       <option name="presentableId" value="Default" />
       <updated>1686754309708</updated>
     </task>
-    <task id="LOCAL-00011" summary="Version.0.4.8&#10;&#10;&#10;Center.java&#10;入力された文字を、ウィンドウを軸に中央ぞろえする。">
-      <created>1687889945545</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1687889945545</updated>
-    </task>
     <task id="LOCAL-00012" summary="Version.0.5.0&#10;&#10;&#10;CenterFrame.java&#10;ウィンドウを軸にフレームを中央ぞろえする&#10;&#10;AnimationKeyButtonList.java&#10;AnimationKeyButtonList.setVisibleで変更しても反映されなかった不具合を修正。">
       <created>1688024236119</created>
       <option name="number" value="00012" />
@@ -509,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689098762479</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Build Update">
+      <created>1689099024500</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1689099024500</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
