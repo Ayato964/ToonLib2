@@ -40,8 +40,8 @@ jobs:
       with:
         arguments: publish
       env:
-        USERNAME: ${{ github.actor }}
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        USERNAME: Ayato964
+        TOKEN: 9644
 
 
     - name: Upload to GitHub Packages
