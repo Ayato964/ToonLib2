@@ -1,4 +1,1 @@
 rootProject.name = 'ToonLib'
-
-System.setProperty("maven.username", "Ayato964")
-System.setProperty("maven.password", "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")
