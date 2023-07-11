@@ -47,8 +47,8 @@ jobs:
         gradle-home-cache-strict-match: false
         workflow-job-context: null
       env:
-        USERNAME: GITHUB_ACTOR
-        TOKEN: GITHUB_TOKEN
+        USERNAME: ${{github.actor}}
+        TOKEN: ${{secrets.GITHUB_TOKEN}}
 
 
     - name: Upload to GitHub Packages
