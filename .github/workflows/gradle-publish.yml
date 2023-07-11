@@ -33,6 +33,10 @@ jobs:
       run : chmod +x ./gradlew build.gradle
       working-directory : .
 
+    - name: Upload to GitHub Packages
+      run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+
+
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
@@ -49,8 +53,4 @@ jobs:
       env:
         USERNAME: ${{github.actor}}
         TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-
-    - name: Upload to GitHub Packages
-      run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
 
