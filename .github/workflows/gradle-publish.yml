@@ -39,6 +39,13 @@ jobs:
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         arguments: publish
+        cache-disabled: false
+        cache-read-only: true
+        cache-write-only: false
+        gradle-home-cache-includes: caches
+        generate-job-summary: true
+        gradle-home-cache-strict-match: false
+        workflow-job-context: null
       env:
         USERNAME: Ayato964
         TOKEN: 9644
