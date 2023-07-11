@@ -22,7 +22,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/Ayato964/ToonLib2")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
-                password =  System.getenv("GITHUB_TOKEN")
+                password =  System.getenv("TOONLIB")
             }
         }
     }

@@ -52,5 +52,5 @@ jobs:
         workflow-job-context: null
       env:
         USERNAME: ${{github.actor}}
-        TOKEN: ${{secrets.YOUR_TOKEN_SECRET_NAME}}
+        TOKEN: ${{secrets.TOONLIB}}
 
