@@ -165,13 +165,6 @@
       <option name="presentableId" value="Default" />
       <updated>1686754309708</updated>
     </task>
-    <task id="LOCAL-00016" summary="Version0.5.2&#10;&#10;Windowのサイズを自由に変更できるようになった。">
-      <created>1688942117641</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1688942117641</updated>
-    </task>
     <task id="LOCAL-00017" summary="Version0.5.2&#10;&#10;Windowのサイズを自由に変更できるようになった。">
       <created>1688942493243</created>
       <option name="number" value="00017" />
@@ -508,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689100968357</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Build Update">
+      <created>1689101224892</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1689101224892</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
