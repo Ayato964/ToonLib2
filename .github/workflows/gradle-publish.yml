@@ -47,8 +47,8 @@ jobs:
         gradle-home-cache-strict-match: false
         workflow-job-context: null
       env:
-        USERNAME: Ayato964
-        TOKEN: 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
+        USERNAME: GITHUB_ACTOR
+        TOKEN: GITHUB_TOKEN
 
 
     - name: Upload to GitHub Packages

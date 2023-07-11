@@ -21,8 +21,8 @@ publishing {
         maven {
             url = uri("https://maven.pkg.github.com/Ayato964/ToonLib2")
             credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
-                password =  project.findProperty("gpr.key") ?: System.getenv("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")
+                username = project.findProperty("maven.username")
+                password =  project.findProperty("maven.password")
             }
         }
     }
