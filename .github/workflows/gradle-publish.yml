@@ -39,9 +39,8 @@ jobs:
       with:
         arguments: build
 
-    #- name: Upload to GitHub Packages
-   #   run: echo ${{ secrets.TOONLIB }} | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
-
+    - name: List Directories
+      run: ls -l
 
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
