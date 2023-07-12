@@ -31,10 +31,6 @@ publishing {
      */
 
 }
-tasks.withType(JavaCompile) {
-    options.debugOptions.debugLevel = "VERBOSE"
-}
-
 dependencies {
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
