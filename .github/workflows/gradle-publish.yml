@@ -42,7 +42,7 @@ jobs:
     - name: Publish to GitHub Packages
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
-        arguments: publish
+        arguments: publish --info --stacktrace
         cache-disabled: false
         cache-read-only: true
         cache-write-only: false
@@ -52,5 +52,5 @@ jobs:
         workflow-job-context: null
       env:
         USERNAME: ${{github.actor}}
-        TOKEN: ${{secrets.TOONLIB2}}
+        TOKEN: ${{secrets.TOONLIB}}
 
