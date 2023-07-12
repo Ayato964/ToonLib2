@@ -51,6 +51,6 @@ jobs:
         gradle-home-cache-strict-match: false
         workflow-job-context: null
       env:
-        USERNAME: ${{ secrets.MY_NAME}}
-        TOKEN: ${{ secrets.MY_TOKEN }}
+        USERNAME: ${{ variables.MY_NAME}}
+        TOKEN: ${{ variables.MY_TOKEN }}
 
