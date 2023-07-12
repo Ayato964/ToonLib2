@@ -17,10 +17,10 @@ publishing {
             version = '1.0-SNAPSHOT'
         }
     }
-    /*
+
     repositories {
         maven {
-            url = uri("https://maven.pkg.github.com/Ayato964/ToonLib2")
+           // url = uri("https://maven.pkg.github.com/Ayato964/ToonLib2")
             credentials {
                 username = System.getenv("USERNAME")
                 password =  System.getenv("TOKEN")
@@ -28,7 +28,7 @@ publishing {
         }
     }
 
-     */
+
 
 }
 dependencies {
