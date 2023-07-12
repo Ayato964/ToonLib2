@@ -16,12 +16,17 @@ repositories {
         }
     }
 }
-
+tasks.withType(AbstractCompile) {
+    options.fork = true
+    options.forkOptions.executable = 'javac'
+}
 publishing {
     publications{
         mavenJava(MavenPublication){
             group = 'org.ayato.main'
             version = '1.0.2'
+            artifactId = project.name
+            groupId = 'org.ayato.main'
         }
     }
 
