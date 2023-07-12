@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group 'org.ayato.main'
+group 'org.ayato'
 version '1.0.2'
 
 repositories {
@@ -23,10 +23,11 @@ tasks.withType(AbstractCompile) {
 publishing {
     publications{
         mavenJava(MavenPublication){
-            group = 'org.ayato.main'
+            from components.java
+            group = 'org.ayato'
             version = '1.0.2'
             artifactId = project.name
-            groupId = 'org.ayato.main'
+            groupId = 'org.ayato'
         }
     }
 
@@ -47,7 +48,7 @@ dependencies {
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+    /* https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core*/
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.15.0-rc2'
 // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.0-rc2'
