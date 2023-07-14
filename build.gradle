@@ -33,7 +33,8 @@ publishing {
 
     repositories {
         maven {
-            url = uri("https://maven.pkg.github.com/Ayato964/ToonLib2")
+            name = "GithubPackages"
+            url = uri("https://maven.pkg.github.com/ayato964/ToonLib2")
             credentials {
                 username = System.getenv("USERNAME")
                 password =  System.getenv("TOKEN")
