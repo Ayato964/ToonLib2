@@ -9,7 +9,7 @@ version '1.0.2'
 repositories {
     mavenCentral()
     maven {
-        url = uri("https://maven.pkg.github.com/Ayato964/ToonLib2")
+        url = uri("https://maven.pkg.github.com/")
         credentials {
             username = System.getenv("USERNAME")
             password = System.getenv("TOKEN")
