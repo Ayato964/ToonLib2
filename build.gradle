@@ -27,11 +27,8 @@ tasks.withType(AbstractCompile) {
 publishing {
     publications{
         mavenJava(MavenPublication){
-            group = 'org.ayato'
-            version = '1.0.2'
-            artifactId = archivesBaseName
-            groupId = 'org.ayato'
-            from components.java
+            artifactId = "toonlib"
+            from(components.java)
         }
     }
 
@@ -42,6 +39,7 @@ publishing {
             credentials {
                 username = System.getenv("USERNAME")
                 password =  System.getenv("TOKEN")
+
             }
         }
     }
