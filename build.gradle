@@ -5,7 +5,7 @@ plugins {
 
 group 'org.ayato'
 version '1.0.2'
-
+/*
 repositories {
     mavenCentral()
     maven {
@@ -16,6 +16,8 @@ repositories {
         }
     }
 }
+
+ */
 tasks.withType(AbstractCompile) {
     options.fork = true
     options.forkOptions.executable = 'javac'
