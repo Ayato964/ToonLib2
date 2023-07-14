@@ -27,11 +27,11 @@ tasks.withType(AbstractCompile) {
 publishing {
     publications{
         mavenJava(MavenPublication){
-            from components.java
             group = 'org.ayato'
             version = '1.0.2'
-            artifactId = project.name
+            artifactId = archivesBaseName
             groupId = 'org.ayato'
+            from components.java
         }
     }
 
