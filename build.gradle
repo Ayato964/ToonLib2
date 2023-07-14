@@ -5,9 +5,10 @@ plugins {
 
 group 'org.ayato'
 version '1.0.2'
-/*
+
 repositories {
     mavenCentral()
+    /*
     maven {
         url = uri("https://maven.pkg.github.com/")
         credentials {
@@ -15,9 +16,10 @@ repositories {
             password = System.getenv("TOKEN")
         }
     }
-}
 
  */
+}
+
 tasks.withType(AbstractCompile) {
     options.fork = true
     options.forkOptions.executable = 'javac'
