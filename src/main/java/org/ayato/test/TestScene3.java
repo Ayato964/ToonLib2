@@ -15,6 +15,7 @@ public class TestScene3 implements IBaseScene {
 
     @Override
     public void setup(ExecuteScene scene) {
+        scene.BACKGROUND.mode.setColor(Color.BLACK);
         AnimationList<String> animationList = AnimationList.create(scene, Component.get(this, "hello"),
                 new Properties().font(new Font("", Font.PLAIN, 32))
                         .color(Color.RED), AnimationText::create, property -> System.out.println("hello"));

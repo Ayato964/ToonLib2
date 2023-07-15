@@ -4,7 +4,7 @@ import org.ayato.util.Display;
 
 import java.awt.*;
 
-class Background implements Display {
+public class Background implements Display {
     public BackgroundMode mode;
     private final ExecuteScene MASTER;
    // private ImageMaker bgImage;
@@ -12,7 +12,8 @@ class Background implements Display {
     public Background(ExecuteScene scene){
         MASTER = scene;
         //bgImage = new ImageMaker("title/background", 256, 144);
-        mode = BackgroundMode.SKY;
+        mode = BackgroundMode.COLOR;
+        mode.setColor(Color.CYAN);
     }
 
     @Override
@@ -20,27 +21,46 @@ class Background implements Display {
 
         Rectangle r = MASTER.FRAME.DESCTOP_BOUNDS;
         switch (mode) {
-           // case COLOR_ANIMATION : g.drawImage(bgImage.get(), 0, 0, r.width, r.height, null);break;
-            case DARK:g.setColor(Color.BLACK); g.fillRect(0, 0, r.width, r.height);break;
-            case GRAY :g.setColor(Color.GRAY); g.fillRect(0, 0, r.width, r.height);break;
-            case SKY:g.setColor(Color.CYAN);g.fillRect(0, 0, r.width, r.height);break;
+            case COLOR:g.setColor(mode.getColor()); g.fillRect(0, 0, r.width, r.height);break;
+            case IMAGE:g.drawImage(mode.getImage(), 0, 0, r.width, r.height, null);break;
         }
 
 
     }
+
+    public void setMode(BackgroundMode mode) {
+        this.mode = mode;
+    }
+
     public enum BackgroundMode{
-        COLOR_ANIMATION("detail.video.bg.def"),
-        DARK("detail.video.bg.dark"),
-        SKY("detail.video.bg.sky"),
-        GRAY("detail.video.bg.gray");
+        COLOR("color"),
+        IMAGE("image");
 
         private String a;
+        private Color c;
+        private Image image;
         BackgroundMode(String i) {
             a = i;
         }
 
         public String get() {
             return a;
+        }
+
+        public void setColor(Color c) {
+            this.c = c;
+        }
+
+        public Color getColor() {
+            return c;
+        }
+
+        public void setImage(Image image) {
+            this.image = image;
+        }
+
+        public Image getImage() {
+            return image;
         }
     }
 }
