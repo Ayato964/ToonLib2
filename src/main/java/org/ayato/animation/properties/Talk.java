@@ -1,15 +1,13 @@
-package org.ayato.system.properties;
+package org.ayato.animation.properties;
 
 import org.ayato.system.AnimationText;
 import org.ayato.system.Component;
-import org.ayato.system.ExecuteScene;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseListener;
 
-public class Talk implements IProperty, KeyListener {
+public class Talk implements IProperty<AnimationText, TextProperties>, KeyListener {
     int count = 0;
     String[] mes;
     KeyListener[] listeners;
@@ -25,7 +23,7 @@ public class Talk implements IProperty, KeyListener {
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, AnimationText text) {
+    public void runningProperty(Graphics g, TextProperties properties, AnimationText text) {
         if(stopEveryEvent){
             stopEveryEvent = false;
             listeners = text.MASTER.FRAME.getKeyListeners();

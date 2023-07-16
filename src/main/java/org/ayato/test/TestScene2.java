@@ -2,8 +2,8 @@ package org.ayato.test;
 
 import org.ayato.system.AnimationText;
 import org.ayato.system.Component;
-import org.ayato.system.ExecuteScene;
-import org.ayato.system.properties.Properties;
+import org.ayato.system.LunchScene;
+import org.ayato.animation.properties.TextProperties;
 import org.ayato.util.Event;
 import org.ayato.util.IBaseScene;
 
@@ -17,11 +17,11 @@ public class TestScene2 implements IBaseScene {
 
     }
     @Override
-    public void setup(ExecuteScene scene) {
+    public void setup(LunchScene scene) {
         Event.create(TestScene2.class, "test", null);
 
         AnimationText.create(scene, Component.get(this, "hello", "apple"), 10, 20,
-                new Properties().size(64).color(Color.RED)
+                new TextProperties().size(64).color(Color.RED)
                         .changeMessage(()->{
                             if(Objects.requireNonNull(Event.get(TestScene2.class, "test")).getEvent()){
                                 return Component.get(this, "hello", "Banana");
@@ -30,24 +30,24 @@ public class TestScene2 implements IBaseScene {
                         })
         );
 
-        AnimationText.create(scene, Component.get(this, "hello"), 50, 60, new Properties()
+        AnimationText.create(scene, Component.get(this, "hello"), 50, 60, new TextProperties()
                 .font(new Font("", 0, 32))
                         .color(Color.WHITE)
                         .frame(50, 60, 120, 20, ()->Color.WHITE, Color.GRAY)
                         .talk(this, true, property ->Objects.requireNonNull(Event.get(TestScene2.class, "test")).clear(), "mes1", "mes2")
         );
-        AnimationText.create(scene,"Hello", 60, 30, new Properties()
+        AnimationText.create(scene,"Hello", 60, 30, new TextProperties()
                 .font(new Font("", Font.PLAIN, 32))
                 .ifView(()-> Objects.requireNonNull(Event.get(TestScene2.class, "test")).getEvent())
         );
         AnimationText.create(scene,Component.get(this, "valuetest", "Apple", "Orange"),
                 100,
                 80,
-                new Properties().font(new Font("", Font.PLAIN, 32)).color(Color.WHITE)
+                new TextProperties().font(new Font("", Font.PLAIN, 32)).color(Color.WHITE)
                         .ifView(()-> Objects.requireNonNull(Event.get(this.getClass(), "test")).getEvent())
         );
         AnimationText.create(scene, Component.get(this, "nextmap"), 50, 60,
-                new Properties().font(new Font("", Font.PLAIN, 32))
+                new TextProperties().font(new Font("", Font.PLAIN, 32))
                         .ifView(()-> Objects.requireNonNull(Event.get(TestScene2.class, "test")).getEvent())
                         .button(50, 60, 120, 20, ()->Color.WHITE,
                                 new Color(127, 127, 127, 50), null, property -> scene.changeScene(new TestScene3()))

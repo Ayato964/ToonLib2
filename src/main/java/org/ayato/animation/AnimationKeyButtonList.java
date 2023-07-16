@@ -1,4 +1,4 @@
-package org.ayato.system;
+package org.ayato.animation;
 
 
 import java.awt.*;

@@ -1,10 +1,8 @@
 package org.ayato.system;
 
 import org.ayato.util.Display;
-import org.ayato.util.IBaseScene;
 import org.ayato.util.VoidSupplier;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 public class DisplayThread {
@@ -12,16 +10,16 @@ public class DisplayThread {
     private final Thread thread;
     private final VoidSupplier sup;
     private final ArrayList<Display> displays;
-    private final ExecuteScene MASTER;
+    private final LunchScene MASTER;
     private final ArrayList<VoidSupplier> endTask;
-    private DisplayThread(VoidSupplier voidSupplier, ExecuteScene scene){
+    private DisplayThread(VoidSupplier voidSupplier, LunchScene scene){
         thread = new Thread(this::run);
         sup = voidSupplier;
         displays = new ArrayList<>();
         MASTER = scene;
         endTask = new ArrayList<>();
     }
-    public static DisplayThread runThread(VoidSupplier supplier, ExecuteScene scene){
+    public static DisplayThread runThread(VoidSupplier supplier, LunchScene scene){
         DisplayThread t = new DisplayThread(supplier, scene);
         t.thread.start();
         return t;

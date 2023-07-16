@@ -6,10 +6,10 @@ import java.awt.*;
 
 public class Background implements Display {
     public BackgroundMode mode;
-    private final ExecuteScene MASTER;
+    private final LunchScene MASTER;
    // private ImageMaker bgImage;
 
-    public Background(ExecuteScene scene){
+    public Background(LunchScene scene){
         MASTER = scene;
         //bgImage = new ImageMaker("title/background", 256, 144);
         mode = BackgroundMode.COLOR;

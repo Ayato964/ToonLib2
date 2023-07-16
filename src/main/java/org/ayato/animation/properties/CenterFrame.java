@@ -1,11 +1,11 @@
-package org.ayato.system.properties;
+package org.ayato.animation.properties;
 
 import org.ayato.system.AnimationText;
 
 import java.awt.*;
 import java.util.function.Supplier;
 
-public class CenterFrame implements IProperty {
+public class CenterFrame implements IProperty<AnimationText, TextProperties> {
     int by, bw, bh;
     Supplier<Color> fc;
     Color bc;
@@ -19,7 +19,7 @@ public class CenterFrame implements IProperty {
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, AnimationText text) {
+    public void runningProperty(Graphics g, TextProperties properties, AnimationText text) {
         int windowCenter = text.MASTER.FRAME.DESCTOP_BOUNDS.width / 2;
         int frameCenter = bw * text.MASTER.FRAME.DW / 2;
         int bx = (windowCenter - frameCenter) / text.MASTER.FRAME.DW;

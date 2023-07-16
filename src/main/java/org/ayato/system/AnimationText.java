@@ -1,34 +1,29 @@
 package org.ayato.system;
 
-import org.ayato.system.properties.Properties;
-import org.ayato.util.Display;
+import org.ayato.animation.AbstractAnimation;
+import org.ayato.animation.properties.TextProperties;
 
 import java.awt.*;
-import java.util.function.BooleanSupplier;
 
 /**
- * <p>This Class relates to  {@link DisplayThread} and {@link Properties}.</p>
+ * <p>This Class relates to  {@link DisplayThread} and {@link TextProperties}.</p>
  *<p>This Class view the Strings TEXT on the  {@link Graphics} class  of {@link MyFrame} class .</p>
- * <p>See {@link Properties} to edit TEXT </p>
+ * <p>See {@link TextProperties} to edit TEXT </p>
  *<p>This don't call constructor. <br>
  * for example:<code>AnimationText.create(ExcuseScene scene).draw(String s, int x, int y, Properties p)</code>
  * </p>
  *
  * @see DisplayThread
- * @see Properties
+ * @see TextProperties
  * @see Graphics
  * @see MyFrame
  * @since 0.4.0
  * @apiNote Ayato
  */
-public class AnimationText implements Display {
-    private String mes;
-    private int x, y;
-    public final ExecuteScene MASTER;
-    private Properties properties;
-    public BooleanSupplier bool;
-    private AnimationText(ExecuteScene scene){
-        MASTER = scene;
+public class AnimationText extends AbstractAnimation<String>{
+
+    private AnimationText(LunchScene scene){
+        super(scene);
     }
 
     /**
@@ -37,13 +32,13 @@ public class AnimationText implements Display {
      * @return new Instance of AnimationText.
      */
     @Deprecated(since = "0.4.5")
-    public static AnimationText create(ExecuteScene scene){
+    public static AnimationText create(LunchScene scene){
         AnimationText text = new AnimationText(scene);
         scene.SCENE.addDisplay(text);
         return text;
     }
 
-    public static AnimationText create(ExecuteScene scene, String str, int bx, int by, Properties properties){
+    public static AnimationText create(LunchScene scene, String str, int bx, int by, TextProperties properties){
         AnimationText t = new AnimationText(scene);
         scene.SCENE.addDisplay(t);
         t.mes = str;
@@ -64,7 +59,7 @@ public class AnimationText implements Display {
     }
 
     @Deprecated(since = "0.4.5")
-    public void draw(String str, int x, int y, Properties properties){
+    public void draw(String str, int x, int y, TextProperties properties){
         mes = str;
         this.x = x;
         this.y = y;

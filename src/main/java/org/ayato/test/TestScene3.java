@@ -1,8 +1,10 @@
 package org.ayato.test;
 
+import org.ayato.animation.AnimationKeyButtonList;
+import org.ayato.animation.AnimationList;
 import org.ayato.system.*;
 import org.ayato.system.Component;
-import org.ayato.system.properties.Properties;
+import org.ayato.animation.properties.TextProperties;
 import org.ayato.util.IBaseScene;
 
 import java.awt.*;
@@ -14,10 +16,10 @@ public class TestScene3 implements IBaseScene {
     }
 
     @Override
-    public void setup(ExecuteScene scene) {
+    public void setup(LunchScene scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
         AnimationList<String> animationList = AnimationList.create(scene, Component.get(this, "hello"),
-                new Properties().font(new Font("", Font.PLAIN, 32))
+                new TextProperties().font(new Font("", Font.PLAIN, 32))
                         .color(Color.RED), AnimationText::create, property -> System.out.println("hello"));
 
         animationList.add("APPLE", property -> System.out.println("APPLE"));

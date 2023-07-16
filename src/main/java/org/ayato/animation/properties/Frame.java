@@ -1,12 +1,12 @@
-package org.ayato.system.properties;
+package org.ayato.animation.properties;
 
 import org.ayato.system.AnimationText;
-import org.ayato.system.ExecuteScene;
+import org.w3c.dom.Text;
 
 import java.awt.*;
 import java.util.function.Supplier;
 
-public class Frame implements IProperty{
+public class Frame implements IProperty<AnimationText, TextProperties>{
     int bx, by, bw, bh;
     Color backCol;
     Supplier<Color> frameCol;
@@ -22,7 +22,7 @@ public class Frame implements IProperty{
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, AnimationText text){
+    public void runningProperty(Graphics g, TextProperties properties, AnimationText text){
         g.setColor(backCol);
         g.fillRect(bx * text.MASTER.FRAME.DW, by * text.MASTER.FRAME.DH  - g.getFontMetrics().getHeight(), bw * text.MASTER.FRAME.DW, bh* text.MASTER.FRAME.DH);
         g.setColor(frameCol.get());

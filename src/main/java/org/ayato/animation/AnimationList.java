@@ -1,19 +1,20 @@
-package org.ayato.system;
+package org.ayato.animation;
 
-import org.ayato.system.properties.Properties;
-import org.ayato.system.properties.PropertyAction;
+import org.ayato.animation.properties.TextProperties;
+import org.ayato.animation.properties.PropertyAction;
+import org.ayato.system.LunchScene;
 
 import java.util.ArrayList;
 
 public class AnimationList<T>{
     public int id;
-    protected final Properties properties;
-    protected final ExecuteScene scene;
+    protected final TextProperties properties;
+    protected final LunchScene scene;
     private final ArrayList<AnimationList<T>> list;
     private T object;
     public AnimationSetup<T> setup;
     public PropertyAction action;
-    private AnimationList(ExecuteScene executeScene, T str, Properties p){
+    private AnimationList(LunchScene executeScene, T str, TextProperties p){
         properties = p;
         this.scene = executeScene;
         object = str;
@@ -27,14 +28,14 @@ public class AnimationList<T>{
         add(str, properties.copy(), a);
     }
 
-    public void add(T str, Properties p, PropertyAction a){
+    public void add(T str, TextProperties p, PropertyAction a){
         list.add(create(scene, str, p, setup, a, list.size()));
     }
     public int length(){
         return list.size();
     }
 
-    private static <A> AnimationList<A> create(ExecuteScene scene, A str, Properties p, AnimationSetup<A> s, PropertyAction a, int id){
+    private static <A> AnimationList<A> create(LunchScene scene, A str, TextProperties p, AnimationSetup<A> s, PropertyAction a, int id){
         AnimationList<A> n = new AnimationList<>(scene, str, p);
         n.list.add(n);
         n.id = id;
@@ -43,7 +44,7 @@ public class AnimationList<T>{
         return n;
     }
 
-    public static <A> AnimationList<A> create(ExecuteScene scene, A str, Properties p, AnimationSetup<A> s, PropertyAction a){
+    public static <A> AnimationList<A> create(LunchScene scene, A str, TextProperties p, AnimationSetup<A> s, PropertyAction a){
         AnimationList<A> n = new AnimationList<>(scene, str, p);
         n.list.add(n);
         n.id = 0;
@@ -52,7 +53,7 @@ public class AnimationList<T>{
         return n;
     }
 
-    public void setup(int bx, int by, Properties properties) {
+    public void setup(int bx, int by, TextProperties properties) {
         setup.accept(scene, object, bx, by, properties);
     }
 
