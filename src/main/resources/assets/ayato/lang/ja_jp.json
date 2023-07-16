@@ -2,7 +2,7 @@
   "hello": "こんにちは!!!",
   "excuse": "これはテストです！！",
   "org.ayato.test.TestScene.hello":"これはテストです！！",
-  "org.ayato.test.TestScene2.hello":"これはシーン２のテストです。変数は$です。",
+  "org.ayato.test.TestScene2.hello":"変数は$です",
   "org.ayato.test.TestScene2.mes1":"会話の1回目です",
   "org.ayato.test.TestScene2.mes2":"会話の2回目です",
   "org.ayato.test.TestScene2.valuetest":"You putted in $ and $",

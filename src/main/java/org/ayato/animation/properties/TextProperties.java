@@ -32,7 +32,7 @@ public class TextProperties extends AbstractProperties<AnimationText>{
         return this;
     }
     public TextProperties changeMessage(Supplier<String> str){
-        properties.add((g, properties1, text) -> animation.setMSG(str.get()));
+        properties.add((g, properties1, text) -> animation.setViewObject(str.get()));
         return this;
     }
     public TextProperties font(Font font){

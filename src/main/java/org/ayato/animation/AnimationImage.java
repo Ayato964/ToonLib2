@@ -23,9 +23,8 @@ public class AnimationImage extends AbstractAnimation<Image> {
         }
         return i;
     }
-
     @Override
-    public void display(Graphics g) {
-
+    protected void run(Graphics g, Image o) {
+        g.drawImage(o, x * MASTER.FRAME.DW, y * MASTER.FRAME.DH, w * MASTER.FRAME.DW, h * MASTER.FRAME.DH, null);
     }
 }

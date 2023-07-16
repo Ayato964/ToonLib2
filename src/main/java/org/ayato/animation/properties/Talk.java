@@ -46,7 +46,7 @@ public class Talk implements IProperty<AnimationText, TextProperties>, KeyListen
     public void keyPressed(KeyEvent keyEvent) {
         if(keyEvent.getKeyCode() == KeyEvent.VK_ENTER || keyEvent.getKeyCode() == KeyEvent.VK_SPACE){
             if(count < mes.length){
-                ANIMATION.setMSG(Component.get(percent, mes[count]));
+                ANIMATION.setViewObject(Component.get(percent, mes[count]));
                 count ++;
             }else{
                 ANIMATION.MASTER.SCENE.removeDisplay(ANIMATION);

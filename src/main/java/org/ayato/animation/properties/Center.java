@@ -21,7 +21,7 @@ public class Center implements IProperty<AnimationText, TextProperties>{
         if(isFirst){
             isFirst = false;
             int windowCenter = text.MASTER.FRAME.DESCTOP_BOUNDS.width / 2;
-            int textCenter = getTextWidth(g, text.getMES()) / 2;
+            int textCenter = getTextWidth(g, text.getViewObject()) / 2;
             text.setX((windowCenter - textCenter )/ text.MASTER.FRAME.DW);
         }
     }

@@ -36,7 +36,7 @@ public class Input implements IProperty<AnimationText, TextProperties>, MouseLis
             text.MASTER.FRAME.addMouseListener(this);
         }
         if(isInputAccepted)
-            text.setMSG(inputStr.toString());
+            text.setViewObject(inputStr.toString());
     }
 
     @Override

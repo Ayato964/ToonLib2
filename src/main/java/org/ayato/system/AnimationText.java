@@ -26,21 +26,13 @@ public class AnimationText extends AbstractAnimation<String>{
         super(scene);
     }
 
-    /**
-     *
-     * @param scene Use ExecuteScene's instance you defined
-     * @return new Instance of AnimationText.
-     */
-    @Deprecated(since = "0.4.5")
-    public static AnimationText create(LunchScene scene){
-        AnimationText text = new AnimationText(scene);
-        scene.SCENE.addDisplay(text);
-        return text;
+    @Override
+    protected void run(Graphics g, String o) {
+        g.drawString(mes, x * MASTER.FRAME.DW, y * MASTER.FRAME.DH);
     }
 
     public static AnimationText create(LunchScene scene, String str, int bx, int by, TextProperties properties){
         AnimationText t = new AnimationText(scene);
-        scene.SCENE.addDisplay(t);
         t.mes = str;
         t.x = bx;
         t.y = by;
@@ -49,50 +41,8 @@ public class AnimationText extends AbstractAnimation<String>{
 
         if(properties != null)
             properties.addAnimation(t);
+
+        scene.SCENE.addDisplay(t);
         return t;
-    }
-
-
-    @Deprecated(since = "0.4.5")
-    public void draw(String str, int x, int y){
-        draw(str, x, y, null);
-    }
-
-    @Deprecated(since = "0.4.5")
-    public void draw(String str, int x, int y, TextProperties properties){
-        mes = str;
-        this.x = x;
-        this.y = y;
-        this.properties = properties;
-        this.bool = ()->true;
-
-        if(properties != null)
-            properties.addAnimation(this);
-    }
-
-    @Override
-    public void display(Graphics g) {
-        if(bool.getAsBoolean()) {
-            if (properties != null)
-                properties.runProp(g);
-            g.drawString(mes, x * MASTER.FRAME.DW, y * MASTER.FRAME.DH);
-        }
-    }
-
-    public void setMSG(String s) {
-        if(s != null)
-            mes = s;
-    }
-
-    public String getMES() {
-        return mes;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int i) {
-        x = i;
     }
 }
