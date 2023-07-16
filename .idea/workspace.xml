@@ -9,20 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.0.57&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/ImageMaker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/test/65535.png" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.0.70&#10;&#10;画像が表示できるようになった">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AbstractAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AbstractAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/AnimationImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/AnimationImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/properties/ImageProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/properties/ImageProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/AnimationText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/AnimationText.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/en_us.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/ImageMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/ImageMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,13 +172,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686754309708</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Build Update">
-      <created>1689102751031</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1689102751031</updated>
     </task>
     <task id="LOCAL-00077" summary="Build Update">
       <created>1689103512196</created>
@@ -526,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689505645694</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="Version.2.0.70&#10;&#10;画像が表示できるようになった">
+      <created>1689527989488</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1689527989488</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -561,6 +551,7 @@
     <MESSAGE value="Version.2.0.27&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
     <MESSAGE value="Version.2.0.36&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
     <MESSAGE value="Version.2.0.57&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.2.0.57&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
+    <MESSAGE value="Version.2.0.70&#10;&#10;画像が表示できるようになった" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.2.0.70&#10;&#10;画像が表示できるようになった" />
   </component>
 </project>

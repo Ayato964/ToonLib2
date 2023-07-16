@@ -12,6 +12,9 @@ public class ImageMaker {
     private Image editImage;
     private BufferedImage original;
 
+    private int tw, ty;
+
+
     public ImageMaker(String directory, String filename){
         URL path = getClass().getClassLoader().getResource(basePath + directory + "/" + filename + ".png");
 
@@ -21,6 +24,12 @@ public class ImageMaker {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+    public ImageMaker(String directory, String filename, int w, int h){
+        this(directory, filename);
+        tw = w;
+        ty = h;
+        editImage = original.getSubimage(0, 0, w, h);
     }
 
     public Image getEditImage() {
