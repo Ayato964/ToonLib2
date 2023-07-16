@@ -15,7 +15,7 @@ public class TextProperties extends AbstractProperties<AnimationText>{
 
     public TextProperties button(int bx, int by, int bw, int bh, Supplier<Color> def, Color bg, PropertyAction insert, PropertyAction action){
         properties.add(new Frame(bx, by, bw, bh, def, bg));
-        properties.add(new Button(bx, by, bw, bh, insert, action));
+        properties.add(new Button<AnimationText, TextProperties>(bx, by, bw, bh, insert, action));
         return this;
     }
     public TextProperties center(){

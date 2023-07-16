@@ -8,7 +8,7 @@ import java.net.URL;
 import java.util.Objects;
 
 public class ImageMaker {
-    private static String basePath = "assets/ayato/";
+    private static String basePath = "assets/ayato/textures/";
     private Image editImage;
     private BufferedImage original;
 
