@@ -14,8 +14,9 @@ public abstract class AbstractAnimation<T> implements Display {
     protected TextProperties properties;
     public BooleanSupplier bool;
 
-    protected AbstractAnimation(LunchScene master) {
+    protected AbstractAnimation(LunchScene master, BooleanSupplier bool){
         MASTER = master;
+        this.bool = bool;
     }
 
     @Override

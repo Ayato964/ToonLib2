@@ -30,7 +30,7 @@ public class TestScene2 implements IBaseScene {
                         })
         );
 
-        AnimationText.create(scene, Component.get(this, "hello"), 50, 60, new TextProperties()
+        AnimationText.create(scene, Component.get(this, "hello", "apple"), 50, 60, new TextProperties()
                 .font(new Font("", 0, 32))
                         .color(Color.WHITE)
                         .frame(50, 60, 120, 20, ()->Color.WHITE, Color.GRAY)

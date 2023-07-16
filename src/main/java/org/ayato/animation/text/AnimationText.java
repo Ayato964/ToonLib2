@@ -7,6 +7,7 @@ import org.ayato.system.LunchScene;
 import org.ayato.system.MyFrame;
 
 import java.awt.*;
+import java.util.function.BooleanSupplier;
 
 /**
  * <p>This Class relates to  {@link DisplayThread} and {@link TextProperties}.</p>
@@ -25,8 +26,8 @@ import java.awt.*;
  */
 public class AnimationText extends AbstractAnimation<String>{
 
-    private AnimationText(LunchScene scene){
-        super(scene);
+    private AnimationText(LunchScene scene, BooleanSupplier supplier){
+        super(scene, supplier);
     }
 
     @Override
@@ -35,12 +36,11 @@ public class AnimationText extends AbstractAnimation<String>{
     }
 
     public static AnimationText create(LunchScene scene, String str, int bx, int by, TextProperties properties){
-        AnimationText t = new AnimationText(scene);
+        AnimationText t = new AnimationText(scene, ()->true);
         t.mes = str;
         t.x = bx;
         t.y = by;
         t.properties = properties;
-        t.bool = ()->true;
 
         if(properties != null)
             properties.addAnimation(t);

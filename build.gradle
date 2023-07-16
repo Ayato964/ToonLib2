@@ -60,7 +60,6 @@ dependencies {
 }
 
 jar{
-
 }
 test {
     useJUnitPlatform()

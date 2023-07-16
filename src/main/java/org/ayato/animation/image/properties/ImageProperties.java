@@ -4,5 +4,7 @@ import org.ayato.AbstractProperties;
 import org.ayato.animation.image.AnimationImage;
 
 public class ImageProperties extends AbstractProperties<AnimationImage> {
-
+    public ImageProperties button(){
+        return this;
+    }
 }

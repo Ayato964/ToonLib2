@@ -23,7 +23,7 @@ public class TestScene3 implements IBaseScene {
                 new TextProperties().font(new Font("", Font.PLAIN, 32))
                         .color(Color.RED), AnimationText::create, property -> System.out.println("hello"));
 
-        animationList.add("APPLE", property -> System.out.println("APPLE"));
+        animationList.add(Component.get(this, "goto.image.test"), property -> scene.changeScene(new ImageTest()));
         animationList.add("LEMON", property -> System.out.println("LEMON"));
         animationList.add("aaa", property -> System.out.println("aaa"));
         animationList.add("bbb", property -> System.out.println("bbb"));

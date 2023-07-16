@@ -7,5 +7,6 @@
   "org.ayato.test.TestScene2.mes2":"This is second communication",
   "org.ayato.test.TestScene2.valuetest":"You putted in $ and $",
   "org.ayato.test.TestScene2.nextmap":"Next Map",
-  "org.ayato.test.TestScene3.hello":"Hello!!"
+  "org.ayato.test.TestScene3.hello":"Hello!!",
+  "org.ayato.test.TestScene3.goto.image.test":"Go to the Image Test"
 }
