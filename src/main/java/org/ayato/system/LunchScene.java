@@ -1,5 +1,6 @@
 package org.ayato.system;
 
+import org.ayato.animation.text.AnimationText;
 import org.ayato.util.IBaseScene;
 
 import java.awt.*;

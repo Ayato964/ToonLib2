@@ -9,17 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.0.27&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AbstractAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AbstractAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/properties/Center.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/properties/Center.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/properties/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/properties/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/properties/Talk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/properties/Talk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/properties/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/properties/TextProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationText.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" afterDir="false" />
-    </list>
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.0.36&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,13 +164,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686754309708</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Build Update">
-      <created>1689102479423</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1689102479423</updated>
     </task>
     <task id="LOCAL-00075" summary="Build Update">
       <created>1689102491433</created>
@@ -518,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689470197427</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Version.2.0.36&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装">
+      <created>1689505290679</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1689505290679</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -551,6 +541,7 @@
     <MESSAGE value="Build Update" />
     <MESSAGE value="Version.2.0&#10;&#10;Background.javaをリニューアル" />
     <MESSAGE value="Version.2.0.27&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.2.0.27&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
+    <MESSAGE value="Version.2.0.36&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.2.0.36&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
   </component>
 </project>

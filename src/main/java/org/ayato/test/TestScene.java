@@ -1,10 +1,10 @@
 package org.ayato.test;
 
 import org.ayato.main.TestMain;
-import org.ayato.system.AnimationText;
+import org.ayato.animation.text.AnimationText;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
-import org.ayato.animation.properties.TextProperties;
+import org.ayato.animation.text.properties.TextProperties;
 import org.ayato.util.IBaseScene;
 
 import java.awt.*;

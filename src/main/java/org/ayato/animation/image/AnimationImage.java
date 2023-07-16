@@ -1,6 +1,7 @@
-package org.ayato.animation;
+package org.ayato.animation.image;
 
-import org.ayato.animation.properties.TextProperties;
+import org.ayato.animation.AbstractAnimation;
+import org.ayato.animation.text.properties.TextProperties;
 import org.ayato.system.LunchScene;
 
 import java.awt.*;

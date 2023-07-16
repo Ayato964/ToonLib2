@@ -2,9 +2,10 @@ package org.ayato.test;
 
 import org.ayato.animation.AnimationKeyButtonList;
 import org.ayato.animation.AnimationList;
+import org.ayato.animation.text.AnimationText;
 import org.ayato.system.*;
 import org.ayato.system.Component;
-import org.ayato.animation.properties.TextProperties;
+import org.ayato.animation.text.properties.TextProperties;
 import org.ayato.util.IBaseScene;
 
 import java.awt.*;

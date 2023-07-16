@@ -1,11 +1,10 @@
 package org.ayato.animation;
 
-import org.ayato.animation.properties.TextProperties;
+import org.ayato.animation.text.properties.TextProperties;
 import org.ayato.system.LunchScene;
 import org.ayato.util.Display;
 
 import java.awt.*;
-import java.awt.geom.Rectangle2D;
 import java.util.function.BooleanSupplier;
 
 public abstract class AbstractAnimation<T> implements Display {

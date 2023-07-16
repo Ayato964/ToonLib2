@@ -1,7 +1,6 @@
-package org.ayato.animation.properties;
+package org.ayato.animation.text.properties;
 
-import org.ayato.system.AnimationText;
-import org.w3c.dom.Text;
+import org.ayato.animation.text.AnimationText;
 
 import java.awt.*;
 import java.util.function.Supplier;

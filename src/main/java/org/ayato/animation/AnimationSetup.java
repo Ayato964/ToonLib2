@@ -1,6 +1,6 @@
 package org.ayato.animation;
 
-import org.ayato.animation.properties.TextProperties;
+import org.ayato.animation.text.properties.TextProperties;
 import org.ayato.system.LunchScene;
 
 public interface AnimationSetup<T> {

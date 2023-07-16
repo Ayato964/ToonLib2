@@ -1,7 +1,10 @@
-package org.ayato.system;
+package org.ayato.animation.text;
 
 import org.ayato.animation.AbstractAnimation;
-import org.ayato.animation.properties.TextProperties;
+import org.ayato.animation.text.properties.TextProperties;
+import org.ayato.system.DisplayThread;
+import org.ayato.system.LunchScene;
+import org.ayato.system.MyFrame;
 
 import java.awt.*;
 

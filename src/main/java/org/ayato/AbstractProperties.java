@@ -1,7 +1,7 @@
 package org.ayato;
 
 import org.ayato.animation.AbstractAnimation;
-import org.ayato.animation.properties.IProperty;
+import org.ayato.animation.text.properties.IProperty;
 
 import java.awt.*;
 import java.util.ArrayList;

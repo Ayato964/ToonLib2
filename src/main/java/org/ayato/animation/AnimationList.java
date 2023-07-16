@@ -1,7 +1,7 @@
 package org.ayato.animation;
 
-import org.ayato.animation.properties.TextProperties;
-import org.ayato.animation.properties.PropertyAction;
+import org.ayato.animation.text.properties.TextProperties;
+import org.ayato.animation.text.properties.PropertyAction;
 import org.ayato.system.LunchScene;
 
 import java.util.ArrayList;
