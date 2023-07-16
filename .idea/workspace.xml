@@ -9,9 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.0.70&#10;&#10;画像が表示できるようになった">
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.0.70&#10;&#10;画像のトリミングをできるようになった。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AbstractAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AbstractAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/AnimationImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/AnimationImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/ImageMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/ImageMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/properties/ImageProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/properties/ImageProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/TextProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,13 +177,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686754309708</updated>
-    </task>
-    <task id="LOCAL-00077" summary="Build Update">
-      <created>1689103512196</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1689103512196</updated>
     </task>
     <task id="LOCAL-00078" summary="Build Update">
       <created>1689104100874</created>
@@ -516,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689527989488</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="Version.2.0.70&#10;&#10;画像のトリミングをできるようになった。">
+      <created>1689530084919</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1689530084919</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -552,6 +557,7 @@
     <MESSAGE value="Version.2.0.36&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
     <MESSAGE value="Version.2.0.57&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
     <MESSAGE value="Version.2.0.70&#10;&#10;画像が表示できるようになった" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.2.0.70&#10;&#10;画像が表示できるようになった" />
+    <MESSAGE value="Version.2.0.70&#10;&#10;画像のトリミングをできるようになった。" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.2.0.70&#10;&#10;画像のトリミングをできるようになった。" />
   </component>
 </project>

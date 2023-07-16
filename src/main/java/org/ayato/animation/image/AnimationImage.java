@@ -1,7 +1,7 @@
 package org.ayato.animation.image;
 
 import org.ayato.animation.AbstractAnimation;
-import org.ayato.animation.text.properties.TextProperties;
+import org.ayato.animation.image.properties.ImageProperties;
 import org.ayato.system.LunchScene;
 
 import java.awt.*;
@@ -13,7 +13,7 @@ public class AnimationImage extends AbstractAnimation<Image> {
     protected AnimationImage(LunchScene master, BooleanSupplier supplier) {
         super(master, supplier);
     }
-    public static AnimationImage create(LunchScene scene, ImageMaker image, int x, int y, int w, int h, TextProperties properties){
+    public static AnimationImage create(LunchScene scene, ImageMaker image, int x, int y, int w, int h, ImageProperties properties){
         AnimationImage i = new AnimationImage(scene, ()->true);
         i.mes = image.getEditImage();
         i.x = x;
@@ -22,6 +22,7 @@ public class AnimationImage extends AbstractAnimation<Image> {
         i.h = h;
         if(properties != null) {
             i.properties = properties;
+            properties.addAnimation(i);
         }
         scene.SCENE.addDisplay(i);
         return i;

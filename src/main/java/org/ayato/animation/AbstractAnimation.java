@@ -1,5 +1,6 @@
 package org.ayato.animation;
 
+import org.ayato.AbstractProperties;
 import org.ayato.animation.text.properties.TextProperties;
 import org.ayato.system.LunchScene;
 import org.ayato.util.Display;
@@ -11,7 +12,7 @@ public abstract class AbstractAnimation<T> implements Display {
     protected T mes;
     protected int x, y;
     public final LunchScene MASTER;
-    protected TextProperties properties;
+    protected AbstractProperties<?> properties;
     public BooleanSupplier bool;
 
     protected AbstractAnimation(LunchScene master, BooleanSupplier bool){
