@@ -1,6 +1,7 @@
 package org.ayato.animation.text.properties;
 
-import org.ayato.animation.text.AnimationText;
+import org.ayato.animation.Animation;
+import org.ayato.animation.Properties;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -9,12 +10,12 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.function.Consumer;
 
-public class Input implements IProperty<AnimationText, TextProperties>, MouseListener, KeyListener {
+public class Input implements IProperty<String>, MouseListener, KeyListener {
     private int x, y, w, h;
     private StringBuilder inputStr = new StringBuilder().append('>');
     private Consumer<String> stringConsumer;
     private boolean isFirst = true, isInputAccepted = false;
-    private AnimationText ANIMATION;
+    private Animation<?> ANIMATION;
 
     public Input(int bx, int by, int bw, int bh, Consumer<String> stringConsumer) {
         this.stringConsumer = stringConsumer;
@@ -25,7 +26,7 @@ public class Input implements IProperty<AnimationText, TextProperties>, MouseLis
     }
 
     @Override
-    public void runningProperty(Graphics g, TextProperties properties, AnimationText text) {
+    public void runningProperty(Graphics g, Properties<String> properties, Animation<String> text) {
         if(isFirst){
             x = (x * text.MASTER.FRAME.DW);
             y = (y * text.MASTER.FRAME.DH);

@@ -1,6 +1,6 @@
 package org.ayato.system;
 
-import org.ayato.animation.text.AnimationText;
+import org.ayato.animation.Animation;
 import org.ayato.util.IBaseScene;
 
 import java.awt.*;
@@ -40,7 +40,7 @@ public class LunchScene {
         }else{
             SCENE.addEndTask(()->{
                 SCENE.removeDisplay(MY_SCENE);
-                SCENE.removeDisplayClass(AnimationText.class);
+                SCENE.removeDisplayClass(Animation.class);
                 FRAME.removeMouseListenerAll();
                 scene.setup(this);
                 SCENE.addDisplay(scene);

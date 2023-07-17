@@ -1,23 +1,33 @@
 package org.ayato.animation;
 
-import org.ayato.AbstractProperties;
-import org.ayato.animation.text.properties.TextProperties;
 import org.ayato.system.LunchScene;
 import org.ayato.util.Display;
 
 import java.awt.*;
 import java.util.function.BooleanSupplier;
 
-public abstract class AbstractAnimation<T> implements Display {
+public class Animation<T> implements Display {
     protected T mes;
     protected int x, y;
     public final LunchScene MASTER;
-    protected AbstractProperties<?> properties;
+    protected Properties<?> properties;
     public BooleanSupplier bool;
+    public DisplayAnimation<T> displayAnimation;
 
-    protected AbstractAnimation(LunchScene master, BooleanSupplier bool){
+    protected Animation(LunchScene master, BooleanSupplier bool){
         MASTER = master;
         this.bool = bool;
+    }
+    public static <T> Animation<T> create(LunchScene scene, T t, Properties<T> properties){
+        Animation<T> i = new Animation<>(scene, ()->true);
+        i.mes = t;
+        if(properties != null) {
+            i.properties = properties;
+            properties.addAnimation(i);
+        }
+
+        scene.SCENE.addDisplay(i);
+        return i;
     }
 
     @Override
@@ -25,11 +35,10 @@ public abstract class AbstractAnimation<T> implements Display {
         if(bool.getAsBoolean()) {
             if (properties != null)
                 properties.runProp(g);
-            if(mes != null)
-                run(g, mes);
+            if(mes != null && displayAnimation != null)
+                displayAnimation.run(MASTER, g, mes);
         }
     }
-    protected abstract void run(Graphics g, T o);
 
     public void setViewObject(T mes) {
         this.mes = mes;

@@ -1,18 +1,19 @@
 package org.ayato.animation.text.properties;
 
-import org.ayato.animation.text.AnimationText;
+import org.ayato.animation.Animation;
+import org.ayato.animation.Properties;
 import org.ayato.system.Component;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Talk implements IProperty<AnimationText, TextProperties>, KeyListener {
+public class Talk implements IProperty<String>, KeyListener {
     int count = 0;
     String[] mes;
     KeyListener[] listeners;
     private boolean stopEveryEvent, isFirst = true;
-    private AnimationText ANIMATION;
+    private Animation<String> ANIMATION;
     private Object percent;
     private PropertyAction action;
     public Talk(String[] strings, Object percent, boolean stopEveryEvent, PropertyAction action) {
@@ -23,7 +24,7 @@ public class Talk implements IProperty<AnimationText, TextProperties>, KeyListen
     }
 
     @Override
-    public void runningProperty(Graphics g, TextProperties properties, AnimationText text) {
+    public void runningProperty(Graphics g, Properties<String> properties, Animation<String> text) {
         if(stopEveryEvent){
             stopEveryEvent = false;
             listeners = text.MASTER.FRAME.getKeyListeners();

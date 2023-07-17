@@ -1,11 +1,11 @@
 package org.ayato.animation.text.properties;
 
-import org.ayato.AbstractProperties;
-import org.ayato.animation.AbstractAnimation;
+import org.ayato.animation.Properties;
+import org.ayato.animation.Animation;
 
 import java.awt.*;
 
-public interface IProperty<T extends AbstractAnimation<?>, M extends AbstractProperties<T>> {
+public interface IProperty<T>{
 
-    public void runningProperty(Graphics g, M properties, T text);
+    void runningProperty(Graphics g, Properties<T> properties,  Animation<T> animation);
 }

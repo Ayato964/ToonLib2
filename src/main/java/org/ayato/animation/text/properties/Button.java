@@ -1,14 +1,13 @@
 package org.ayato.animation.text.properties;
 
-import org.ayato.AbstractProperties;
-import org.ayato.animation.AbstractAnimation;
-import org.ayato.animation.text.AnimationText;
+import org.ayato.animation.Properties;
+import org.ayato.animation.Animation;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class Button<T extends AbstractAnimation<?>, M extends AbstractProperties<T>> implements IProperty<T, M>, MouseListener {
+public class Button<T> implements IProperty<T>, MouseListener {
     int bx, by, bw, bh;
     PropertyAction insert, action;
     private boolean isFirst = true;
@@ -23,7 +22,7 @@ public class Button<T extends AbstractAnimation<?>, M extends AbstractProperties
     }
 
     @Override
-    public void runningProperty(Graphics g, M properties, T text) {
+    public void runningProperty(Graphics g, Properties<T> properties, Animation<T> text) {
         if(isFirst){
             isFirst = false;
             bx = (bx * text.MASTER.FRAME.DW );
