@@ -2,6 +2,7 @@ package org.ayato.test;
 
 import org.ayato.animation.AnimationKeyButtons;
 import org.ayato.animation.AnimationList;
+import org.ayato.animation.AnimationMouseButtons;
 import org.ayato.animation.Properties;
 import org.ayato.system.*;
 import org.ayato.system.Component;
@@ -26,9 +27,13 @@ public class TestScene3 implements IBaseScene {
         animationList.add("LEMON", () -> System.out.println("LEMON"));
         animationList.add("aaa", () -> System.out.println("aaa"));
         animationList.add("bbb", () -> System.out.println("bbb"));
-
+/*
         AnimationKeyButtons<String, AnimationList<String, Properties<String>>> list =
                 new AnimationKeyButtons<>(animationList, 10, 50, 100, 50, Color.RED, Color.WHITE);
+
+ */
+        AnimationMouseButtons<String, AnimationList<String, Properties<String>>> list =
+                new AnimationMouseButtons<>(animationList, 10, 50, 100, 50, Color.RED, Color.WHITE);
 
         list.setVisible(true);
 

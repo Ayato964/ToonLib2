@@ -6,32 +6,22 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class AnimationKeyButtons<A, T extends AnimationList<A, Properties<A>>> implements KeyListener {
-    private final T list;
-    private boolean visible = false;
-    private int x, y, w, h;
-    private final LunchScene MASTER;
-    private Color selected, normal;
+public class AnimationKeyButtons<A, T extends AnimationList<A, Properties<A>>> extends AbstractAnimations<A, T> implements KeyListener {
+
     private int selectCount = 0;
     public AnimationKeyButtons(T list, int x, int y, int w, int h, Color ifSelectedColor, Color normalColor){
-        this.list = list;
-        this.x = x;
-        this.y = y;
-        this.w = w;
-        this.h = h;
-        MASTER = list.MASTER;
-        selected = ifSelectedColor;
-        normal = normalColor;
-        setup();
+        super(list, x, y, w, h, ifSelectedColor, normalColor);
     }
-    public void setVisible(boolean visible) {
-        this.visible = visible;
-        if(visible)
+
+    @Override
+    protected void visibleAction(boolean v) {
+        if(v)
             MASTER.FRAME.addKeyListener(this);
         else
             MASTER.FRAME.removeKeyListener(this);
     }
-    private void setup(){
+
+    protected void setup(){
         int one_height = (h * MASTER.FRAME.DH / list.length()) /MASTER.FRAME.DH;
         int count = 0;
         AnimationList<A, Properties<A>> n = list;

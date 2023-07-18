@@ -9,14 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.1.29&#10;&#10;Animation.java&#10;クラスをリニューアル">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationKeyButtons.java" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.1.37&#10;&#10;&#10;AnimationList.java&#10;Animationクラス専門の配列をリニューアル&#10;AnimationKeyButtons.java&#10;ボタン機能が追加された">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AbstractAnimations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationMouseButtons.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationKeyButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationKeyButtons.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/PropertyAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/PropertyAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,13 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686754309708</updated>
-    </task>
-    <task id="LOCAL-00084" summary="Build Update">
-      <created>1689106595159</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1689106595159</updated>
     </task>
     <task id="LOCAL-00085" summary="Build Update">
       <created>1689107123937</created>
@@ -521,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689666253214</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="Version.2.1.37&#10;&#10;&#10;AnimationList.java&#10;Animationクラス専門の配列をリニューアル&#10;AnimationKeyButtons.java&#10;ボタン機能が追加された">
+      <created>1689701082078</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1689701082078</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -536,7 +534,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version.0.2.0&#10;&#10;Setup.java&#10;で、宣言する専用システムである、 AnimationText.javaを作成した。&#10;String形式のアニメーションをGraphicsを通してWindowに表示する。" />
     <MESSAGE value="Version.0.2.5&#10;&#10;LangLoader.java&#10;言語変換システムの仮実装" />
     <MESSAGE value="Version.0.4.0&#10;&#10;Properties.java&#10;add the properties setting." />
     <MESSAGE value="Version.0.4.3&#10;&#10;Properties.ifView&#10;表示する条件を設定できるようになった。&#10;&#10;Event.java&#10;イベントを管理できるシステム。Event.EventCardと Inheriting.javaを組み合わせることで、&#10;イベントを通してデータの引継ぎが可能になる。" />
@@ -561,6 +558,7 @@
     <MESSAGE value="Version.2.1&#10;&#10;&#10;画像データに描画させる機能を実装" />
     <MESSAGE value="Version.2.1.24&#10;&#10;Animationクラスをリニューアル&#10;&#10;AnimationText.java&#10;AnimationImage.java&#10;の機能を廃止&#10;&#10;TextProperties.java&#10;ImageProperties.java&#10;の機能を廃止&#10;&#10;Animation&lt;T&gt;.javaと&#10;Properties&lt;T&gt;.java&#10;に統合され、管理するようになった" />
     <MESSAGE value="Version.2.1.29&#10;&#10;Animation.java&#10;クラスをリニューアル" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.2.1.29&#10;&#10;Animation.java&#10;クラスをリニューアル" />
+    <MESSAGE value="Version.2.1.37&#10;&#10;&#10;AnimationList.java&#10;Animationクラス専門の配列をリニューアル&#10;AnimationKeyButtons.java&#10;ボタン機能が追加された" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.2.1.37&#10;&#10;&#10;AnimationList.java&#10;Animationクラス専門の配列をリニューアル&#10;AnimationKeyButtons.java&#10;ボタン機能が追加された" />
   </component>
 </project>

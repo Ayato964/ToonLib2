@@ -108,7 +108,9 @@ public class Properties<T>{
     public int getH() {
         return h;
     }
-
+    public Properties<T> getInstance(){
+        return this;
+    }
 
     public <M extends Properties<T>> M copy() {
         Properties<T> t = this instanceof TextProperties
@@ -186,6 +188,11 @@ public class Properties<T>{
             properties.add(new Input(bx, by, bw, bh, stringConsumer));
             return this;
         }
+
+        @Override
+        public TextProperties getInstance() {
+            return this;
+        }
     }
 
     public static class ImageProperties extends Properties<ImageMaker> {
@@ -200,6 +207,11 @@ public class Properties<T>{
         }
         public ImageProperties ifView(BooleanSupplier how){
             booleanSupplier = how;
+            return this;
+        }
+
+        @Override
+        public ImageProperties getInstance() {
             return this;
         }
     }
