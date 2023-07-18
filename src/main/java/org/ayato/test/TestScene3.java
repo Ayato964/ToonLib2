@@ -1,5 +1,6 @@
 package org.ayato.test;
 
+import org.ayato.animation.AnimationKeyButtons;
 import org.ayato.animation.AnimationList;
 import org.ayato.animation.Properties;
 import org.ayato.system.*;
@@ -18,18 +19,18 @@ public class TestScene3 implements IBaseScene {
     public void setup(LunchScene scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
         AnimationList<String, Properties<String>> animationList = new AnimationList<>(scene, Component.get(this, "hello"),
-                Properties.ofText(0, 0).font(new Font("", Font.PLAIN, 32))
-                        .color(Color.RED), property -> System.out.println("hello"));
+                Properties.ofText().font(new Font("", Font.PLAIN, 32))
+                        .color(Color.RED), ()->System.out.println("hello"));
 
-        animationList.add(Component.get(this, "goto.image.test"), property -> scene.changeScene(new ImageTest()));
-        animationList.add("LEMON", property -> System.out.println("LEMON"));
-        animationList.add("aaa", property -> System.out.println("aaa"));
-        animationList.add("bbb", property -> System.out.println("bbb"));
+        animationList.add(Component.get(this, "goto.image.test"), () -> scene.changeScene(new ImageTest()));
+        animationList.add("LEMON", () -> System.out.println("LEMON"));
+        animationList.add("aaa", () -> System.out.println("aaa"));
+        animationList.add("bbb", () -> System.out.println("bbb"));
 
-        //AnimationMouseButtonList<AnimationList<?>> list = AnimationMouseButtonList.generate(animationList, 50, 50, 120, 30);
-      //  AnimationKeyButtonList<AnimationList<String>> list = AnimationKeyButtonList.generate(animationList, 50, 50, 60, 30);
-       // list.setVisible(true);
-        //list.setVisible(false);
+        AnimationKeyButtons<String, AnimationList<String, Properties<String>>> list =
+                new AnimationKeyButtons<>(animationList, 10, 50, 100, 50, Color.RED, Color.WHITE);
+
+        list.setVisible(true);
 
     }
 }

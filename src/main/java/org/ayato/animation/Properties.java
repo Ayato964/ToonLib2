@@ -4,6 +4,7 @@ import org.ayato.animation.image.ImageMaker;
 import org.ayato.animation.text.properties.*;
 import org.ayato.animation.text.properties.Button;
 import org.ayato.animation.text.properties.Frame;
+import org.ayato.system.LunchScene;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -27,27 +28,39 @@ public class Properties<T>{
         animation.displayAnimation = runAnimation;
     }
 
-
-    public  static Properties.TextProperties ofText(int x, int y){
+    public  static TextProperties ofText(){
+        return ofText(0, 0);
+    }
+    public  static TextProperties ofText(int x, int y){
         final TextProperties properties1 = new TextProperties();
         properties1.x = x;
         properties1.y = y;
-        properties1.runAnimation = (MASTER, g, o) -> g.drawString(o, properties1.x * MASTER.FRAME.DW, properties1.y * MASTER.FRAME.DH);
+        properties1.runAnimation = properties1.getTextAnimation();
+
         return properties1;
     }
+    public static Properties.ImageProperties ofImage(){
+        return ofImage(0, 0, 0, 0);
+    }
+
     public static Properties.ImageProperties ofImage(int x, int y, int w, int h){
         final ImageProperties properties1 =  new ImageProperties();
         properties1.x = x;
         properties1.y = y;
         properties1.w = w;
         properties1.h = h;
-        properties1.runAnimation = (MASTER, g, o) -> g.drawImage(o.getEditImage(),
-                properties1.x * MASTER.FRAME.DW, properties1.y * MASTER.FRAME.DH
-                , properties1.w * MASTER.FRAME.DW, properties1.h * MASTER.FRAME.DH, null);
+        properties1.runAnimation = properties1.getImageAnimation();
 
         return properties1;
     }
-
+    protected DisplayAnimation<String> getTextAnimation(){
+        return (MASTER, g, o) -> g.drawString(o, x * MASTER.FRAME.DW, y * MASTER.FRAME.DH);
+    }
+    protected DisplayAnimation<ImageMaker> getImageAnimation(){
+        return (MASTER, g, o)-> g.drawImage(o.getEditImage(),
+                x * MASTER.FRAME.DW, y * MASTER.FRAME.DH
+                , w * MASTER.FRAME.DW, h * MASTER.FRAME.DH, null);
+    }
 
     public void runProp(Graphics g){
         if(booleanSupplier != null) {
@@ -58,21 +71,69 @@ public class Properties<T>{
         for(IProperty<T> p : properties)
             p.runningProperty(g, this, animation);
     }
+    public Properties<T> setSize(int x, int y){
+        this.x = x;
+        this.y = y;
+        return this;
+    }
 
-    public void setX(int i) {
+    public Properties<T> setX(int i) {
         x = i;
+        return this;
+    }
+
+    public Properties<T> setY(int y) {
+        this.y = y;
+        return this;
+    }
+
+    public Properties<T> setW(int w) {
+        this.w = w;
+        return this;
+    }
+
+    public Properties<T> setH(int h) {
+        this.h = h;
+        return this;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getW() {
+        return w;
+    }
+
+    public int getH() {
+        return h;
+    }
+
+
+    public <M extends Properties<T>> M copy() {
+        Properties<T> t = this instanceof TextProperties
+                ? (Properties<T>) new TextProperties()
+                : (Properties<T>) new ImageProperties();
+        t.x = x;
+        t.y = y;
+        t.h = h;
+        t.w = w;
+        t.runAnimation = this instanceof TextProperties ? (DisplayAnimation<T>) t.getTextAnimation() : (DisplayAnimation<T>) t.getImageAnimation();
+
+        t.properties.addAll((Collection<? extends IProperty<T>>) properties.clone());
+        return (M) t;
     }
 
 
     public static class TextProperties extends Properties<String>{
 
         public TextProperties button(int bx, int by, int bw, int bh, Supplier<Color> def, Color bg, PropertyAction insert, PropertyAction action){
-            properties.add(new Frame(bx, by, bw, bh, def, bg));
+            properties.add(new Frame(()->bx, ()->by, bw, bh, def, bg));
             properties.add(new Button<>(bx, by, bw, bh, insert, action));
             return this;
         }
         public TextProperties button(int bw, int bh, Supplier<Color> def, Color bg, PropertyAction insert, PropertyAction action){
-            properties.add(new Frame(x, y, bw, bh, def, bg));
+            properties.add(new Frame(()->x, ()->y, bw, bh, def, bg));
             properties.add(new Button<>(x, y, bw, bh, insert, action));
             return this;
         }
@@ -102,11 +163,11 @@ public class Properties<T>{
             return this;
         }
         public TextProperties frame(int bx, int by, int bw, int bh, Supplier<Color> frameCol, Color backColor){
-            properties.add(0, new Frame(bx, by, bw, bh, frameCol, backColor));
+            properties.add(0, new Frame(()->bx, ()->by, bw, bh, frameCol, backColor));
             return this;
         }
         public TextProperties frame(int bw, int bh, Supplier<Color> frameCol, Color backColor){
-            properties.add(0, new Frame(x, y,bw, bh, frameCol, backColor));
+            properties.add(0, new Frame(()->x, ()->y,bw, bh, frameCol, backColor));
             return this;
         }
         public TextProperties talk(Object key, boolean stopAll, PropertyAction action, String ... strings){
@@ -125,18 +186,16 @@ public class Properties<T>{
             properties.add(new Input(bx, by, bw, bh, stringConsumer));
             return this;
         }
-
-        public Properties copy() {
-            Properties<String> properties1 = new Properties<>();
-            properties1.properties.addAll((Collection<? extends IProperty<String>>) properties.clone());
-            return properties1;
-        }
     }
 
     public static class ImageProperties extends Properties<ImageMaker> {
 
         public ImageProperties button(int bx, int by, int bw, int bh, PropertyAction insert, PropertyAction action){
-            properties.add(new Button(bx, by, bw, bh, insert, action));
+            properties.add(new Button<>(bx, by, bw, bh, insert, action));
+            return this;
+        }
+        public ImageProperties button(PropertyAction insert, PropertyAction action){
+            properties.add(new Button<>(x, y, w, h, insert, action));
             return this;
         }
         public ImageProperties ifView(BooleanSupplier how){
