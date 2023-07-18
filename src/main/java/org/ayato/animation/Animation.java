@@ -8,7 +8,6 @@ import java.util.function.BooleanSupplier;
 
 public class Animation<T> implements Display {
     protected T mes;
-    protected int x, y;
     public final LunchScene MASTER;
     protected Properties<?> properties;
     public BooleanSupplier bool;
@@ -46,21 +45,5 @@ public class Animation<T> implements Display {
 
     public T getViewObject() {
         return mes;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int i) {
-        x = i;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
     }
 }

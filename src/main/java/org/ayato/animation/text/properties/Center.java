@@ -6,7 +6,6 @@ import org.ayato.animation.Properties;
 import java.awt.*;
 
 public class Center implements IProperty<String>{
-    private int bx, by, bw, bh;
     private boolean isFirst = true;
     private int getTextWidth(Graphics g, String str){
         int w = 0;
@@ -22,7 +21,7 @@ public class Center implements IProperty<String>{
             isFirst = false;
             int windowCenter = text.MASTER.FRAME.DESCTOP_BOUNDS.width / 2;
             int textCenter = getTextWidth(g, text.getViewObject()) / 2;
-            text.setX((windowCenter - textCenter )/ text.MASTER.FRAME.DW);
+            properties.setX((windowCenter - textCenter )/ text.MASTER.FRAME.DW);
         }
     }
 }

@@ -17,11 +17,10 @@ public class Properties<T>{
     protected final ArrayList<IProperty<T>> properties;
     protected Animation<T> animation;
     protected BooleanSupplier booleanSupplier;
-    private final DisplayAnimation<T> runAnimation;
-    protected Properties(DisplayAnimation<T> runAnimation)
+    protected DisplayAnimation<T> runAnimation;
+    protected Properties()
     {
         properties = new ArrayList<>();
-        this.runAnimation = runAnimation;
     }
     public void addAnimation(Animation<T> text){
         animation = text;
@@ -30,13 +29,23 @@ public class Properties<T>{
 
 
     public  static Properties.TextProperties ofText(int x, int y){
-        TextProperties properties1 = new TextProperties((MASTER, g, o) -> g.drawString(o, x * MASTER.FRAME.DW, y * MASTER.FRAME.DH));
+        final TextProperties properties1 = new TextProperties();
         properties1.x = x;
         properties1.y = y;
+        properties1.runAnimation = (MASTER, g, o) -> g.drawString(o, properties1.x * MASTER.FRAME.DW, properties1.y * MASTER.FRAME.DH);
         return properties1;
     }
     public static Properties.ImageProperties ofImage(int x, int y, int w, int h){
-        return new ImageProperties((MASTER, g, o) -> g.drawImage(o.getEditImage(), x, y, w, h, null));
+        final ImageProperties properties1 =  new ImageProperties();
+        properties1.x = x;
+        properties1.y = y;
+        properties1.w = w;
+        properties1.h = h;
+        properties1.runAnimation = (MASTER, g, o) -> g.drawImage(o.getEditImage(),
+                properties1.x * MASTER.FRAME.DW, properties1.y * MASTER.FRAME.DH
+                , properties1.w * MASTER.FRAME.DW, properties1.h * MASTER.FRAME.DH, null);
+
+        return properties1;
     }
 
 
@@ -50,17 +59,21 @@ public class Properties<T>{
             p.runningProperty(g, this, animation);
     }
 
+    public void setX(int i) {
+        x = i;
+    }
 
 
     public static class TextProperties extends Properties<String>{
 
-        protected TextProperties(DisplayAnimation<String> runAnimation) {
-            super(runAnimation);
-        }
-
         public TextProperties button(int bx, int by, int bw, int bh, Supplier<Color> def, Color bg, PropertyAction insert, PropertyAction action){
             properties.add(new Frame(bx, by, bw, bh, def, bg));
             properties.add(new Button<>(bx, by, bw, bh, insert, action));
+            return this;
+        }
+        public TextProperties button(int bw, int bh, Supplier<Color> def, Color bg, PropertyAction insert, PropertyAction action){
+            properties.add(new Frame(x, y, bw, bh, def, bg));
+            properties.add(new Button<>(x, y, bw, bh, insert, action));
             return this;
         }
         public TextProperties center(){
@@ -69,6 +82,11 @@ public class Properties<T>{
         }
         public TextProperties centerFrame(int by, int bw, int bh, Supplier<Color> frameCol, Color backColor){
             properties.add(new CenterFrame(by, bw, bh, frameCol, backColor));
+            return this;
+        }
+
+        public TextProperties centerFrame(int bw, int bh, Supplier<Color> frameCol, Color backColor){
+            properties.add(new CenterFrame(y, bw, bh, frameCol, backColor));
             return this;
         }
         public TextProperties color(Color color){
@@ -85,6 +103,10 @@ public class Properties<T>{
         }
         public TextProperties frame(int bx, int by, int bw, int bh, Supplier<Color> frameCol, Color backColor){
             properties.add(0, new Frame(bx, by, bw, bh, frameCol, backColor));
+            return this;
+        }
+        public TextProperties frame(int bw, int bh, Supplier<Color> frameCol, Color backColor){
+            properties.add(0, new Frame(x, y,bw, bh, frameCol, backColor));
             return this;
         }
         public TextProperties talk(Object key, boolean stopAll, PropertyAction action, String ... strings){
@@ -105,16 +127,13 @@ public class Properties<T>{
         }
 
         public Properties copy() {
-            Properties<String> properties1 = new Properties<>((MASTER, g, o) -> g.drawString(o, x, y));
+            Properties<String> properties1 = new Properties<>();
             properties1.properties.addAll((Collection<? extends IProperty<String>>) properties.clone());
             return properties1;
         }
     }
 
     public static class ImageProperties extends Properties<ImageMaker> {
-        protected ImageProperties(DisplayAnimation<ImageMaker> runAnimation) {
-            super(runAnimation);
-        }
 
         public ImageProperties button(int bx, int by, int bw, int bh, PropertyAction insert, PropertyAction action){
             properties.add(new Button(bx, by, bw, bh, insert, action));
