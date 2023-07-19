@@ -31,4 +31,9 @@ public class CenterFrame implements IProperty<String> {
         g.drawRect(bx * text.MASTER.FRAME.DW, by * text.MASTER.FRAME.DH - g.getFontMetrics().getHeight(),
                 bw * text.MASTER.FRAME.DW, bh * text.MASTER.FRAME.DH);
     }
+
+    @Override
+    public void reset(int nx, int ny) {
+
+    }
 }

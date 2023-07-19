@@ -41,6 +41,12 @@ public class Input implements IProperty<String>, MouseListener, KeyListener {
     }
 
     @Override
+    public void reset(int nx, int ny) {
+        x = nx;
+        y = ny;
+    }
+
+    @Override
     public void mouseClicked(MouseEvent e) {
         if(e.getX() >= x && e.getX() <= x + w && e.getY() >= y - h && e.getY() <= y + h){
             ANIMATION.MASTER.FRAME.addKeyListener(this);

@@ -14,6 +14,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class Properties<T>{
+    public int mx, my;
     public int x, y, w, h;
     protected final ArrayList<IProperty<T>> properties;
     protected Animation<T> animation;
@@ -35,6 +36,8 @@ public class Properties<T>{
         final TextProperties properties1 = new TextProperties();
         properties1.x = x;
         properties1.y = y;
+        properties1.mx = x;
+        properties1.my = y;
         properties1.runAnimation = properties1.getTextAnimation();
 
         return properties1;
@@ -49,6 +52,8 @@ public class Properties<T>{
         properties1.y = y;
         properties1.w = w;
         properties1.h = h;
+        properties1.mx = x;
+        properties1.my = y;
         properties1.runAnimation = properties1.getImageAnimation();
 
         return properties1;
@@ -111,6 +116,13 @@ public class Properties<T>{
     public Properties<T> getInstance(){
         return this;
     }
+    public void reset(){
+        x = mx;
+        y = my;
+        for(IProperty<T> p : properties){
+            p.reset(mx, my);
+        }
+    }
 
     public <M extends Properties<T>> M copy() {
         Properties<T> t = this instanceof TextProperties
@@ -153,15 +165,45 @@ public class Properties<T>{
             return this;
         }
         public TextProperties color(Color color){
-            properties.add((g, properties1, text) -> g.setColor(color));
+            properties.add(new IProperty<String>() {
+                @Override
+                public void runningProperty(Graphics g, Properties<String> properties, Animation<String> animation) {
+                    g.setColor(color);
+                }
+
+                @Override
+                public void reset(int nx, int ny) {
+
+                }
+            });
             return this;
         }
         public TextProperties changeMessage(Supplier<String> str){
-            properties.add((g, properties1, text) -> animation.setViewObject(str.get()));
+            properties.add((new IProperty<String>() {
+                @Override
+                public void runningProperty(Graphics g, Properties<String> properties, Animation<String> animation) {
+                    animation.setViewObject(str.get());
+                }
+
+                @Override
+                public void reset(int nx, int ny) {
+
+                }
+            } ));
             return this;
         }
         public TextProperties font(Font font){
-            properties.add(0, ((g, properties1, text) -> g.setFont(font)));
+            properties.add(0, new IProperty<String>() {
+                @Override
+                public void runningProperty(Graphics g, Properties<String> properties, Animation<String> animation) {
+                    g.setFont(font);
+                }
+
+                @Override
+                public void reset(int nx, int ny) {
+
+                }
+            });
             return this;
         }
         public TextProperties frame(int bx, int by, int bw, int bh, Supplier<Color> frameCol, Color backColor){
@@ -177,7 +219,17 @@ public class Properties<T>{
             return this;
         }
         public TextProperties size(int size){
-            properties.add(((g, properties1, text) -> g.setFont(new Font("", Font.PLAIN, size))));
+            properties.add(new IProperty<String>() {
+                @Override
+                public void runningProperty(Graphics g, Properties<String> properties, Animation<String> animation) {
+                    g.setFont(new Font("", Font.PLAIN, size));
+                }
+
+                @Override
+                public void reset(int nx, int ny) {
+
+                }
+            });
             return this;
         }
         public TextProperties ifView(BooleanSupplier how){

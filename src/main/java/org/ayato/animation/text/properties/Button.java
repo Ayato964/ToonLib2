@@ -35,6 +35,12 @@ public class Button<T> implements IProperty<T>, MouseListener {
     }
 
     @Override
+    public void reset(int nx, int ny) {
+        bx = nx;
+        by = ny;
+    }
+
+    @Override
     public void mouseClicked(MouseEvent mouseEvent) {
         if(mouseEvent.getX() >= bx && mouseEvent.getX() <= bx + bw && mouseEvent.getY() >= by && mouseEvent.getY() <= by + bh){
             action.action(this);

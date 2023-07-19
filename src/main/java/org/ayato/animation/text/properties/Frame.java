@@ -34,4 +34,9 @@ public class Frame implements IProperty<String>{
         g.drawRect(bx.getAsInt() * text.MASTER.FRAME.DW, by.getAsInt() * text.MASTER.FRAME.DH  - g.getFontMetrics().getHeight(),
                 bw * text.MASTER.FRAME.DW, bh* text.MASTER.FRAME.DH);
     }
+
+    @Override
+    public void reset(int nx, int ny) {
+
+    }
 }

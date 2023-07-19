@@ -24,4 +24,9 @@ public class Center implements IProperty<String>{
             properties.setX((windowCenter - textCenter )/ text.MASTER.FRAME.DW);
         }
     }
+
+    @Override
+    public void reset(int nx, int ny) {
+
+    }
 }

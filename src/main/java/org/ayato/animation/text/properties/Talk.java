@@ -40,6 +40,12 @@ public class Talk implements IProperty<String>, KeyListener {
     }
 
     @Override
+    public void reset(int nx, int ny) {
+        count = 0;
+
+    }
+
+    @Override
     public void keyTyped(KeyEvent keyEvent) {
     }
 

@@ -8,4 +8,5 @@ import java.awt.*;
 public interface IProperty<T>{
 
     void runningProperty(Graphics g, Properties<T> properties,  Animation<T> animation);
+    void reset(int nx, int ny);
 }
