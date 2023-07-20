@@ -1,12 +1,7 @@
 {
-  "hello": "こんにちは!!!",
-  "excuse": "これはテストです！！",
-  "org.ayato.test.TestScene.hello":"これはテストです！！",
-  "org.ayato.test.TestScene2.hello":"変数は$です",
-  "org.ayato.test.TestScene2.mes1":"会話の1回目です",
-  "org.ayato.test.TestScene2.mes2":"会話の2回目です",
-  "org.ayato.test.TestScene2.valuetest":"You putted in $ and $",
-  "org.ayato.test.TestScene2.nextmap":"次のマップ",
-  "org.ayato.test.TestScene3.hello":"こんにちは",
-  "org.ayato.test.TestScene3.goto.image.test":"画像認識テストへ"
+  "org.ayato.test.TS1.factory":"ファクトリーアニメーションのテストへ",
+  "org.ayato.test.TS1.2":"テキストアニメーションのテストへ",
+  "org.ayato.main.TestMain.hello":"Hello World!!",
+  "org.ayato.test.AnimationFactory.c1":"FactoryTest"
+
 }

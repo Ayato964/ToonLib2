@@ -7,17 +7,22 @@ import org.ayato.system.Component;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Arrays;
 
 public class Talk implements IProperty<String>, KeyListener {
     int count = 0;
     String[] mes;
     KeyListener[] listeners;
-    private boolean stopEveryEvent, isFirst = true;
+    private final boolean stopEveryEventPercent;
+    private boolean stopEveryEvent;
+    private boolean isFirst = false;
     private Animation<String> ANIMATION;
     private Object percent;
     private PropertyAction action;
     public Talk(String[] strings, Object percent, boolean stopEveryEvent, PropertyAction action) {
         mes =strings;
+        System.out.println(Arrays.toString(mes));
+        stopEveryEventPercent = stopEveryEvent;
         this.percent = percent;
         this.action = action;
         this.stopEveryEvent = stopEveryEvent;
@@ -35,6 +40,7 @@ public class Talk implements IProperty<String>, KeyListener {
         if(isFirst){
             isFirst = false;
             ANIMATION = text;
+            text.setViewObject(Component.get(percent, mes[0]));
             text.MASTER.FRAME.addKeyListener(this);
         }
     }
@@ -42,6 +48,8 @@ public class Talk implements IProperty<String>, KeyListener {
     @Override
     public void reset(int nx, int ny) {
         count = 0;
+        isFirst = true;
+        stopEveryEvent = stopEveryEventPercent;
 
     }
 
@@ -52,20 +60,20 @@ public class Talk implements IProperty<String>, KeyListener {
     @Override
     public void keyPressed(KeyEvent keyEvent) {
         if(keyEvent.getKeyCode() == KeyEvent.VK_ENTER || keyEvent.getKeyCode() == KeyEvent.VK_SPACE){
-            if(count < mes.length){
-                ANIMATION.setViewObject(Component.get(percent, mes[count]));
+            if(count < mes.length - 1 ){
                 count ++;
+                ANIMATION.setViewObject(Component.get(percent, mes[count]));
+
             }else{
                 ANIMATION.MASTER.SCENE.removeDisplay(ANIMATION);
-                ANIMATION.MASTER.FRAME.removeKeyListener(this);
                 for(KeyListener l : listeners) ANIMATION.MASTER.FRAME.addKeyListener(l);
+                ANIMATION.MASTER.FRAME.removeKeyListener(this);
                 if(action != null)
                     action.action(this);
 
             }
         }
     }
-
     @Override
     public void keyReleased(KeyEvent keyEvent) {
 

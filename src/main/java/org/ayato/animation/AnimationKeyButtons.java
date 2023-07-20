@@ -29,7 +29,7 @@ public class AnimationKeyButtons<A, T extends AnimationList<A, Properties<A>>> e
             final int c = count;
             ((Properties.TextProperties)n.getProperties()).ifView(()->visible).frame(w, one_height,
                     ()->c == selectCount ? selected : normal , Color.GRAY);
-            Animation.create(MASTER, n.getNode(), n.getProperties().setSize(x, y + count * one_height));
+            Animation.create(MASTER, n.getNode(), n.getProperties().setSize(x, y + count * one_height), true);
             count ++;
             n =  n.next();
         }
@@ -46,7 +46,7 @@ public class AnimationKeyButtons<A, T extends AnimationList<A, Properties<A>>> e
         switch (e.getKeyCode()){
             case KeyEvent.VK_UP : if(selectCount > 0) selectCount --; else selectCount = list.length() - 1; break;
             case KeyEvent.VK_DOWN:if(selectCount < list.length() -1) selectCount ++; else selectCount = 0; break;
-            case KeyEvent.VK_ENTER:list.get(selectCount).drawAction();break;
+            case KeyEvent.VK_ENTER:list.get(selectCount).drawAction();MASTER.FRAME.removeKeyListener(this);break;
         }
     }
 

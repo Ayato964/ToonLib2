@@ -16,7 +16,7 @@ public class AnimationMouseButtons<A, T extends AnimationList<A, Properties<A>>>
         T node = list;
         while (node != null) {
             final T n = node;
-            Animation.create(MASTER, node.getNode(), node.getProperties().setSize(x, y + count * MASTER.FRAME.DH));
+            Animation.create(MASTER, node.getNode(), node.getProperties().setSize(x, y + count * MASTER.FRAME.DH), true);
             ((Properties.TextProperties) node.getProperties())
                     .ifView(()->visible)
                     .button(w, one_height, ()-> selected, normal, null, property ->  n.drawAction());

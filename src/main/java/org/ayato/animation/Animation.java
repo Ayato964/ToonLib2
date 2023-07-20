@@ -17,16 +17,20 @@ public class Animation<T> implements Display {
         MASTER = master;
         this.bool = bool;
     }
-    public static <T> Animation<T> create(LunchScene scene, T t, Properties<T> properties){
+    public static <T> Animation<T> create(LunchScene scene, T t, Properties<T> properties, boolean isViewThisScene){
         Animation<T> i = new Animation<>(scene, ()->true);
         i.mes = t;
         if(properties != null) {
             i.properties = properties;
             properties.addAnimation(i);
         }
-
-        scene.SCENE.addDisplay(i);
+        if(isViewThisScene)
+            scene.SCENE.addDisplay(i);
         return i;
+    }
+    public void drawThisScene(){
+        properties.reset();
+        MASTER.SCENE.addDisplay(this);
     }
 
     @Override

@@ -9,16 +9,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.2&#10;&#10;Animationクラスをリニューアル&#10;&#10;AnimationText.java&#10;AnimationImage.java&#10;の機能を廃止&#10;&#10;TextProperties.java&#10;ImageProperties.java&#10;の機能を廃止&#10;&#10;Animation&lt;T&gt;.javaと&#10;Properties&lt;T&gt;.java&#10;に統合され、管理するようになった&#10;&#10;Animation.java&#10;クラスをリニューアル&#10;&#10;AnimationList.java&#10;Animationクラス専門の配列をリニューアル&#10;AnimationKeyButtons.java&#10;ボタン機能が追加された&#10;&#10;AnimationMouseButtons.java&#10;マウスのボタン機能が追加">
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.2.9&#10;&#10;Properties.java&#10;リセット機能を追加">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/RegistoryList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/RegistoryObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/FactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TS1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TS2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Center.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Center.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/CenterFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/CenterFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Animation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationKeyButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationKeyButtons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationMouseButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationMouseButtons.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Talk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Talk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/DisplayThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/DisplayThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestScene3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/en_us.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/lang/ja_jp.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,13 +188,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686754309708</updated>
-    </task>
-    <task id="LOCAL-00087" summary="Build Update">
-      <created>1689107758867</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1689107758867</updated>
     </task>
     <task id="LOCAL-00088" summary="Build Update">
       <created>1689107845903</created>
@@ -522,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689724912745</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="Version.2.2.9&#10;&#10;Properties.java&#10;リセット機能を追加">
+      <created>1689802504969</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1689802504969</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -537,7 +547,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version.0.4.3&#10;&#10;Properties.ifView&#10;表示する条件を設定できるようになった。&#10;&#10;Event.java&#10;イベントを管理できるシステム。Event.EventCardと Inheriting.javaを組み合わせることで、&#10;イベントを通してデータの引継ぎが可能になる。" />
     <MESSAGE value="Version.0.4.4&#10;&#10;Properties.changeMessage&#10;メッセージの内容を書き換えることができるようになった。" />
     <MESSAGE value="Version.0.4.5&#10;&#10;Input.java&#10;プレイヤーから文字入力を受け付ける機能を追加した。" />
     <MESSAGE value="Version.0.4.5&#10;&#10;&#10;AnimationList.java&#10;AnimationTextに関するオブジェクトをリスト化する。&#10;&#10;AnimationMouseButtonList.java&#10;AnimationList.javaに基づき、リスト構造を可視化。&#10;また、マウスのボタンに反応する。" />
@@ -562,6 +571,7 @@
     <MESSAGE value="Version.2.1.37&#10;&#10;&#10;AnimationList.java&#10;Animationクラス専門の配列をリニューアル&#10;AnimationKeyButtons.java&#10;ボタン機能が追加された" />
     <MESSAGE value="Version.2.1.43&#10;&#10;&#10;AnimationMouseButtons.java&#10;マウスのボタン機能が追加" />
     <MESSAGE value="Version.2.2&#10;&#10;Animationクラスをリニューアル&#10;&#10;AnimationText.java&#10;AnimationImage.java&#10;の機能を廃止&#10;&#10;TextProperties.java&#10;ImageProperties.java&#10;の機能を廃止&#10;&#10;Animation&lt;T&gt;.javaと&#10;Properties&lt;T&gt;.java&#10;に統合され、管理するようになった&#10;&#10;Animation.java&#10;クラスをリニューアル&#10;&#10;AnimationList.java&#10;Animationクラス専門の配列をリニューアル&#10;AnimationKeyButtons.java&#10;ボタン機能が追加された&#10;&#10;AnimationMouseButtons.java&#10;マウスのボタン機能が追加" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.2.2&#10;&#10;Animationクラスをリニューアル&#10;&#10;AnimationText.java&#10;AnimationImage.java&#10;の機能を廃止&#10;&#10;TextProperties.java&#10;ImageProperties.java&#10;の機能を廃止&#10;&#10;Animation&lt;T&gt;.javaと&#10;Properties&lt;T&gt;.java&#10;に統合され、管理するようになった&#10;&#10;Animation.java&#10;クラスをリニューアル&#10;&#10;AnimationList.java&#10;Animationクラス専門の配列をリニューアル&#10;AnimationKeyButtons.java&#10;ボタン機能が追加された&#10;&#10;AnimationMouseButtons.java&#10;マウスのボタン機能が追加" />
+    <MESSAGE value="Version.2.2.9&#10;&#10;Properties.java&#10;リセット機能を追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.2.2.9&#10;&#10;Properties.java&#10;リセット機能を追加" />
   </component>
 </project>

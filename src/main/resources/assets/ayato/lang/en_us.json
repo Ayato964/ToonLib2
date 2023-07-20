@@ -1,12 +1,10 @@
 {
-  "hello": "HelloEveryOne!!!",
-  "excuse": "ASASS",
-  "org.ayato.test.TestScene.hello":"This is a test!!",
-  "org.ayato.test.TestScene2.hello":"This is a Test Scene of two",
-  "org.ayato.test.TestScene2.mes1":"This is first communication",
-  "org.ayato.test.TestScene2.mes2":"This is second communication",
-  "org.ayato.test.TestScene2.valuetest":"You putted in $ and $",
-  "org.ayato.test.TestScene2.nextmap":"Next Map",
-  "org.ayato.test.TestScene3.hello":"Hello!!",
-  "org.ayato.test.TestScene3.goto.image.test":"Go to the Image Test"
+  "org.ayato.test.TS1.factory":"Go to the Factory Text Animation Test",
+  "org.ayato.test.TS1.2":"Go to the Text Animation Test",
+  "org.ayato.main.TestMain.hello":"Hello World!!",
+  "org.ayato.test.AnimationFactory.c1":"FactoryTest",
+  "org.ayato.test.AnimationFactory.1":"1conv",
+  "org.ayato.test.AnimationFactory.2":"2conv",
+  "org.ayato.test.AnimationFactory.3":"3conv",
+  "org.ayato.test.AnimationFactory.4":"4conv"
 }

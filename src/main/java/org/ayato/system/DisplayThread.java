@@ -52,18 +52,18 @@ public class DisplayThread {
         endTask.add(supplier);
     }
     public void removeDisplay(Display display){
-        System.out.println(display);
-        System.out.println(displays.get(1));
         for(int i = 0; i < displays.size(); i ++)
             if(display.equals(displays.get(i))) {
                 displays.remove(i);
             }
 
     }
+    public void removeDisplayAll(){
+
+    }
     public void removeDisplayClass(Class<?> cls){
         for(int i = 0; i < displays.size(); i ++){
             if(displays.get(i).getClass() == cls){
-                System.out.println("remove animation text");
                 displays.remove(i);
                 i = -1;
             }
