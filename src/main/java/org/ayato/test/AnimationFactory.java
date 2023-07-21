@@ -21,7 +21,9 @@ public class AnimationFactory {
                     "c1");
     public static final RegistoryObject<Animation<String>> CONV2 =
             CONV.create(Animation.create(TestMain.MASTER1, "",
-                    Properties.ofText(100, 100).talk(THIS, true, property -> System.out.println("SSSS"), "2", "3", "4"),
+                    Properties.ofText(100, 100).talk(THIS, true, property -> System.out.println("SSSS"),
+                            ()->Component.get(THIS, "1"),()->Component.get(THIS, "2"),
+                            ()->Component.get(THIS, "3"),()->Component.get(THIS, "4")),
                     false
             ), "c2");
 

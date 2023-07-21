@@ -8,10 +8,11 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Arrays;
+import java.util.function.Supplier;
 
 public class Talk implements IProperty<String>, KeyListener {
     int count = 0;
-    String[] mes;
+    Supplier<String>[] mes;
     KeyListener[] listeners;
     private final boolean stopEveryEventPercent;
     private boolean stopEveryEvent;
@@ -19,7 +20,7 @@ public class Talk implements IProperty<String>, KeyListener {
     private Animation<String> ANIMATION;
     private Object percent;
     private PropertyAction action;
-    public Talk(String[] strings, Object percent, boolean stopEveryEvent, PropertyAction action) {
+    public Talk(Supplier<String>[] strings, Object percent, boolean stopEveryEvent, PropertyAction action) {
         mes =strings;
         System.out.println(Arrays.toString(mes));
         stopEveryEventPercent = stopEveryEvent;
@@ -40,7 +41,7 @@ public class Talk implements IProperty<String>, KeyListener {
         if(isFirst){
             isFirst = false;
             ANIMATION = text;
-            text.setViewObject(Component.get(percent, mes[0]));
+            text.setViewObject(mes[0].get());
             text.MASTER.FRAME.addKeyListener(this);
         }
     }
@@ -62,7 +63,7 @@ public class Talk implements IProperty<String>, KeyListener {
         if(keyEvent.getKeyCode() == KeyEvent.VK_ENTER || keyEvent.getKeyCode() == KeyEvent.VK_SPACE){
             if(count < mes.length - 1 ){
                 count ++;
-                ANIMATION.setViewObject(Component.get(percent, mes[count]));
+                ANIMATION.setViewObject(mes[count].get());
 
             }else{
                 ANIMATION.MASTER.SCENE.removeDisplay(ANIMATION);

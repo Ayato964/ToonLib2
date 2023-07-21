@@ -214,7 +214,7 @@ public class Properties<T>{
             properties.add(0, new Frame(()->x, ()->y,bw, bh, frameCol, backColor));
             return this;
         }
-        public TextProperties talk(Object key, boolean stopAll, PropertyAction action, String ... strings){
+        public TextProperties talk(Object key, boolean stopAll, PropertyAction action, Supplier<String> ... strings){
             properties.add( new Talk(strings, key, stopAll, action));
             return this;
         }
