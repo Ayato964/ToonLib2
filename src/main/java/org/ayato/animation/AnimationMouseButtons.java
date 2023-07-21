@@ -4,8 +4,8 @@ import java.awt.*;
 
 public class AnimationMouseButtons<A, T extends AnimationList<A, Properties<A>>> extends  AbstractAnimations<A, T>{
 
-    public AnimationMouseButtons(T list, int x, int y, int w, int h, Color ifSelectedColor, Color normalColor) {
-        super(list, x, y, w, h, ifSelectedColor, normalColor);
+    public AnimationMouseButtons(T list, int x, int y, int w, int h, Color ifSelectedColor, Color normalColor, Color bgC) {
+        super(list, x, y, w, h, ifSelectedColor, normalColor, bgC);
     }
 
 
@@ -19,7 +19,7 @@ public class AnimationMouseButtons<A, T extends AnimationList<A, Properties<A>>>
             Animation.create(MASTER, node.getNode(), node.getProperties().setSize(x, y + count * MASTER.FRAME.DH), true);
             ((Properties.TextProperties) node.getProperties())
                     .ifView(()->visible)
-                    .button(w, one_height, ()-> selected, normal, null, property ->  n.drawAction());
+                    .button(w, one_height, ()-> selected, bgColor, null, property ->  n.drawAction());
 
             node = (T) node.next();
             count ++;

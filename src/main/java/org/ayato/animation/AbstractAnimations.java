@@ -9,9 +9,9 @@ public abstract class AbstractAnimations<A, T extends AnimationList<A, Propertie
     protected boolean visible = false;
     protected int x, y, w, h;
     protected final LunchScene MASTER;
-    protected Color selected, normal;
+    protected Color selected, normal, bgColor;
 
-    public AbstractAnimations(T list, int x, int y, int w, int h, Color ifSelectedColor, Color normalColor){
+    public AbstractAnimations(T list, int x, int y, int w, int h, Color ifSelectedColor, Color normalColor, Color bgCol){
         this.list = list;
         this.x = x;
         this.y = y;
@@ -20,6 +20,7 @@ public abstract class AbstractAnimations<A, T extends AnimationList<A, Propertie
         MASTER = list.MASTER;
         selected = ifSelectedColor;
         normal = normalColor;
+        bgColor = bgCol;
         setup();
     }
     public void setVisible(boolean visible) {
