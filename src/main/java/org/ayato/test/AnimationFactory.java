@@ -16,11 +16,11 @@ public class AnimationFactory {
             RegistoryList.create(TestMain.MASTER1, "test");
 
     public static final RegistoryObject<Animation<String>> CONV1 =
-            CONV.create(Animation.create(TestMain.MASTER1, Component.get(THIS, "c1"),
+            CONV.create(()-> Animation.create(TestMain.MASTER1, Component.get(THIS, "c1"),
                             Properties.ofText(20, 20).color(Color.WHITE).size(40), false),
                     "c1");
     public static final RegistoryObject<Animation<String>> CONV2 =
-            CONV.create(Animation.create(TestMain.MASTER1, "",
+            CONV.create(()->Animation.create(TestMain.MASTER1, "",
                     Properties.ofText(100, 100).talk(THIS, true, property -> System.out.println("SSSS"),
                             ()->Component.get(THIS, "1"),()->Component.get(THIS, "2"),
                             ()->Component.get(THIS, "3"),()->Component.get(THIS, "4")),

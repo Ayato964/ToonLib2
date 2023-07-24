@@ -1,6 +1,7 @@
 package org.ayato.system;
 
 import java.util.ArrayList;
+import java.util.function.Supplier;
 
 public class RegistoryList<T> {
     private final ArrayList<RegistoryObject<T>> LIST = new ArrayList<>();
@@ -13,7 +14,7 @@ public class RegistoryList<T> {
     public static <A> RegistoryList<A> create(LunchScene MASTER, String base_id){
         return new RegistoryList<>(MASTER, base_id);
     }
-    public RegistoryObject<T> create(T t, String sub_id){
+    public RegistoryObject<T> create(Supplier<T> t, String sub_id){
         String id = BASE_ID + "." +  sub_id;
         RegistoryObject<T> c = RegistoryObject.create(t, id);
         LIST.add(c);
