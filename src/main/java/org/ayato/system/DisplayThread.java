@@ -27,22 +27,25 @@ public class DisplayThread {
     private void run(){
         while (isExecute){
             //System.out.println("Hello World");
-            for(Display d : displays)d.display(MASTER.GRAPHIC);
+            synchronized (displays) {
+                for (Display d : displays) d.display(MASTER.GRAPHIC);
 
-            MASTER.FRAME.repaint();
+                MASTER.FRAME.repaint();
 
 
-            if(sup != null)
-                sup.action();
+                if (sup != null)
+                    sup.action();
 
-            try {
-                Thread.sleep(20);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                try {
+                    Thread.sleep(20);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
-
-            for (VoidSupplier v : endTask) v.action();
-            endTask.clear();
+            synchronized (endTask) {
+                for (VoidSupplier v : endTask) v.action();
+                endTask.clear();
+            }
         }
     }
     public void addDisplay(Display display){
