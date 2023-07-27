@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.3.11&#10;&#10;RegistoryObject.java&#10;の仕様を変更">
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.4.3&#10;&#10;Event.java&#10;の仕様を変更">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/DisplayThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/DisplayThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,13 +172,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686754309708</updated>
-    </task>
-    <task id="LOCAL-00093" summary="Build Update">
-      <created>1689124559949</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1689124559949</updated>
     </task>
     <task id="LOCAL-00094" summary="Build Update">
       <created>1689125556924</created>
@@ -516,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690225358185</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="Version.2.4.3&#10;&#10;Event.java&#10;の仕様を変更">
+      <created>1690472464585</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1690472464585</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -531,7 +531,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version.0.5.0&#10;&#10;&#10;CenterFrame.java&#10;ウィンドウを軸にフレームを中央ぞろえする&#10;&#10;AnimationKeyButtonList.java&#10;AnimationKeyButtonList.setVisibleで変更しても反映されなかった不具合を修正。" />
     <MESSAGE value="Version0.5.1" />
     <MESSAGE value="Version0.5.2&#10;&#10;Windowのサイズを自由に変更できるようになった。" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.github/workflows/gradle-publish.yml&#10;#&#9;.idea/workspace.xml" />
@@ -556,6 +555,7 @@
     <MESSAGE value="Version.2.3.5&#10;&#10;&#10;Talk.java&#10;で、変数が反映されない不具合を修正。" />
     <MESSAGE value="Version.2.3.11&#10;&#10;AnimationMouseButtons.java&#10;でのバックグラウンドの色を変えられるようにした。" />
     <MESSAGE value="Version.2.3.11&#10;&#10;RegistoryObject.java&#10;の仕様を変更" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.2.3.11&#10;&#10;RegistoryObject.java&#10;の仕様を変更" />
+    <MESSAGE value="Version.2.4.3&#10;&#10;Event.java&#10;の仕様を変更" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.2.4.3&#10;&#10;Event.java&#10;の仕様を変更" />
   </component>
 </project>

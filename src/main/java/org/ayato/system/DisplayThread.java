@@ -46,7 +46,9 @@ public class DisplayThread {
         }
     }
     public void addDisplay(Display display){
-        displays.add(display);
+        synchronized (displays) {
+            displays.add(display);
+        }
     }
     public void addEndTask(VoidSupplier supplier){
         endTask.add(supplier);
