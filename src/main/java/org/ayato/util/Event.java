@@ -41,6 +41,7 @@ public class Event {
         public void clear(){
             event = true;
         }
+        public void setEvent(boolean b){event = b;}
         public boolean getEvent(){
             return event;
         }
