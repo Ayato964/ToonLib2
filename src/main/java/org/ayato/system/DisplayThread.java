@@ -4,20 +4,21 @@ import org.ayato.util.Display;
 import org.ayato.util.VoidSupplier;
 
 import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class DisplayThread {
     private boolean isExecute = true;
     private final Thread thread;
     private final VoidSupplier sup;
-    private final ArrayList<Display> displays;
+    private final CopyOnWriteArrayList<Display> displays;
     private final LunchScene MASTER;
-    private final ArrayList<VoidSupplier> endTask;
+    private final CopyOnWriteArrayList<VoidSupplier> endTask;
     private DisplayThread(VoidSupplier voidSupplier, LunchScene scene){
         thread = new Thread(this::run);
         sup = voidSupplier;
-        displays = new ArrayList<>();
+        displays = new CopyOnWriteArrayList<>();
         MASTER = scene;
-        endTask = new ArrayList<>();
+        endTask = new CopyOnWriteArrayList<>();
     }
     public static DisplayThread runThread(VoidSupplier supplier, LunchScene scene){
         DisplayThread t = new DisplayThread(supplier, scene);
@@ -26,26 +27,23 @@ public class DisplayThread {
     }
     private void run(){
         while (isExecute){
-            //System.out.println("Hello World");
-            synchronized (displays) {
-                for (Display d : displays) d.display(MASTER.GRAPHIC);
+        //System.out.println("Hello World");
+            for (Display d : displays) d.display(MASTER.GRAPHIC);
 
-                MASTER.FRAME.repaint();
+            MASTER.FRAME.repaint();
 
 
-                if (sup != null)
-                    sup.action();
+            if (sup != null)
+                sup.action();
 
-                try {
-                    Thread.sleep(20);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+            try {
+                Thread.sleep(20);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
             }
-            synchronized (endTask) {
-                for (VoidSupplier v : endTask) v.action();
-                endTask.clear();
-            }
+
+            for (VoidSupplier v : endTask) v.action();
+            endTask.clear();
         }
     }
     public void addDisplay(Display display){
