@@ -9,32 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.4.12&#10;&#10;DisplayThread&#10;の致命的なエラーを修正。">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/ImageProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/PropertiesComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.4.37&#10;&#10;Animation.javaと Properties.javaの大幅な仕様変更。">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/RectProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AbstractAnimations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AbstractAnimations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Animation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationKeyButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationKeyButtons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationMouseButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationMouseButtons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/DisplayAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/DisplayAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Center.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Center.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/CenterFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/CenterFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/PropertyAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/PropertyAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Talk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Talk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/FactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/FactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TS1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TS1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationComponent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +40,8 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -98,6 +79,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.ayato.main" />
       <recent name="org.ayato.system.properties" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -109,6 +91,19 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.ayato.main.Main" />
       <module name="ToonLib.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.ayato.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ayato.main.MyClass" />
+      <module name="ToonLib2.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.ayato.main.*" />
@@ -178,6 +173,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="アプリケーション.MyClass" />
         <item itemvalue="アプリケーション.TestMain" />
         <item itemvalue="Gradle.ToonLib [jar]" />
         <item itemvalue="Gradle.ToonLib2 [publish]" />
@@ -193,13 +189,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1686754309708</updated>
-    </task>
-    <task id="LOCAL-00097" summary="Build Update">
-      <created>1689126329878</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1689126329878</updated>
     </task>
     <task id="LOCAL-00098" summary="Build Update">
       <created>1689126657134</created>
@@ -537,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690496115199</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="Version.2.4.37&#10;&#10;Animation.javaと Properties.javaの大幅な仕様変更。">
+      <created>1691975904352</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1691975904352</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -552,7 +548,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Build Update" />
     <MESSAGE value="Version.2.0&#10;&#10;Background.javaをリニューアル" />
     <MESSAGE value="Version.2.0.27&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
     <MESSAGE value="Version.2.0.36&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
@@ -577,6 +572,7 @@
     <MESSAGE value="Version.2.4.6&#10;&#10;DisplayThread&#10;の致命的なエラーを修正。" />
     <MESSAGE value="Version.2.4.9&#10;&#10;DisplayThread&#10;の致命的なエラーを修正。" />
     <MESSAGE value="Version.2.4.12&#10;&#10;DisplayThread&#10;の致命的なエラーを修正。" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.2.4.12&#10;&#10;DisplayThread&#10;の致命的なエラーを修正。" />
+    <MESSAGE value="Version.2.4.37&#10;&#10;Animation.javaと Properties.javaの大幅な仕様変更。" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.2.4.37&#10;&#10;Animation.javaと Properties.javaの大幅な仕様変更。" />
   </component>
 </project>

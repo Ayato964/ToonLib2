@@ -8,6 +8,7 @@ import java.awt.*;
 
 public class AnimationComponent {
     public static AObject<String> ofText(String str){
+
         return new AObject<>(str) {
             @Override
             public void run(LunchScene MASTER, Properties prop, Graphics g, String o) {
@@ -26,15 +27,17 @@ public class AnimationComponent {
             }
         };
     }
-    /*
+
     public static AObject<VoidSupplier> ofRect(){
-        return new AObject<>(null) {
+        return  new AObject<>(null) {
             @Override
-            public void run(LunchScene MASTER, Properties prop, Graphics g, VoidSupplier o) {
+            public void run(LunchScene MASTER, Properties p, Graphics g, VoidSupplier o) {
+                RectProperties prop = (RectProperties) p;
                 g.drawRect(prop.x, prop.y, prop.w, prop.h);
             }
         };
     }
+    /*
 
     public static AObject<VoidSupplier> ofLine(){
         return new AObject<>(null) {
@@ -46,6 +49,8 @@ public class AnimationComponent {
     }
 
      */
+
+
 
     public static  <T> AObject<T> ofCustom(T t, DisplayAnimation<T> run){
         return new AObject<>(t) {
