@@ -5,8 +5,8 @@ import org.ayato.animation.Animation;
 
 import java.awt.*;
 
-public interface IProperty<T>{
+public interface IProperty{
 
-    void runningProperty(Graphics g, Properties<T> properties,  Animation<T> animation);
+    void runningProperty(Graphics g, Properties properties,  Animation<?> animation);
     void reset(int nx, int ny);
 }

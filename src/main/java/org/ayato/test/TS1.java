@@ -1,9 +1,6 @@
 package org.ayato.test;
 
-import org.ayato.animation.AnimationKeyButtons;
-import org.ayato.animation.AnimationList;
-import org.ayato.animation.Properties;
-import org.ayato.system.Background;
+import org.ayato.animation.*;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
 import org.ayato.util.IBaseScene;
@@ -20,15 +17,14 @@ public class TS1 implements IBaseScene {
     @Override
     public void setup(LunchScene scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
-        AnimationList<String, Properties<String>> alist =
-                new AnimationList<>(scene, Component.get(this, "factory"),
-                        Properties.ofText().font(new Font("", Font.PLAIN, 32)),
-                        ()-> scene.changeScene(new FactoryTest())
-                        );
+        AnimationList<String, Properties> alist =
+                new AnimationList<>(scene,
+                        PropertiesComponent.ofText().font(new Font("", Font.PLAIN, 32)));
 
-        alist.add(Component.get(this, "2"), ()->scene.changeScene(new TS2()));
+        alist.add(AnimationComponent.ofText(Component.get(this, "factory")), ()-> scene.changeScene(new FactoryTest()));
+        alist.add(AnimationComponent.ofText(Component.get(this, "2")), ()->scene.changeScene(new TS2()));
 
-        AnimationKeyButtons<String, AnimationList<String, Properties<String>>> list =
+        AnimationKeyButtons<String, AnimationList<String, Properties>> list =
                 new AnimationKeyButtons<>(alist, 20, 20, 100, 50, Color.RED, Color.WHITE, new Color(127, 127, 127, 80));
         list.setVisible(true);
 

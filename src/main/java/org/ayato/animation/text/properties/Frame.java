@@ -9,7 +9,7 @@ import java.util.function.IntFunction;
 import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 
-public class Frame implements IProperty<String>{
+public class Frame implements IProperty{
     IntSupplier bx, by;
     int bw, bh;
     Color backCol;
@@ -26,7 +26,7 @@ public class Frame implements IProperty<String>{
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties<String> properties, Animation<String> text){
+    public void runningProperty(Graphics g, Properties properties, Animation<?> text){
         g.setColor(backCol);
         g.fillRect(bx.getAsInt() * text.MASTER.FRAME.DW, by.getAsInt() * text.MASTER.FRAME.DH  - g.getFontMetrics().getHeight(),
                 bw * text.MASTER.FRAME.DW, bh* text.MASTER.FRAME.DH);

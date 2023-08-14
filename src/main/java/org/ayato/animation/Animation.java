@@ -7,17 +7,16 @@ import java.awt.*;
 import java.util.function.BooleanSupplier;
 
 public class Animation<T> implements Display {
-    protected T mes;
+    protected AObject<T> mes;
     public final LunchScene MASTER;
-    protected Properties<?> properties;
+    protected Properties properties;
     public BooleanSupplier bool;
-    public DisplayAnimation<T> displayAnimation;
 
     protected Animation(LunchScene master, BooleanSupplier bool){
         MASTER = master;
         this.bool = bool;
     }
-    public static <T> Animation<T> create(LunchScene scene, T t, Properties<T> properties, boolean isViewThisScene){
+    public static <T> Animation<T> create(LunchScene scene, AObject<T> t, Properties properties, boolean isViewThisScene){
         Animation<T> i = new Animation<>(scene, ()->true);
         i.mes = t;
         if(properties != null) {
@@ -38,16 +37,16 @@ public class Animation<T> implements Display {
         if(bool.getAsBoolean()) {
             if (properties != null)
                 properties.runProp(g);
-            if(mes != null && displayAnimation != null)
-                displayAnimation.run(MASTER, g, mes);
+            if(mes != null)
+                mes.run(MASTER, properties, g, mes.getOBJECT());
         }
     }
 
     public void setViewObject(T mes) {
-        this.mes = mes;
+        this.mes.setOBJECT(mes);
     }
 
     public T getViewObject() {
-        return mes;
+        return mes.getOBJECT();
     }
 }

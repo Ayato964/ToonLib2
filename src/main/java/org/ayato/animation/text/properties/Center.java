@@ -5,7 +5,7 @@ import org.ayato.animation.Properties;
 
 import java.awt.*;
 
-public class Center implements IProperty<String>{
+public class Center implements IProperty{
     private boolean isFirst = true;
     private int getTextWidth(Graphics g, String str){
         int w = 0;
@@ -16,11 +16,12 @@ public class Center implements IProperty<String>{
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties<String> properties, Animation<String> text) {
+    public void runningProperty(Graphics g, Properties properties, Animation<?> text) {
         if(isFirst){
+            Animation<String> a = (Animation<String>) text;
             isFirst = false;
             int windowCenter = text.MASTER.FRAME.DESCTOP_BOUNDS.width / 2;
-            int textCenter = getTextWidth(g, text.getViewObject()) / 2;
+            int textCenter = getTextWidth(g, a.getViewObject()) / 2;
             properties.setX((windowCenter - textCenter )/ text.MASTER.FRAME.DW);
         }
     }

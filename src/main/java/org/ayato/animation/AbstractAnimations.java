@@ -4,7 +4,7 @@ import org.ayato.system.LunchScene;
 
 import java.awt.*;
 
-public abstract class AbstractAnimations<A, T extends AnimationList<A, Properties<A>>> {
+public abstract class AbstractAnimations<A, T extends AnimationList<A, Properties>> {
     protected final T list;
     protected boolean visible = false;
     protected int x, y, w, h;

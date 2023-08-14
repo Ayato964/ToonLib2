@@ -7,26 +7,35 @@ import org.ayato.util.VoidSupplier;
 
 import java.awt.*;
 
-public class AnimationList<T, M extends Properties<T>> {
+public class AnimationList<T, M extends Properties> {
     AnimationList<T, M> nextNode;
     private final M properties;
-    private final T object;
+    private AObject<T> object;
     public final LunchScene MASTER;
-    private final VoidSupplier drawAction;
-    public AnimationList(LunchScene master, T n, M prop, VoidSupplier action){
+    private VoidSupplier drawAction;
+    public AnimationList(LunchScene master, M prop){
+        this(master, null, prop, null);
+    }
+
+    private AnimationList(LunchScene master, AObject<T> n, M prop, VoidSupplier action){
         MASTER = master;
         object = n;
         properties = prop;
         drawAction = action;
     }
-    public void add(T object, VoidSupplier action){
+    public void add(AObject<T> object, VoidSupplier action){
         add(object, properties.copy(), action);
     }
-    public void add(T object, M m, VoidSupplier action) {
-        if (nextNode != null)
-            nextNode.add(object, m, action);
-        else
-            nextNode = new AnimationList<>(MASTER, object, m, action);
+    public void add(AObject<T> object, M m, VoidSupplier action) {
+        if(this.object == null) {
+            this.object = object;
+            this.drawAction = action;
+        }else {
+            if (nextNode != null)
+                nextNode.add(object, m, action);
+            else
+                nextNode = new AnimationList<>(MASTER, object, m, action);
+        }
     }
     public AnimationList<T, M> next(){
         return nextNode;
@@ -39,7 +48,7 @@ public class AnimationList<T, M extends Properties<T>> {
         return nextNode == null ? 1 : 1 + nextNode.length();
     }
 
-    public T getNode() {
+    public AObject<T> getNode() {
         return object;
     }
 

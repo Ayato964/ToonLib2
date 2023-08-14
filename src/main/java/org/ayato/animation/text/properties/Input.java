@@ -10,7 +10,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.function.Consumer;
 
-public class Input implements IProperty<String>, MouseListener, KeyListener {
+public class Input implements IProperty, MouseListener, KeyListener {
     private int x, y, w, h;
     private StringBuilder inputStr = new StringBuilder().append('>');
     private Consumer<String> stringConsumer;
@@ -26,7 +26,8 @@ public class Input implements IProperty<String>, MouseListener, KeyListener {
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties<String> properties, Animation<String> text) {
+    public void runningProperty(Graphics g, Properties properties, Animation<?> text) {
+        Animation<String> t = (Animation<String>)text;
         if(isFirst){
             x = (x * text.MASTER.FRAME.DW);
             y = (y * text.MASTER.FRAME.DH);
@@ -37,7 +38,7 @@ public class Input implements IProperty<String>, MouseListener, KeyListener {
             text.MASTER.FRAME.addMouseListener(this);
         }
         if(isInputAccepted)
-            text.setViewObject(inputStr.toString());
+            t.setViewObject(inputStr.toString());
     }
 
     @Override

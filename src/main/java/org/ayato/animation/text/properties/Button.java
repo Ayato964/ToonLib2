@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class Button<T> implements IProperty<T>, MouseListener {
+public class Button implements IProperty, MouseListener {
     int bx, by, bw, bh;
     PropertyAction insert, action;
     private boolean isFirst = true;
@@ -22,7 +22,7 @@ public class Button<T> implements IProperty<T>, MouseListener {
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties<T> properties, Animation<T> text) {
+    public void runningProperty(Graphics g, Properties properties, Animation<?> text) {
         if(isFirst){
             isFirst = false;
             bx = (bx * text.MASTER.FRAME.DW );

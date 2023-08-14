@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class AnimationKeyButtons<A, T extends AnimationList<A, Properties<A>>> extends AbstractAnimations<A, T> implements KeyListener {
+public class AnimationKeyButtons<A, T extends AnimationList<A, Properties>> extends AbstractAnimations<A, T> implements KeyListener {
 
     private int selectCount = 0;
     public AnimationKeyButtons(T list, int x, int y, int w, int h, Color ifSelectedColor, Color normalColor, Color bgColor){
@@ -24,10 +24,10 @@ public class AnimationKeyButtons<A, T extends AnimationList<A, Properties<A>>> e
     protected void setup(){
         int one_height = (h * MASTER.FRAME.DH / list.length()) /MASTER.FRAME.DH;
         int count = 0;
-        AnimationList<A, Properties<A>> n = list;
+        AnimationList<A, Properties> n = list;
         while (n != null){
             final int c = count;
-            ((Properties.TextProperties)n.getProperties()).ifView(()->visible).frame(w, one_height,
+            ((TextProperties)n.getProperties()).ifView(()->visible).frame(w, one_height,
                     ()->c == selectCount ? selected : normal , bgColor);
             Animation.create(MASTER, n.getNode(), n.getProperties().setSize(x, y + count * one_height), true);
             count ++;

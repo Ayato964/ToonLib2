@@ -10,7 +10,7 @@ import java.awt.event.KeyListener;
 import java.util.Arrays;
 import java.util.function.Supplier;
 
-public class Talk implements IProperty<String>, KeyListener {
+public class Talk implements IProperty, KeyListener {
     int count = 0;
     Supplier<String>[] mes;
     KeyListener[] listeners;
@@ -30,7 +30,7 @@ public class Talk implements IProperty<String>, KeyListener {
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties<String> properties, Animation<String> text) {
+    public void runningProperty(Graphics g, Properties properties, Animation<?> text) {
         if(stopEveryEvent){
             stopEveryEvent = false;
             listeners = text.MASTER.FRAME.getKeyListeners();
@@ -40,8 +40,8 @@ public class Talk implements IProperty<String>, KeyListener {
         }
         if(isFirst){
             isFirst = false;
-            ANIMATION = text;
-            text.setViewObject(mes[0].get());
+            ANIMATION = (Animation<String>) text;
+            ANIMATION.setViewObject(mes[0].get());
             text.MASTER.FRAME.addKeyListener(this);
         }
     }
