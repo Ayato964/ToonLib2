@@ -8,18 +8,7 @@ version '2.5.0'
 
 repositories {
     mavenCentral()
-    /*
-    maven {
-        url = uri("https://maven.pkg.github.com/")
-        credentials {
-            username = System.getenv("USERNAME")
-            password = System.getenv("TOKEN")
-        }
-    }
-
- */
 }
-
 tasks.withType(AbstractCompile) {
     options.fork = true
     options.forkOptions.executable = 'javac'
@@ -31,7 +20,6 @@ publishing {
             from(components.java)
         }
     }
-
     repositories {
         maven {
             name = "GithubPackages"
@@ -39,16 +27,11 @@ publishing {
             credentials {
                 username = System.getenv("USERNAME")
                 password =  System.getenv("TOKEN")
-
             }
         }
     }
 }
-
-
 dependencies {
-
-
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     /* https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core*/
@@ -58,7 +41,6 @@ dependencies {
 // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.15.0-rc2'
 }
-
 jar{
 }
 test {
