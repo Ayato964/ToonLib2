@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="ToonLib" />
-    </artifacts-to-build>
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.5.0&#10;&#10;RectProperties.java&#10;四角形の図形に対応" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.0.4.8&#10;&#10;&#10;Center.java&#10;入力された文字を、ウィンドウを軸に中央ぞろえする。">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AbstractAnimations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AbstractAnimations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationKeyButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationKeyButtons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationMouseButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationMouseButtons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TS1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TS1.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,37 +22,16 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view />
-      </state>
-    </system>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="Class" />
-        <option value="AnnotationType" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--follow-tags" />
-        <option name="title" value="Current Branch" />
-      </GitPushTagMode>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="3ee9c6b7-2fc7-4573-9ac8-d1f730d9f4f0" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -65,21 +46,13 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/My_Project/RPG_Test&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;アーティファクト&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/My_Project/ToonLib&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.ayato.main" />
       <recent name="org.ayato.system.properties" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\My_Project\ToonLib2\src\main\resources\assets\ayato\textures\test" />
-      <recent name="G:\My_Project\ToonLib2\src\main\resources\assets\ayato\" />
     </key>
   </component>
   <component name="RunManager" selected="アプリケーション.TestMain">
@@ -96,21 +69,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.ayato.main.MyClass" />
-      <module name="ToonLib2.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.ayato.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="jbr-17" />
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="org.ayato.main.TestMain" />
       <module name="ToonLib2.main" />
@@ -145,34 +105,16 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ToonLib2 [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="publish" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Gradle.ToonLib [jar]" />
+      <item itemvalue="アプリケーション.Main" />
+      <item itemvalue="アプリケーション.TestMain" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="アプリケーション.MyClass" />
         <item itemvalue="アプリケーション.TestMain" />
-        <item itemvalue="Gradle.ToonLib [jar]" />
-        <item itemvalue="Gradle.ToonLib2 [publish]" />
         <item itemvalue="アプリケーション.Main" />
+        <item itemvalue="Gradle.ToonLib [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -185,350 +127,84 @@
       <option name="presentableId" value="Default" />
       <updated>1686754309708</updated>
     </task>
-    <task id="LOCAL-00100" summary="Build Update">
-      <created>1689127041052</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
+    <task id="LOCAL-00001" summary="Version.0.0.0&#10;&#10;Gradleの設定">
+      <created>1686754875402</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1689127041052</updated>
+      <updated>1686754875402</updated>
     </task>
-    <task id="LOCAL-00101" summary="Build Update">
-      <created>1689127204319</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
+    <task id="LOCAL-00002" summary="Version.0.1.0&#10;&#10;&#10;シーンの切り替えのプログラムを作成した。">
+      <created>1686771298374</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1689127204319</updated>
+      <updated>1686771298374</updated>
     </task>
-    <task id="LOCAL-00102" summary="Build Update">
-      <created>1689127380324</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
+    <task id="LOCAL-00003" summary="Version.0.2.0&#10;&#10;Setup.java&#10;で、宣言する専用システムである、 AnimationText.javaを作成した。&#10;String形式のアニメーションをGraphicsを通してWindowに表示する。">
+      <created>1686799433497</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1689127380324</updated>
+      <updated>1686799433497</updated>
     </task>
-    <task id="LOCAL-00103" summary="Build Update">
-      <created>1689127567368</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
+    <task id="LOCAL-00004" summary="Version.0.2.5&#10;&#10;LangLoader.java&#10;言語変換システムの仮実装">
+      <created>1686802817792</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1689127567368</updated>
+      <updated>1686802817792</updated>
     </task>
-    <task id="LOCAL-00104" summary="Build Update">
-      <created>1689127798090</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
+    <task id="LOCAL-00005" summary="Version.0.4.0&#10;&#10;Properties.java&#10;add the properties setting.">
+      <created>1687605710189</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1689127798090</updated>
+      <updated>1687605710189</updated>
     </task>
-    <task id="LOCAL-00105" summary="Build Update">
-      <created>1689128203925</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
+    <task id="LOCAL-00006" summary="Version.0.4.3&#10;&#10;Properties.ifView&#10;表示する条件を設定できるようになった。&#10;&#10;Event.java&#10;イベントを管理できるシステム。Event.EventCardと Inheriting.javaを組み合わせることで、&#10;イベントを通してデータの引継ぎが可能になる。">
+      <created>1687624928245</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1689128203925</updated>
+      <updated>1687624928245</updated>
     </task>
-    <task id="LOCAL-00106" summary="Build Update">
-      <created>1689162625784</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
+    <task id="LOCAL-00007" summary="Version.0.4.4&#10;&#10;Properties.changeMessage&#10;メッセージの内容を書き換えることができるようになった。">
+      <created>1687677840590</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1689162625784</updated>
+      <updated>1687677840590</updated>
     </task>
-    <task id="LOCAL-00107" summary="Build Update">
-      <created>1689163250690</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
+    <task id="LOCAL-00008" summary="Version.0.4.5&#10;&#10;Input.java&#10;プレイヤーから文字入力を受け付ける機能を追加した。">
+      <created>1687723773910</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1689163250690</updated>
+      <updated>1687723773910</updated>
     </task>
-    <task id="LOCAL-00108" summary="Build Update">
-      <created>1689164782110</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
+    <task id="LOCAL-00009" summary="Version.0.4.5&#10;&#10;&#10;AnimationList.java&#10;AnimationTextに関するオブジェクトをリスト化する。&#10;&#10;AnimationMouseButtonList.java&#10;AnimationList.javaに基づき、リスト構造を可視化。&#10;また、マウスのボタンに反応する。">
+      <created>1687797581421</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1689164782110</updated>
+      <updated>1687797581421</updated>
     </task>
-    <task id="LOCAL-00109" summary="Build Update">
-      <created>1689166220654</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
+    <task id="LOCAL-00010" summary="Version.0.4.7&#10;&#10;&#10;AnimationKeyButtonList.java&#10;AnimationList.javaのリスト構造を元に可視化し、キー入力に応じて選択を可能にする">
+      <created>1687823418149</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1689166220654</updated>
+      <updated>1687823418149</updated>
     </task>
-    <task id="LOCAL-00110" summary="Build Update">
-      <created>1689167006681</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
+    <task id="LOCAL-00011" summary="Version.0.4.8&#10;&#10;&#10;Center.java&#10;入力された文字を、ウィンドウを軸に中央ぞろえする。">
+      <created>1687889945545</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1689167006681</updated>
+      <updated>1687889945545</updated>
     </task>
-    <task id="LOCAL-00111" summary="Build Update">
-      <created>1689351896304</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1689351896304</updated>
-    </task>
-    <task id="LOCAL-00112" summary="Build Update">
-      <created>1689353125584</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1689353125584</updated>
-    </task>
-    <task id="LOCAL-00113" summary="Build Update">
-      <created>1689353275243</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1689353275243</updated>
-    </task>
-    <task id="LOCAL-00114" summary="Build Update">
-      <created>1689362703817</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1689362703817</updated>
-    </task>
-    <task id="LOCAL-00115" summary="Build Update">
-      <created>1689362847729</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1689362847729</updated>
-    </task>
-    <task id="LOCAL-00116" summary="Build Update">
-      <created>1689363058198</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1689363058198</updated>
-    </task>
-    <task id="LOCAL-00117" summary="Build Update">
-      <created>1689363463359</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1689363463359</updated>
-    </task>
-    <task id="LOCAL-00118" summary="Build Update">
-      <created>1689372482932</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1689372482932</updated>
-    </task>
-    <task id="LOCAL-00119" summary="Build Update">
-      <created>1689372606757</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1689372606757</updated>
-    </task>
-    <task id="LOCAL-00120" summary="Build Update">
-      <created>1689372633169</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1689372633169</updated>
-    </task>
-    <task id="LOCAL-00121" summary="Version.2.0&#10;&#10;Background.javaをリニューアル">
-      <created>1689462907441</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1689462907441</updated>
-    </task>
-    <task id="LOCAL-00122" summary="Version.2.0.27&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装">
-      <created>1689470197427</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1689470197427</updated>
-    </task>
-    <task id="LOCAL-00123" summary="Version.2.0.36&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装">
-      <created>1689505290679</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1689505290679</updated>
-    </task>
-    <task id="LOCAL-00124" summary="Version.2.0.57&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装">
-      <created>1689505645694</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1689505645694</updated>
-    </task>
-    <task id="LOCAL-00125" summary="Version.2.0.70&#10;&#10;画像が表示できるようになった">
-      <created>1689527989488</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1689527989488</updated>
-    </task>
-    <task id="LOCAL-00126" summary="Version.2.0.70&#10;&#10;画像のトリミングをできるようになった。">
-      <created>1689530084919</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1689530084919</updated>
-    </task>
-    <task id="LOCAL-00127" summary="Version.2.0.70&#10;&#10;画像のトリミングをできるようになった。">
-      <created>1689531478935</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1689531478935</updated>
-    </task>
-    <task id="LOCAL-00128" summary="Version.2.0.78&#10;&#10;画像をボタンとして運用できるようになった。">
-      <created>1689531543622</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1689531543622</updated>
-    </task>
-    <task id="LOCAL-00129" summary="Version.2.0.81&#10;&#10;&#10;画像データに描画させる条件を実装した">
-      <created>1689532869842</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1689532869842</updated>
-    </task>
-    <task id="LOCAL-00130" summary="Version.2.1&#10;&#10;&#10;画像データに描画させる機能を実装">
-      <created>1689532959437</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1689532959437</updated>
-    </task>
-    <task id="LOCAL-00131" summary="Version.2.1.24&#10;&#10;Animationクラスをリニューアル&#10;&#10;AnimationText.java&#10;AnimationImage.java&#10;の機能を廃止&#10;&#10;TextProperties.java&#10;ImageProperties.java&#10;の機能を廃止&#10;&#10;Animation&lt;T&gt;.javaと&#10;Properties&lt;T&gt;.java&#10;に統合され、管理するようになった">
-      <created>1689612652451</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1689612652451</updated>
-    </task>
-    <task id="LOCAL-00132" summary="Version.2.1.29&#10;&#10;Animation.java&#10;クラスをリニューアル">
-      <created>1689666253214</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1689666253214</updated>
-    </task>
-    <task id="LOCAL-00133" summary="Version.2.1.37&#10;&#10;&#10;AnimationList.java&#10;Animationクラス専門の配列をリニューアル&#10;AnimationKeyButtons.java&#10;ボタン機能が追加された">
-      <created>1689701082078</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1689701082078</updated>
-    </task>
-    <task id="LOCAL-00134" summary="Version.2.1.43&#10;&#10;&#10;AnimationMouseButtons.java&#10;マウスのボタン機能が追加">
-      <created>1689702975532</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1689702975532</updated>
-    </task>
-    <task id="LOCAL-00135" summary="Version.2.2&#10;&#10;Animationクラスをリニューアル&#10;&#10;AnimationText.java&#10;AnimationImage.java&#10;の機能を廃止&#10;&#10;TextProperties.java&#10;ImageProperties.java&#10;の機能を廃止&#10;&#10;Animation&lt;T&gt;.javaと&#10;Properties&lt;T&gt;.java&#10;に統合され、管理するようになった&#10;&#10;Animation.java&#10;クラスをリニューアル&#10;&#10;AnimationList.java&#10;Animationクラス専門の配列をリニューアル&#10;AnimationKeyButtons.java&#10;ボタン機能が追加された&#10;&#10;AnimationMouseButtons.java&#10;マウスのボタン機能が追加">
-      <created>1689724912745</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1689724912745</updated>
-    </task>
-    <task id="LOCAL-00136" summary="Version.2.2.9&#10;&#10;Properties.java&#10;リセット機能を追加">
-      <created>1689802504969</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1689802504969</updated>
-    </task>
-    <task id="LOCAL-00137" summary="Version.2.2.28&#10;&#10;&#10;RegistoryList.java&#10;RegistoryObject.java&#10;&#10;ファクトリーメソッドを作るための補助クラスを作成">
-      <created>1689880489064</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1689880489065</updated>
-    </task>
-    <task id="LOCAL-00138" summary="Version.2.3.0&#10;&#10;Properties.java&#10;リセット機能を追加&#10;&#10;&#10;RegistoryList.java&#10;RegistoryObject.java&#10;&#10;ファクトリーメソッドを作るための補助クラスを作成">
-      <created>1689880571511</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1689880571511</updated>
-    </task>
-    <task id="LOCAL-00139" summary="Version.2.3.5&#10;&#10;&#10;Talk.java&#10;で、変数が反映されない不具合を修正。">
-      <created>1689928604964</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1689928604964</updated>
-    </task>
-    <task id="LOCAL-00140" summary="Version.2.3.11&#10;&#10;AnimationMouseButtons.java&#10;でのバックグラウンドの色を変えられるようにした。">
-      <created>1689965796226</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1689965796226</updated>
-    </task>
-    <task id="LOCAL-00141" summary="Version.2.3.11&#10;&#10;RegistoryObject.java&#10;の仕様を変更">
-      <created>1690225358184</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1690225358185</updated>
-    </task>
-    <task id="LOCAL-00142" summary="Version.2.4.3&#10;&#10;Event.java&#10;の仕様を変更">
-      <created>1690472464585</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1690472464585</updated>
-    </task>
-    <task id="LOCAL-00143" summary="Version.2.4.6&#10;&#10;DisplayThread&#10;の致命的なエラーを修正。">
-      <created>1690495084236</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1690495084236</updated>
-    </task>
-    <task id="LOCAL-00144" summary="Version.2.4.9&#10;&#10;DisplayThread&#10;の致命的なエラーを修正。">
-      <created>1690495697406</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1690495697406</updated>
-    </task>
-    <task id="LOCAL-00145" summary="Version.2.4.12&#10;&#10;DisplayThread&#10;の致命的なエラーを修正。">
-      <created>1690496115199</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1690496115199</updated>
-    </task>
-    <task id="LOCAL-00146" summary="Version.2.4.37&#10;&#10;Animation.javaと Properties.javaの大幅な仕様変更。">
-      <created>1691975904352</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1691975904352</updated>
-    </task>
-    <task id="LOCAL-00147" summary="Version.2.5.0&#10;&#10;RectProperties.java&#10;四角形の図形に対応">
-      <created>1692008694414</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1692008694414</updated>
-    </task>
-    <task id="LOCAL-00148" summary="Version.2.5.0&#10;&#10;RectProperties.java&#10;四角形の図形に対応">
-      <created>1692008873973</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1692008873973</updated>
-    </task>
-    <option name="localTasksCounter" value="149" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -543,31 +219,17 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version.2.0.27&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
-    <MESSAGE value="Version.2.0.36&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
-    <MESSAGE value="Version.2.0.57&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
-    <MESSAGE value="Version.2.0.70&#10;&#10;画像が表示できるようになった" />
-    <MESSAGE value="Version.2.0.70&#10;&#10;画像のトリミングをできるようになった。" />
-    <MESSAGE value="Version.2.0.78&#10;&#10;画像をボタンとして運用できるようになった。" />
-    <MESSAGE value="Version.2.0.81&#10;&#10;&#10;画像データに描画させる条件を実装した" />
-    <MESSAGE value="Version.2.1&#10;&#10;&#10;画像データに描画させる機能を実装" />
-    <MESSAGE value="Version.2.1.24&#10;&#10;Animationクラスをリニューアル&#10;&#10;AnimationText.java&#10;AnimationImage.java&#10;の機能を廃止&#10;&#10;TextProperties.java&#10;ImageProperties.java&#10;の機能を廃止&#10;&#10;Animation&lt;T&gt;.javaと&#10;Properties&lt;T&gt;.java&#10;に統合され、管理するようになった" />
-    <MESSAGE value="Version.2.1.29&#10;&#10;Animation.java&#10;クラスをリニューアル" />
-    <MESSAGE value="Version.2.1.37&#10;&#10;&#10;AnimationList.java&#10;Animationクラス専門の配列をリニューアル&#10;AnimationKeyButtons.java&#10;ボタン機能が追加された" />
-    <MESSAGE value="Version.2.1.43&#10;&#10;&#10;AnimationMouseButtons.java&#10;マウスのボタン機能が追加" />
-    <MESSAGE value="Version.2.2&#10;&#10;Animationクラスをリニューアル&#10;&#10;AnimationText.java&#10;AnimationImage.java&#10;の機能を廃止&#10;&#10;TextProperties.java&#10;ImageProperties.java&#10;の機能を廃止&#10;&#10;Animation&lt;T&gt;.javaと&#10;Properties&lt;T&gt;.java&#10;に統合され、管理するようになった&#10;&#10;Animation.java&#10;クラスをリニューアル&#10;&#10;AnimationList.java&#10;Animationクラス専門の配列をリニューアル&#10;AnimationKeyButtons.java&#10;ボタン機能が追加された&#10;&#10;AnimationMouseButtons.java&#10;マウスのボタン機能が追加" />
-    <MESSAGE value="Version.2.2.9&#10;&#10;Properties.java&#10;リセット機能を追加" />
-    <MESSAGE value="Version.2.2.28&#10;&#10;&#10;RegistoryList.java&#10;RegistoryObject.java&#10;&#10;ファクトリーメソッドを作るための補助クラスを作成" />
-    <MESSAGE value="Version.2.3.0&#10;&#10;Properties.java&#10;リセット機能を追加&#10;&#10;&#10;RegistoryList.java&#10;RegistoryObject.java&#10;&#10;ファクトリーメソッドを作るための補助クラスを作成" />
-    <MESSAGE value="Version.2.3.5&#10;&#10;&#10;Talk.java&#10;で、変数が反映されない不具合を修正。" />
-    <MESSAGE value="Version.2.3.11&#10;&#10;AnimationMouseButtons.java&#10;でのバックグラウンドの色を変えられるようにした。" />
-    <MESSAGE value="Version.2.3.11&#10;&#10;RegistoryObject.java&#10;の仕様を変更" />
-    <MESSAGE value="Version.2.4.3&#10;&#10;Event.java&#10;の仕様を変更" />
-    <MESSAGE value="Version.2.4.6&#10;&#10;DisplayThread&#10;の致命的なエラーを修正。" />
-    <MESSAGE value="Version.2.4.9&#10;&#10;DisplayThread&#10;の致命的なエラーを修正。" />
-    <MESSAGE value="Version.2.4.12&#10;&#10;DisplayThread&#10;の致命的なエラーを修正。" />
-    <MESSAGE value="Version.2.4.37&#10;&#10;Animation.javaと Properties.javaの大幅な仕様変更。" />
-    <MESSAGE value="Version.2.5.0&#10;&#10;RectProperties.java&#10;四角形の図形に対応" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.2.5.0&#10;&#10;RectProperties.java&#10;四角形の図形に対応" />
+    <MESSAGE value="Version.0.0.0&#10;&#10;Gradleの設定" />
+    <MESSAGE value="Version.0.1.0&#10;&#10;&#10;シーンの切り替えのプログラムを作成した。" />
+    <MESSAGE value="Version.0.2.0&#10;&#10;Setup.java&#10;で、宣言する専用システムである、 AnimationText.javaを作成した。&#10;String形式のアニメーションをGraphicsを通してWindowに表示する。" />
+    <MESSAGE value="Version.0.2.5&#10;&#10;LangLoader.java&#10;言語変換システムの仮実装" />
+    <MESSAGE value="Version.0.4.0&#10;&#10;Properties.java&#10;add the properties setting." />
+    <MESSAGE value="Version.0.4.3&#10;&#10;Properties.ifView&#10;表示する条件を設定できるようになった。&#10;&#10;Event.java&#10;イベントを管理できるシステム。Event.EventCardと Inheriting.javaを組み合わせることで、&#10;イベントを通してデータの引継ぎが可能になる。" />
+    <MESSAGE value="Version.0.4.4&#10;&#10;Properties.changeMessage&#10;メッセージの内容を書き換えることができるようになった。" />
+    <MESSAGE value="Version.0.4.5&#10;&#10;Input.java&#10;プレイヤーから文字入力を受け付ける機能を追加した。" />
+    <MESSAGE value="Version.0.4.5&#10;&#10;&#10;AnimationList.java&#10;AnimationTextに関するオブジェクトをリスト化する。&#10;&#10;AnimationMouseButtonList.java&#10;AnimationList.javaに基づき、リスト構造を可視化。&#10;また、マウスのボタンに反応する。" />
+    <MESSAGE value="Version.0.4.7&#10;&#10;&#10;AnimationKeyButtonList.java&#10;AnimationList.javaのリスト構造を元に可視化し、キー入力に応じて選択を可能にする" />
+    <MESSAGE value="Version.0.4.8&#10;&#10;&#10;Center.java&#10;入力された文字を、ウィンドウを軸に中央ぞろえする。" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.0.4.8&#10;&#10;&#10;Center.java&#10;入力された文字を、ウィンドウを軸に中央ぞろえする。" />
   </component>
 </project>

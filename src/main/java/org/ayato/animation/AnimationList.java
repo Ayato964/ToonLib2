@@ -6,27 +6,38 @@ import org.ayato.system.LunchScene;
 import org.ayato.util.VoidSupplier;
 
 import java.awt.*;
+import java.util.function.Consumer;
 
 public class AnimationList<T, M extends Properties> {
     AnimationList<T, M> nextNode;
     private final M properties;
     private AObject<T> object;
     public final LunchScene MASTER;
-    private VoidSupplier drawAction;
+    private Consumer<AbstractAnimations<?, ?>> drawAction;
+    private AbstractAnimations<?, ?> key;
     public AnimationList(LunchScene master, M prop){
         this(master, null, prop, null);
     }
 
-    private AnimationList(LunchScene master, AObject<T> n, M prop, VoidSupplier action){
+    private AnimationList(LunchScene master, AObject<T> n, M prop, Consumer<AbstractAnimations<?, ?>> action){
         MASTER = master;
         object = n;
         properties = prop;
         drawAction = action;
     }
-    public void add(AObject<T> object, VoidSupplier action){
+
+    public AbstractAnimations<?, ?> getKey() {
+        return key;
+    }
+
+    public void setKey(AbstractAnimations<?, ?> key) {
+        this.key = key;
+    }
+
+    public void add(AObject<T> object, Consumer<AbstractAnimations<?, ?>> action){
         add(object, properties.copy(), action);
     }
-    public void add(AObject<T> object, M m, VoidSupplier action) {
+    public void add(AObject<T> object, M m, Consumer<AbstractAnimations<?, ?>> action) {
         if(this.object == null) {
             this.object = object;
             this.drawAction = action;
@@ -56,6 +67,8 @@ public class AnimationList<T, M extends Properties> {
         return properties;
     }
     public void drawAction(){
-        drawAction.action();
+        drawAction.accept(key);
     }
+
+
 }

@@ -21,8 +21,8 @@ public class TS1 implements IBaseScene {
                 new AnimationList<>(scene,
                         PropertiesComponent.ofText().font(new Font("", Font.PLAIN, 32)));
 
-        alist.add(AnimationComponent.ofText(Component.get(this, "factory")), ()-> scene.changeScene(new FactoryTest()));
-        alist.add(AnimationComponent.ofText(Component.get(this, "2")), ()->scene.changeScene(new TS2()));
+        alist.add(AnimationComponent.ofText(Component.get(this, "factory")), key-> scene.changeScene(new FactoryTest()));
+        alist.add(AnimationComponent.ofText(Component.get(this, "2")), key->scene.changeScene(new TS2()));
 
         AnimationKeyButtons<String, AnimationList<String, Properties>> list =
                 new AnimationKeyButtons<>(alist, 20, 20, 100, 50, Color.RED, Color.WHITE, new Color(127, 127, 127, 80));
