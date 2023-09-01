@@ -43,6 +43,6 @@ public class Order implements IProperty{
 
     @Override
     public void reset(int nx, int ny) {
-
+        isFirst = true;
     }
 }
