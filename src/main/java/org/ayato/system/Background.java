@@ -1,5 +1,6 @@
 package org.ayato.system;
 
+import org.ayato.animation.image.ImageMaker;
 import org.ayato.util.Display;
 
 import java.awt.*;
@@ -18,11 +19,14 @@ public class Background implements Display {
 
     @Override
     public void display(Graphics g) {
-
         Rectangle r = MASTER.FRAME.DESCTOP_BOUNDS;
         switch (mode) {
-            case COLOR:g.setColor(mode.getColor()); g.fillRect(0, 0, r.width, r.height);break;
-            case IMAGE:g.drawImage(mode.getImage(), 0, 0, r.width, r.height, null);break;
+            case COLOR -> {
+                g.setColor(mode.getColor());
+                g.fillRect(0, 0, r.width, r.height);
+            }
+            case IMAGE -> g.drawImage(mode.getImage().getEditImage(), 0, 0, r.width, r.height, null);
+            default -> throw new IllegalStateException("Unexpected value: " + mode);
         }
 
 
@@ -36,9 +40,9 @@ public class Background implements Display {
         COLOR("color"),
         IMAGE("image");
 
-        private String a;
+        private final String a;
         private Color c;
-        private Image image;
+        private ImageMaker image;
         BackgroundMode(String i) {
             a = i;
         }
@@ -55,11 +59,11 @@ public class Background implements Display {
             return c;
         }
 
-        public void setImage(Image image) {
+        public void setImage(ImageMaker image) {
             this.image = image;
         }
 
-        public Image getImage() {
+        public ImageMaker getImage() {
             return image;
         }
     }

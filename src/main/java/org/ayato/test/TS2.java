@@ -1,5 +1,10 @@
 package org.ayato.test;
 
+import org.ayato.animation.Animation;
+import org.ayato.animation.AnimationComponent;
+import org.ayato.animation.PropertiesComponent;
+import org.ayato.animation.image.ImageMaker;
+import org.ayato.system.Background;
 import org.ayato.system.LunchScene;
 import org.ayato.util.IBaseScene;
 
@@ -13,6 +18,13 @@ public class TS2 implements IBaseScene {
 
     @Override
     public void setup(LunchScene scene) {
+        scene.BACKGROUND.mode = Background.BackgroundMode.IMAGE;
+        scene.BACKGROUND.mode.setImage(new ImageMaker("test", "65535"));
 
+        Animation.create(scene, AnimationComponent.ofText("Hello WOrld!!"),
+                PropertiesComponent.ofText(20, 20)
+                        .color(Color.BLACK)
+                        .font(new Font("", Font.PLAIN, 32))
+                        .displayInOrder(2), true);
     }
 }

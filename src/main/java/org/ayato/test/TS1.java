@@ -1,6 +1,8 @@
 package org.ayato.test;
 
 import org.ayato.animation.*;
+import org.ayato.animation.image.ImageMaker;
+import org.ayato.system.Background;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
 import org.ayato.util.IBaseScene;
@@ -16,6 +18,7 @@ public class TS1 implements IBaseScene {
 
     @Override
     public void setup(LunchScene scene) {
+        scene.BACKGROUND.mode = Background.BackgroundMode.COLOR;
         scene.BACKGROUND.mode.setColor(Color.BLACK);
         AnimationList<String, Properties> alist =
                 new AnimationList<>(scene,

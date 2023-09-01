@@ -73,6 +73,7 @@ public abstract class Properties{
         }
     }
 
+
     public <M extends Properties> M copy() {
         Properties t = this instanceof TextProperties
                 ?  new TextProperties(x, y)
