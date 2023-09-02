@@ -21,10 +21,10 @@ public class TS2 implements IBaseScene {
         scene.BACKGROUND.mode = Background.BackgroundMode.IMAGE;
         scene.BACKGROUND.mode.setImage(new ImageMaker("test", "65535"));
 
-        Animation.create(scene, AnimationComponent.ofText("Hello WOrld!!"),
+        Animation.create(scene, AnimationComponent.ofText("Hello!!!!"),
                 PropertiesComponent.ofText(20, 20)
                         .color(Color.BLACK)
                         .font(new Font("", Font.PLAIN, 32))
-                        .displayInOrder(2), true);
+                        .displayInOrder(10), true);
     }
 }
