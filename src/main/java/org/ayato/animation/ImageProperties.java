@@ -1,5 +1,6 @@
 package org.ayato.animation;
 
+import org.ayato.animation.image.Gif;
 import org.ayato.animation.text.properties.Button;
 import org.ayato.animation.text.properties.PropertyAction;
 
@@ -29,6 +30,11 @@ public class ImageProperties extends Properties {
 
     @Override
     public ImageProperties getInstance() {
+        return this;
+    }
+
+    public ImageProperties gif(long l) {
+        properties.add(new Gif(l));
         return this;
     }
 }

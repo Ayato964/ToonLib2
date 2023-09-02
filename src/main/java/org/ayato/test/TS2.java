@@ -26,5 +26,9 @@ public class TS2 implements IBaseScene {
                         .color(Color.BLACK)
                         .font(new Font("", Font.PLAIN, 32))
                         .displayInOrder(10), true);
+        Animation.create(scene, AnimationComponent.ofImage(new ImageMaker("test", "loading", 120,120)),
+                PropertiesComponent.ofImage(50, 50, 50, 50)
+                        .gif(10)
+                , true);
     }
 }

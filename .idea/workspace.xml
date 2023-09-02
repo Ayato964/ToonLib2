@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.5.15&#10;&#10;Order.java&#10;秒数T秒にかけて文字を順番に表示する。">
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.5.15&#10;&#10;TextProperties.java&#10;*displayInOrder&#10;-&gt;文字を順番に表示する。">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/Gif.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/ImageProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/ImageProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/ImageMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/ImageMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TS2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TS2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/test/loading.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/test/loading.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +55,7 @@
       <recent name="org.ayato.system.properties" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/test" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -224,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693532918593</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Ver.2.5.15&#10;&#10;TextProperties.java&#10;*displayInOrder&#10;-&gt;文字を順番に表示する。">
+      <created>1693617365345</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1693617365345</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,6 +265,7 @@
     <MESSAGE value="Ver.2.5.7&#10;&#10;AnimationList.java&#10;AbstractAnimations.java&#10;の依存関係を最適化" />
     <MESSAGE value="Ver.2.5.14&#10;&#10;Order.java&#10;秒数T秒にかけて文字を順番に表示する。" />
     <MESSAGE value="Ver.2.5.15&#10;&#10;Order.java&#10;秒数T秒にかけて文字を順番に表示する。" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.5.15&#10;&#10;Order.java&#10;秒数T秒にかけて文字を順番に表示する。" />
+    <MESSAGE value="Ver.2.5.15&#10;&#10;TextProperties.java&#10;*displayInOrder&#10;-&gt;文字を順番に表示する。" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.5.15&#10;&#10;TextProperties.java&#10;*displayInOrder&#10;-&gt;文字を順番に表示する。" />
   </component>
 </project>
