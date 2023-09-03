@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.5.15&#10;&#10;TextProperties.java&#10;*displayInOrder&#10;-&gt;文字を順番に表示する。">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/Gif.java" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.5.21&#10;&#10;ImageProperties.java&#10;*Gif.java&#10;-&gt;アニメーション用に設定された画像データを動かす">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationSequentialOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/IteratorList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/ImageProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/ImageProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/ImageMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/ImageMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TS2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TS2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/test/loading.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/test/loading.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693617365345</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Ver.2.5.21&#10;&#10;ImageProperties.java&#10;*Gif.java&#10;-&gt;アニメーション用に設定された画像データを動かす">
+      <created>1693629479045</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1693629479045</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +274,7 @@
     <MESSAGE value="Ver.2.5.14&#10;&#10;Order.java&#10;秒数T秒にかけて文字を順番に表示する。" />
     <MESSAGE value="Ver.2.5.15&#10;&#10;Order.java&#10;秒数T秒にかけて文字を順番に表示する。" />
     <MESSAGE value="Ver.2.5.15&#10;&#10;TextProperties.java&#10;*displayInOrder&#10;-&gt;文字を順番に表示する。" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.5.15&#10;&#10;TextProperties.java&#10;*displayInOrder&#10;-&gt;文字を順番に表示する。" />
+    <MESSAGE value="Ver.2.5.21&#10;&#10;ImageProperties.java&#10;*Gif.java&#10;-&gt;アニメーション用に設定された画像データを動かす" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.5.21&#10;&#10;ImageProperties.java&#10;*Gif.java&#10;-&gt;アニメーション用に設定された画像データを動かす" />
   </component>
 </project>

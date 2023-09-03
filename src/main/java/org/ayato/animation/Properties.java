@@ -30,8 +30,6 @@ public abstract class Properties{
         animation = text;
     }
 
-
-
     public void runProp(Graphics g){
         if(booleanSupplier != null) {
             animation.bool = booleanSupplier;
@@ -72,6 +70,12 @@ public abstract class Properties{
             p.reset(mx, my);
         }
     }
+    public AnimationSequentialOrder popMatrix(){
+        AnimationSequentialOrder order = new AnimationSequentialOrder(this);
+        properties.add(order);
+        return order;
+    }
+
 
 
     public <M extends Properties> M copy() {
