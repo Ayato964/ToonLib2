@@ -15,4 +15,6 @@ public interface IProperty{
         order.endTask();
     }
     default void endTask(){}
+
+    default void setup(Graphics g, Properties properties, Animation<?> animation){}
 }

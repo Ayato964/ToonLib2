@@ -18,14 +18,18 @@ public class TS2 implements IBaseScene {
 
     @Override
     public void setup(LunchScene scene) {
+
         scene.BACKGROUND.mode = Background.BackgroundMode.IMAGE;
         scene.BACKGROUND.mode.setImage(new ImageMaker("test", "65535"));
+
+
 
         Animation.create(scene, AnimationComponent.ofText("Hello!!!!"),
                 PropertiesComponent.ofText(20, 20)
                         .color(Color.BLACK)
                         .font(new Font("", Font.PLAIN, 32))
                         .displayInOrder(10), true);
+
 
 
         Animation.create(scene, AnimationComponent.ofImage(new ImageMaker("test", "loading", 120,120)),
@@ -38,8 +42,8 @@ public class TS2 implements IBaseScene {
                         .font(new Font("", Font.PLAIN, 32))
                         .color(Color.BLACK)
                         .popMatrix()
-                        .textDisplayInOrder(10)
-                        .textDisplayInOrder(3)
+                        .textFadeIn(2)
+                        .textDisplayInOrder(2)
                         .push()
                 , true);
     }

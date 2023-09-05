@@ -13,6 +13,7 @@ public abstract class Properties{
     protected final ArrayList<IProperty> properties;
     protected Animation<?> animation;
     protected BooleanSupplier booleanSupplier;
+    private boolean isFirst = true;
     protected Properties()
     {
         this(0, 0);
@@ -36,6 +37,12 @@ public abstract class Properties{
             booleanSupplier = null;
             return;
         }
+        if(isFirst) {
+            for (IProperty p : properties)
+                p.setup(g, this, animation);
+            isFirst = false;
+        }
+
         for(IProperty p : properties)
             p.runningProperty(g, this, animation);
     }
