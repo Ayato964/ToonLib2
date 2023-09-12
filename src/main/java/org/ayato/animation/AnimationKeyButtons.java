@@ -5,6 +5,7 @@ import org.ayato.system.LunchScene;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.function.BooleanSupplier;
 
 public class AnimationKeyButtons<A, T extends AnimationList<A, Properties>> extends AbstractAnimations<A, T> implements KeyListener {
 
@@ -27,6 +28,8 @@ public class AnimationKeyButtons<A, T extends AnimationList<A, Properties>> exte
         AnimationList<A, Properties> n = list;
         while (n != null){
             final int c = count;
+
+            n.setKey(this);
             ((TextProperties)n.getProperties()).ifView(()->visible).frame(w, one_height,
                     ()->c == selectCount ? selected : normal , bgColor);
             Animation.create(MASTER, n.getNode(), n.getProperties().setSize(x, y + count * one_height), true);

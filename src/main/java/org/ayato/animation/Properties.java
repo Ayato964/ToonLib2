@@ -13,6 +13,7 @@ public abstract class Properties{
     protected final ArrayList<IProperty> properties;
     protected Animation<?> animation;
     protected BooleanSupplier booleanSupplier;
+    private boolean isFirst = true;
     protected Properties()
     {
         this(0, 0);
@@ -30,14 +31,18 @@ public abstract class Properties{
         animation = text;
     }
 
-
-
     public void runProp(Graphics g){
         if(booleanSupplier != null) {
             animation.bool = booleanSupplier;
             booleanSupplier = null;
             return;
         }
+        if(isFirst) {
+            for (IProperty p : properties)
+                p.setup(g, this, animation);
+            isFirst = false;
+        }
+
         for(IProperty p : properties)
             p.runningProperty(g, this, animation);
     }
@@ -72,6 +77,13 @@ public abstract class Properties{
             p.reset(mx, my);
         }
     }
+    public AnimationSequentialOrder popMatrix(){
+        AnimationSequentialOrder order = new AnimationSequentialOrder(this);
+        properties.add(order);
+        return order;
+    }
+
+
 
     public <M extends Properties> M copy() {
         Properties t = this instanceof TextProperties

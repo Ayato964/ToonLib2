@@ -15,6 +15,7 @@ public class AnimationMouseButtons<A, T extends AnimationList<A, Properties>> ex
         final int one_height = (h * MASTER.FRAME.DH / list.length()) / MASTER.FRAME.DH;
         T node = list;
         while (node != null) {
+            node.setKey(this);
             final T n = node;
             Animation.create(MASTER, node.getNode(), node.getProperties().setSize(x, y + count * MASTER.FRAME.DH), true);
             ((TextProperties) node.getProperties())
