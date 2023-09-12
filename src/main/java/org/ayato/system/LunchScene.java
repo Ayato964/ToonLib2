@@ -42,6 +42,7 @@ public class LunchScene {
                 SCENE.removeDisplay(MY_SCENE);
                 SCENE.removeDisplayClass(Animation.class);
                 FRAME.removeMouseListenerAll();
+                FRAME.removeKeyListenerAll();
                 scene.setup(this);
                 SCENE.addDisplay(scene);
                 MY_SCENE = scene;

@@ -2,6 +2,7 @@ package org.ayato.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 
@@ -45,6 +46,13 @@ public class MyFrame extends JFrame {
             removeMouseListener(ll);
         }
 
+    }
+
+    public void removeKeyListenerAll() {
+        KeyListener[] l = getKeyListeners();
+        for(KeyListener k : l){
+            removeKeyListener(k);
+        }
     }
 
     private class MainPanel extends JLabel{
