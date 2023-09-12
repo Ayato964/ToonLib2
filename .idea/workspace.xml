@@ -9,12 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.5.0&#10;&#10;RectProperties.java&#10;四角形の図形に対応">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/MyFrame.java" afterDir="false" />
-    </list>
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Version.2.5.5&#10;&#10;&#10;バグ&#10;＊シーンを変更した際、KeyListenerが残り続けてしまうバグを修正。" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,8 +49,22 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Ayato964"
+  }
+}]]></component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="3ee9c6b7-2fc7-4573-9ac8-d1f730d9f4f0" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3ee9c6b7-2fc7-4573-9ac8-d1f730d9f4f0" />
+        <option name="url" value="https://github.com/Ayato964/ToonLib2.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -539,7 +548,7 @@
       <option name="project" value="LOCAL" />
       <updated>1692009416717</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -554,7 +563,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version.2.0.27&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
     <MESSAGE value="Version.2.0.36&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
     <MESSAGE value="Version.2.0.57&#10;&#10;AnimationText.java&#10;Properties.java&#10;を抽象化&#10;&#10;AnimationImage.java&#10;Graphicに画像を出力できる機構を仮実装" />
     <MESSAGE value="Version.2.0.70&#10;&#10;画像が表示できるようになった" />
@@ -579,6 +587,7 @@
     <MESSAGE value="Version.2.4.12&#10;&#10;DisplayThread&#10;の致命的なエラーを修正。" />
     <MESSAGE value="Version.2.4.37&#10;&#10;Animation.javaと Properties.javaの大幅な仕様変更。" />
     <MESSAGE value="Version.2.5.0&#10;&#10;RectProperties.java&#10;四角形の図形に対応" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version.2.5.0&#10;&#10;RectProperties.java&#10;四角形の図形に対応" />
+    <MESSAGE value="Version.2.5.5&#10;&#10;&#10;バグ&#10;＊シーンを変更した際、KeyListenerが残り続けてしまうバグを修正。" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version.2.5.5&#10;&#10;&#10;バグ&#10;＊シーンを変更した際、KeyListenerが残り続けてしまうバグを修正。" />
   </component>
 </project>
