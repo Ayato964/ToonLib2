@@ -15,6 +15,13 @@ public class Component {
             return str;
 
     }
+    public static String getForGlobal(String key, String ... value){
+        String str = LangLoader.getInstance().get(value, key);
+        if(str != null)
+            return str;
+        create(key, key);
+        return key;
+    }
     public static void create(String key, String mes){
         LangLoader.getInstance().createLanguage(key, mes);
     }

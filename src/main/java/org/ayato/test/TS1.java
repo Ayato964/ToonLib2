@@ -31,5 +31,10 @@ public class TS1 implements IBaseScene {
                 new AnimationKeyButtons<>(alist, 20, 20, 100, 50, Color.RED, Color.WHITE, new Color(127, 127, 127, 80));
         list.setVisible(true);
 
+        Animation.create(scene, AnimationComponent.ofText(Component.getForGlobal("test")),
+                PropertiesComponent
+                        .ofText(0, 10)
+                        .color(Color.RED)
+                        .font(new Font("", Font.PLAIN, 32)), true);
     }
 }
