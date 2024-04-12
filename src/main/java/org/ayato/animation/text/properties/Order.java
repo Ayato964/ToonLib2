@@ -6,8 +6,6 @@ import org.ayato.animation.Properties;
 import org.ayato.animation.TimerPropertyForText;
 
 import java.awt.*;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class Order extends TimerPropertyForText {
     private StringBuilder baseMessage, arrangeMessage;

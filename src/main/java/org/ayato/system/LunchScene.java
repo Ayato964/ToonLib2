@@ -1,6 +1,8 @@
 package org.ayato.system;
 
 import org.ayato.animation.Animation;
+import org.ayato.animation.Properties;
+import org.ayato.animation.image.ImageMaker;
 import org.ayato.util.IBaseScene;
 
 import java.awt.*;
@@ -49,7 +51,12 @@ public class LunchScene {
             });
         }
     }
-
+    public <A> Animation<A> animation(A object, Properties<A> prop){
+        Animation<A> animation = new Animation<>(this, object, prop);
+        SCENE.addDisplay(animation);
+        animation.init();
+        return animation;
+    }
     public void setVisible(boolean b) {
         FRAME.setVisible(b);
     }

@@ -3,7 +3,9 @@ package org.ayato.main;
 import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
 import org.ayato.system.LangLoader;
-import org.ayato.test.TS1;
+import org.ayato.test.NewAnimationTest;
+
+import java.util.function.Consumer;
 
 public class TestMain {
     public static LunchScene MASTER1;
@@ -13,6 +15,6 @@ public class TestMain {
 
         MASTER1 = new LunchScene("TOON_LIB_TEST");
         MASTER1.setVisible(true);
-        MASTER1.changeScene(new TS1());
+        MASTER1.changeScene(new NewAnimationTest());
     }
 }

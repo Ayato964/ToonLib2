@@ -6,13 +6,15 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.function.BooleanSupplier;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
-public abstract class Properties{
+public abstract class Properties<T> implements DisplayAnimation<T>{
     public int mx, my;
     public int x, y;
-    protected final ArrayList<IProperty> properties;
-    protected Animation<?> animation;
-    protected BooleanSupplier booleanSupplier;
+    protected final ArrayList<Supplier<IProperty>> properties;
+    protected final ArrayList<IProperty> init_properties;
+    public BooleanSupplier isVisible;
     private boolean isFirst = true;
     protected Properties()
     {
@@ -21,43 +23,41 @@ public abstract class Properties{
 
     public Properties(int x, int y) {
         properties = new ArrayList<>();
+        init_properties = new ArrayList<>();
         this.x = x;
         this.y = y;
         this.mx = x;
         this.my = y;
     }
+    public void runProp(Graphics g, Animation<T> animation){
+        if(isVisible.getAsBoolean()) {
+            if (isFirst) {
+                for (IProperty p : init_properties)
+                    p.setup(g, this, animation);
+                isFirst = false;
+            }
 
-    public void addAnimation(Animation<?> text){
-        animation = text;
-    }
-
-    public void runProp(Graphics g){
-        if(booleanSupplier != null) {
-            animation.bool = booleanSupplier;
-            booleanSupplier = null;
-            return;
+            for (IProperty p : init_properties)
+                p.runningProperty(g, this, animation);
         }
-        if(isFirst) {
-            for (IProperty p : properties)
-                p.setup(g, this, animation);
-            isFirst = false;
-        }
-
-        for(IProperty p : properties)
-            p.runningProperty(g, this, animation);
     }
-    public Properties setSize(int x, int y){
+    public Properties<?> setSize(int x, int y){
         this.x = x;
         this.y = y;
         return this;
     }
-
-    public Properties setX(int i) {
+    public void setPosition(int x, int y){
+        mx = x;
+        my = y;
+        this.x = x;
+        this.y = y;
+    }
+    public Properties<?> setX(int i) {
         x = i;
         return this;
     }
 
-    public Properties setY(int y) {
+    public Properties<?> setY(int y) {
         this.y = y;
         return this;
     }
@@ -67,30 +67,26 @@ public abstract class Properties{
         return y;
     }
 
-    public Properties getInstance(){
+    public Properties<?> getInstance(){
         return this;
     }
     public void reset(){
         x = mx;
         y = my;
-        for(IProperty p : properties){
-            p.reset(mx, my);
+        init();
+    }
+
+    public void init() {
+        init_properties.clear();
+        isVisible = isVisible != null ? isVisible : ()->true;
+        for(Supplier<IProperty> sup : properties){
+            init_properties.add(sup.get());
         }
     }
+
     public AnimationSequentialOrder popMatrix(){
         AnimationSequentialOrder order = new AnimationSequentialOrder(this);
-        properties.add(order);
+        properties.add(()->order);
         return order;
     }
-
-
-
-    public <M extends Properties> M copy() {
-        Properties t = this instanceof TextProperties
-                ?  new TextProperties(x, y)
-                :  new ImageProperties(x, y, 0, 0);
-        t.properties.addAll((Collection<? extends IProperty>) properties.clone());
-        return (M) t;
-    }
-
 }

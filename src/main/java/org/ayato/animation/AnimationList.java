@@ -34,20 +34,7 @@ public class AnimationList<T, M extends Properties> {
         this.key = key;
     }
 
-    public void add(AObject<T> object, Consumer<AbstractAnimations<?, ?>> action){
-        add(object, properties.copy(), action);
-    }
-    public void add(AObject<T> object, M m, Consumer<AbstractAnimations<?, ?>> action) {
-        if(this.object == null) {
-            this.object = object;
-            this.drawAction = action;
-        }else {
-            if (nextNode != null)
-                nextNode.add(object, m, action);
-            else
-                nextNode = new AnimationList<>(MASTER, object, m, action);
-        }
-    }
+
     public AnimationList<T, M> next(){
         return nextNode;
     }

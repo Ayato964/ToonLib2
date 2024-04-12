@@ -16,8 +16,7 @@ public class FadeIn extends TimerPropertyForText {
             Color c = g.getColor();
             g.setColor(new Color(c.getRed(), c.getGreen(), c.getBlue(), a));
             isTimeCount = false;
-    }
-
+        }
     }
     @Override
     public void reset(int nx, int ny) {}

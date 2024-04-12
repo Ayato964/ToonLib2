@@ -7,18 +7,20 @@ import java.awt.*;
 import java.util.function.BooleanSupplier;
 
 public class Animation<T> implements Display {
-    protected AObject<T> mes;
+    protected T mes;
     public final LunchScene MASTER;
-    protected Properties properties;
-    public BooleanSupplier bool;
+    protected Properties<T> properties;
 
-    protected Animation(LunchScene master, BooleanSupplier bool){
+    public Animation(LunchScene master, T a, Properties<T> prop){
+        mes = a;
         MASTER = master;
-        this.bool = bool;
+        properties = prop;
     }
-    public static <T> Animation<T> create(LunchScene scene, AObject<T> t, Properties properties, boolean isViewThisScene){
-        Animation<T> i = new Animation<>(scene, ()->true);
-        i.mes = t;
+    @Deprecated
+    public static <T> Animation<T> create(LunchScene scene, AObject<T> t, Properties<T> properties, boolean isViewThisScene){
+        /*
+        Animation<T> i = new Animation<>(scene, t, ()->true);
+   //     i.mes = t;
         if(properties != null) {
             i.properties = properties;
             properties.addAnimation(i);
@@ -26,27 +28,27 @@ public class Animation<T> implements Display {
         if(isViewThisScene)
             scene.SCENE.addDisplay(i);
         return i;
-    }
-    public void drawThisScene(){
-        properties.reset();
-        MASTER.SCENE.addDisplay(this);
+        */
+        return null;
     }
 
     @Override
     public void display(Graphics g) {
-        if(bool.getAsBoolean()) {
             if (properties != null)
-                properties.runProp(g);
+                properties.runProp(g, this);
             if(mes != null)
-                mes.run(MASTER, properties, g, mes.getOBJECT());
-        }
+                properties.run(MASTER,g, mes);
     }
 
     public void setViewObject(T mes) {
-        this.mes.setOBJECT(mes);
+        this.mes = mes;
     }
 
     public T getViewObject() {
-        return mes.getOBJECT();
+        return mes;
+    }
+
+    public void init(){
+        properties.init();
     }
 }

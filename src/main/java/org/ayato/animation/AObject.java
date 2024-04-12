@@ -3,7 +3,7 @@ package org.ayato.animation;
 import org.ayato.system.LunchScene;
 
 import java.awt.*;
-
+@Deprecated
 public abstract class AObject<T> implements DisplayAnimation<T>{
     private T OBJECT;
     public AObject(T o){

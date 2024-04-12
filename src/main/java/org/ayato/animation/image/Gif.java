@@ -23,7 +23,7 @@ public class Gif implements IProperty {
         if(isFirst){
             imageMaker = image.getViewObject();
             isFirst = false;
-            bool = image.bool;
+            bool = properties.isVisible;
             Thread thread = new Thread(this::gif);
             thread.start();
         }
