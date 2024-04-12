@@ -4,27 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.5.28&#10;&#10;AnimationSequentialOrder.java&#10;&#10;アニメーションを順番に出力する機能を追加">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/PropertiesSupplier.java" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.6.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Animation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/DisplayAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/DisplayAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/FadeIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/FadeIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/ImageProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/ImageProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/Gif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/Gif.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/FactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TS1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TS2.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693712146764</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Ver.2.6.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化">
+      <created>1712899359323</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1712899359323</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -368,6 +356,7 @@
     <MESSAGE value="Ver.2.5.15&#10;&#10;TextProperties.java&#10;*displayInOrder&#10;-&gt;文字を順番に表示する。" />
     <MESSAGE value="Ver.2.5.21&#10;&#10;ImageProperties.java&#10;*Gif.java&#10;-&gt;アニメーション用に設定された画像データを動かす" />
     <MESSAGE value="Ver.2.5.28&#10;&#10;AnimationSequentialOrder.java&#10;&#10;アニメーションを順番に出力する機能を追加" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.5.28&#10;&#10;AnimationSequentialOrder.java&#10;&#10;アニメーションを順番に出力する機能を追加" />
+    <MESSAGE value="Ver.2.6.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.6.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
   </component>
 </project>
