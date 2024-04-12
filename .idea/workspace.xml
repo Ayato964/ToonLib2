@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.6.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化">
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.7.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +16,31 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ToonLib2" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ToonLib2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,7 +91,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="アプリケーション.TestMain">
+  <component name="RunManager" selected="Gradle.ToonLib2 [test]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.ayato.main.Main" />
       <module name="ToonLib.main" />
@@ -95,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ToonLib [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ToomLib2 [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -106,7 +131,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="jar" />
+            <option value="publish" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -159,19 +184,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.ToomLib2 [publish]" />
       <item itemvalue="Gradle.ToonLib2 [dependencies]" />
       <item itemvalue="Gradle.ToonLib2 [test]" />
-      <item itemvalue="Gradle.ToonLib [jar]" />
       <item itemvalue="アプリケーション.Main" />
       <item itemvalue="アプリケーション.TestMain" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ToonLib2 [test]" />
+        <item itemvalue="Gradle.ToomLib2 [publish]" />
         <item itemvalue="Gradle.ToonLib2 [dependencies]" />
         <item itemvalue="アプリケーション.TestMain" />
-        <item itemvalue="Gradle.ToonLib2 [test]" />
         <item itemvalue="アプリケーション.Main" />
-        <item itemvalue="Gradle.ToonLib [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712899359323</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Ver.2.7.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化">
+      <created>1712900441280</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1712900441280</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -357,6 +389,7 @@
     <MESSAGE value="Ver.2.5.21&#10;&#10;ImageProperties.java&#10;*Gif.java&#10;-&gt;アニメーション用に設定された画像データを動かす" />
     <MESSAGE value="Ver.2.5.28&#10;&#10;AnimationSequentialOrder.java&#10;&#10;アニメーションを順番に出力する機能を追加" />
     <MESSAGE value="Ver.2.6.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.6.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
+    <MESSAGE value="Ver.2.7.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.7.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
   </component>
 </project>
