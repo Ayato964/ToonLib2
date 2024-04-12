@@ -56,6 +56,6 @@ jobs:
         gradle-home-cache-strict-match: false
         workflow-job-context: null
       env:
-        USERNAME: ${{ github.actor }}
+        USERNAME: ${{ github.repository_owner}}
         TOKEN: ${{ secrets.MY_TOKEN }}
 
