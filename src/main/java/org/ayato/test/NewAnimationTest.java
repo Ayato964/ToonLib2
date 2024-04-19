@@ -31,6 +31,7 @@ public class NewAnimationTest implements IBaseScene{
     @Override
     public void setup(LunchScene scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
+        System.out.println("d");
         scene.animation("Hello", TEMPLATE.of(20, 20).
                 button(0, 0, 40, 20,STATE.get() ,
                         (action)-> System.out.println("cool")));
