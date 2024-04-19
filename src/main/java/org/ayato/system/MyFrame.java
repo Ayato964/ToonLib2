@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 
 public class MyFrame extends JFrame {
     public String NAME;
-    private final MainPanel panel;
+    public final MainPanel panel;
     public int DW;
     public int DH;
     public Rectangle DESCTOP_BOUNDS;
@@ -21,6 +21,7 @@ public class MyFrame extends JFrame {
         setTitle(title);
 //        this.setUndecorated(true);
         getRootPane().setWindowDecorationStyle(JRootPane.NONE);
+
         NAME = title;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         DESCTOP_BOUNDS = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds();
@@ -55,7 +56,7 @@ public class MyFrame extends JFrame {
         }
     }
 
-    private class MainPanel extends JLabel{
+    public class MainPanel extends JLabel{
         BufferedImage image;
         final Graphics hackingPazzle;
         public MainPanel(){

@@ -2,13 +2,16 @@ package org.ayato.util;
 
 import org.ayato.system.LunchScene;
 
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.HashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class KeyInputs implements KeyListener, Runnable {
+public class KeyInputs extends KeyAdapter implements Runnable {
     public boolean isRunning = false;
     private static final HashMap<Integer, Boolean> KEY = new HashMap<>();
     private static final CopyOnWriteArrayList<IListenerDecoder> LISTENERS = new CopyOnWriteArrayList<>();
@@ -37,22 +40,34 @@ public class KeyInputs implements KeyListener, Runnable {
     }
     @Override
     public void keyTyped(KeyEvent keyEvent) {
+        System.out.println(keyEvent.getKeyCode());
+        keyAction(keyEvent);
+    }
+
+    private void keyAction(KeyEvent keyEvent){
+
+        if(isRunning) {
+            if (ID != -1 && (keyEvent.getExtendedKeyCode() == KeyEvent.VK_ENTER ||
+                    keyEvent.getKeyCode() == KeyEvent.VK_ENTER))
+                LISTENERS.get(ID).press();
+        }
         if(isRunning){
-            if(keyEvent.getExtendedKeyCode() == KeyEvent.VK_TAB || keyEvent.getKeyCode() == KeyEvent.VK_TAB) {
-                if (keyEvent.isShiftDown()) {
+            if(keyEvent.getExtendedKeyCode() == KeyEvent.VK_TAB ||keyEvent.getKeyCode() == KeyEvent.VK_DOWN) {
+                if (ID + 1 >= LISTENERS.size()) ID = 0;
+                else ID++;
+            }
+            if((keyEvent.getExtendedKeyCode() == KeyEvent.VK_TAB && keyEvent.isShiftDown()) || keyEvent.getKeyCode() == KeyEvent.VK_UP){
                     if (ID > 0) ID--;
                     else ID = 0;
-                } else {
-                    if (ID + 1 >= LISTENERS.size()) ID = 0;
-                    else ID++;
-                }
             }
         }else{
-            if(keyEvent.getExtendedKeyCode() == KeyEvent.VK_TAB || keyEvent.getKeyCode() == KeyEvent.VK_TAB){
+            if(keyEvent.getExtendedKeyCode() == KeyEvent.VK_TAB || keyEvent.getKeyCode() == KeyEvent.VK_DOWN){
                 running(true);
                 MouseInputs.running(false);
             }
         }
+
+
     }
     public static void running(boolean b){
         INSTANCE.isRunning = b;
@@ -64,12 +79,9 @@ public class KeyInputs implements KeyListener, Runnable {
 
     @Override
     public void keyPressed(KeyEvent keyEvent) {
-        if(isRunning) {
-            KEY.put(keyEvent.getKeyCode(), true);
-            if (ID != -1 && (keyEvent.getExtendedKeyCode() == KeyEvent.VK_ENTER ||
-                    keyEvent.getKeyCode() == KeyEvent.VK_ENTER))
-                LISTENERS.get(ID).press();
-        }
+        KEY.put(keyEvent.getKeyCode(), true);
+
+        keyAction(keyEvent);
     }
 
     @Override
@@ -81,7 +93,7 @@ public class KeyInputs implements KeyListener, Runnable {
     public void run() {
         while (true){
             if(isRunning) {
-                if (LISTENERS.size() != 0) {
+                if (!LISTENERS.isEmpty()) {
                     if (ID != -1) {
                         LISTENERS.get(ID).overlap();
                     }
