@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.8.2&#10;&#10;システム&#10;* Button.java&#10;    -&gt;マウスが重なった時の色を変更できるようにした&#10;    -&gt;Tabキーを押すことでキー操作でのボタンの操作ができるようになった。&#10;    -&gt;insertという機能を削除&#10;    -&gt;x,y座標がPropertyクラスのx,yに対して相対的になった" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.7.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/gradle-publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gradle-publish.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -395,8 +398,6 @@
     <MESSAGE value="Ver.2.5.28&#10;&#10;AnimationSequentialOrder.java&#10;&#10;アニメーションを順番に出力する機能を追加" />
     <MESSAGE value="Ver.2.6.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
     <MESSAGE value="Ver.2.7.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
-    <MESSAGE value="Ver.2.8.0&#10;&#10;システム&#10;* Button.java&#10;    -&gt;マウスが重なった時の色を変更できるようにした&#10;    -&gt;Tabキーを押すことでキー操作でのボタンの操作ができるようになった。&#10;    -&gt;insertという機能を削除&#10;    -&gt;x,y座標がPropertyクラスのx,yに対して相対的になった" />
-    <MESSAGE value="Ver.2.8.2&#10;&#10;システム&#10;* Button.java&#10;    -&gt;マウスが重なった時の色を変更できるようにした&#10;    -&gt;Tabキーを押すことでキー操作でのボタンの操作ができるようになった。&#10;    -&gt;insertという機能を削除&#10;    -&gt;x,y座標がPropertyクラスのx,yに対して相対的になった" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.8.2&#10;&#10;システム&#10;* Button.java&#10;    -&gt;マウスが重なった時の色を変更できるようにした&#10;    -&gt;Tabキーを押すことでキー操作でのボタンの操作ができるようになった。&#10;    -&gt;insertという機能を削除&#10;    -&gt;x,y座標がPropertyクラスのx,yに対して相対的になった" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.7.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
   </component>
 </project>
