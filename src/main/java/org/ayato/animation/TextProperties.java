@@ -3,25 +3,20 @@ package org.ayato.animation;
 import org.ayato.animation.text.properties.*;
 import org.ayato.animation.text.properties.Frame;
 import org.ayato.system.LunchScene;
+import org.ayato.util.Position;
 
 import java.awt.*;
-import java.util.function.BooleanSupplier;
-import java.util.function.Consumer;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class TextProperties extends Properties<String>{
     public TextProperties(int x, int y){
         super(x, y);
     }
 
-    public TextProperties button(int bx, int by, int bw, int bh, Supplier<Color> def, Color bg, PropertyAction insert, PropertyAction action){
-        properties.add(()->new org.ayato.animation.text.properties.Frame(()->bx, ()->by, bw, bh, def, bg));
-        properties.add(()->new org.ayato.animation.text.properties.Button(bx, by, bw, bh, insert, action));
-        return this;
-    }
-    public TextProperties button(int bw, int bh, Supplier<Color> def, Color bg, PropertyAction insert, PropertyAction action){
-        properties.add(()->new org.ayato.animation.text.properties.Frame(()->x, ()->y, bw, bh, def, bg));
-        properties.add(()->new org.ayato.animation.text.properties.Button(x, y, bw, bh, insert, action));
+    public TextProperties button(int bx, int by, int bw, int bh, AnimationState state, PropertyAction action){
+        Position p = new Position(()->x + bx, ()->y + by, bw, bh);
+        Supplier<Frame> f = ()->new org.ayato.animation.text.properties.Frame(p, state);
+        properties.add(()->new org.ayato.animation.text.properties.Button(p, action, f.get()));
         return this;
     }
     public TextProperties center(){
@@ -84,12 +79,8 @@ public class TextProperties extends Properties<String>{
         });
         return this;
     }
-    public TextProperties frame(int bx, int by, int bw, int bh, Supplier<Color> frameCol, Color backColor){
-        properties.add(0, ()->new org.ayato.animation.text.properties.Frame(()->bx, ()->by, bw, bh, frameCol, backColor));
-        return this;
-    }
-    public TextProperties frame(int bw, int bh, Supplier<Color> frameCol, Color backColor){
-        properties.add(0, ()->new Frame(()->x, ()->y,bw, bh, frameCol, backColor));
+    public TextProperties frame(Position position, AnimationState state){
+        properties.add(0, ()->new Frame(position, state));
         return this;
     }
     public TextProperties talk(Object key, boolean stopAll, PropertyAction action, Supplier<String> ... strings){

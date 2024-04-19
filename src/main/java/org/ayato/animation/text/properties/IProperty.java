@@ -9,6 +9,7 @@ import java.awt.*;
 public interface IProperty{
 
     void runningProperty(Graphics g, Properties properties,  Animation<?> animation);
+    @Deprecated
     void reset(int nx, int ny);
 
     default void endAnimation(IProperty order){

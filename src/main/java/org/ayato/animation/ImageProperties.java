@@ -5,6 +5,7 @@ import org.ayato.animation.image.ImageMaker;
 import org.ayato.animation.text.properties.Button;
 import org.ayato.animation.text.properties.PropertyAction;
 import org.ayato.system.LunchScene;
+import org.ayato.util.Position;
 
 import java.awt.*;
 import java.util.function.BooleanSupplier;
@@ -18,12 +19,14 @@ public class ImageProperties extends Properties<ImageMaker> {
         this.h = h;
     }
 
-    public ImageProperties button(int bx, int by, int bw, int bh, PropertyAction insert, PropertyAction action){
-        properties.add(()->new Button(bx, by, bw, bh, insert, action));
+    public ImageProperties button(int bx, int by, int bw, int bh, PropertyAction action){
+        Position p = new Position(()->x + bx, ()->y + by, bw, bh);
+        properties.add(()->new Button(p,  action, null));
         return this;
     }
-    public ImageProperties button(PropertyAction insert, PropertyAction action){
-        properties.add(()->new Button(x, y, w, h, insert, action));
+    public ImageProperties button(PropertyAction action){
+        Position p = new Position(()->x, ()->y, w, h);
+        properties.add(()->new Button(p, action, null));
         return this;
     }
     public ImageProperties ifView(BooleanSupplier how){

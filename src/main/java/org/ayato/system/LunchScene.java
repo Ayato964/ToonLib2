@@ -4,6 +4,8 @@ import org.ayato.animation.Animation;
 import org.ayato.animation.Properties;
 import org.ayato.animation.image.ImageMaker;
 import org.ayato.util.IBaseScene;
+import org.ayato.util.KeyInputs;
+import org.ayato.util.MouseInputs;
 
 import java.awt.*;
 
@@ -21,6 +23,8 @@ public class LunchScene {
         SCENE = DisplayThread.runThread(null, this);
         ANIMATION  = DisplayThread.runThread(null, this);
         SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
+        KeyInputs.init(this);
+        MouseInputs.init(this);
     }
     public LunchScene(String str, int dw, int dh){
         FRAME = new MyFrame(str);
