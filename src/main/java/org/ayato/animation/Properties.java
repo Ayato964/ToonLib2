@@ -1,6 +1,7 @@
 package org.ayato.animation;
 
 import org.ayato.animation.text.properties.*;
+import org.ayato.util.Position;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -10,8 +11,8 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public abstract class Properties<T> implements DisplayAnimation<T>{
-    public int mx, my;
-    public int x, y;
+    public int baseX, baseY, rx, ry;
+    public Position position;
     protected final ArrayList<Supplier<IProperty>> properties;
     protected final ArrayList<IProperty> init_properties;
     public BooleanSupplier isVisible;
@@ -23,10 +24,11 @@ public abstract class Properties<T> implements DisplayAnimation<T>{
     public Properties(int x, int y) {
         properties = new ArrayList<>();
         init_properties = new ArrayList<>();
-        this.x = x;
-        this.y = y;
-        this.mx = x;
-        this.my = y;
+        baseX = x;
+        baseY = y;
+        rx = baseX;
+        ry = baseY;
+        position = new Position(()->baseX, ()-> baseY, 0, 0);
     }
     public void runProp(Graphics g, Animation<T> animation){
         if(isVisible.getAsBoolean()) {
@@ -34,43 +36,14 @@ public abstract class Properties<T> implements DisplayAnimation<T>{
                 p.runningProperty(g, this, animation);
         }
     }
-    public Properties<?> setSize(int x, int y){
-        this.x = x;
-        this.y = y;
-        return this;
-    }
-    public void setPosition(int x, int y){
-        mx = x;
-        my = y;
-        this.x = x;
-        this.y = y;
-    }
-    public Properties<?> setX(int i) {
-        x = i;
-        return this;
-    }
-
-    public Properties<?> setY(int y) {
-        this.y = y;
-        return this;
-    }
-
-
-    public int getY() {
-        return y;
-    }
-
-    public Properties<?> getInstance(){
-        return this;
-    }
     public void reset(){
-        x = mx;
-        y = my;
         init();
     }
 
     public void init() {
         init_properties.clear();
+        baseX = rx;
+        baseY = ry;
         isVisible = isVisible != null ? isVisible : ()->true;
         for(Supplier<IProperty> sup : properties){
             init_properties.add(sup.get());

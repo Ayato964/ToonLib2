@@ -14,7 +14,7 @@ public class TextProperties extends Properties<String>{
     }
 
     public TextProperties button(int bx, int by, int bw, int bh, AnimationState state, PropertyAction action){
-        Position p = new Position(()->x + bx, ()->y + by, bw, bh);
+        Position p = new Position(()->position.x.getAsInt() + bx, ()->position.y.getAsInt() + by, bw, bh);
         Supplier<Frame> f = ()->new org.ayato.animation.text.properties.Frame(p, state);
         properties.add(()->new org.ayato.animation.text.properties.Button(p, action, f.get()));
         return this;
@@ -29,7 +29,7 @@ public class TextProperties extends Properties<String>{
     }
 
     public TextProperties centerFrame(int bw, int bh, Supplier<Color> frameCol, Color backColor){
-        properties.add(()->new CenterFrame(y, bw, bh, frameCol, backColor));
+        properties.add(()->new CenterFrame(position.y.getAsInt(), bw, bh, frameCol, backColor));
         return this;
     }
     public TextProperties color(Color color){
@@ -107,12 +107,7 @@ public class TextProperties extends Properties<String>{
     }
 
     @Override
-    public TextProperties getInstance() {
-        return this;
-    }
-
-    @Override
     public void run(LunchScene MASTER, Graphics g, String o) {
-        g.drawString(o, x * MASTER.DW, y * MASTER.DH + g.getFontMetrics().getHeight());
+        g.drawString(o, position.x.getAsInt() * MASTER.DW, position.y.getAsInt() * MASTER.DH + g.getFontMetrics().getHeight());
     }
 }

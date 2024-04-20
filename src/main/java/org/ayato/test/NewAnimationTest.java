@@ -34,7 +34,6 @@ public class NewAnimationTest implements IBaseScene{
         scene.BACKGROUND.mode.setColor(Color.BLACK);
         Animation<String> animation = scene.createAnimation("YESSS!!", TEMPLATE.of(100, 120).center());
 
-        System.out.println("d");
         scene.addAnimation("Hello", TEMPLATE.of(20, 20).center().
                 button(0, 0, 40, 20,STATE.get() ,
                         (action)-> System.out.println("cool")));

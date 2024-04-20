@@ -20,22 +20,17 @@ public class ImageProperties extends Properties<ImageMaker> {
     }
 
     public ImageProperties button(int bx, int by, int bw, int bh, PropertyAction action){
-        Position p = new Position(()->x + bx, ()->y + by, bw, bh);
+        Position p = new Position(()->position.x.getAsInt() + bx, ()->position.y.getAsInt() + by, bw, bh);
         properties.add(()->new Button(p,  action, null));
         return this;
     }
     public ImageProperties button(PropertyAction action){
-        Position p = new Position(()->x, ()->y, w, h);
+        Position p = new Position(()->position.x.getAsInt(), ()->position.y.getAsInt(), w, h);
         properties.add(()->new Button(p, action, null));
         return this;
     }
     public ImageProperties ifView(BooleanSupplier how){
         isVisible = how;
-        return this;
-    }
-
-    @Override
-    public ImageProperties getInstance() {
         return this;
     }
 
