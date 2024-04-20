@@ -16,21 +16,6 @@ public class Animation<T> implements Display {
         MASTER = master;
         properties = prop;
     }
-    @Deprecated
-    public static <T> Animation<T> create(LunchScene scene, AObject<T> t, Properties<T> properties, boolean isViewThisScene){
-        /*
-        Animation<T> i = new Animation<>(scene, t, ()->true);
-   //     i.mes = t;
-        if(properties != null) {
-            i.properties = properties;
-            properties.addAnimation(i);
-        }
-        if(isViewThisScene)
-            scene.SCENE.addDisplay(i);
-        return i;
-        */
-        return null;
-    }
 
     @Override
     public void display(Graphics g) {
