@@ -27,8 +27,8 @@ public class Position {
         return  this;
     }
     public boolean isInRect(int mx, int my, LunchScene main){
-        return x.getAsInt() * main.FRAME.DW + runAddon(sx, 0) <= mx && x.getAsInt() * main.FRAME.DW + runAddon(sx, 0) + w * main.FRAME.DW  >= mx &&
-                y.getAsInt() * main.FRAME.DH + runAddon(sy, 0) <= my && y.getAsInt() * main.FRAME.DH + runAddon(sy, 0) + h * main.FRAME.DH >= my;
+        return x.getAsInt() * main.DW + runAddon(sx, 0) <= mx && x.getAsInt() * main.DW + runAddon(sx, 0) + w * main.DW  >= mx &&
+                y.getAsInt() * main.DH + runAddon(sy, 0) <= my && y.getAsInt() * main.DH + runAddon(sy, 0) + h * main.DH >= my;
     }
     private int runAddon(ArrayList<IntSupplier> a, int c){
         return a.size() < c ? a.get(c).getAsInt() + runAddon(a, c + 1) : 0;

@@ -22,7 +22,7 @@ public class NewAnimationTest implements IBaseScene{
     );
     public static final PropertiesSupplier<TextProperties> TEMPLATE =(x, y) -> PropertiesComponent.ofText(x, y)
             .color(Color.WHITE)
-            .font(new Font("", Font.PLAIN, 32));
+            .font("", Font.PLAIN, 1.5f);
     @Override
     public void display(Graphics g) {
 

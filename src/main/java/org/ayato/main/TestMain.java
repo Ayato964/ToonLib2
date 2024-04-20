@@ -11,10 +11,11 @@ public class TestMain {
     public static LunchScene MASTER1;
     public static void main(String[] args) {
         LangLoader.create("assets/ayato/lang", LangLoader.ENGLISH);
-        System.out.println(Component.get(new TestMain(), "hello"));
-
-        MASTER1 = new LunchScene("TOON_LIB_TEST");
+        MASTER1 = new LunchScene("TOON_LIB_TEST", true);
         MASTER1.setVisible(true);
+
+        System.out.println(MASTER1.FONT_BASE_SIZE);
+
         MASTER1.changeScene(new NewAnimationTest());
     }
 }

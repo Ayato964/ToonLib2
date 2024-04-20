@@ -9,24 +9,20 @@ import java.awt.image.BufferedImage;
 public class MyFrame extends JFrame {
     public String NAME;
     public final MainPanel panel;
-    public int DW;
-    public int DH;
     public Rectangle DESCTOP_BOUNDS;
     public Graphics g;
 
 
-    public MyFrame(String title){
+    public MyFrame(String title, boolean isFullScreen){
         //JOptionPane.showMessageDialog(new JFrame(), getClass().getClassLoader().getResource("assets/").toString());
         setName(title);
         setTitle(title);
-//        this.setUndecorated(true);
+        this.setUndecorated(isFullScreen);
         getRootPane().setWindowDecorationStyle(JRootPane.NONE);
 
         NAME = title;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         DESCTOP_BOUNDS = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds();
-        DW = (int) DESCTOP_BOUNDS.getWidth() / 198;
-        DH =(int) DESCTOP_BOUNDS.getHeight() / 108;
         panel = new MainPanel();
         add("Center", panel);
         pack();
@@ -37,8 +33,6 @@ public class MyFrame extends JFrame {
     @Override
     public void setSize(int width, int height) {
         super.setSize(width, height);
-        DW = width / 198;
-        DH = height / 108;
     }
 
     public void removeMouseListenerAll() {

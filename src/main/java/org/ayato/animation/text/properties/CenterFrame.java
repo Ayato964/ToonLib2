@@ -22,14 +22,14 @@ public class CenterFrame implements IProperty {
     @Override
     public void runningProperty(Graphics g, Properties properties, Animation<?> text) {
         int windowCenter = text.MASTER.FRAME.DESCTOP_BOUNDS.width / 2;
-        int frameCenter = bw * text.MASTER.FRAME.DW / 2;
-        int bx = (windowCenter - frameCenter) / text.MASTER.FRAME.DW;
+        int frameCenter = bw * text.MASTER.DW / 2;
+        int bx = (windowCenter - frameCenter) / text.MASTER.DW;
         g.setColor(bc);
-        g.fillRect(bx * text.MASTER.FRAME.DW, by * text.MASTER.FRAME.DH - g.getFontMetrics().getHeight(),
-                bw * text.MASTER.FRAME.DW, bh * text.MASTER.FRAME.DH );
+        g.fillRect(bx * text.MASTER.DW, by * text.MASTER.DH - g.getFontMetrics().getHeight(),
+                bw * text.MASTER.DW, bh * text.MASTER.DH );
         g.setColor(fc.get());
-        g.drawRect(bx * text.MASTER.FRAME.DW, by * text.MASTER.FRAME.DH - g.getFontMetrics().getHeight(),
-                bw * text.MASTER.FRAME.DW, bh * text.MASTER.FRAME.DH);
+        g.drawRect(bx * text.MASTER.DW, by * text.MASTER.DH - g.getFontMetrics().getHeight(),
+                bw * text.MASTER.DW, bh * text.MASTER.DH);
     }
 
     @Override

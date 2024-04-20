@@ -16,8 +16,17 @@ public class LunchScene {
     public final Graphics       GRAPHIC;
     public final Background     BACKGROUND;
     public IBaseScene MY_SCENE;
-    public LunchScene(String title){
-        FRAME = new MyFrame(title);
+    public int DW;
+    public int DH;
+
+    public final int FONT_BASE_SIZE;
+
+    public LunchScene(String title, boolean isFull){
+        FRAME = new MyFrame(title, isFull);
+        DW = (int) FRAME.DESCTOP_BOUNDS.getWidth() / 400;
+        DH =(int) FRAME.DESCTOP_BOUNDS.getHeight() / 200;
+        FONT_BASE_SIZE = (DW * 5 + DH * 5) / 2;
+
         GRAPHIC = FRAME.g;
         BACKGROUND = new Background(this);
         SCENE = DisplayThread.runThread(null, this);
@@ -27,13 +36,20 @@ public class LunchScene {
         MouseInputs.init(this);
     }
     public LunchScene(String str, int dw, int dh){
-        FRAME = new MyFrame(str);
+        FRAME = new MyFrame(str, false);
         FRAME.setSize(dw, dh);
+        DW = (int) FRAME.DESCTOP_BOUNDS.getWidth() / 400;
+        DH =(int) FRAME.DESCTOP_BOUNDS.getHeight() / 200;
+        FONT_BASE_SIZE = (DW * 5 + DH * 5) / 2;
+
+
         GRAPHIC = FRAME.g;
         BACKGROUND = new Background(this);
         SCENE = DisplayThread.runThread(null, this);
         ANIMATION  = DisplayThread.runThread(null, this);
         SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
+        KeyInputs.init(this);
+        MouseInputs.init(this);
     }
     public void changeScene(IBaseScene scene){
         if(MY_SCENE == null) {
@@ -63,5 +79,8 @@ public class LunchScene {
     }
     public void setVisible(boolean b) {
         FRAME.setVisible(b);
+    }
+    public Font getMakeFont(String fontName, int style, float size){
+        return new Font(fontName, style, (int) (FONT_BASE_SIZE * size));
     }
 }

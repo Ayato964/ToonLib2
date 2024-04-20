@@ -65,11 +65,11 @@ public class TextProperties extends Properties<String>{
         properties.add(()->new Order(time));
         return this;
     }
-    public TextProperties font(Font font){
+    public TextProperties font(String font, int style, float size){
         properties.add(0,()-> new IProperty() {
             @Override
             public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
-                g.setFont(font);
+                g.setFont(animation.MASTER.getMakeFont(font, style, size));
             }
 
             @Override
@@ -91,7 +91,7 @@ public class TextProperties extends Properties<String>{
         properties.add(()->new IProperty() {
             @Override
             public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
-                g.setFont(new Font("", Font.PLAIN, size));
+                g.setFont(animation.MASTER.getMakeFont("", Font.PLAIN, size));
             }
 
             @Override
@@ -117,6 +117,6 @@ public class TextProperties extends Properties<String>{
 
     @Override
     public void run(LunchScene MASTER, Graphics g, String o) {
-        g.drawString(o, x * MASTER.FRAME.DW, y * MASTER.FRAME.DH);
+        g.drawString(o, x * MASTER.DW, y * MASTER.DH + g.getFontMetrics().getHeight());
     }
 }

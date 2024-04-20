@@ -29,10 +29,10 @@ public class Input implements IProperty, MouseListener, KeyListener {
     public void runningProperty(Graphics g, Properties properties, Animation<?> text) {
         Animation<String> t = (Animation<String>)text;
         if(isFirst){
-            x = (x * text.MASTER.FRAME.DW);
-            y = (y * text.MASTER.FRAME.DH);
-            w = (w * text.MASTER.FRAME.DW);
-            h = (h * text.MASTER.FRAME.DH);
+            x = (x * text.MASTER.DW);
+            y = (y * text.MASTER.DH);
+            w = (w * text.MASTER.DW);
+            h = (h * text.MASTER.DH);
             isFirst = false;
             ANIMATION = text;
             text.MASTER.FRAME.addMouseListener(this);
