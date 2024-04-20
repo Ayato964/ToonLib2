@@ -1,5 +1,6 @@
 package org.ayato.test;
 
+import org.ayato.animation.Animation;
 import org.ayato.animation.AnimationState;
 import org.ayato.animation.PropertiesComponent;
 import org.ayato.animation.TextProperties;
@@ -31,18 +32,20 @@ public class NewAnimationTest implements IBaseScene{
     @Override
     public void setup(LunchScene scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
+        Animation<String> animation = scene.createAnimation("YESSS!!", TEMPLATE.of(100, 120).center());
+
         System.out.println("d");
-        scene.animation("Hello", TEMPLATE.of(20, 20).
+        scene.addAnimation("Hello", TEMPLATE.of(20, 20).center().
                 button(0, 0, 40, 20,STATE.get() ,
                         (action)-> System.out.println("cool")));
 
-        scene.animation("Test Animation", TEMPLATE.of(60, 40)
+        scene.addAnimation("Test Animation", TEMPLATE.of(60, 40)
                 .button(0, 0, 10, 10, STATE.get(),
                         (a)-> System.out.println("cooler"))
         );
-        scene.animation("Test AAAAA", TEMPLATE.of(90, 40)
+        scene.addAnimation("Test AAAAA", TEMPLATE.of(90, 40)
                 .button(0, 0, 10, 10, STATE.get(),
-                        (a)-> System.out.println("coolest"))
+                        (a)-> scene.addAnimation(animation))
         );
     }
 }

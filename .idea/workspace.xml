@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.9.0&#10;&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;AnimationList.javaを削除&#10;Fontのサイズを相対的にした&#10;&#10;以下のコンポーネントを削除&#10;AbstractAnimations.java&#10;AnimationComponent.java&#10;AnimationList.java">
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.9.2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationSequentialOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/FadeIn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TimerPropertyForText.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +55,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -406,7 +416,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713596968991</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Ver.2.9.2">
+      <option name="closed" value="true" />
+      <created>1713597085534</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1713597085534</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -444,6 +462,7 @@
     <MESSAGE value="Ver.2.8.7&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;&#10; AnimationList.javaを削除" />
     <MESSAGE value="Ver.2.8.13&#10;&#10;以下のコンポーネントを削除&#10;AbstractAnimations.java&#10;AnimationComponent.java&#10;AnimationList.java" />
     <MESSAGE value="Ver.2.9.0&#10;&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;AnimationList.javaを削除&#10;Fontのサイズを相対的にした&#10;&#10;以下のコンポーネントを削除&#10;AbstractAnimations.java&#10;AnimationComponent.java&#10;AnimationList.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.9.0&#10;&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;AnimationList.javaを削除&#10;Fontのサイズを相対的にした&#10;&#10;以下のコンポーネントを削除&#10;AbstractAnimations.java&#10;AnimationComponent.java&#10;AnimationList.java" />
+    <MESSAGE value="Ver.2.9.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.9.2" />
   </component>
 </project>

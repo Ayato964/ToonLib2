@@ -71,12 +71,21 @@ public class LunchScene {
             });
         }
     }
-    public <A> Animation<A> animation(A object, Properties<A> prop){
+    public <A> Animation<A> addAnimation(A object, Properties<A> prop){
         Animation<A> animation = new Animation<>(this, object, prop);
         SCENE.addDisplay(animation);
         animation.init();
         return animation;
     }
+    public <A> Animation<A> addAnimation(Animation<A> animation){
+        SCENE.addDisplay(animation);
+        animation.init();
+        return animation;
+    }
+    public <A> Animation<A> createAnimation(A object, Properties<A> prop){
+        return new Animation<>(this, object, prop);
+    }
+
     public void setVisible(boolean b) {
         FRAME.setVisible(b);
     }

@@ -61,10 +61,6 @@ public class TextProperties extends Properties<String>{
         } ));
         return this;
     }
-    public TextProperties displayInOrder(long time){
-        properties.add(()->new Order(time));
-        return this;
-    }
     public TextProperties font(String font, int style, float size){
         properties.add(0,()-> new IProperty() {
             @Override

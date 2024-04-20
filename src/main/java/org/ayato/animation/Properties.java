@@ -15,7 +15,6 @@ public abstract class Properties<T> implements DisplayAnimation<T>{
     protected final ArrayList<Supplier<IProperty>> properties;
     protected final ArrayList<IProperty> init_properties;
     public BooleanSupplier isVisible;
-    private boolean isFirst = true;
     protected Properties()
     {
         this(0, 0);
@@ -31,12 +30,6 @@ public abstract class Properties<T> implements DisplayAnimation<T>{
     }
     public void runProp(Graphics g, Animation<T> animation){
         if(isVisible.getAsBoolean()) {
-            if (isFirst) {
-                for (IProperty p : init_properties)
-                    p.setup(g, this, animation);
-                isFirst = false;
-            }
-
             for (IProperty p : init_properties)
                 p.runningProperty(g, this, animation);
         }
@@ -82,11 +75,5 @@ public abstract class Properties<T> implements DisplayAnimation<T>{
         for(Supplier<IProperty> sup : properties){
             init_properties.add(sup.get());
         }
-    }
-
-    public AnimationSequentialOrder popMatrix(){
-        AnimationSequentialOrder order = new AnimationSequentialOrder(this);
-        properties.add(()->order);
-        return order;
     }
 }
