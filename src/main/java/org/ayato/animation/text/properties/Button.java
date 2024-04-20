@@ -27,7 +27,6 @@ public class Button implements IProperty, IListenerDecoder {
     @Override
     public void runningProperty(Graphics g, Properties properties, Animation<?> text) {
         if(isFirst){
-            position.setYAddon(()->-g.getFontMetrics().getHeight());
             isFirst = false;
             KeyInputs.add(this);
             MouseInputs.add(position, this);

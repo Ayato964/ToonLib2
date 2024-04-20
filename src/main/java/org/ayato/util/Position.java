@@ -8,7 +8,7 @@ import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 
 public class Position {
-    public IntSupplier x, y;
+    private IntSupplier x, y;
     public int w, h;
     private ArrayList<IntSupplier> sx = new ArrayList<>();
     private ArrayList<IntSupplier> sy = new ArrayList<>();
@@ -17,6 +17,12 @@ public class Position {
         this.y = y;
         this.w = w;
         this.h = h;
+    }
+    public int getX(){
+        return x.getAsInt() + runAddon(sx, 0);
+    }
+    public int getY(){
+        return y.getAsInt() + runAddon(sy, 0);
     }
     public Position setXAddon(IntSupplier s){
         sx.add(s);
@@ -31,6 +37,6 @@ public class Position {
                 y.getAsInt() * main.DH + runAddon(sy, 0) <= my && y.getAsInt() * main.DH + runAddon(sy, 0) + h * main.DH >= my;
     }
     private int runAddon(ArrayList<IntSupplier> a, int c){
-        return a.size() < c ? a.get(c).getAsInt() + runAddon(a, c + 1) : 0;
+        return a.size() > c ? a.get(c).getAsInt() + runAddon(a, c + 1) : 0;
     }
 }
