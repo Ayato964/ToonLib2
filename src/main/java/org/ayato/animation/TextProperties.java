@@ -46,21 +46,6 @@ public class TextProperties extends Properties<String>{
         });
         return this;
     }
-    public TextProperties changeMessage(Supplier<String> str){
-        properties.add(()->(new IProperty() {
-            @Override
-            public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
-                Animation<String> a = (Animation<String>) animation;
-                a.setViewObject(str.get());
-            }
-
-            @Override
-            public void reset(int nx, int ny) {
-
-            }
-        } ));
-        return this;
-    }
     public TextProperties font(String font, int style, float size){
         properties.add(0,()-> new IProperty() {
             @Override
@@ -79,6 +64,7 @@ public class TextProperties extends Properties<String>{
         properties.add(0, ()->new Frame(position, state));
         return this;
     }
+    @Deprecated
     public TextProperties talk(Object key, boolean stopAll, PropertyAction action, Supplier<String> ... strings){
         properties.add( ()->new Talk(strings, key, stopAll, action));
         return this;

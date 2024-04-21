@@ -10,6 +10,7 @@ import java.awt.event.KeyListener;
 import java.util.Arrays;
 import java.util.function.Supplier;
 
+@Deprecated
 public class Talk implements IProperty, KeyListener {
     int count = 0;
     Supplier<String>[] mes;
