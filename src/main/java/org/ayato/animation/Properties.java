@@ -39,6 +39,10 @@ public abstract class Properties<T> implements DisplayAnimation<T>{
     public void reset(){
         init();
     }
+    public Properties<T> custom(Supplier<IProperty> property){
+        properties.add(property);
+        return this;
+    }
 
     public void init() {
         init_properties.clear();

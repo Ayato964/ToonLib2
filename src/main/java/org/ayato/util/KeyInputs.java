@@ -40,17 +40,17 @@ public class KeyInputs extends KeyAdapter implements Runnable {
     }
     @Override
     public void keyTyped(KeyEvent keyEvent) {
-        System.out.println(keyEvent.getKeyCode());
         keyAction(keyEvent);
-    }
-
-    private void keyAction(KeyEvent keyEvent){
-
         if(isRunning) {
             if (ID != -1 && (keyEvent.getExtendedKeyCode() == KeyEvent.VK_ENTER ||
                     keyEvent.getKeyCode() == KeyEvent.VK_ENTER))
                 LISTENERS.get(ID).press();
         }
+    }
+
+    private void keyAction(KeyEvent keyEvent){
+
+
         if(isRunning){
             if(keyEvent.getExtendedKeyCode() == KeyEvent.VK_TAB ||keyEvent.getKeyCode() == KeyEvent.VK_DOWN) {
                 if (ID + 1 >= LISTENERS.size()) ID = 0;

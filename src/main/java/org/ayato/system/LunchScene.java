@@ -14,6 +14,7 @@ public class LunchScene {
     public  final DisplayThread ANIMATION;
     public  final MyFrame       FRAME;
     public final Graphics       GRAPHIC;
+    public final AnimationHandler HANDLER;
     public final Background     BACKGROUND;
     public IBaseScene MY_SCENE;
     public int DW;
@@ -31,6 +32,7 @@ public class LunchScene {
         BACKGROUND = new Background(this);
         SCENE = DisplayThread.runThread(null, this);
         ANIMATION  = DisplayThread.runThread(null, this);
+        HANDLER = new AnimationHandler(this);
         SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
         KeyInputs.init(this);
         MouseInputs.init(this);
@@ -47,6 +49,7 @@ public class LunchScene {
         BACKGROUND = new Background(this);
         SCENE = DisplayThread.runThread(null, this);
         ANIMATION  = DisplayThread.runThread(null, this);
+        HANDLER = new AnimationHandler(this);
         SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
         KeyInputs.init(this);
         MouseInputs.init(this);

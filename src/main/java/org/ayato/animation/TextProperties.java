@@ -46,6 +46,13 @@ public class TextProperties extends Properties<String>{
         });
         return this;
     }
+    public TextProperties copyAddon(TextProperties prop){
+        if(prop != null) {
+            isVisible = prop.isVisible;
+            properties.addAll(prop.properties);
+        }
+        return this;
+    }
     public TextProperties font(String font, int style, float size){
         properties.add(0,()-> new IProperty() {
             @Override
@@ -61,6 +68,7 @@ public class TextProperties extends Properties<String>{
         return this;
     }
     public TextProperties frame(Position position, AnimationState state){
+
         properties.add(0, ()->new Frame(position, state));
         return this;
     }
@@ -87,6 +95,7 @@ public class TextProperties extends Properties<String>{
         isVisible = how;
         return this;
     }
+    @Deprecated
     public TextProperties input(int bx, int by, int bw, int bh, Consumer<String> stringConsumer){
         properties.add(()->new Input(bx, by, bw, bh, stringConsumer));
         return this;

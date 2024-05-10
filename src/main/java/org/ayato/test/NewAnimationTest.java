@@ -43,7 +43,9 @@ public class NewAnimationTest implements IBaseScene{
                 .button(0, 0, 10, 10, STATE.get(),
                         (a)-> scene.addAnimation(animation))
         );
-        AnimationGroup g = new AnimationGroup(100, 20, b, c, d);
+        AnimationGroup g = new AnimationGroup(60, 20, b, c, d);
         g.view(scene);
+
+        scene.HANDLER.addInputModule("Input Here", System.out::println, TEMPLATE.of(80, 40));
     }
 }

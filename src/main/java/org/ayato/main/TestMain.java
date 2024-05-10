@@ -1,11 +1,8 @@
 package org.ayato.main;
 
-import org.ayato.system.Component;
 import org.ayato.system.LunchScene;
 import org.ayato.system.LangLoader;
 import org.ayato.test.NewAnimationTest;
-
-import java.util.function.Consumer;
 
 public class TestMain {
     public static LunchScene MASTER1;

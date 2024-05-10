@@ -10,6 +10,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.function.Consumer;
 
+@Deprecated
 public class Input implements IProperty, MouseListener, KeyListener {
     private int x, y, w, h;
     private StringBuilder inputStr = new StringBuilder().append('>');

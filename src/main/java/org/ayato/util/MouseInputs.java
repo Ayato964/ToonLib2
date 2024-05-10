@@ -5,7 +5,6 @@ import org.ayato.system.LunchScene;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.text.FieldPosition;
 import java.util.HashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -74,7 +73,7 @@ public class MouseInputs implements MouseListener, Runnable {
             if (isRunning) {
                 Point point = MouseInfo.getPointerInfo().getLocation();
                 for (Position p : POSITION) {
-                    if (p.isInRect(point.x, point.y, MAIN))
+                    if (p.isInRect((int) point.getX(),(int) point.getY(), MAIN))
                         DECODER.get(p).overlap();
                     else
                         DECODER.get(p).unOverlap();
