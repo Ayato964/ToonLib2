@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.9.21&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/InputModule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/KeyInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/KeyInputs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/MouseInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/MouseInputs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" afterDir="false" />
-    </list>
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.9.35&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -448,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713621342050</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Ver.2.9.35&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる">
+      <created>1715301597391</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1715301597391</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -463,7 +455,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version.0.2.0&#10;&#10;Setup.java&#10;で、宣言する専用システムである、 AnimationText.javaを作成した。&#10;String形式のアニメーションをGraphicsを通してWindowに表示する。" />
     <MESSAGE value="Version.0.2.5&#10;&#10;LangLoader.java&#10;言語変換システムの仮実装" />
     <MESSAGE value="Version.0.4.0&#10;&#10;Properties.java&#10;add the properties setting." />
     <MESSAGE value="Version.0.4.3&#10;&#10;Properties.ifView&#10;表示する条件を設定できるようになった。&#10;&#10;Event.java&#10;イベントを管理できるシステム。Event.EventCardと Inheriting.javaを組み合わせることで、&#10;イベントを通してデータの引継ぎが可能になる。" />
@@ -488,6 +479,7 @@
     <MESSAGE value="Ver.2.9.13&#10;&#10;以下のコンポーネントを一時的に削除&#10;AnimationSequentialOrder.java&#10;FadeIn.java&#10;Order.java&#10;TimerPropertyForText.java" />
     <MESSAGE value="Ver.2.9.13&#10;&#10;Properties.java&#10;* 表示位置をPosition.javaで管理するようになった。" />
     <MESSAGE value="Ver.2.9.21&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.9.21&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる" />
+    <MESSAGE value="Ver.2.9.35&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.9.35&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる" />
   </component>
 </project>
