@@ -9,21 +9,28 @@ import java.util.function.Supplier;
 
 public class Position {
     public boolean isCalcInclude = true;
-    private IntSupplier x, y;
-    public int w, h;
+    public int x, y, w, h;
     private ArrayList<IntSupplier> sx = new ArrayList<>();
     private ArrayList<IntSupplier> sy = new ArrayList<>();
-    public Position(IntSupplier x, IntSupplier y, int w, int h){
+    public Position(int x, int y, int w, int h){
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
     }
     public int getX(){
-        return x.getAsInt() + runAddon(sx, 0);
+        return x + runAddon(sx, 0);
     }
     public int getY(){
-        return y.getAsInt() + runAddon(sy, 0);
+        return y + runAddon(sy, 0);
+    }
+    public Position setX(int dx){
+        x = dx;
+        return this;
+    }
+    public Position setY(int dy){
+        y = dy;
+        return this;
     }
     public Position setXAddon(IntSupplier s){
         sx.add(s);

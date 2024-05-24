@@ -48,7 +48,7 @@ public class InputModule extends Animation<String> implements KeyListener {
 
     public InputModule(LunchScene master, String a, TextProperties prop, Consumer<String> ifPressEnter) {
         super(master, a, prop);
-        this.properties = INPUT_PROP.of(prop.baseX, prop.baseY).copyAddon(prop);
+        this.properties = INPUT_PROP.of(prop.position.getX(), prop.position.y).copyAddon(prop);
         this.ifPressEnter = ifPressEnter;
         this.baseMessage = a;
     }
@@ -70,7 +70,7 @@ public class InputModule extends Animation<String> implements KeyListener {
     @Override
     public void keyPressed(KeyEvent keyEvent) {
         if(isClicked && keyEvent.getKeyCode() == KeyEvent.VK_BACK_SPACE){
-            if (inputMessage.length() > 0) {
+            if (!inputMessage.isEmpty()) {
                 inputMessage.deleteCharAt(inputMessage.length() - 1);
                 mes = inputMessage.toString();
             }

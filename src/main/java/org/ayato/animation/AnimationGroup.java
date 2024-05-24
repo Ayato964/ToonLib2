@@ -10,7 +10,7 @@ public class AnimationGroup{
     public Position position;
     private Animation<?>[] animations;
     public AnimationGroup(int x, int y, Animation<?>... animation){
-        position = new Position(()->x, ()->y, 0, 0);
+        position = new Position(x, y, 0, 0);
         animations = animation;
         for(Animation<?> a : animation){
             a.properties.position.setXAddon(()->position.getX());

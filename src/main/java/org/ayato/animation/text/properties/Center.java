@@ -22,7 +22,7 @@ public class Center implements IProperty{
             isFirst = false;
             int windowCenter = text.MASTER.FRAME.DESCTOP_BOUNDS.width / 2;
             int textCenter = getTextWidth(g, a.getViewObject()) / 2;
-            properties.baseX = (windowCenter - textCenter )/ text.MASTER.DW;
+            properties.position.setX( (windowCenter - textCenter )/ text.MASTER.DW);
         }
     }
 

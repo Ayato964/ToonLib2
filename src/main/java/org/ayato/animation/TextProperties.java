@@ -14,7 +14,7 @@ public class TextProperties extends Properties<String>{
     }
 
     public TextProperties button(int bx, int by, int bw, int bh, AnimationState state, PropertyAction action){
-        Position p = new Position(()->position.getX() + bx, ()->position.getY() + by, bw, bh);
+        Position p = new Position(bx, by, bw, bh).setXAddon(()->position.getX()).setYAddon(()->position.getY() );
         Supplier<Frame> f = ()->new org.ayato.animation.text.properties.Frame(p, state);
         properties.add(()->new org.ayato.animation.text.properties.Button(p, action, f.get()));
         return this;

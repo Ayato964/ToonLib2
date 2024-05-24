@@ -20,12 +20,12 @@ public class ImageProperties extends Properties<ImageMaker> {
     }
 
     public ImageProperties button(int bx, int by, int bw, int bh, PropertyAction action){
-        Position p = new Position(()->position.getX() + bx, ()->position.getY() + by, bw, bh);
-        properties.add(()->new Button(p,  action, null));
+        properties.add(()->new Button( new Position(bx, by, bw, bh)
+                .setXAddon(()->position.getX()).setYAddon(()->position.getY()), action, null));
         return this;
     }
     public ImageProperties button(PropertyAction action){
-        Position p = new Position(()->position.getX(), ()->position.getY(), w, h);
+        Position p = new Position(0, 0, w, h).setXAddon(()->position.getX()).setYAddon(()->position.getY());
         properties.add(()->new Button(p, action, null));
         return this;
     }

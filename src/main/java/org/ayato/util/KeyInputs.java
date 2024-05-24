@@ -60,6 +60,9 @@ public class KeyInputs extends KeyAdapter implements Runnable {
                     if (ID > 0) ID--;
                     else ID = 0;
             }
+            if (ID != -1 && (keyEvent.getExtendedKeyCode() == KeyEvent.VK_ENTER ||
+                    keyEvent.getKeyCode() == KeyEvent.VK_ENTER)) LISTENERS.get(ID).press();
+
         }else{
             if(keyEvent.getExtendedKeyCode() == KeyEvent.VK_TAB || keyEvent.getKeyCode() == KeyEvent.VK_DOWN){
                 running(true);

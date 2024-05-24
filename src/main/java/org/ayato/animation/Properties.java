@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public abstract class Properties<T> implements DisplayAnimation<T>{
-    public int baseX, baseY, rx, ry;
+    public int rx, ry;
     public Position position;
     protected final ArrayList<Supplier<IProperty>> properties;
     protected final ArrayList<IProperty> init_properties;
@@ -24,11 +24,9 @@ public abstract class Properties<T> implements DisplayAnimation<T>{
     public Properties(int x, int y) {
         properties = new ArrayList<>();
         init_properties = new ArrayList<>();
-        baseX = x;
-        baseY = y;
-        rx = baseX;
-        ry = baseY;
-        position = new Position(()->baseX, ()-> baseY, 0, 0);
+        rx = x;
+        ry = y;
+        position = new Position(x,y, 0, 0);
     }
     public void runProp(Graphics g, Animation<T> animation){
         if(isVisible.getAsBoolean()) {
@@ -46,8 +44,8 @@ public abstract class Properties<T> implements DisplayAnimation<T>{
 
     public void init() {
         init_properties.clear();
-        baseX = rx;
-        baseY = ry;
+        position.setX(rx);
+        position.setY(ry);
         isVisible = isVisible != null ? isVisible : ()->true;
         for(Supplier<IProperty> sup : properties){
             init_properties.add(sup.get());
