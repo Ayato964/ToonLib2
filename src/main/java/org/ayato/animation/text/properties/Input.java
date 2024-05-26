@@ -42,11 +42,7 @@ public class Input implements IProperty, MouseListener, KeyListener {
             t.setViewObject(inputStr.toString());
     }
 
-    @Override
-    public void reset(int nx, int ny) {
-        x = nx;
-        y = ny;
-    }
+
 
     @Override
     public void mouseClicked(MouseEvent e) {

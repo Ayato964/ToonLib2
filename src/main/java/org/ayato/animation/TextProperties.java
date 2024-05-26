@@ -1,6 +1,7 @@
 package org.ayato.animation;
 
 import org.ayato.animation.text.properties.*;
+import org.ayato.animation.text.properties.Button;
 import org.ayato.animation.text.properties.Frame;
 import org.ayato.system.LunchScene;
 import org.ayato.util.Position;
@@ -13,14 +14,14 @@ public class TextProperties extends Properties<String>{
         super(x, y);
     }
 
-    public TextProperties button(int bx, int by, int bw, int bh, AnimationState state, PropertyAction action){
+    public TextProperties button(int bx, int by, int bw, int bh, AnimationState state, PropertyAction<Button> action){
         Position p = new Position(bx, by, bw, bh).setXAddon(()->position.getX()).setYAddon(()->position.getY() );
         Supplier<Frame> f = ()->new org.ayato.animation.text.properties.Frame(p, state);
         properties.add(()->new org.ayato.animation.text.properties.Button(p, action, f.get()));
         return this;
     }
     public TextProperties center(){
-        properties.add(()->new Center());
+        properties.add(Center::new);
         return this;
     }
     public TextProperties centerFrame(int by, int bw, int bh, Supplier<Color> frameCol, Color backColor){
@@ -33,17 +34,7 @@ public class TextProperties extends Properties<String>{
         return this;
     }
     public TextProperties color(Color color){
-        properties.add(()->new IProperty() {
-            @Override
-            public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
-                g.setColor(color);
-            }
-
-            @Override
-            public void reset(int nx, int ny) {
-
-            }
-        });
+        properties.add(()->new ChangeColor(color));
         return this;
     }
     public TextProperties copyAddon(TextProperties prop){
@@ -58,11 +49,6 @@ public class TextProperties extends Properties<String>{
             @Override
             public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
                 g.setFont(animation.MASTER.getMakeFont(font, style, size));
-            }
-
-            @Override
-            public void reset(int nx, int ny) {
-
             }
         });
         return this;
@@ -82,11 +68,6 @@ public class TextProperties extends Properties<String>{
             @Override
             public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
                 g.setFont(animation.MASTER.getMakeFont("", Font.PLAIN, size));
-            }
-
-            @Override
-            public void reset(int nx, int ny) {
-
             }
         });
         return this;

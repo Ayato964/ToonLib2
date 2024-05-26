@@ -32,8 +32,5 @@ public class CenterFrame implements IProperty {
                 bw * text.MASTER.DW, bh * text.MASTER.DH);
     }
 
-    @Override
-    public void reset(int nx, int ny) {
 
-    }
 }

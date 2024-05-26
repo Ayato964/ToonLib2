@@ -14,11 +14,11 @@ import java.awt.event.MouseListener;
 
 public class Button implements IProperty, IListenerDecoder {
     Position position;
-    PropertyAction action;
+    PropertyAction<Button> action;
     final Frame frame;
     private boolean isFirst = true;
 
-    public Button(Position position, PropertyAction action, Frame frame) {
+    public Button(Position position, PropertyAction<Button> action, Frame frame) {
         this.position = position;
         this.action = action;
         this.frame = frame;
@@ -35,9 +35,7 @@ public class Button implements IProperty, IListenerDecoder {
         frame.runningProperty(g, properties, text);
     }
 
-    @Override
-    public void reset(int nx, int ny) {
-    }
+
 
     @Override
     public void overlap() {

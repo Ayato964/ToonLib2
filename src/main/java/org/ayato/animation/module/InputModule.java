@@ -1,6 +1,7 @@
 package org.ayato.animation.module;
 
 import org.ayato.animation.*;
+import org.ayato.animation.text.properties.Button;
 import org.ayato.animation.text.properties.IProperty;
 import org.ayato.animation.text.properties.PropertyAction;
 import org.ayato.system.LunchScene;
@@ -12,8 +13,8 @@ import java.awt.event.KeyListener;
 import java.util.function.Consumer;
 
 public class InputModule extends Animation<String> implements KeyListener {
-    private String baseMessage;
-    private StringBuilder inputMessage = new StringBuilder();
+    private final String baseMessage;
+    private final StringBuilder inputMessage = new StringBuilder();
     private boolean isClicked = false;
     private AnimationState STATE= new AnimationState(
             Color.WHITE,
@@ -24,26 +25,29 @@ public class InputModule extends Animation<String> implements KeyListener {
             new Color(0, 0, 0, 190)
     );
     private final Consumer<String> ifPressEnter;
-    private PropertiesSupplier<TextProperties> INPUT_PROP = (x, y) ->
+    private final PropertiesSupplier<TextProperties> INPUT_PROP = (x, y) ->
             PropertiesComponent.ofText(x, y)
                     .color(Color.WHITE)
                     .font("", Font.PLAIN, 1.0f)
                     .button(0, 0, 20, 10, STATE, this::pressed);
 
-    private void pressed(IProperty property) {
+    private void pressed(Button property) {
         isClicked = !isClicked;
-        if(!isClicked){
+        if (!isClicked) {
             ifPressEnter.accept(inputMessage.toString());
-            if(inputMessage.isEmpty())
+            if (inputMessage.isEmpty())
                 mes = baseMessage;
-        }else if(inputMessage.isEmpty()){
-            mes = "";
+        } else{
+            if (inputMessage.isEmpty()) {
+                mes = "";
+            }
+            MASTER.SCENE.addEndTask(()->MASTER.FRAME.addKeyListener(this));
         }
     }
     @Override
     public void init() {
         super.init();
-        MASTER.FRAME.addKeyListener(this);
+        //MASTER.FRAME.addKeyListener(this);
     }
 
     public InputModule(LunchScene master, String a, TextProperties prop, Consumer<String> ifPressEnter) {
@@ -56,12 +60,18 @@ public class InputModule extends Animation<String> implements KeyListener {
     @Override
     public void keyTyped(KeyEvent keyEvent) {
         if(isClicked) {
-            if (keyEvent.getKeyCode() != KeyEvent.VK_BACK_SPACE &&
-                keyEvent.getKeyCode() != KeyEvent.VK_ENTER && keyEvent.getKeyChar() != '\n'
-            ) {
+            if (keyEvent.getKeyChar() != '\b' && keyEvent.getKeyChar() != '\n'){
                 inputMessage.append(keyEvent.getKeyChar());
                 mes = inputMessage.toString();
+            }else if(keyEvent.getKeyChar() == '\b'){
+                if (!inputMessage.isEmpty()) {
+                    inputMessage.deleteCharAt(inputMessage.length() - 1);
+                    mes = inputMessage.toString();
+                }
+            }else{
+                MASTER.SCENE.addEndTask(()->MASTER.FRAME.removeKeyListener(this));
             }
+
         }
 
 
@@ -69,12 +79,6 @@ public class InputModule extends Animation<String> implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent keyEvent) {
-        if(isClicked && keyEvent.getKeyCode() == KeyEvent.VK_BACK_SPACE){
-            if (!inputMessage.isEmpty()) {
-                inputMessage.deleteCharAt(inputMessage.length() - 1);
-                mes = inputMessage.toString();
-            }
-        }
     }
 
     @Override

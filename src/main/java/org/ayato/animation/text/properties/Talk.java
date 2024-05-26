@@ -48,14 +48,6 @@ public class Talk implements IProperty, KeyListener {
     }
 
     @Override
-    public void reset(int nx, int ny) {
-        count = 0;
-        isFirst = true;
-        stopEveryEvent = stopEveryEventPercent;
-
-    }
-
-    @Override
     public void keyTyped(KeyEvent keyEvent) {
     }
 

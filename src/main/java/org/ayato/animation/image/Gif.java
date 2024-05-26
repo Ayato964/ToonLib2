@@ -39,8 +39,4 @@ public class Gif implements IProperty {
         }
     }
 
-    @Override
-    public void reset(int nx, int ny) {
-        isFirst = true;
-    }
 }

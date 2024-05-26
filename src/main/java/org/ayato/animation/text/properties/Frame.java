@@ -32,7 +32,5 @@ public class Frame implements IProperty {
                 position.w * text.MASTER.DW, position.h * text.MASTER.DH);
     }
 
-    @Deprecated
-    @Override
-    public void reset(int nx, int ny) {}
+
 }

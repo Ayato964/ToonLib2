@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.9.46&#10;&#10;Position.java&#10;x, yの変数をIntegerSupplierからintに変更">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/RegistoryList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/RegistoryObject.java" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/ChangeColor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/Gif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/Gif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/InputModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/InputModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Center.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Center.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/CenterFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/CenterFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/PropertyAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/PropertyAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Talk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Talk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/RegistoryList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/RegistoryObject.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -444,7 +456,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716573329394</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。">
+      <option name="closed" value="true" />
+      <created>1716575078783</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1716575078783</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -465,7 +485,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version.0.2.5&#10;&#10;LangLoader.java&#10;言語変換システムの仮実装" />
     <MESSAGE value="Version.0.4.0&#10;&#10;Properties.java&#10;add the properties setting." />
     <MESSAGE value="Version.0.4.3&#10;&#10;Properties.ifView&#10;表示する条件を設定できるようになった。&#10;&#10;Event.java&#10;イベントを管理できるシステム。Event.EventCardと Inheriting.javaを組み合わせることで、&#10;イベントを通してデータの引継ぎが可能になる。" />
     <MESSAGE value="Version.0.4.4&#10;&#10;Properties.changeMessage&#10;メッセージの内容を書き換えることができるようになった。" />
@@ -490,6 +509,7 @@
     <MESSAGE value="Ver.2.9.13&#10;&#10;Properties.java&#10;* 表示位置をPosition.javaで管理するようになった。" />
     <MESSAGE value="Ver.2.9.21&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる" />
     <MESSAGE value="Ver.2.9.46&#10;&#10;Position.java&#10;x, yの変数をIntegerSupplierからintに変更" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.9.46&#10;&#10;Position.java&#10;x, yの変数をIntegerSupplierからintに変更" />
+    <MESSAGE value="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。" />
   </component>
 </project>
