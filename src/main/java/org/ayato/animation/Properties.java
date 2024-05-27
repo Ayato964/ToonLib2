@@ -47,8 +47,15 @@ public abstract class Properties<T> implements DisplayAnimation<T>{
         position.setX(rx);
         position.setY(ry);
         isVisible = isVisible != null ? isVisible : ()->true;
+        ChangeColor c = null;
         for(Supplier<IProperty> sup : properties){
-            init_properties.add(sup.get());
+            IProperty s = sup.get();
+            if(s instanceof ChangeColor)
+                c = (ChangeColor) s;
+            else
+                init_properties.add(s);
         }
+        if(c != null)
+            init_properties.add(c);
     }
 }

@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/CheckBox.java" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.10.7">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/ComponentTag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/InputModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/InputModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/PropertyAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/PropertyAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -456,7 +453,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716575078783</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Ver.2.10.7">
+      <option name="closed" value="true" />
+      <created>1716785698801</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1716785698801</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -477,7 +482,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version.0.4.0&#10;&#10;Properties.java&#10;add the properties setting." />
     <MESSAGE value="Version.0.4.3&#10;&#10;Properties.ifView&#10;表示する条件を設定できるようになった。&#10;&#10;Event.java&#10;イベントを管理できるシステム。Event.EventCardと Inheriting.javaを組み合わせることで、&#10;イベントを通してデータの引継ぎが可能になる。" />
     <MESSAGE value="Version.0.4.4&#10;&#10;Properties.changeMessage&#10;メッセージの内容を書き換えることができるようになった。" />
     <MESSAGE value="Version.0.4.5&#10;&#10;Input.java&#10;プレイヤーから文字入力を受け付ける機能を追加した。" />
@@ -502,6 +506,7 @@
     <MESSAGE value="Ver.2.9.21&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる" />
     <MESSAGE value="Ver.2.9.46&#10;&#10;Position.java&#10;x, yの変数をIntegerSupplierからintに変更" />
     <MESSAGE value="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。" />
+    <MESSAGE value="Ver.2.10.7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.10.7" />
   </component>
 </project>

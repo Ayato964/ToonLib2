@@ -3,6 +3,7 @@ package org.ayato.system;
 import org.ayato.animation.Animation;
 import org.ayato.animation.Properties;
 import org.ayato.animation.image.ImageMaker;
+import org.ayato.util.Display;
 import org.ayato.util.IBaseScene;
 import org.ayato.util.KeyInputs;
 import org.ayato.util.MouseInputs;
@@ -94,5 +95,8 @@ public class LunchScene {
     }
     public Font getMakeFont(String fontName, int style, float size){
         return new Font(fontName, style, (int) (FONT_BASE_SIZE * size));
+    }
+    public Display getComponentsTag(String... tag){
+        return null;
     }
 }
