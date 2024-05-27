@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.function.BooleanSupplier;
 
 public class Animation<T> extends BaseAbstractObject {
-    protected T mes;
+    public T mes;
     public final LunchScene MASTER;
     protected Properties<T> properties;
 

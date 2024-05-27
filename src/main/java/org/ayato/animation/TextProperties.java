@@ -75,11 +75,7 @@ public final class TextProperties extends Properties<String>{
         properties.add(0, ()->new Frame(position, state));
         return this;
     }
-    @Deprecated
-    public TextProperties talk(Object key, boolean stopAll, PropertyAction action, Supplier<String> ... strings){
-        properties.add( ()->new Talk(strings, key, stopAll, action));
-        return this;
-    }
+
     public TextProperties size(int size){
         properties.add(()->new IProperty() {
             @Override

@@ -1,8 +1,9 @@
-package org.ayato.animation;
+package org.ayato.animation.text.properties;
 
-import org.ayato.animation.text.properties.IProperty;
+import org.ayato.animation.Animation;
+import org.ayato.animation.AnimationState;
+import org.ayato.animation.Properties;
 import org.ayato.util.Display;
-import org.ayato.util.Position;
 
 import java.awt.*;
 import java.util.ArrayList;
