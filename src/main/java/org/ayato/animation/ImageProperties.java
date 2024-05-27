@@ -10,7 +10,7 @@ import org.ayato.util.Position;
 import java.awt.*;
 import java.util.function.BooleanSupplier;
 
-public class ImageProperties extends Properties<ImageMaker> {
+public final class ImageProperties extends Properties<ImageMaker> {
     public int w, h;
 
     public ImageProperties(int x, int y, int w, int h) {

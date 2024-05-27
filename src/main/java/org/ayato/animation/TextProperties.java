@@ -9,7 +9,7 @@ import org.ayato.util.Position;
 import java.awt.*;
 import java.util.function.*;
 
-public class TextProperties extends Properties<String>{
+public final class TextProperties extends Properties<String>{
     public TextProperties(int x, int y){
         super(x, y);
     }
