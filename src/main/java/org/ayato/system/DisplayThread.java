@@ -46,6 +46,18 @@ public class DisplayThread {
             endTask.clear();
         }
     }
+    public ArrayList<ComponentTag> getTagComponents(){
+        ArrayList<ComponentTag> tags = new ArrayList<>();
+        for(Display d : displays){
+            if(d instanceof ComponentTag){
+                tags.add((ComponentTag) d);
+            }
+        }
+        return tags;
+    }
+    public CopyOnWriteArrayList<Display> getDisplay(){
+        return displays;
+    }
     public void addDisplay(Display display){
         synchronized (displays) {
             displays.add(display);
@@ -71,5 +83,15 @@ public class DisplayThread {
                 i = -1;
             }
         }
+    }
+
+    public ArrayList<ComponentGroup> getGroupComponent() {
+        ArrayList<ComponentGroup> groups = new ArrayList<>();
+        for(Display dd : displays){
+            if(dd instanceof  ComponentGroup){
+                groups.add((ComponentGroup) dd);
+            }
+        }
+        return groups;
     }
 }

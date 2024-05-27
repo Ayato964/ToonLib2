@@ -1,21 +1,26 @@
 package org.ayato.system;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
-public interface ComponentTag {
-    ArrayList<String> tags = new ArrayList<>();
+public interface ComponentTag{
 
-    public void setTag(ArrayList<String> myTag);
-
-    public default ArrayList<String> getTags(){
-        setTag(tags);
-        return tags;
+    public default void addTag(String... tag){
+        getTagsList().addAll(Arrays.asList(tag));
     }
     public default boolean isFindTags(String... f_tags){
-
+        int i = 0;
         for(String tag : f_tags){
-
+            l :for(String my_tag : getTagsList()){
+                if(tag.equals(my_tag)){
+                    System.out.println(my_tag);
+                    i ++;
+                    break l;
+                }
+            }
         }
-        return true;
+        return i == f_tags.length;
     }
+
+    ArrayList<String> getTagsList();
 }

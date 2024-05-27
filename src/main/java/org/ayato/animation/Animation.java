@@ -1,12 +1,16 @@
 package org.ayato.animation;
 
+import org.ayato.animation.text.properties.IProperty;
+import org.ayato.system.BaseAbstractObject;
+import org.ayato.system.ComponentTag;
 import org.ayato.system.LunchScene;
 import org.ayato.util.Display;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.function.BooleanSupplier;
 
-public class Animation<T> implements Display {
+public class Animation<T> extends BaseAbstractObject {
     protected T mes;
     public final LunchScene MASTER;
     protected Properties<T> properties;

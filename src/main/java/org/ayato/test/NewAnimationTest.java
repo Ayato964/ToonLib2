@@ -1,12 +1,15 @@
 package org.ayato.test;
 
 import org.ayato.animation.*;
+import org.ayato.animation.module.InputModule;
 import org.ayato.system.LunchScene;
+import org.ayato.util.Display;
 import org.ayato.util.IBaseScene;
 import org.ayato.util.Position;
 import org.ayato.util.PropertiesSupplier;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.function.Supplier;
 
 public class NewAnimationTest implements IBaseScene{
@@ -50,6 +53,6 @@ public class NewAnimationTest implements IBaseScene{
 
         scene.addAnimation("IsCorrect?", TEMPLATE.of(100, 150)
                 .checkBox(System.out::println, STATE.get(), Color.WHITE, CheckBox.Duration.RIGHT)
-        );
+        ).setGroup("INDEX4");
     }
 }
