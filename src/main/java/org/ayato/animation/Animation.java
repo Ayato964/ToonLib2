@@ -28,6 +28,15 @@ public class Animation<T> extends BaseAbstractObject {
             if(mes != null)
                 properties.run(MASTER,g, mes);
     }
+    public <A extends IProperty> A getPropertyClass(Class<A> cls){
+        A a = null;
+        for (IProperty p : properties.init_properties){
+            if(cls.isInstance(p)){
+                a = (A) p;
+            }
+        }
+        return a;
+    }
 
     public void setViewObject(T mes) {
         this.mes = mes;

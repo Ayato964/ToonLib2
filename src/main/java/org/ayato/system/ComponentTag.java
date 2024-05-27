@@ -13,7 +13,6 @@ public interface ComponentTag{
         for(String tag : f_tags){
             l :for(String my_tag : getTagsList()){
                 if(tag.equals(my_tag)){
-                    System.out.println(my_tag);
                     i ++;
                     break l;
                 }

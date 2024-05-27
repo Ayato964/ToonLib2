@@ -52,7 +52,13 @@ public class NewAnimationTest implements IBaseScene{
         scene.HANDLER.addInputModule("Input Here", System.out::println, TEMPLATE.of(80, 40));
 
         scene.addAnimation("IsCorrect?", TEMPLATE.of(100, 150)
-                .checkBox(System.out::println, STATE.get(), Color.WHITE, CheckBox.Duration.RIGHT)
-        ).setGroup("INDEX4");
+                .checkBox(System.out::println, STATE.get(), Color.WHITE, CheckBox.Duration.LEFT)
+        );
+        scene.addAnimation("Choose1", TEMPLATE.of(120, 100)
+                .chooseBox(System.out::println, STATE.get(), Color.WHITE, CheckBox.Duration.LEFT)
+        ).setGroup("test");
+        scene.addAnimation("Choose2", TEMPLATE.of(150, 100)
+                .chooseBox(System.out::println, STATE.get(), Color.WHITE, CheckBox.Duration.LEFT)
+        ).setGroup("test");
     }
 }

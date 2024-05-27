@@ -122,9 +122,9 @@ public class LunchScene {
         ArrayList<Display> correct = new ArrayList<>();
         ArrayList<ComponentGroup> groups = SCENE.getGroupComponent();
         for(ComponentGroup g : groups){
-            if(g.isGroup(id)){
-                correct.add((Display) correct);
-            }
+            if(g.getGroup() != null)
+                if(g.isGroup(id))
+                    correct.add((Display) g);
         }
         return correct;
     }
