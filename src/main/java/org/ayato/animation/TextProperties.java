@@ -53,6 +53,10 @@ public class TextProperties extends Properties<String>{
             properties.add(()->p);
         return this;
     }
+    public TextProperties checkBox(Consumer<Boolean> buttonAction, AnimationState state, Color checkColor, CheckBox.Duration duration){
+        properties.add(()->new CheckBox(buttonAction,state, checkColor, duration));
+        return this;
+    }
     public TextProperties font(String font, int style, float size){
         properties.add(0,()-> new IProperty() {
             @Override

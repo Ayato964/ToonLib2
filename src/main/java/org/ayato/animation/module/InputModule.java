@@ -2,8 +2,6 @@ package org.ayato.animation.module;
 
 import org.ayato.animation.*;
 import org.ayato.animation.text.properties.Button;
-import org.ayato.animation.text.properties.IProperty;
-import org.ayato.animation.text.properties.PropertyAction;
 import org.ayato.system.LunchScene;
 import org.ayato.util.InputCursor;
 import org.ayato.util.PropertiesSupplier;
@@ -18,7 +16,7 @@ public class InputModule extends Animation<String> implements KeyListener {
     private final String baseMessage;
     private final StringBuilder inputMessage = new StringBuilder();
     private boolean isClicked = false;
-    private AnimationState STATE= new AnimationState(
+    private final AnimationState STATE= new AnimationState(
             Color.WHITE,
             Color.BLUE,
             Color.RED,

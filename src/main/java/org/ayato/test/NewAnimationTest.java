@@ -47,5 +47,9 @@ public class NewAnimationTest implements IBaseScene{
         g.view(scene);
 
         scene.HANDLER.addInputModule("Input Here", System.out::println, TEMPLATE.of(80, 40));
+
+        scene.addAnimation("IsCorrect?", TEMPLATE.of(100, 150)
+                .checkBox(System.out::println, STATE.get(), Color.WHITE, CheckBox.Duration.RIGHT)
+        );
     }
 }

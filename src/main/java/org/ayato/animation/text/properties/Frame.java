@@ -3,14 +3,9 @@ package org.ayato.animation.text.properties;
 import org.ayato.animation.Animation;
 import org.ayato.animation.AnimationState;
 import org.ayato.animation.Properties;
-import org.ayato.util.IListenerDecoder;
 import org.ayato.util.Position;
 
 import java.awt.*;
-import java.util.function.IntConsumer;
-import java.util.function.IntFunction;
-import java.util.function.IntSupplier;
-import java.util.function.Supplier;
 
 public class Frame implements IProperty {
     Position position;

@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/InputCursor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/CheckBox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/InputModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/InputModule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Input.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/PropertyAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/PropertyAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,10 +93,10 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="アプリケーション.TestMain">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.ayato.main.TestMain" />
-      <module name="ToonLib2.main" />
+      <option name="MAIN_CLASS_NAME" value="org.ayato.main.Main" />
+      <module name="ToonLib.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.ayato.main.*" />
@@ -143,6 +141,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="ToonLib2 [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -164,6 +163,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="ToonLib2 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -185,21 +185,23 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.TestMain" />
       <item itemvalue="Gradle.ToomLib2 [publish]" />
       <item itemvalue="Gradle.ToonLib2 [dependencies]" />
       <item itemvalue="Gradle.ToonLib2 [test]" />
+      <item itemvalue="アプリケーション.Main" />
+      <item itemvalue="アプリケーション.TestMain" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.ToonLib2 [test]" />
         <item itemvalue="Gradle.ToomLib2 [publish]" />
         <item itemvalue="Gradle.ToonLib2 [dependencies]" />
+        <item itemvalue="アプリケーション.TestMain" />
+        <item itemvalue="アプリケーション.Main" />
       </list>
     </recent_temporary>
   </component>
