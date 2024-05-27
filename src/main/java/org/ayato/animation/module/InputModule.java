@@ -5,6 +5,7 @@ import org.ayato.animation.text.properties.Button;
 import org.ayato.animation.text.properties.IProperty;
 import org.ayato.animation.text.properties.PropertyAction;
 import org.ayato.system.LunchScene;
+import org.ayato.util.InputCursor;
 import org.ayato.util.PropertiesSupplier;
 
 import java.awt.*;
@@ -13,6 +14,7 @@ import java.awt.event.KeyListener;
 import java.util.function.Consumer;
 
 public class InputModule extends Animation<String> implements KeyListener {
+    private final InputCursor inputCursor;
     private final String baseMessage;
     private final StringBuilder inputMessage = new StringBuilder();
     private boolean isClicked = false;
@@ -37,7 +39,9 @@ public class InputModule extends Animation<String> implements KeyListener {
             ifPressEnter.accept(inputMessage.toString());
             if (inputMessage.isEmpty())
                 mes = baseMessage;
+            inputCursor.isInputMode = false;
         } else{
+            inputCursor.isInputMode = true;
             if (inputMessage.isEmpty()) {
                 mes = "";
             }
@@ -52,9 +56,10 @@ public class InputModule extends Animation<String> implements KeyListener {
 
     public InputModule(LunchScene master, String a, TextProperties prop, Consumer<String> ifPressEnter) {
         super(master, a, prop);
-        this.properties = INPUT_PROP.of(prop.position.getX(), prop.position.y).copyAddon(prop);
+        this.properties = INPUT_PROP.of(prop.position.getX(), prop.position.getY()).copyAddon(prop);
         this.ifPressEnter = ifPressEnter;
         this.baseMessage = a;
+        inputCursor = new InputCursor(20l, Color.WHITE, master);
     }
 
     @Override
@@ -69,7 +74,9 @@ public class InputModule extends Animation<String> implements KeyListener {
                     mes = inputMessage.toString();
                 }
             }else{
-                MASTER.SCENE.addEndTask(()->MASTER.FRAME.removeKeyListener(this));
+                MASTER.SCENE.addEndTask(()->
+                    MASTER.FRAME.removeKeyListener(this));
+
             }
 
         }
@@ -84,5 +91,11 @@ public class InputModule extends Animation<String> implements KeyListener {
     @Override
     public void keyReleased(KeyEvent keyEvent) {
 
+    }
+
+    @Override
+    public void display(Graphics g) {
+        super.display(g);
+        inputCursor.display(g, mes, properties.position);
     }
 }

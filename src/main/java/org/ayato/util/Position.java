@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 
 public class Position {
     public boolean isCalcInclude = true;
-    public int x, y, w, h;
+    private int x, y, w, h;
     private ArrayList<IntSupplier> sx = new ArrayList<>();
     private ArrayList<IntSupplier> sy = new ArrayList<>();
     public Position(int x, int y, int w, int h){
@@ -32,6 +32,17 @@ public class Position {
         y = dy;
         return this;
     }
+
+    public Position setW(int w) {
+        this.w = w;
+        return this;
+    }
+
+    public Position setH(int h) {
+        this.h = h;
+        return this;
+    }
+
     public Position setXAddon(IntSupplier s){
         sx.add(s);
         return  this;
@@ -40,6 +51,15 @@ public class Position {
         sy.add(s);
         return  this;
     }
+
+    public int getW() {
+        return w;
+    }
+
+    public int getH() {
+        return h;
+    }
+
     public boolean isInRect(int mx, int my, LunchScene main){
         int dw = isCalcInclude ? main.DW : 1;
         int dh = isCalcInclude ? main.DH : 1;

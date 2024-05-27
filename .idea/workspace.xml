@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/ChangeColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/InputCursor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/Gif.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/Gif.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/InputModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/InputModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Center.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Center.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/CenterFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/CenterFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/PropertyAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/PropertyAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Talk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Talk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/RegistoryList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/RegistoryObject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Input.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,21 +71,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.ToonLib2 [:TestMain.main()].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "G:/My_Project/ToonLib",
-    "project.structure.last.edited": "プロジェクト",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.19655173",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.ToonLib2 [:TestMain.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/My_Project/ToonLib&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;プロジェクト&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.19655173&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.ayato.system.properties" />
@@ -101,10 +95,10 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="アプリケーション.TestMain">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.ayato.main.Main" />
-      <module name="ToonLib.main" />
+      <option name="MAIN_CLASS_NAME" value="org.ayato.main.TestMain" />
+      <module name="ToonLib2.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.ayato.main.*" />
@@ -149,7 +143,6 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="ToonLib2 [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -171,7 +164,6 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="ToonLib2 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -193,23 +185,21 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.TestMain" />
       <item itemvalue="Gradle.ToomLib2 [publish]" />
       <item itemvalue="Gradle.ToonLib2 [dependencies]" />
       <item itemvalue="Gradle.ToonLib2 [test]" />
-      <item itemvalue="アプリケーション.Main" />
-      <item itemvalue="アプリケーション.TestMain" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.ToonLib2 [test]" />
         <item itemvalue="Gradle.ToomLib2 [publish]" />
         <item itemvalue="Gradle.ToonLib2 [dependencies]" />
-        <item itemvalue="アプリケーション.TestMain" />
-        <item itemvalue="アプリケーション.Main" />
       </list>
     </recent_temporary>
   </component>

@@ -44,6 +44,15 @@ public class TextProperties extends Properties<String>{
         }
         return this;
     }
+    public TextProperties custom(IProperty prop){
+        properties.add(()->prop);
+        return this;
+    }
+    public TextProperties customAll(IProperty[] props){
+        for(IProperty p : props)
+            properties.add(()->p);
+        return this;
+    }
     public TextProperties font(String font, int style, float size){
         properties.add(0,()-> new IProperty() {
             @Override
@@ -74,11 +83,6 @@ public class TextProperties extends Properties<String>{
     }
     public TextProperties ifView(BooleanSupplier how){
         isVisible = how;
-        return this;
-    }
-    @Deprecated
-    public TextProperties input(int bx, int by, int bw, int bh, Consumer<String> stringConsumer){
-        properties.add(()->new Input(bx, by, bw, bh, stringConsumer));
         return this;
     }
 

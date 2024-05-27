@@ -10,9 +10,7 @@ public class TestMain {
         LangLoader.create("assets/ayato/lang", LangLoader.ENGLISH);
         MASTER1 = new LunchScene("TOON_LIB_TEST", true);
         MASTER1.setVisible(true);
-
         System.out.println(MASTER1.FONT_BASE_SIZE);
-
         MASTER1.changeScene(new NewAnimationTest());
     }
 }
