@@ -19,8 +19,10 @@ public class ChooseBox extends CheckBox{
 
     @Override
     public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
-        if(isFirst)
+        if(isFirst) {
             this.animation = animation;
+            isFirst = false;
+        }
         positionUpdate(properties.position, g, animation);
         groupID = animation.getGroup();
         g.setColor(state.getState(AnimationState.FRAME));
@@ -36,7 +38,13 @@ public class ChooseBox extends CheckBox{
     @Override
     public void press() {
         isClicked = true;
+        buttonAction.accept(isClicked);
         unCheckOtherChooseBox();
+
+    }
+    public void unClick(){
+        isClicked = false;
+        buttonAction.accept(isClicked);
     }
 
     private void unCheckOtherChooseBox() {
@@ -46,7 +54,7 @@ public class ChooseBox extends CheckBox{
                 if(!animation1.equals(animation)) {
                     ChooseBox chooseBoxes = animation1.getPropertyClass(ChooseBox.class);
                     if (chooseBoxes != null)
-                        chooseBoxes.isClicked = false;
+                        chooseBoxes.unClick();
                 }
             }
         }

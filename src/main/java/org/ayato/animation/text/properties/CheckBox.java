@@ -12,7 +12,7 @@ import java.awt.*;
 import java.util.function.Consumer;
 
 public class CheckBox implements IProperty, IListenerDecoder {
-    private final Consumer<Boolean> buttonAction;
+    protected final Consumer<Boolean> buttonAction;
     protected final Color  checkColor;
     protected final AnimationState state;
     private final Duration duration;

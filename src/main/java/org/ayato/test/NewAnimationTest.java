@@ -57,5 +57,6 @@ public class NewAnimationTest implements IBaseScene{
         scene.addAnimation("Choose2", TEMPLATE.of(150, 100)
                 .chooseBox(System.out::println, STATE.get(), Color.WHITE, CheckBox.Duration.LEFT)
         ).setGroup("test");
+
     }
 }
