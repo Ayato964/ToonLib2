@@ -13,6 +13,8 @@ public class MouseInputs implements MouseListener, Runnable {
     private static final CopyOnWriteArrayList<Position> POSITION = new CopyOnWriteArrayList<>();
     private static final MouseInputs INSTANCE = new MouseInputs();
     private boolean isRunning = false;
+    private boolean isLocked = false;
+    private Position lockPos;
     private LunchScene MAIN;
     public static void init(LunchScene m){
         INSTANCE.isRunning = true;
@@ -29,18 +31,23 @@ public class MouseInputs implements MouseListener, Runnable {
         POSITION.remove(p);
         DECODER.remove(p);
     }
+    public static void setLock(boolean b){
+        INSTANCE.isLocked = b;
+    }
 
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {
-        if(isRunning) {
-            for (Position p : POSITION) {
-                if (p.isInRect(mouseEvent.getX(), mouseEvent.getY(), MAIN)) {
-                    DECODER.get(p).press();
+        if(!isLocked) {
+            if (isRunning) {
+                for (Position p : POSITION) {
+                    if (p.isInRect(mouseEvent.getX(), mouseEvent.getY(), MAIN)) {
+                        DECODER.get(p).press();
+                    }
                 }
+            } else {
+                KeyInputs.running(false);
+                isRunning = true;
             }
-        }else{
-            KeyInputs.running(false);
-            isRunning = true;
         }
     }
     public static void running(boolean b){
@@ -70,19 +77,21 @@ public class MouseInputs implements MouseListener, Runnable {
     @Override
     public void run() {
         while (true) {
-            if (isRunning) {
-                Point point = MouseInfo.getPointerInfo().getLocation();
-                for (Position p : POSITION) {
-                    if (p.isInRect((int) point.getX(),(int) point.getY(), MAIN))
-                        DECODER.get(p).overlap();
-                    else
-                        DECODER.get(p).unOverlap();
+            if(!isLocked) {
+                if (isRunning) {
+                    Point point = MouseInfo.getPointerInfo().getLocation();
+                    for (Position p : POSITION) {
+                        if (p.isInRect((int) point.getX(), (int) point.getY(), MAIN))
+                            DECODER.get(p).overlap();
+                        else
+                            DECODER.get(p).unOverlap();
+                    }
                 }
-            }
-            try {
-                Thread.currentThread().sleep(20);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                try {
+                    Thread.currentThread().sleep(100L);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
     }

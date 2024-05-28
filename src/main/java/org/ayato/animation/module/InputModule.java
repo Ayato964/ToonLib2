@@ -4,6 +4,8 @@ import org.ayato.animation.*;
 import org.ayato.animation.text.properties.Button;
 import org.ayato.system.LunchScene;
 import org.ayato.util.InputCursor;
+import org.ayato.util.KeyInputs;
+import org.ayato.util.MouseInputs;
 import org.ayato.util.PropertiesSupplier;
 
 import java.awt.*;
@@ -38,7 +40,10 @@ public class InputModule extends Animation<String> implements KeyListener {
             if (inputMessage.isEmpty())
                 mes = baseMessage;
             inputCursor.isInputMode = false;
+            KeyInputs.setLock(false);
         } else{
+            MouseInputs.setLock(true);
+            KeyInputs.setLock(true);
             inputCursor.isInputMode = true;
             if (inputMessage.isEmpty()) {
                 mes = "";
@@ -72,8 +77,9 @@ public class InputModule extends Animation<String> implements KeyListener {
                     mes = inputMessage.toString();
                 }
             }else{
-                MASTER.SCENE.addEndTask(()->
-                    MASTER.FRAME.removeKeyListener(this));
+                MASTER.SCENE.addEndTask(()->{
+                    MASTER.FRAME.removeKeyListener(this);
+                    MouseInputs.setLock(false);});
 
             }
 
