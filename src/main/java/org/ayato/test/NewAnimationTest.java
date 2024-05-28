@@ -58,5 +58,19 @@ public class NewAnimationTest implements IBaseScene{
                 .chooseBox(System.out::println, STATE.get(), Color.WHITE, CheckBox.Duration.LEFT)
         ).setGroup("test");
 
+        scene.addAnimation("First Message", TEMPLATE.of(200, 100)
+                .changeText((isClicked, event, count) -> {
+                    if(event != null)
+                        if(event.getKeyChar() == '\n'){
+                            return switch (count){
+                                case 0 -> "Secound";
+                                case 1-> "SSSSS";
+                                case 2->"YESSSS!!!";
+                                default -> null;
+                            };
+                        }
+                    return null;
+                })
+        );
     }
 }

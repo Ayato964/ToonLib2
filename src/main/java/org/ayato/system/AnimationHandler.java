@@ -2,9 +2,11 @@ package org.ayato.system;
 
 import org.ayato.animation.Properties;
 import org.ayato.animation.TextProperties;
+import org.ayato.animation.module.ChangeObjectModule;
 import org.ayato.animation.module.InputModule;
 import org.ayato.animation.text.properties.PropertyAction;
 
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 public class AnimationHandler {
@@ -21,5 +23,13 @@ public class AnimationHandler {
         SCENE.addAnimation(i);
         return i;
     }
+    /*
+    public <T> ChangeObjectModule<T> addChangeObjectModule(BiConsumer<ChangeObjectModule<T>, T[]> condition, Properties<T> prop, T... changeObj){
+        ChangeObjectModule<T> co = new ChangeObjectModule<>(SCENE, condition, prop, changeObj);
+        SCENE.addAnimation(co);
+        return co;
+    }
+
+     */
 
 }

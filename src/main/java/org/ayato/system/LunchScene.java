@@ -12,7 +12,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class LunchScene {
+public final class LunchScene {
     public  final DisplayThread SCENE;
     public  final DisplayThread ANIMATION;
     public  final MyFrame       FRAME;

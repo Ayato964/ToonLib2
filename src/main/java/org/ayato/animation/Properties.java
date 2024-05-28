@@ -16,6 +16,7 @@ public sealed abstract class Properties<T> implements DisplayAnimation<T> permit
     protected final ArrayList<Supplier<IProperty>> properties;
     protected final ArrayList<IProperty> init_properties;
     public BooleanSupplier isVisible;
+    public boolean isFirst = true;
     protected Properties()
     {
         this(0, 0);
@@ -32,7 +33,13 @@ public sealed abstract class Properties<T> implements DisplayAnimation<T> permit
         if(isVisible.getAsBoolean()) {
             for (IProperty p : init_properties)
                 p.runningProperty(g, this, animation);
+            if(isFirst) {
+                for (IProperty p : init_properties)
+                    p.setupProperty(g, this, animation);
+                isFirst = false;
+            }
         }
+
     }
     public void reset(){
         init();
@@ -57,5 +64,6 @@ public sealed abstract class Properties<T> implements DisplayAnimation<T> permit
         }
         if(c != null)
             init_properties.add(c);
+
     }
 }

@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。">
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.12.0&#10;&#10;New Properties&#10; * ChooseBox.java&#10;  TrueかFalseのみで表現されるボタン。&#10;&#10;System&#10; * RectProperties.java&#10; 削除">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Change.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/ChangeObjectModule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/ChangeFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/CheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/CheckBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/ChooseBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/ChooseBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -63,7 +68,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -91,6 +96,23 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
+  <component name="QodanaHighlightedReportService">
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="C:\Users\admin\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
+        <option name="reportGuid" value="5cc4792a-16f7-425d-80a2-349482390270" />
+        <option name="reportName" value="ToonLib2/qodana/2024-05-28" />
+      </LocalReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\admin\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="5cc4792a-16f7-425d-80a2-349482390270" reportId="ToonLib2/qodana/2024-05-28" />
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.ayato.system.properties" />
@@ -461,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716575078783</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Ver.2.12.0&#10;&#10;New Properties&#10; * ChooseBox.java&#10;  TrueかFalseのみで表現されるボタン。&#10;&#10;System&#10; * RectProperties.java&#10; 削除">
+      <option name="closed" value="true" />
+      <created>1716862064560</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1716862064560</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -482,7 +512,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version.0.4.0&#10;&#10;Properties.java&#10;add the properties setting." />
     <MESSAGE value="Version.0.4.3&#10;&#10;Properties.ifView&#10;表示する条件を設定できるようになった。&#10;&#10;Event.java&#10;イベントを管理できるシステム。Event.EventCardと Inheriting.javaを組み合わせることで、&#10;イベントを通してデータの引継ぎが可能になる。" />
     <MESSAGE value="Version.0.4.4&#10;&#10;Properties.changeMessage&#10;メッセージの内容を書き換えることができるようになった。" />
     <MESSAGE value="Version.0.4.5&#10;&#10;Input.java&#10;プレイヤーから文字入力を受け付ける機能を追加した。" />
@@ -507,6 +536,7 @@
     <MESSAGE value="Ver.2.9.21&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる" />
     <MESSAGE value="Ver.2.9.46&#10;&#10;Position.java&#10;x, yの変数をIntegerSupplierからintに変更" />
     <MESSAGE value="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。" />
+    <MESSAGE value="Ver.2.12.0&#10;&#10;New Properties&#10; * ChooseBox.java&#10;  TrueかFalseのみで表現されるボタン。&#10;&#10;System&#10; * RectProperties.java&#10; 削除" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.12.0&#10;&#10;New Properties&#10; * ChooseBox.java&#10;  TrueかFalseのみで表現されるボタン。&#10;&#10;System&#10; * RectProperties.java&#10; 削除" />
   </component>
 </project>

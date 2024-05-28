@@ -9,4 +9,5 @@ public interface IProperty{
 
     void runningProperty(Graphics g, Properties properties,  Animation<?> animation);
 
+    default void setupProperty(Graphics g, Properties<?> properties, Animation<?> animation){}
 }
