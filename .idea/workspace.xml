@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.14.13&#10;&#10;&#10;シーンが切り替わるとき、 KeyInputs.java MouseInputs.java TimeCounter.java の３つのクラスに化されるキャッシュを開放するようにした。">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/PropertyMatrix.java" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.14.22&#10;&#10;&#10;SCENEが切り替わるとき、MouseListenerとKeyListenerを削除する機能を削除&#10;&#10;New Properties&#10; * PropertyMatrix.java&#10;    IProperty.java を継承したクラスを配列形式で保存し、順番に一つずつ実行するクラス。&#10; * IProperty.java&#10;    isEndメソッドを追加。一通りの処理が終わったらtrueを動的に返すメソッド。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/FadeIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/FadeIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/FadeOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/FadeOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/IProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -538,7 +532,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717085905576</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Ver.2.14.22&#10;&#10;&#10;SCENEが切り替わるとき、MouseListenerとKeyListenerを削除する機能を削除&#10;&#10;New Properties&#10; * PropertyMatrix.java&#10;    IProperty.java を継承したクラスを配列形式で保存し、順番に一つずつ実行するクラス。&#10; * IProperty.java&#10;    isEndメソッドを追加。一通りの処理が終わったらtrueを動的に返すメソッド。">
+      <option name="closed" value="true" />
+      <created>1717088554466</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1717088554466</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -559,7 +561,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version.0.4.7&#10;&#10;&#10;AnimationKeyButtonList.java&#10;AnimationList.javaのリスト構造を元に可視化し、キー入力に応じて選択を可能にする" />
     <MESSAGE value="Version.0.4.8&#10;&#10;&#10;Center.java&#10;入力された文字を、ウィンドウを軸に中央ぞろえする。" />
     <MESSAGE value="Ver.2.5.7&#10;&#10;AnimationList.java&#10;AbstractAnimations.java&#10;の依存関係を最適化" />
     <MESSAGE value="Ver.2.5.14&#10;&#10;Order.java&#10;秒数T秒にかけて文字を順番に表示する。" />
@@ -584,6 +585,7 @@
     <MESSAGE value="Ver.2.14.0&#10;&#10;&#10;util&#10; * LastRunningProperty.java&#10;   プロパティの実行順を静的に最後にしたい場合のインタフェース&#10;&#10;Properties&#10; * FadeIn.java&#10;   文字列が時間に応じてフェードインしてくれる。&#10;&#10;TimeConverter.java&#10;* 時間軸から任意の数値に変換するクラス&#10;&#10;System&#10; * Javaのバージョンを17から21に変更&#10; * Gradleのバージョンを7.4から8.5に変更" />
     <MESSAGE value="Ver.2.14.8&#10;&#10;New Properties&#10; * FadeOut.java&#10;   条件を満たしたら画面からオブジェクトがフェードアウトする。&#10; &#10; * DisplayInOrder.java&#10;   文字列を順番に表示する&#10;&#10;&#10;System&#10;　　* TimeCounter.java&#10;      指定した値まで値を刻み、満たしたら関数型変数を実行する" />
     <MESSAGE value="Ver.2.14.13&#10;&#10;&#10;シーンが切り替わるとき、 KeyInputs.java MouseInputs.java TimeCounter.java の３つのクラスに化されるキャッシュを開放するようにした。" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.14.13&#10;&#10;&#10;シーンが切り替わるとき、 KeyInputs.java MouseInputs.java TimeCounter.java の３つのクラスに化されるキャッシュを開放するようにした。" />
+    <MESSAGE value="Ver.2.14.22&#10;&#10;&#10;SCENEが切り替わるとき、MouseListenerとKeyListenerを削除する機能を削除&#10;&#10;New Properties&#10; * PropertyMatrix.java&#10;    IProperty.java を継承したクラスを配列形式で保存し、順番に一つずつ実行するクラス。&#10; * IProperty.java&#10;    isEndメソッドを追加。一通りの処理が終わったらtrueを動的に返すメソッド。" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.14.22&#10;&#10;&#10;SCENEが切り替わるとき、MouseListenerとKeyListenerを削除する機能を削除&#10;&#10;New Properties&#10; * PropertyMatrix.java&#10;    IProperty.java を継承したクラスを配列形式で保存し、順番に一つずつ実行するクラス。&#10; * IProperty.java&#10;    isEndメソッドを追加。一通りの処理が終わったらtrueを動的に返すメソッド。" />
   </component>
 </project>
