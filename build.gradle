@@ -4,18 +4,15 @@ plugins {
 }
 
 group 'org.ayato'
-version '2.13.0'
+version '2.14.0'
 
 repositories {
     mavenCentral()
 }
-tasks.withType(AbstractCompile) {
-    options.fork = true
-    options.forkOptions.executable = 'javac'
-}
+
 publishing {
-    publications{
-        mavenJava(MavenPublication){
+    publications {
+        mavenJava(MavenPublication) {
             artifactId = "toonlib"
             from(components.java)
         }
@@ -26,31 +23,34 @@ publishing {
             url = uri("https://maven.pkg.github.com/ayato964/ToonLib2")
             credentials {
                 username = System.getenv("USERNAME")
-                password =  System.getenv("TOKEN")
+                password = System.getenv("TOKEN")
             }
         }
     }
 }
-java{
-    sourceCompatibility = 17
-    targetCompatibility = 17
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
+
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    /* https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core*/
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.15.0-rc2'
-// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.0-rc2'
-// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.15.0-rc2'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.15.0-rc2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0-rc2'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.15.0-rc2'
 }
-jar{
+
+wrapper {
+    gradleVersion = '8.5'
 }
+
 test {
     useJUnitPlatform()
 }
 
-wrapper{
-    gradleVersion = '7.4'
+tasks.withType(JavaCompile) {
+    options.fork = true
 }

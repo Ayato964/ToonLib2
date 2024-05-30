@@ -1,5 +1,6 @@
 package org.ayato.animation;
 
+import org.ayato.animation.image.ImageMaker;
 import org.ayato.animation.text.properties.IProperty;
 import org.ayato.util.LastRunningProperty;
 
@@ -13,6 +14,13 @@ public class FadeIn extends TimeConverter implements LastRunningProperty {
     @Override
     protected void clockTick(Graphics g, Properties properties, Animation<?> animation, int secTime) {
         Color color = g.getColor();
-        g.setColor(new Color(color.getRed(), color.getGreen(), color.getBlue(), secTime));
+        switch (animation.mes){
+            case String s ->  g.setColor(new Color(color.getRed(), color.getGreen(), color.getBlue(), secTime));
+            default -> throw new IllegalStateException("Unexpected value: " + animation.mes);
+        }
+        if(animation.mes instanceof String) {
+            g.setColor(new Color(color.getRed(), color.getGreen(), color.getBlue(), secTime));
+        }
+
     }
 }
