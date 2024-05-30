@@ -68,8 +68,8 @@ public final class LunchScene {
             SCENE.addEndTask(()->{
                 SCENE.removeDisplay(MY_SCENE);
                 SCENE.removeDisplayClass(Animation.class);
-                FRAME.removeMouseListenerAll();
-                FRAME.removeKeyListenerAll();
+                //FRAME.removeMouseListenerAll();
+                //FRAME.removeKeyListenerAll();
                 MouseInputs.removeAll();
                 KeyInputs.removeAll();
                 TimeCounter.removeAll();

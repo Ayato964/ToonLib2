@@ -7,6 +7,7 @@ import org.ayato.util.LastRunningProperty;
 import java.awt.*;
 
 public class FadeIn extends TimeConverter implements LastRunningProperty {
+    private boolean isEnd = false;
     public FadeIn(long maxTime) {
         super(maxTime, 255);
     }
@@ -21,6 +22,13 @@ public class FadeIn extends TimeConverter implements LastRunningProperty {
         if(animation.mes instanceof String) {
             g.setColor(new Color(color.getRed(), color.getGreen(), color.getBlue(), secTime));
         }
+        if(secTime >= 255){
+            isEnd = true;
+        }
+    }
 
+    @Override
+    public boolean isEnd() {
+        return isEnd;
     }
 }

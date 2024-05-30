@@ -4,6 +4,7 @@ import java.awt.*;
 import java.util.function.BooleanSupplier;
 
 public class FadeOut extends TimeConverter{
+    private boolean isEnd = false;
     private final BooleanSupplier condition;
     public FadeOut(long maxTime, BooleanSupplier condition) {
         super(maxTime, 255);
@@ -20,6 +21,14 @@ public class FadeOut extends TimeConverter{
                 }
                 default -> throw new IllegalStateException("Unexpected value: " + animation.mes);
             }
+            if(255 - secTime <= 0){
+                isEnd = true;
+            }
         }
+    }
+
+    @Override
+    public boolean isEnd() {
+        return isEnd;
     }
 }

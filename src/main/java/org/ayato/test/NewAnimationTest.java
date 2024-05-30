@@ -29,7 +29,13 @@ public class NewAnimationTest implements IBaseScene{
     @Override
     public void setup(LunchScene scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
-        Animation<String> animation = scene.createAnimation("YESSS!!", TEMPLATE.of(100, 120).center().displayInOrder(20));
+        Animation<String> animation = scene.createAnimation("YESSS!!", TEMPLATE.of(100, 120).center()
+                        .displayInOrder(200)
+                .pushMatrix()
+                        .fadeIn(2000)
+                        .fadeOut(2000)
+                .endMatrix()
+        );
         animation.setGroup("FadeIn");
         Animation<String> d = scene.createAnimation("Hello", TEMPLATE.of(20, 20).center().
                 button(0, 0, 40, 20,STATE.get() ,

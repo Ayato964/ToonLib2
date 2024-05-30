@@ -108,6 +108,11 @@ public final class TextProperties extends Properties<String>{
         isVisible = how;
         return this;
     }
+    public PropertyMatrix<TextProperties> pushMatrix(){
+        PropertyMatrix<TextProperties> matrix = new PropertyMatrix<>(this);
+        properties.add(()->matrix);
+        return matrix;
+    }
 
     @Override
     public void run(LunchScene MASTER, Graphics g, String o) {
