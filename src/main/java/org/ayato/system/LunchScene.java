@@ -3,10 +3,7 @@ package org.ayato.system;
 import org.ayato.animation.Animation;
 import org.ayato.animation.Properties;
 import org.ayato.animation.image.ImageMaker;
-import org.ayato.util.Display;
-import org.ayato.util.IBaseScene;
-import org.ayato.util.KeyInputs;
-import org.ayato.util.MouseInputs;
+import org.ayato.util.*;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -39,6 +36,7 @@ public final class LunchScene {
         SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
         KeyInputs.init(this);
         MouseInputs.init(this);
+        TimeCounter.init();
     }
     public LunchScene(String str, int dw, int dh){
         FRAME = new MyFrame(str, false);
@@ -56,6 +54,7 @@ public final class LunchScene {
         SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
         KeyInputs.init(this);
         MouseInputs.init(this);
+        TimeCounter.init();
     }
     public void changeScene(IBaseScene scene){
         if(MY_SCENE == null) {

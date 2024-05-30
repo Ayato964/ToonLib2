@@ -69,6 +69,17 @@ public final class TextProperties extends Properties<String>{
         properties.add(()->new FadeIn(time));
         return this;
     }
+    public TextProperties displayInOrder(long time){
+        properties.add(()->new DisplayInOrder(time));
+        return this;
+    }
+    public TextProperties fadeOut(long time){
+        return fadeOut(time, ()->true);
+    }
+    public TextProperties fadeOut(long time, BooleanSupplier condition){
+        properties.add(()-> new FadeOut(time, condition));
+        return this;
+    }
     public TextProperties font(String font, int style, float size){
         properties.add(0,()-> new IProperty() {
             @Override

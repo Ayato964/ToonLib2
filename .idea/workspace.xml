@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.13.16&#10;&#10;&#10;util&#10; * LastRunningProperty.java&#10;   プロパティの実行順を静的に最後にしたい場合のインタフェース&#10;&#10;Properties&#10; * FadeIn.java&#10;   文字列が時間に応じてフェードインしてくれる。&#10;&#10;TimeConverter.java&#10;* 時間軸から任意の数値に変換するクラス">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.14.0&#10;&#10;&#10;util&#10; * LastRunningProperty.java&#10;   プロパティの実行順を静的に最後にしたい場合のインタフェース&#10;&#10;Properties&#10; * FadeIn.java&#10;   文字列が時間に応じてフェードインしてくれる。&#10;&#10;TimeConverter.java&#10;* 時間軸から任意の数値に変換するクラス&#10;&#10;System&#10; * Javaのバージョンを17から21に変更&#10; * Gradleのバージョンを7.4から8.5に変更">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/FadeOut.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/DisplayInOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/ITimeCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/TimeCounter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/FadeIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/FadeIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +62,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -512,7 +514,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717044554264</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Ver.2.14.0&#10;&#10;&#10;util&#10; * LastRunningProperty.java&#10;   プロパティの実行順を静的に最後にしたい場合のインタフェース&#10;&#10;Properties&#10; * FadeIn.java&#10;   文字列が時間に応じてフェードインしてくれる。&#10;&#10;TimeConverter.java&#10;* 時間軸から任意の数値に変換するクラス&#10;&#10;System&#10; * Javaのバージョンを17から21に変更&#10; * Gradleのバージョンを7.4から8.5に変更">
+      <option name="closed" value="true" />
+      <created>1717046354665</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1717046354665</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -533,7 +543,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Version.0.4.4&#10;&#10;Properties.changeMessage&#10;メッセージの内容を書き換えることができるようになった。" />
     <MESSAGE value="Version.0.4.5&#10;&#10;Input.java&#10;プレイヤーから文字入力を受け付ける機能を追加した。" />
     <MESSAGE value="Version.0.4.5&#10;&#10;&#10;AnimationList.java&#10;AnimationTextに関するオブジェクトをリスト化する。&#10;&#10;AnimationMouseButtonList.java&#10;AnimationList.javaに基づき、リスト構造を可視化。&#10;また、マウスのボタンに反応する。" />
     <MESSAGE value="Version.0.4.7&#10;&#10;&#10;AnimationKeyButtonList.java&#10;AnimationList.javaのリスト構造を元に可視化し、キー入力に応じて選択を可能にする" />
@@ -558,6 +567,7 @@
     <MESSAGE value="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。" />
     <MESSAGE value="Ver.2.10.7" />
     <MESSAGE value="Ver.2.13.16&#10;&#10;&#10;util&#10; * LastRunningProperty.java&#10;   プロパティの実行順を静的に最後にしたい場合のインタフェース&#10;&#10;Properties&#10; * FadeIn.java&#10;   文字列が時間に応じてフェードインしてくれる。&#10;&#10;TimeConverter.java&#10;* 時間軸から任意の数値に変換するクラス" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.13.16&#10;&#10;&#10;util&#10; * LastRunningProperty.java&#10;   プロパティの実行順を静的に最後にしたい場合のインタフェース&#10;&#10;Properties&#10; * FadeIn.java&#10;   文字列が時間に応じてフェードインしてくれる。&#10;&#10;TimeConverter.java&#10;* 時間軸から任意の数値に変換するクラス" />
+    <MESSAGE value="Ver.2.14.0&#10;&#10;&#10;util&#10; * LastRunningProperty.java&#10;   プロパティの実行順を静的に最後にしたい場合のインタフェース&#10;&#10;Properties&#10; * FadeIn.java&#10;   文字列が時間に応じてフェードインしてくれる。&#10;&#10;TimeConverter.java&#10;* 時間軸から任意の数値に変換するクラス&#10;&#10;System&#10; * Javaのバージョンを17から21に変更&#10; * Gradleのバージョンを7.4から8.5に変更" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.14.0&#10;&#10;&#10;util&#10; * LastRunningProperty.java&#10;   プロパティの実行順を静的に最後にしたい場合のインタフェース&#10;&#10;Properties&#10; * FadeIn.java&#10;   文字列が時間に応じてフェードインしてくれる。&#10;&#10;TimeConverter.java&#10;* 時間軸から任意の数値に変換するクラス&#10;&#10;System&#10; * Javaのバージョンを17から21に変更&#10; * Gradleのバージョンを7.4から8.5に変更" />
   </component>
 </project>
