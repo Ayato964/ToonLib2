@@ -27,6 +27,12 @@ public class TimeCounter implements  Runnable {
         t.start();
     }
 
+    public static void removeAll() {
+        for(CounterHost h : INSTANCE.hosts){
+            INSTANCE.hosts.remove(h);
+        }
+    }
+
     @Override
     public void run() {
         while (true){

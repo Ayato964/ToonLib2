@@ -49,6 +49,12 @@ public class KeyInputs extends KeyAdapter implements Runnable {
         INSTANCE.isLocked = b;
     }
 
+    public static void removeAll() {
+        for(IListenerDecoder d : LISTENERS){
+            LISTENERS.remove(d);
+        }
+    }
+
     @Override
     public void keyTyped(KeyEvent keyEvent) {
         keyAction(keyEvent);

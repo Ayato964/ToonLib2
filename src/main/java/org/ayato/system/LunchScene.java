@@ -70,6 +70,9 @@ public final class LunchScene {
                 SCENE.removeDisplayClass(Animation.class);
                 FRAME.removeMouseListenerAll();
                 FRAME.removeKeyListenerAll();
+                MouseInputs.removeAll();
+                KeyInputs.removeAll();
+                TimeCounter.removeAll();
                 scene.setup(this);
                 SCENE.addDisplay(scene);
                 MY_SCENE = scene;

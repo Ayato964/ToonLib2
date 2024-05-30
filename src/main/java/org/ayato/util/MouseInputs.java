@@ -35,6 +35,13 @@ public class MouseInputs implements MouseListener, Runnable {
         INSTANCE.isLocked = b;
     }
 
+    public static void removeAll() {
+        for(Position p : POSITION){
+            POSITION.remove(p);
+        }
+        DECODER.clear();
+    }
+
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {
         if(!isLocked) {
