@@ -13,6 +13,7 @@ public class DisplayThread {
     private final CopyOnWriteArrayList<Display> displays;
     private final LunchScene MASTER;
     private final CopyOnWriteArrayList<VoidSupplier> endTask;
+    public final int SLEEP_TIME = 10;
     private DisplayThread(VoidSupplier voidSupplier, LunchScene scene){
         thread = new Thread(this::run);
         sup = voidSupplier;
@@ -37,10 +38,12 @@ public class DisplayThread {
                 sup.action();
 
             try {
-                Thread.sleep(20);
+                Thread.sleep(SLEEP_TIME);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+
+
 
             for (VoidSupplier v : endTask) v.action();
             endTask.clear();

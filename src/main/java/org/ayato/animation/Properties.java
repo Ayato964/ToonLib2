@@ -1,6 +1,7 @@
 package org.ayato.animation;
 
 import org.ayato.animation.text.properties.*;
+import org.ayato.util.LastRunningProperty;
 import org.ayato.util.Position;
 
 import java.awt.*;
@@ -54,16 +55,18 @@ public sealed abstract class Properties<T> implements DisplayAnimation<T> permit
         position.setX(rx);
         position.setY(ry);
         isVisible = isVisible != null ? isVisible : ()->true;
-        ChangeColor c = null;
+        ArrayList<LastRunningProperty> last = new ArrayList<>();
         for(Supplier<IProperty> sup : properties){
             IProperty s = sup.get();
-            if(s instanceof ChangeColor)
-                c = (ChangeColor) s;
-            else
+            if(s instanceof LastRunningProperty l){
+                last.add(l);
+            }else {
                 init_properties.add(s);
+            }
         }
-        if(c != null)
-            init_properties.add(c);
+        for(LastRunningProperty l : last){
+            init_properties.add((IProperty) l);
+        }
 
     }
 }

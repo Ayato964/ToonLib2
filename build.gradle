@@ -31,6 +31,10 @@ publishing {
         }
     }
 }
+java{
+    sourceCompatibility = 17
+    targetCompatibility = 17
+}
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
@@ -45,4 +49,8 @@ jar{
 }
 test {
     useJUnitPlatform()
+}
+
+wrapper{
+    gradleVersion = '7.4'
 }

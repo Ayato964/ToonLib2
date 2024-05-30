@@ -4,8 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.12.14&#10;&#10;System&#10; * KeyInputs.java,  MouseInputs.java&#10;  ロック機能を実装。ロックすることで、ロックしたEvent以外の操作を禁止する&#10;&#10;InputModule.java&#10;＊インプットする際、他のキー操作ができなくなった。">
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.11.19&#10;&#10;&#10;軽微なファイル整理を実施&#10;軽微な不具合を修正。">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/FadeIn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TimeConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/LastRunningProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/ChangeColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/ChangeColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/DisplayThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/DisplayThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +40,27 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ToonLib2" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ToonLib2" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ToonLib2" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ToonLib2" type="f1a62948:ProjectNode" />
+                <item name="実行構成" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -43,23 +78,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Ayato964"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ayato964&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Ayato964/ToonLib2",
-    "accountId": "c61a65de-46ef-49b7-a2df-1f353cf2575e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ayato964/ToonLib2&quot;,
+    &quot;accountId&quot;: &quot;3ee9c6b7-2fc7-4573-9ac8-d1f730d9f4f0&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -70,40 +105,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.ToomLib2 [publish].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ToonLib2 [:TestMain.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/My_Project/ToonLib&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;プロジェクト&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.19655173&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Gradle ラッパーのアップグレード.executor": "Run",
+    "Gradle.ToonLib2 [:TestMain.main()].executor": "Run",
+    "Gradle.ToonLib2 [wrapper].executor": "Run",
+    "Gradle.ToonLib2 のビルド.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "G:/My_Project/ToonLib",
+    "project.structure.last.edited": "プロジェクト",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.19655173",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "アプリケーション.TestMain.executor": "Run"
   }
-}</component>
-  <component name="QodanaHighlightedReportService">
-    <option name="localRunNotPublishedPersistedInfo">
-      <LocalReportPersistedInfo>
-        <option name="path" value="C:\Users\admin\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
-        <option name="reportGuid" value="5cc4792a-16f7-425d-80a2-349482390270" />
-        <option name="reportName" value="ToonLib2/qodana/2024-05-28" />
-      </LocalReportPersistedInfo>
-    </option>
-  </component>
-  <component name="QodanaIsSelectedPersistenceService">
-    <option name="selectedOrLoading" value="true" />
-  </component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="C:\Users\admin\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="5cc4792a-16f7-425d-80a2-349482390270" reportId="ToonLib2/qodana/2024-05-28" />
-    </option>
-  </component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.ayato.system.properties" />
@@ -113,20 +134,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="アプリケーション.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.ayato.main.TestMain" />
-      <module name="ToonLib2.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.ayato.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="アプリケーション.TestMain">
     <configuration name="TestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="jbr-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -208,17 +216,41 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="ToonLib2 [wrapper]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="wrapper" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Gradle.ToonLib2 [wrapper]" />
       <item itemvalue="Gradle.ToomLib2 [publish]" />
       <item itemvalue="Gradle.ToonLib2 [dependencies]" />
       <item itemvalue="Gradle.ToonLib2 [test]" />
-      <item itemvalue="アプリケーション.Main" />
       <item itemvalue="アプリケーション.TestMain" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ToomLib2 [publish]" />
+        <item itemvalue="アプリケーション.TestMain" />
+        <item itemvalue="Gradle.ToonLib2 [wrapper]" />
         <item itemvalue="Gradle.ToonLib2 [test]" />
+        <item itemvalue="Gradle.ToomLib2 [publish]" />
         <item itemvalue="Gradle.ToonLib2 [dependencies]" />
       </list>
     </recent_temporary>
@@ -474,31 +506,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716575078783</updated>
     </task>
-    <task id="LOCAL-00034" summary="Ver.2.12.0&#10;&#10;New Properties&#10; * ChooseBox.java&#10;  TrueかFalseのみで表現されるボタン。&#10;&#10;System&#10; * RectProperties.java&#10; 削除">
+    <task id="LOCAL-00034" summary="Ver.2.10.7">
       <option name="closed" value="true" />
-      <created>1716862064560</created>
+      <created>1716785698801</created>
       <option name="number" value="00034" />
       <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
-      <updated>1716862064560</updated>
+      <updated>1716785698801</updated>
     </task>
-    <task id="LOCAL-00035" summary="Ver.2.12.10&#10;&#10;Change.java&#10;任意の条件でAnimation.javaで表示しているオブジェクトを変更する">
-      <option name="closed" value="true" />
-      <created>1716871088153</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1716871088153</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Ver.2.12.14&#10;&#10;System&#10; * KeyInputs.java,  MouseInputs.java&#10;  ロック機能を実装。ロックすることで、ロックしたEvent以外の操作を禁止する&#10;&#10;InputModule.java&#10;＊インプットする際、他のキー操作ができなくなった。">
-      <option name="closed" value="true" />
-      <created>1716873478503</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1716873478503</updated>
-    </task>
-    <option name="localTasksCounter" value="37" />
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -519,6 +535,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Version.0.4.3&#10;&#10;Properties.ifView&#10;表示する条件を設定できるようになった。&#10;&#10;Event.java&#10;イベントを管理できるシステム。Event.EventCardと Inheriting.javaを組み合わせることで、&#10;イベントを通してデータの引継ぎが可能になる。" />
+    <MESSAGE value="Version.0.4.4&#10;&#10;Properties.changeMessage&#10;メッセージの内容を書き換えることができるようになった。" />
     <MESSAGE value="Version.0.4.5&#10;&#10;Input.java&#10;プレイヤーから文字入力を受け付ける機能を追加した。" />
     <MESSAGE value="Version.0.4.5&#10;&#10;&#10;AnimationList.java&#10;AnimationTextに関するオブジェクトをリスト化する。&#10;&#10;AnimationMouseButtonList.java&#10;AnimationList.javaに基づき、リスト構造を可視化。&#10;また、マウスのボタンに反応する。" />
     <MESSAGE value="Version.0.4.7&#10;&#10;&#10;AnimationKeyButtonList.java&#10;AnimationList.javaのリスト構造を元に可視化し、キー入力に応じて選択を可能にする" />
@@ -541,9 +559,7 @@
     <MESSAGE value="Ver.2.9.21&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる" />
     <MESSAGE value="Ver.2.9.46&#10;&#10;Position.java&#10;x, yの変数をIntegerSupplierからintに変更" />
     <MESSAGE value="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。" />
-    <MESSAGE value="Ver.2.12.0&#10;&#10;New Properties&#10; * ChooseBox.java&#10;  TrueかFalseのみで表現されるボタン。&#10;&#10;System&#10; * RectProperties.java&#10; 削除" />
-    <MESSAGE value="Ver.2.12.10&#10;&#10;Change.java&#10;任意の条件でAnimation.javaで表示しているオブジェクトを変更する" />
-    <MESSAGE value="Ver.2.12.14&#10;&#10;System&#10; * KeyInputs.java,  MouseInputs.java&#10;  ロック機能を実装。ロックすることで、ロックしたEvent以外の操作を禁止する&#10;&#10;InputModule.java&#10;＊インプットする際、他のキー操作ができなくなった。" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.12.14&#10;&#10;System&#10; * KeyInputs.java,  MouseInputs.java&#10;  ロック機能を実装。ロックすることで、ロックしたEvent以外の操作を禁止する&#10;&#10;InputModule.java&#10;＊インプットする際、他のキー操作ができなくなった。" />
+    <MESSAGE value="Ver.2.10.7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.10.7" />
   </component>
 </project>

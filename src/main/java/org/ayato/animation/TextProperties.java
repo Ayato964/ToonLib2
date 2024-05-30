@@ -65,6 +65,10 @@ public final class TextProperties extends Properties<String>{
         properties.add(()->new ChooseBox(buttonAction, state, checkColor, duration));
         return this;
     }
+    public TextProperties fadeIn(long time){
+        properties.add(()->new FadeIn(time));
+        return this;
+    }
     public TextProperties font(String font, int style, float size){
         properties.add(0,()-> new IProperty() {
             @Override

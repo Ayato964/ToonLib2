@@ -29,8 +29,8 @@ public class NewAnimationTest implements IBaseScene{
     @Override
     public void setup(LunchScene scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
-        Animation<String> animation = scene.createAnimation("YESSS!!", TEMPLATE.of(100, 120).center());
-
+        Animation<String> animation = scene.createAnimation("YESSS!!", TEMPLATE.of(100, 120).center().fadeIn(100));
+        animation.setGroup("FadeIn");
         Animation<String> d = scene.createAnimation("Hello", TEMPLATE.of(20, 20).center().
                 button(0, 0, 40, 20,STATE.get() ,
                         (action)-> System.out.println("cool")));
