@@ -1,5 +1,8 @@
 package org.ayato.util;
 
+import org.ayato.system.LunchScene;
+
+import java.util.ArrayList;
 import java.util.Random;
 
 public interface IBaseScene extends Setup, Display{

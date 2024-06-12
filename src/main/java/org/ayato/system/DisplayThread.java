@@ -77,7 +77,7 @@ public class DisplayThread {
 
     }
     public void removeDisplayAll(){
-
+        displays.clear();
     }
     public void removeDisplayClass(Class<?> cls){
         for(int i = 0; i < displays.size(); i ++){

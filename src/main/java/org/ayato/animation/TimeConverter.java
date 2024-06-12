@@ -16,7 +16,7 @@ public abstract class TimeConverter implements IProperty {
     }
 
     @Override
-    public final void setupProperty(Graphics g, Properties<?> properties, Animation<?> animation) {
+    public void setupProperty(Graphics g, Properties<?> properties, Animation<?> animation) {
         overTime = overTime * animation.MASTER.SCENE.SLEEP_TIME;
     }
 

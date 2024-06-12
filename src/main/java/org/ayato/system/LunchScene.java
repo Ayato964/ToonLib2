@@ -60,6 +60,7 @@ public final class LunchScene {
         if(MY_SCENE == null) {
             SCENE.addEndTask(()->{
                 scene.setup(this);
+                scene.runSetupClass(this);
                 SCENE.addDisplay(scene);
                 MY_SCENE = scene;
             });
@@ -67,13 +68,13 @@ public final class LunchScene {
         }else{
             SCENE.addEndTask(()->{
                 SCENE.removeDisplay(MY_SCENE);
-                SCENE.removeDisplayClass(Animation.class);
-                //FRAME.removeMouseListenerAll();
-                //FRAME.removeKeyListenerAll();
+                SCENE.removeDisplayAll();
+                SCENE.addDisplay(BACKGROUND);
                 MouseInputs.removeAll();
                 KeyInputs.removeAll();
                 TimeCounter.removeAll();
                 scene.setup(this);
+                scene.runSetupClass(this);
                 SCENE.addDisplay(scene);
                 MY_SCENE = scene;
             });

@@ -5,8 +5,10 @@ import org.ayato.animation.text.properties.CheckBox;
 import org.ayato.system.LunchScene;
 import org.ayato.util.IBaseScene;
 import org.ayato.util.PropertiesSupplier;
+import org.ayato.util.Setup;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.function.Supplier;
 
 public class NewAnimationTest implements IBaseScene{
@@ -29,54 +31,37 @@ public class NewAnimationTest implements IBaseScene{
     @Override
     public void setup(LunchScene scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
-        Animation<String> animation = scene.createAnimation("YESSS!!", TEMPLATE.of(100, 120).center()
-                        .displayInOrder(200)
-                .pushMatrix()
-                        .fadeIn(2000)
-                        .fadeOut(2000)
-                .endMatrix()
-        );
-        animation.setGroup("FadeIn");
-        Animation<String> d = scene.createAnimation("Hello", TEMPLATE.of(20, 20).center().
-                button(0, 0, 40, 20,STATE.get() ,
-                        (action)-> System.out.println("cool")));
 
-        Animation<String> b =scene.createAnimation("Test Animation", TEMPLATE.of(60, 40)
-                .button(0, 0, 10, 10, STATE.get(),
-                        (a)-> System.out.println("cooler"))
-        );
-        Animation<String> c =scene.createAnimation("Test AAAAA", TEMPLATE.of(90, 40)
-                .button(0, 0, 10, 10, STATE.get(),
-                        (a)-> scene.addAnimation(animation))
-        );
-        AnimationGroup g = new AnimationGroup(60, 20, b, c, d);
-        g.view(scene);
+    }
 
-        scene.HANDLER.addInputModule("Input Here", System.out::println, TEMPLATE.of(80, 40));
+    @Override
+    public void setupClass(ArrayList<Setup> setups) {
+        setups.add(new NormalAnimation());
+        setups.add(new AnimationSetup());
+        setups.add(new ButtonSetup(null, ModuleAnimationTest::new, "<", ">"));
+    }
 
-        scene.addAnimation("IsCorrect?", TEMPLATE.of(100, 150)
-                .checkBox(System.out::println, STATE.get(), Color.WHITE, CheckBox.Duration.LEFT)
-        );
-        scene.addAnimation("Choose1", TEMPLATE.of(120, 100)
-                .chooseBox(System.out::println, STATE.get(), Color.WHITE, CheckBox.Duration.LEFT)
-        ).setGroup("test");
-        scene.addAnimation("Choose2", TEMPLATE.of(150, 100)
-                .chooseBox(System.out::println, STATE.get(), Color.WHITE, CheckBox.Duration.LEFT)
-        ).setGroup("test");
+    private static class NormalAnimation implements Setup{
 
-        scene.addAnimation("First Message", TEMPLATE.of(200, 100)
-                .changeText((isClicked, event, count) -> {
-                    if(event != null)
-                        if(event.getKeyChar() == '\n'){
-                            return switch (count){
-                                case 0 -> "Secound";
-                                case 1-> "SSSSS";
-                                case 2->"YESSSS!!!";
-                                default -> null;
-                            };
-                        }
-                    return null;
-                })
-        );
+        @Override
+        public void setup(LunchScene scene) {
+            Animation<String> button = scene.createAnimation("Selected!!(Center)", TEMPLATE.of(0, 50).center());
+            scene.addAnimation("Normal", TEMPLATE.of(10, 10));
+            scene.addAnimation("Button" , TEMPLATE.of(100, 10)
+                    .button(0, 0, 30, 15, STATE.get(), a->scene.addAnimation(button)));
+
+        }
+    }
+
+    private static final class AnimationSetup implements Setup{
+        @Override
+        public void setup(LunchScene scene) {
+            scene.addAnimation("FadeIn", TEMPLATE.of(10, 100).fadeIn(300));
+            scene.addAnimation("FadeOut", TEMPLATE.of(50, 100).fadeOut(300));
+            scene.addAnimation("Matrix", TEMPLATE.of(100, 100).pushMatrix()
+                    .fadeIn(500)
+                    .fadeOut(500)
+                    .endMatrix());
+        }
     }
 }

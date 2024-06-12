@@ -53,6 +53,7 @@ public class KeyInputs extends KeyAdapter implements Runnable {
         for(IListenerDecoder d : LISTENERS){
             LISTENERS.remove(d);
         }
+        INSTANCE.ID = -1;
     }
 
     @Override
