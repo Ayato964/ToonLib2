@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.16.6&#10;&#10;System&#10;- Alpha値が変更されるプロパティにおいて、他のAnimationにも干渉してしまうバグを修正">
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.16.13&#10;&#10;Properties&#10;- Parent&#10;  Animation&lt;?&gt;もしくはPositionを引数にすることで、それを親とみなし、座標の動きを同期する&#10;&#10;REMOVE&#10;- AnimationGroup.java&#10;- Event.java&#10;- Inheriting.java">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Sleep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Wait.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/PropertyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/PropertyMatrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -575,7 +575,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718362574860</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Ver.2.16.13&#10;&#10;Properties&#10;- Parent&#10;  Animation&lt;?&gt;もしくはPositionを引数にすることで、それを親とみなし、座標の動きを同期する&#10;&#10;REMOVE&#10;- AnimationGroup.java&#10;- Event.java&#10;- Inheriting.java">
+      <option name="closed" value="true" />
+      <created>1718363855751</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1718363855752</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -596,7 +604,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ver.2.5.15&#10;&#10;TextProperties.java&#10;*displayInOrder&#10;-&gt;文字を順番に表示する。" />
     <MESSAGE value="Ver.2.5.21&#10;&#10;ImageProperties.java&#10;*Gif.java&#10;-&gt;アニメーション用に設定された画像データを動かす" />
     <MESSAGE value="Ver.2.5.28&#10;&#10;AnimationSequentialOrder.java&#10;&#10;アニメーションを順番に出力する機能を追加" />
     <MESSAGE value="Ver.2.6.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
@@ -621,6 +628,7 @@
     <MESSAGE value="Ver.2.15.11&#10;&#10;System&#10;- LunchScene.java&#10;  シーンを変更したとき、InputModuleが残り続ける不具合を修正&#10;- Setup.runSetupClass, Setup.setupClass&#10;  セットアップの中身をクラス単位で分けて実行できるようになった" />
     <MESSAGE value="Ver.2.16.0&#10;&#10;System&#10;- LunchScene.java&#10;  シーンを変更したとき、InputModuleが残り続ける不具合を修正&#10;- Setup.runSetupClass, Setup.setupClass&#10;  セットアップの中身をクラス単位で分けて実行できるようになった&#10;- TimeConverter.java&#10;  使用を大幅に変更&#10;  &#10;Properties&#10;- Move.java&#10;  指定した座標まで瞬時に転送する&#10;- MoveTo.java&#10;  指定した座標までN秒掛けて移動する" />
     <MESSAGE value="Ver.2.16.6&#10;&#10;System&#10;- Alpha値が変更されるプロパティにおいて、他のAnimationにも干渉してしまうバグを修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.16.6&#10;&#10;System&#10;- Alpha値が変更されるプロパティにおいて、他のAnimationにも干渉してしまうバグを修正" />
+    <MESSAGE value="Ver.2.16.13&#10;&#10;Properties&#10;- Parent&#10;  Animation&lt;?&gt;もしくはPositionを引数にすることで、それを親とみなし、座標の動きを同期する&#10;&#10;REMOVE&#10;- AnimationGroup.java&#10;- Event.java&#10;- Inheriting.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.16.13&#10;&#10;Properties&#10;- Parent&#10;  Animation&lt;?&gt;もしくはPositionを引数にすることで、それを親とみなし、座標の動きを同期する&#10;&#10;REMOVE&#10;- AnimationGroup.java&#10;- Event.java&#10;- Inheriting.java" />
   </component>
 </project>

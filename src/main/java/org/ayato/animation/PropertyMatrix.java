@@ -57,6 +57,15 @@ public class PropertyMatrix<V extends Properties<?>> implements IProperty {
         return this;
     }
 
+    public PropertyMatrix<V> sleep(long time){
+        properties.add(()->new Sleep(time));
+        return this;
+    }
+    public PropertyMatrix<V> wait(BooleanSupplier isWaitCondition){
+        properties.add(()->new Wait(isWaitCondition));
+        return this;
+    }
+
     public V endMatrix(){
         return MASTER;
     }

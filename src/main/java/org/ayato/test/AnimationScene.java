@@ -28,9 +28,17 @@ public class AnimationScene implements IBaseScene {
                 .endMatrix());
         Animation<?> a = scene.addAnimation("MoveTo", NewAnimationTest.TEMPLATE.of(10, 10)
                 .pushMatrix()
-                .moveTo(300, 10, 300, MoveTo.VelocityFormat.CURVE)
+                .moveTo(300, 10, 100, MoveTo.VelocityFormat.CURVE)
+                        .sleep(300)
                         .moveTo(300, 200, 300, MoveTo.VelocityFormat.CONSTANT)
                 .endMatrix());
+
+        scene.addAnimation("Wait Test", NewAnimationTest.TEMPLATE.of(10, 20)
+                .pushMatrix()
+                .wait(()->position.getX() * scene.DW >= scene.FRAME.DESCTOP_BOUNDS.width)
+                        .moveTo(40, 40, 200, MoveTo.VelocityFormat.CONSTANT)
+                .endMatrix());
+
         scene.addAnimation("ParentAnimation", NewAnimationTest.TEMPLATE.of(100, 100)
                 .parent(a));
         scene.addAnimation("ParentPosition1", NewAnimationTest.TEMPLATE.of(0, 120)
