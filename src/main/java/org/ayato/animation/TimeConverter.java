@@ -5,29 +5,24 @@ import org.ayato.animation.text.properties.IProperty;
 import java.awt.*;
 
 public abstract class TimeConverter implements IProperty {
-    private long count_time = 0L;
-    private float overTime;
-    private int secTime = 0;
-    private int maxValue;
-
-    public TimeConverter(long maxTime, int value) {
-        overTime = (float) value / maxTime; //increase
-        maxValue = value;
-    }
-
-    @Override
-    public void setupProperty(Graphics g, Properties<?> properties, Animation<?> animation) {
-        overTime = overTime * animation.MASTER.SCENE.SLEEP_TIME;
+    private final long maxTime;
+    private long time = 0;
+    public TimeConverter(long maxTime) {
+        this.maxTime = maxTime;
     }
 
     @Override
     public final void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
-        if(secTime <= maxValue) {
-            count_time += 1;
-            secTime = (int) Math.min(maxValue, overTime * count_time);
-        }
-        clockTick(g, properties, animation, secTime);
+        double progress = (double) time / maxTime;
+        clockTick(g, properties, animation, progress);
+        if(time <= maxTime)
+            time++;
     }
 
-    protected abstract void clockTick(Graphics g, Properties properties, Animation<?> animation, int secTime);
+    protected abstract void clockTick(Graphics g, Properties properties, Animation<?> animation, double progress);
+
+    @Override
+    public boolean isEnd() {
+        return time >= maxTime;
+    }
 }

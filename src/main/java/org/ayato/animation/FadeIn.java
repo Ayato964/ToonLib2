@@ -7,28 +7,17 @@ import org.ayato.util.LastRunningProperty;
 import java.awt.*;
 
 public class FadeIn extends TimeConverter implements LastRunningProperty {
-    private boolean isEnd = false;
     public FadeIn(long maxTime) {
-        super(maxTime, 255);
+        super(maxTime);
     }
 
     @Override
-    protected void clockTick(Graphics g, Properties properties, Animation<?> animation, int secTime) {
+    protected void clockTick(Graphics g, Properties properties, Animation<?> animation, double progress) {
         Color color = g.getColor();
         switch (animation.mes){
-            case String s ->  g.setColor(new Color(color.getRed(), color.getGreen(), color.getBlue(), secTime));
+            case String s ->  g.setColor(new Color(color.getRed(), color.getGreen(), color.getBlue(), (int) (255 * progress)));
             default -> throw new IllegalStateException("Unexpected value: " + animation.mes);
         }
-        if(animation.mes instanceof String) {
-            g.setColor(new Color(color.getRed(), color.getGreen(), color.getBlue(), secTime));
-        }
-        if(secTime >= 255){
-            isEnd = true;
-        }
-    }
+     }
 
-    @Override
-    public boolean isEnd() {
-        return isEnd;
-    }
 }

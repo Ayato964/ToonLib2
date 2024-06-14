@@ -24,6 +24,12 @@ public class Position {
     public int getY(){
         return y + runAddon(sy, 0);
     }
+    public int getNormalX(){
+        return x;
+    }
+    public int getNormalY(){
+        return y;
+    }
     public Position setX(int dx){
         x = dx;
         return this;

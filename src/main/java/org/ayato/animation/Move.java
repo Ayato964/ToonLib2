@@ -1,19 +1,26 @@
 package org.ayato.animation;
 
+import org.ayato.animation.text.properties.IProperty;
+
 import java.awt.*;
 
-public class Move extends TimeConverter{
-    public Move(long maxTime, int x, int y) {
-        super(maxTime, -1);
+public class Move implements IProperty {
+    private final int x, y;
+    boolean isEnd = false;
+    public Move(int x1, int y1) {
+        this.x = x1;
+        this.y = y1;
     }
 
     @Override
-    public void setupProperty(Graphics g, Properties<?> properties, Animation<?> animation) {
-        super.setupProperty(g, properties, animation);
+    public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
+        properties.position.setX(x);
+        properties.position.setY(y);
+        isEnd = true;
     }
 
     @Override
-    protected void clockTick(Graphics g, Properties properties, Animation<?> animation, int secTime) {
-
+    public boolean isEnd() {
+        return isEnd;
     }
 }

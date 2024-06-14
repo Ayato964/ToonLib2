@@ -58,10 +58,13 @@ public class NewAnimationTest implements IBaseScene{
         public void setup(LunchScene scene) {
             scene.addAnimation("FadeIn", TEMPLATE.of(10, 100).fadeIn(300));
             scene.addAnimation("FadeOut", TEMPLATE.of(50, 100).fadeOut(300));
+
             scene.addAnimation("Matrix", TEMPLATE.of(100, 100).pushMatrix()
-                    .fadeIn(500)
-                    .fadeOut(500)
+                    .fadeIn(100)
+                    .fadeOut(100)
                     .endMatrix());
+
+
         }
     }
 }

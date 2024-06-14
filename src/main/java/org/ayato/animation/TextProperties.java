@@ -108,6 +108,10 @@ public final class TextProperties extends Properties<String>{
         isVisible = how;
         return this;
     }
+    public TextProperties moveTo(int x, int y, long maxTime, MoveTo.VelocityFormat format){
+        properties.add(()->new MoveTo(x, y, maxTime, format));
+        return this;
+    }
     public PropertyMatrix<TextProperties> pushMatrix(){
         PropertyMatrix<TextProperties> matrix = new PropertyMatrix<>(this);
         properties.add(()->matrix);

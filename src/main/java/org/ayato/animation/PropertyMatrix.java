@@ -48,6 +48,14 @@ public class PropertyMatrix<V extends Properties<?>> implements IProperty {
         properties.add(()->new FadeOut(time, condition));
         return this;
     }
+    public PropertyMatrix<V> move(int x, int y){
+        properties.add(()->new Move(x, y));
+        return this;
+    }
+    public PropertyMatrix<V> moveTo(int x, int y, long second, MoveTo.VelocityFormat format){
+        properties.add(()->new MoveTo(x, y, second, format));
+        return this;
+    }
 
     public V endMatrix(){
         return MASTER;

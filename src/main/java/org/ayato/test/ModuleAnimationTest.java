@@ -24,6 +24,6 @@ public class ModuleAnimationTest implements IBaseScene {
 
     @Override
     public void setupClass(ArrayList<Setup> setups) {
-        setups.add(new ButtonSetup(NewAnimationTest::new, null, "<", ">"));
+        setups.add(new ButtonSetup(NewAnimationTest::new, AnimationScene::new, "<", ">"));
     }
 }
