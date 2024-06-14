@@ -117,6 +117,16 @@ public final class TextProperties extends Properties<String>{
         properties.add(()->matrix);
         return matrix;
     }
+    public TextProperties parent(Position position){
+        this.position.setXAddon(position::getX);
+        this.position.setYAddon(position::getY);
+        return this;
+    }
+    public TextProperties parent(Animation<?> animation){
+        position.setXAddon(animation.properties.position::getX);
+        position.setYAddon(animation.properties.position::getY);
+        return this;
+    }
 
     @Override
     public void run(LunchScene MASTER, Graphics g, String o) {

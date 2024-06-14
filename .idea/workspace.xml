@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.16.0&#10;&#10;System&#10;- LunchScene.java&#10;  シーンを変更したとき、InputModuleが残り続ける不具合を修正&#10;- Setup.runSetupClass, Setup.setupClass&#10;  セットアップの中身をクラス単位で分けて実行できるようになった&#10;- TimeConverter.java&#10;  使用を大幅に変更&#10;  &#10;Properties&#10;- Move.java&#10;  指定した座標まで瞬時に転送する&#10;- MoveTo.java&#10;  指定した座標までN秒掛けて移動する">
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.16.6&#10;&#10;System&#10;- Alpha値が変更されるプロパティにおいて、他のAnimationにも干渉してしまうバグを修正">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/Inheriting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/Inheriting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/AnimationGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -566,7 +567,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718361633270</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Ver.2.16.6&#10;&#10;System&#10;- Alpha値が変更されるプロパティにおいて、他のAnimationにも干渉してしまうバグを修正">
+      <option name="closed" value="true" />
+      <created>1718362574860</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1718362574860</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -587,7 +596,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ver.2.5.15&#10;&#10;Order.java&#10;秒数T秒にかけて文字を順番に表示する。" />
     <MESSAGE value="Ver.2.5.15&#10;&#10;TextProperties.java&#10;*displayInOrder&#10;-&gt;文字を順番に表示する。" />
     <MESSAGE value="Ver.2.5.21&#10;&#10;ImageProperties.java&#10;*Gif.java&#10;-&gt;アニメーション用に設定された画像データを動かす" />
     <MESSAGE value="Ver.2.5.28&#10;&#10;AnimationSequentialOrder.java&#10;&#10;アニメーションを順番に出力する機能を追加" />
@@ -612,6 +620,7 @@
     <MESSAGE value="Ver.2.15.0&#10;&#10;&#10;SCENEが切り替わるとき、MouseListenerとKeyListenerを削除する機能を削除&#10;&#10;New Properties&#10;* FadeOut.java&#10; 条件を満たしたら画面からオブジェクトがフェードアウトする。&#10; &#10;* DisplayInOrder.java&#10; 文字列を順番に表示する&#10; &#10; * PropertyMatrix.java&#10;    IProperty.java を継承したクラスを配列形式で保存し、順番に一つずつ実行するクラス。&#10; * IProperty.java&#10;    isEndメソッドを追加。一通りの処理が終わったらtrueを動的に返すメソッド。&#10;   System&#10;   　　* TimeCounter.java&#10;       指定した値まで値を刻み、満たしたら関数型変数を実行する&#10;       シーンが切り替わるとき、 KeyInputs.java MouseInputs.java TimeCounter.java の３つのクラスに化されるキャッシュを開放するようにした。" />
     <MESSAGE value="Ver.2.15.11&#10;&#10;System&#10;- LunchScene.java&#10;  シーンを変更したとき、InputModuleが残り続ける不具合を修正&#10;- Setup.runSetupClass, Setup.setupClass&#10;  セットアップの中身をクラス単位で分けて実行できるようになった" />
     <MESSAGE value="Ver.2.16.0&#10;&#10;System&#10;- LunchScene.java&#10;  シーンを変更したとき、InputModuleが残り続ける不具合を修正&#10;- Setup.runSetupClass, Setup.setupClass&#10;  セットアップの中身をクラス単位で分けて実行できるようになった&#10;- TimeConverter.java&#10;  使用を大幅に変更&#10;  &#10;Properties&#10;- Move.java&#10;  指定した座標まで瞬時に転送する&#10;- MoveTo.java&#10;  指定した座標までN秒掛けて移動する" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.16.0&#10;&#10;System&#10;- LunchScene.java&#10;  シーンを変更したとき、InputModuleが残り続ける不具合を修正&#10;- Setup.runSetupClass, Setup.setupClass&#10;  セットアップの中身をクラス単位で分けて実行できるようになった&#10;- TimeConverter.java&#10;  使用を大幅に変更&#10;  &#10;Properties&#10;- Move.java&#10;  指定した座標まで瞬時に転送する&#10;- MoveTo.java&#10;  指定した座標までN秒掛けて移動する" />
+    <MESSAGE value="Ver.2.16.6&#10;&#10;System&#10;- Alpha値が変更されるプロパティにおいて、他のAnimationにも干渉してしまうバグを修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.16.6&#10;&#10;System&#10;- Alpha値が変更されるプロパティにおいて、他のAnimationにも干渉してしまうバグを修正" />
   </component>
 </project>

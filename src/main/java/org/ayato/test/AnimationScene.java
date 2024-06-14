@@ -1,18 +1,21 @@
 package org.ayato.test;
 
+import org.ayato.animation.Animation;
 import org.ayato.animation.MoveTo;
 import org.ayato.system.LunchScene;
 import org.ayato.util.IBaseScene;
+import org.ayato.util.Position;
 import org.ayato.util.Setup;
 
 import java.awt.*;
 import java.util.ArrayList;
 
 public class AnimationScene implements IBaseScene {
+    private final Position position = new Position(0, 0, 100, 100);
 
     @Override
     public void display(Graphics g) {
-
+        position.setX(position.getNormalX() + 1);
     }
 
     @Override
@@ -23,11 +26,17 @@ public class AnimationScene implements IBaseScene {
                     .fadeIn(300)
                     .move(50, 50)
                 .endMatrix());
-        scene.addAnimation("MoveTo", NewAnimationTest.TEMPLATE.of(10, 10)
+        Animation<?> a = scene.addAnimation("MoveTo", NewAnimationTest.TEMPLATE.of(10, 10)
                 .pushMatrix()
                 .moveTo(300, 10, 300, MoveTo.VelocityFormat.CURVE)
                         .moveTo(300, 200, 300, MoveTo.VelocityFormat.CONSTANT)
                 .endMatrix());
+        scene.addAnimation("ParentAnimation", NewAnimationTest.TEMPLATE.of(100, 100)
+                .parent(a));
+        scene.addAnimation("ParentPosition1", NewAnimationTest.TEMPLATE.of(0, 120)
+                .parent(position));
+        scene.addAnimation("ParentPosition2", NewAnimationTest.TEMPLATE.of(10, 150)
+                .parent(position));
     }
 
     @Override

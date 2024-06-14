@@ -73,6 +73,9 @@ public class Position {
                 getY() * dh <= my && (getY() + h) * dh >= my;
     }
     private int runAddon(ArrayList<IntSupplier> a, int c){
-        return a.size() > c ? a.get(c).getAsInt() + runAddon(a, c + 1) : 0;
+        if(!a.isEmpty())
+            return a.size() > c ? a.get(c).getAsInt() + runAddon(a, c + 1) : 0;
+        else
+            return 0;
     }
 }
