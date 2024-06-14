@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.16.13&#10;&#10;Properties&#10;- Parent&#10;  Animation&lt;?&gt;もしくはPositionを引数にすることで、それを親とみなし、座標の動きを同期する&#10;&#10;REMOVE&#10;- AnimationGroup.java&#10;- Event.java&#10;- Inheriting.java">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Sleep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Wait.java" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.16.18&#10;&#10;Properties&#10;- Sleep.java&#10;  pushMatrixにおいて、N秒間動作を停止する&#10;- Wait.java&#10;　PropertyMatrixにおいて、条件をクリアしないと次に進めなくする">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/PropertyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/PropertyMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Animation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Change.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/ChangeObjectModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/InputModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/module/InputModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/ChangeFunction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/DisplayInOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/DisplayInOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/AnimationHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -583,7 +590,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718363855752</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Ver.2.16.18&#10;&#10;Properties&#10;- Sleep.java&#10;  pushMatrixにおいて、N秒間動作を停止する&#10;- Wait.java&#10;　PropertyMatrixにおいて、条件をクリアしないと次に進めなくする">
+      <option name="closed" value="true" />
+      <created>1718364799665</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1718364799665</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -604,7 +619,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ver.2.5.21&#10;&#10;ImageProperties.java&#10;*Gif.java&#10;-&gt;アニメーション用に設定された画像データを動かす" />
     <MESSAGE value="Ver.2.5.28&#10;&#10;AnimationSequentialOrder.java&#10;&#10;アニメーションを順番に出力する機能を追加" />
     <MESSAGE value="Ver.2.6.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
     <MESSAGE value="Ver.2.7.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
@@ -629,6 +643,7 @@
     <MESSAGE value="Ver.2.16.0&#10;&#10;System&#10;- LunchScene.java&#10;  シーンを変更したとき、InputModuleが残り続ける不具合を修正&#10;- Setup.runSetupClass, Setup.setupClass&#10;  セットアップの中身をクラス単位で分けて実行できるようになった&#10;- TimeConverter.java&#10;  使用を大幅に変更&#10;  &#10;Properties&#10;- Move.java&#10;  指定した座標まで瞬時に転送する&#10;- MoveTo.java&#10;  指定した座標までN秒掛けて移動する" />
     <MESSAGE value="Ver.2.16.6&#10;&#10;System&#10;- Alpha値が変更されるプロパティにおいて、他のAnimationにも干渉してしまうバグを修正" />
     <MESSAGE value="Ver.2.16.13&#10;&#10;Properties&#10;- Parent&#10;  Animation&lt;?&gt;もしくはPositionを引数にすることで、それを親とみなし、座標の動きを同期する&#10;&#10;REMOVE&#10;- AnimationGroup.java&#10;- Event.java&#10;- Inheriting.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.16.13&#10;&#10;Properties&#10;- Parent&#10;  Animation&lt;?&gt;もしくはPositionを引数にすることで、それを親とみなし、座標の動きを同期する&#10;&#10;REMOVE&#10;- AnimationGroup.java&#10;- Event.java&#10;- Inheriting.java" />
+    <MESSAGE value="Ver.2.16.18&#10;&#10;Properties&#10;- Sleep.java&#10;  pushMatrixにおいて、N秒間動作を停止する&#10;- Wait.java&#10;　PropertyMatrixにおいて、条件をクリアしないと次に進めなくする" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.16.18&#10;&#10;Properties&#10;- Sleep.java&#10;  pushMatrixにおいて、N秒間動作を停止する&#10;- Wait.java&#10;　PropertyMatrixにおいて、条件をクリアしないと次に進めなくする" />
   </component>
 </project>

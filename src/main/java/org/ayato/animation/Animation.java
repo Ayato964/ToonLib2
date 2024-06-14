@@ -9,20 +9,25 @@ import org.ayato.util.Display;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.function.BooleanSupplier;
+import java.util.function.Supplier;
 
 public class Animation<T> extends BaseAbstractObject {
+    public final Supplier<T> baseObject;
     public T mes;
     public final LunchScene MASTER;
     protected Properties<T> properties;
 
-    public Animation(LunchScene master, T a, Properties<T> prop){
-        mes = a;
+    public Animation(LunchScene master, Supplier<T> base, Properties<T> prop){
+        baseObject = base;
+        mes = base.get();
         MASTER = master;
         properties = prop;
     }
 
     @Override
     public void display(Graphics g) {
+            mes = baseObject.get();
+
             if (properties != null)
                 properties.runProp(g, this);
             if(mes != null)
@@ -46,7 +51,7 @@ public class Animation<T> extends BaseAbstractObject {
     }
 
     public T getViewObject() {
-        return mes;
+        return baseObject.get();
     }
 
     public void init(){

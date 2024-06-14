@@ -12,6 +12,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class InputModule extends Animation<String> implements KeyListener {
     private final InputCursor inputCursor;
@@ -51,17 +52,18 @@ public class InputModule extends Animation<String> implements KeyListener {
             MASTER.SCENE.addEndTask(()->MASTER.FRAME.addKeyListener(this));
         }
     }
+
     @Override
     public void init() {
         super.init();
         //MASTER.FRAME.addKeyListener(this);
     }
 
-    public InputModule(LunchScene master, String a, TextProperties prop, Consumer<String> ifPressEnter) {
+    public InputModule(LunchScene master, Supplier<String> a, TextProperties prop, Consumer<String> ifPressEnter) {
         super(master, a, prop);
         this.properties = INPUT_PROP.of(prop.position.getX(), prop.position.getY()).copyAddon(prop);
         this.ifPressEnter = ifPressEnter;
-        this.baseMessage = a;
+        this.baseMessage = a.get();
         inputCursor = new InputCursor(20l, Color.WHITE, master);
     }
 
@@ -99,7 +101,13 @@ public class InputModule extends Animation<String> implements KeyListener {
 
     @Override
     public void display(Graphics g) {
-        super.display(g);
+        if (properties != null)
+            properties.runProp(g, this);
+        if(mes != null)
+            properties.run(MASTER,g, mes);
+
+        Color now = g.getColor();
+        g.setColor(new Color(now.getRGB()));
         inputCursor.display(g, mes, properties.position);
     }
 }

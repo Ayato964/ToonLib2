@@ -53,10 +53,7 @@ public final class TextProperties extends Properties<String>{
             properties.add(()->p);
         return this;
     }
-    public TextProperties changeText(ChangeFunction<String> condition){
-        properties.add(()->new Change<String>(condition));
-        return this;
-    }
+    
     public TextProperties checkBox(Consumer<Boolean> buttonAction, AnimationState state, Color checkColor, CheckBox.Duration duration){
         properties.add(()->new CheckBox(buttonAction,state, checkColor, duration));
         return this;

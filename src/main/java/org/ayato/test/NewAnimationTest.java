@@ -23,9 +23,11 @@ public class NewAnimationTest implements IBaseScene{
     public static final PropertiesSupplier<TextProperties> TEMPLATE =(x, y) -> PropertiesComponent.ofText(x, y)
             .color(Color.WHITE)
             .font("", Font.PLAIN, 1.5f);
+
+    private int count = 0;
     @Override
     public void display(Graphics g) {
-
+        count ++;
     }
 
     @Override
@@ -41,7 +43,7 @@ public class NewAnimationTest implements IBaseScene{
         setups.add(new ButtonSetup(null, ModuleAnimationTest::new, "<", ">"));
     }
 
-    private static class NormalAnimation implements Setup{
+    private class NormalAnimation implements Setup{
 
         @Override
         public void setup(LunchScene scene) {
@@ -49,7 +51,7 @@ public class NewAnimationTest implements IBaseScene{
             scene.addAnimation("Normal", TEMPLATE.of(10, 10));
             scene.addAnimation("Button" , TEMPLATE.of(100, 10)
                     .button(0, 0, 30, 15, STATE.get(), a->scene.addAnimation(button)));
-
+            scene.addAnimation((Supplier<String>) () -> String.valueOf(NewAnimationTest.this.count), TEMPLATE.of(150, 10).displayInOrder(200));
         }
     }
 

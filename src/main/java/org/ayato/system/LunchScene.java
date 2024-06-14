@@ -8,6 +8,7 @@ import org.ayato.util.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.function.Supplier;
 
 public final class LunchScene {
     public  final DisplayThread SCENE;
@@ -80,8 +81,17 @@ public final class LunchScene {
             });
         }
     }
-    public <A> Animation<A> addAnimation(A object, Properties<A> prop){
+    public <A> Animation<A> addAnimation(Supplier<A> object, Properties<A> prop){
         Animation<A> animation = new Animation<>(this, object, prop);
+        SCENE.addDisplay(animation);
+        animation.init();
+        return animation;
+    }
+    public <A> Animation<A> createAnimation(Supplier<A> object, Properties<A> prop){
+        return new Animation<>(this, object, prop);
+    }
+    public <A> Animation<A> addAnimation(A object, Properties<A> prop){
+        Animation<A> animation = new Animation<>(this, ()->object, prop);
         SCENE.addDisplay(animation);
         animation.init();
         return animation;
@@ -92,7 +102,7 @@ public final class LunchScene {
         return animation;
     }
     public <A> Animation<A> createAnimation(A object, Properties<A> prop){
-        return new Animation<>(this, object, prop);
+        return new Animation<>(this, ()->object, prop);
     }
 
     public void setVisible(boolean b) {

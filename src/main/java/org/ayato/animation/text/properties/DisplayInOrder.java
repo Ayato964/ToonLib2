@@ -39,12 +39,12 @@ public class DisplayInOrder implements ITimeCounter, IProperty {
     @Override
     public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
         Animation<String> animation1 = (Animation<String>) animation;
-        if(!arrangeText.isEmpty())
+        if(!arrangeText.isEmpty() && !isEnd)
             animation1.setViewObject(arrangeText.toString());
     }
 
     @Override
     public boolean isEnd() {
-        return IProperty.super.isEnd();
+        return isEnd;
     }
 }
