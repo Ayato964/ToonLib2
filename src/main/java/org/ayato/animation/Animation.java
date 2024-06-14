@@ -27,6 +27,9 @@ public class Animation<T> extends BaseAbstractObject {
                 properties.runProp(g, this);
             if(mes != null)
                 properties.run(MASTER,g, mes);
+
+            Color now = g.getColor();
+            g.setColor(new Color(now.getRGB()));
     }
     public <A extends IProperty> A getPropertyClass(Class<A> cls){
         A a = null;

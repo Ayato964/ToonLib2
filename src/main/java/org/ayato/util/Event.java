@@ -2,6 +2,7 @@ package org.ayato.util;
 
 import java.util.ArrayList;
 
+@Deprecated
 public class Event {
     private static final ArrayList<EventCard<? extends Inheriting>> cards = new ArrayList<>();
 

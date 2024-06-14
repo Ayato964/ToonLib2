@@ -2,6 +2,7 @@ package org.ayato.util;
 
 import java.util.HashMap;
 
+@Deprecated
 public class Inheriting {
     private final HashMap<String, Integer> integerKey = new HashMap<>();
     private final HashMap<String, String> stringKey = new HashMap<>();

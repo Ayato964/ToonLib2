@@ -63,6 +63,8 @@ public class NewAnimationTest implements IBaseScene{
                     .fadeIn(100)
                     .fadeOut(100)
                     .endMatrix());
+            scene.addAnimation("DisplayInorder", TEMPLATE.of(150, 100)
+                    .displayInOrder(200));
 
 
         }

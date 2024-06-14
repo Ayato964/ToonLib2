@@ -3,6 +3,7 @@ package org.ayato.system;
 import org.ayato.util.Display;
 import org.ayato.util.VoidSupplier;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArrayList;
 
