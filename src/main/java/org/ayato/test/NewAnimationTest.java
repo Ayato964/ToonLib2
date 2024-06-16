@@ -3,12 +3,14 @@ package org.ayato.test;
 import org.ayato.animation.*;
 import org.ayato.animation.text.properties.CheckBox;
 import org.ayato.system.LunchScene;
+import org.ayato.util.Display;
 import org.ayato.util.IBaseScene;
 import org.ayato.util.PropertiesSupplier;
 import org.ayato.util.Setup;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Supplier;
 
 public class NewAnimationTest implements IBaseScene{
@@ -27,7 +29,7 @@ public class NewAnimationTest implements IBaseScene{
     private int count = 0;
     @Override
     public void display(Graphics g) {
-        count ++;
+
     }
 
     @Override
@@ -41,6 +43,11 @@ public class NewAnimationTest implements IBaseScene{
         setups.add(new NormalAnimation());
         setups.add(new AnimationSetup());
         setups.add(new ButtonSetup(null, ModuleAnimationTest::new, "<", ">"));
+    }
+
+    @Override
+    public void tick() {
+        count ++;
     }
 
     private class NormalAnimation implements Setup{

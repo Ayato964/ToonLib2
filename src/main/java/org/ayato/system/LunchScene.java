@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 
 public final class LunchScene {
     public  final DisplayThread SCENE;
-    public  final DisplayThread ANIMATION;
+    public  final TickThread TICK;
     public  final MyFrame       FRAME;
     public final Graphics       GRAPHIC;
     public final AnimationHandler HANDLER;
@@ -32,12 +32,12 @@ public final class LunchScene {
         GRAPHIC = FRAME.g;
         BACKGROUND = new Background(this);
         SCENE = DisplayThread.runThread(null, this);
-        ANIMATION  = DisplayThread.runThread(null, this);
         HANDLER = new AnimationHandler(this);
         SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
         KeyInputs.init(this);
         MouseInputs.init(this);
         TimeCounter.init();
+        TICK = TickThread.INSTANCE;
     }
     public LunchScene(String str, int dw, int dh){
         FRAME = new MyFrame(str, false);
@@ -50,33 +50,36 @@ public final class LunchScene {
         GRAPHIC = FRAME.g;
         BACKGROUND = new Background(this);
         SCENE = DisplayThread.runThread(null, this);
-        ANIMATION  = DisplayThread.runThread(null, this);
         HANDLER = new AnimationHandler(this);
         SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
         KeyInputs.init(this);
         MouseInputs.init(this);
         TimeCounter.init();
+        TICK = TickThread.INSTANCE;
     }
     public void changeScene(IBaseScene scene){
         if(MY_SCENE == null) {
             SCENE.addEndTask(()->{
-                scene.setup(this);
                 scene.runSetupClass(this);
-                SCENE.addDisplay(scene);
+                scene.runDisplayClass(SCENE);
+                scene.runTickClass(TICK);
+                scene.setToonObjectClass(this);
+                TICK.add(scene);
                 MY_SCENE = scene;
             });
 
         }else{
             SCENE.addEndTask(()->{
-                SCENE.removeDisplay(MY_SCENE);
                 SCENE.removeDisplayAll();
                 SCENE.addDisplay(BACKGROUND);
                 MouseInputs.removeAll();
                 KeyInputs.removeAll();
                 TimeCounter.removeAll();
-                scene.setup(this);
+
                 scene.runSetupClass(this);
-                SCENE.addDisplay(scene);
+                scene.runDisplayClass(SCENE);
+                scene.runTickClass(TICK);
+                scene.setToonObjectClass(this);
                 MY_SCENE = scene;
             });
         }

@@ -1,11 +1,13 @@
 package org.ayato.test;
 
 import org.ayato.system.LunchScene;
+import org.ayato.util.Display;
 import org.ayato.util.IBaseScene;
 import org.ayato.util.Setup;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ModuleAnimationTest implements IBaseScene {
 
@@ -25,5 +27,10 @@ public class ModuleAnimationTest implements IBaseScene {
     @Override
     public void setupClass(ArrayList<Setup> setups) {
         setups.add(new ButtonSetup(NewAnimationTest::new, AnimationScene::new, "<", ">"));
+    }
+
+    @Override
+    public void tick() {
+
     }
 }

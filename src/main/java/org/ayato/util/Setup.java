@@ -9,6 +9,7 @@ public interface Setup extends SerialID{
 
     public default void runSetupClass(LunchScene scene){
         ArrayList<Setup> setups = new ArrayList<>();
+        setups.add(this);
         setupClass(setups);
         for(Setup s : setups)
             s.setup(scene);
