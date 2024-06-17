@@ -54,4 +54,8 @@ public final class TickThread implements Runnable{
     public void removeAll() {
         ticks.clear();
     }
+
+    public void remove(Tick object) {
+        ticks.remove(object);
+    }
 }

@@ -11,10 +11,6 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class ImageTestScene extends IBaseScene {
-    @Override
-    protected ArrayList<ToonObject> getToonObjects() {
-        return null;
-    }
 
     @Override
     public void tick() {

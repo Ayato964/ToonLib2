@@ -51,11 +51,6 @@ public class NewAnimationTest extends IBaseScene{
         count ++;
     }
 
-    @Override
-    public ArrayList<ToonObject> getToonObjects() {
-        return null;
-    }
-
     private class NormalAnimation implements Setup{
 
         @Override

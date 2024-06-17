@@ -17,10 +17,10 @@ public class InputCursor {
     }
     public void display(Graphics g, String str, Position position){
         if(isInputMode && isVisible) {
-            int x = position.getX() * MASTER.DW, y = position.getY();
+            int x = position.getX(), y = position.getY();
             x += g.getFontMetrics().stringWidth(str);
             g.setColor(def);
-            g.fillRect(x, y * MASTER.DH, 2 * MASTER.DW, g.getFontMetrics().getHeight());
+            g.fillRect(x, y, 2 * MASTER.DW, g.getFontMetrics().getHeight());
         }
         count ++;
         if(count > maxDisplayTime){

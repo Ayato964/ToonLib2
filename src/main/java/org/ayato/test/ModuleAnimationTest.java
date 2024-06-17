@@ -35,8 +35,5 @@ public class ModuleAnimationTest extends IBaseScene {
 
     }
 
-    @Override
-    public ArrayList<ToonObject> getToonObjects() {
-        return null;
-    }
+
 }

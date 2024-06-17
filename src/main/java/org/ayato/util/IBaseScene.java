@@ -7,47 +7,33 @@ import org.ayato.system.ToonObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public abstract class IBaseScene implements Setup, Display, Tick {
     private final long serial = new Random().nextLong(0, 1000000);
+    private final CopyOnWriteArrayList<ToonObject> objects = new CopyOnWriteArrayList<>();
     public final void setToonObjectClass(LunchScene scene){
-        ArrayList<ToonObject> objects = getToonObjects();
-
-        try {
-            setToonObjects(objects);
-        } catch (NullPointerException e) {
-            throw new NullPointerException("You're setting ToonObjects. But You don't declared container.\n " +
-                    "You need to declare container with getToonObjects().");
+        setToonObjects(objects);
+        for(ToonObject o : objects){
+            scene.SCENE.addDisplay(o);
+            scene.TICK.add(o);
         }
-        if(objects != null)
-            for(ToonObject o : objects){
-                scene.SCENE.addDisplay(o);
-                scene.TICK.add(o);
-            }
-    }
-    public void setToonTick(LunchScene scene){
-        scene.TICK.add(new Tick() {
-            @Override
-            public void tick() {
-                ArrayList<ToonObject> toons = getToonObjects();
-                if(toons != null){
-                    scene.TICK.addAll(toons);
-                    scene.SCENE.addAllDisplay(toons);
-                }
-            }
-
-            @Override
-            public long getSerialID() {
-                return -1;
-            }
-        });
     }
 
+    protected final void addObject(ToonObject toonObject){
+        objects.add(toonObject);
+        LunchScene.getINSTANCE().SCENE.addDisplay(toonObject);
+        LunchScene.getINSTANCE().TICK.add(toonObject);
+    }
+    protected final void  deleteObject(ToonObject object){
+        objects.remove(object);
+        LunchScene.getINSTANCE().SCENE.removeDisplay(object);
+        LunchScene.getINSTANCE().TICK.remove(object);
+    }
     @Override
     public long getSerialID() {
         return serial;
     }
 
-    protected void setToonObjects(ArrayList<ToonObject> to) throws NullPointerException {}
-    protected abstract ArrayList<ToonObject> getToonObjects();
+    protected void setToonObjects(CopyOnWriteArrayList<ToonObject> to) {}
 }

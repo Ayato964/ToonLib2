@@ -1,6 +1,8 @@
 package org.ayato.system;
 
+import org.ayato.animation.Animation;
 import org.ayato.util.Display;
+import org.ayato.util.IBaseScene;
 import org.ayato.util.VoidSupplier;
 
 import java.awt.*;
@@ -12,6 +14,7 @@ public class DisplayThread {
     private final Thread thread;
     private final VoidSupplier sup;
     private final CopyOnWriteArrayList<Display> displays;
+    private final CopyOnWriteArrayList<Display> GUIS = new CopyOnWriteArrayList<>();
     private final LunchScene MASTER;
     private final CopyOnWriteArrayList<VoidSupplier> endTask;
     public final int SLEEP_TIME = 10;
@@ -31,6 +34,8 @@ public class DisplayThread {
         while (isExecute){
         //System.out.println("Hello World");
             for (Display d : displays) d.display(MASTER.GRAPHIC);
+
+            for(Display d: GUIS) d.display(MASTER.GRAPHIC);
 
             MASTER.FRAME.repaint();
 
@@ -63,35 +68,34 @@ public class DisplayThread {
         return displays;
     }
     public void addDisplay(Display display){
-        synchronized (displays) {
-            displays.add(display);
-        }
+            switch (display){
+                case Animation<?> a: GUIS.add(a); break;
+                default:
+                    displays.add(display);break;
+            }
     }
     public void addEndTask(VoidSupplier supplier){
         endTask.add(supplier);
     }
     public void removeDisplay(Display display){
-        for(int i = 0; i < displays.size(); i ++)
-            if(display.equals(displays.get(i))) {
-                displays.remove(i);
-            }
-
+        switch (display){
+            case Animation<?> a-> GUIS.remove(a);
+            default -> displays.remove(display);
+        }
     }
     public void removeDisplayAll(){
         displays.clear();
-    }
-    public void removeDisplayClass(Class<?> cls){
-        for(int i = 0; i < displays.size(); i ++){
-            if(displays.get(i).getClass() == cls){
-                displays.remove(i);
-                i = -1;
-            }
-        }
+        GUIS.clear();
     }
 
     public ArrayList<ComponentGroup> getGroupComponent() {
         ArrayList<ComponentGroup> groups = new ArrayList<>();
         for(Display dd : displays){
+            if(dd instanceof  ComponentGroup){
+                groups.add((ComponentGroup) dd);
+            }
+        }
+        for(Display dd : GUIS){
             if(dd instanceof  ComponentGroup){
                 groups.add((ComponentGroup) dd);
             }

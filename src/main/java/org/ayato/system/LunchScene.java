@@ -34,7 +34,6 @@ public final class LunchScene {
         BACKGROUND = new Background(this);
         SCENE = DisplayThread.runThread(null, this);
         HANDLER = new AnimationHandler(this);
-        SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
         KeyInputs.init(this);
         MouseInputs.init(this);
         TimeCounter.init();
@@ -52,7 +51,6 @@ public final class LunchScene {
         BACKGROUND = new Background(this);
         SCENE = DisplayThread.runThread(null, this);
         HANDLER = new AnimationHandler(this);
-        SCENE.addEndTask(()->SCENE.addDisplay(BACKGROUND));
         KeyInputs.init(this);
         MouseInputs.init(this);
         TimeCounter.init();
@@ -76,11 +74,11 @@ public final class LunchScene {
     public void changeScene(IBaseScene scene){
         if(MY_SCENE == null) {
             SCENE.addEndTask(()->{
+                SCENE.addDisplay(BACKGROUND);
                 scene.runSetupClass(this);
                 scene.runDisplayClass(SCENE);
                 scene.runTickClass(TICK);
                 scene.setToonObjectClass(this);
-                scene.setToonTick(this);
                 TICK.add(scene);
                 MY_SCENE = scene;
             });
@@ -98,7 +96,6 @@ public final class LunchScene {
                 scene.runDisplayClass(SCENE);
                 scene.runTickClass(TICK);
                 scene.setToonObjectClass(this);
-                scene.setToonTick(this);
                 MY_SCENE = scene;
             });
         }
@@ -163,4 +160,6 @@ public final class LunchScene {
         }
         return correct;
     }
+
+
 }

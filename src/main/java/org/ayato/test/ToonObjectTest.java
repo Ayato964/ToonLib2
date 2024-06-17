@@ -8,27 +8,21 @@ import org.ayato.util.Setup;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ToonObjectTest extends IBaseScene {
     private int count = 0;
-    private final ArrayList<ToonObject> toonObjects = new ArrayList<>();
-
-    @Override
-    public ArrayList<ToonObject> getToonObjects() {
-        return toonObjects;
-    }
-
     @Override
     public void tick() {
         count ++;
         if(count >= 3000){
-            toonObjects.add(new TestObject(new Random().nextInt(0, 400), new Random().nextInt(0, 200)));
+            addObject(new TestObject(new Random().nextInt(0, 400), new Random().nextInt(0, 200)));
             count = 0;
         }
     }
 
     @Override
-    public void setToonObjects( ArrayList<ToonObject> to) throws NullPointerException {
+    public void setToonObjects( CopyOnWriteArrayList<ToonObject> to) {
         to.add(new TestObject(100, 100));
     }
 

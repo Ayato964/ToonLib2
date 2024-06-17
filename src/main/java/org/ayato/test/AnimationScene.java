@@ -57,9 +57,4 @@ public class AnimationScene extends IBaseScene {
     public void tick() {
 
     }
-
-    @Override
-    public ArrayList<ToonObject> getToonObjects() {
-        return null;
-    }
 }
