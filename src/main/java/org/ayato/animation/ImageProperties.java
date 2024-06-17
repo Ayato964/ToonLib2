@@ -11,12 +11,9 @@ import java.awt.*;
 import java.util.function.BooleanSupplier;
 
 public final class ImageProperties extends Properties<ImageMaker> {
-    public int w, h;
 
-    public ImageProperties(int x, int y, int w, int h) {
-        super(x, y);
-        this.w = w;
-        this.h = h;
+    public ImageProperties(Position position) {
+        super(position);
     }
 
     public ImageProperties button(int bx, int by, int bw, int bh, PropertyAction<Button> action){
@@ -25,8 +22,7 @@ public final class ImageProperties extends Properties<ImageMaker> {
         return this;
     }
     public ImageProperties button(PropertyAction<Button> action){
-        Position p = new Position(0, 0, w, h).setXAddon(()->position.getX()).setYAddon(()->position.getY());
-        properties.add(()->new Button(p, action, null));
+        properties.add(()->new Button(position, action, null));
         return this;
     }
     public ImageProperties ifView(BooleanSupplier how){
@@ -41,6 +37,6 @@ public final class ImageProperties extends Properties<ImageMaker> {
 
     @Override
     public void run(LunchScene MASTER, Graphics g, ImageMaker o) {
-
+        g.drawImage(o.get(), position.getX(), position.getY(), position.getW(), position.getH(), null);
     }
 }

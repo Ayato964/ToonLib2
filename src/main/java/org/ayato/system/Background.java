@@ -27,7 +27,7 @@ public class Background implements Display {
                 g.setColor(mode.getColor());
                 g.fillRect(0, 0, r.width, r.height);
             }
-            case IMAGE -> g.drawImage(mode.getImage().getEditImage(), 0, 0, r.width, r.height, null);
+            case IMAGE -> g.drawImage(mode.getImage().get(), 0, 0, r.width, r.height, null);
             default -> throw new IllegalStateException("Unexpected value: " + mode);
         }
 

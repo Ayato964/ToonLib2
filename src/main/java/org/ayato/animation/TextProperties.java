@@ -11,11 +11,11 @@ import java.util.function.*;
 
 public final class TextProperties extends Properties<String>{
     public TextProperties(int x, int y){
-        super(x, y);
+        super(new Position(x, y, 0, 0));
     }
 
     public TextProperties button(int bx, int by, int bw, int bh, AnimationState state, PropertyAction<Button> action){
-        Position p = new Position(bx, by, bw, bh).setXAddon(()->position.getX()).setYAddon(()->position.getY() );
+        Position p = new Position(bx, by, bw, bh).setXAddon(()->position.getNormalX()).setYAddon(()->position.getNormalY());
         Supplier<Frame> f = ()->new org.ayato.animation.text.properties.Frame(p, state);
         properties.add(()->new org.ayato.animation.text.properties.Button(p, action, f.get()));
         return this;
@@ -53,7 +53,7 @@ public final class TextProperties extends Properties<String>{
             properties.add(()->p);
         return this;
     }
-    
+
     public TextProperties checkBox(Consumer<Boolean> buttonAction, AnimationState state, Color checkColor, CheckBox.Duration duration){
         properties.add(()->new CheckBox(buttonAction,state, checkColor, duration));
         return this;
@@ -78,12 +78,7 @@ public final class TextProperties extends Properties<String>{
         return this;
     }
     public TextProperties font(String font, int style, float size){
-        properties.add(0,()-> new IProperty() {
-            @Override
-            public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
-                g.setFont(animation.MASTER.getMakeFont(font, style, size));
-            }
-        });
+        properties.add(0,()-> (g, properties, animation) -> g.setFont(animation.MASTER.getMakeFont(font, style, size)));
         return this;
     }
     public TextProperties frame(Position position, AnimationState state){
@@ -115,18 +110,18 @@ public final class TextProperties extends Properties<String>{
         return matrix;
     }
     public TextProperties parent(Position position){
-        this.position.setXAddon(position::getX);
-        this.position.setYAddon(position::getY);
+        this.position.setXAddon(position::getPrefabX);
+        this.position.setYAddon(position::getPrefabY);
         return this;
     }
     public TextProperties parent(Animation<?> animation){
-        position.setXAddon(animation.properties.position::getX);
-        position.setYAddon(animation.properties.position::getY);
+        position.setXAddon(animation.properties.position::getNormalX);
+        position.setYAddon(animation.properties.position::getNormalY);
         return this;
     }
 
     @Override
     public void run(LunchScene MASTER, Graphics g, String o) {
-        g.drawString(o, position.getX() * MASTER.DW, position.getY() * MASTER.DH + g.getFontMetrics().getHeight());
+        g.drawString(o, position.getX(), position.getY() + g.getFontMetrics().getHeight());
     }
 }

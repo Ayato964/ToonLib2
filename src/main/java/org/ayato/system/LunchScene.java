@@ -23,7 +23,8 @@ public final class LunchScene {
 
     public final int FONT_BASE_SIZE;
 
-    public LunchScene(String title, boolean isFull){
+    private static LunchScene INSTANCE;
+    private LunchScene(String title, boolean isFull){
         FRAME = new MyFrame(title, isFull);
         DW = (int) FRAME.DESCTOP_BOUNDS.getWidth() / 400;
         DH =(int) FRAME.DESCTOP_BOUNDS.getHeight() / 200;
@@ -39,11 +40,11 @@ public final class LunchScene {
         TimeCounter.init();
         TICK = TickThread.INSTANCE;
     }
-    public LunchScene(String str, int dw, int dh){
+    private LunchScene(String str, int dw, int dh){
         FRAME = new MyFrame(str, false);
         FRAME.setSize(dw, dh);
         DW = (int) FRAME.DESCTOP_BOUNDS.getWidth() / 400;
-        DH =(int) FRAME.DESCTOP_BOUNDS.getHeight() / 200;
+        DH =(int) FRAME.DESCTOP_BOUNDS.getHeight() / 400;
         FONT_BASE_SIZE = (DW * 5 + DH * 5) / 2;
 
 
@@ -57,6 +58,21 @@ public final class LunchScene {
         TimeCounter.init();
         TICK = TickThread.INSTANCE;
     }
+    public static LunchScene create(String title, boolean isFull){
+        if(INSTANCE == null)
+            INSTANCE = new LunchScene(title, isFull);
+        return INSTANCE;
+    }
+    public static LunchScene create(String title, int w, int h){
+        if(INSTANCE != null)
+            INSTANCE = new LunchScene(title, w, h);
+        return INSTANCE;
+    }
+
+    public static LunchScene getINSTANCE() {
+        return INSTANCE;
+    }
+
     public void changeScene(IBaseScene scene){
         if(MY_SCENE == null) {
             SCENE.addEndTask(()->{

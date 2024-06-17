@@ -15,10 +15,8 @@ public class MouseInputs implements MouseListener, Runnable {
     private boolean isRunning = false;
     private boolean isLocked = false;
     private Position lockPos;
-    private LunchScene MAIN;
     public static void init(LunchScene m){
         INSTANCE.isRunning = true;
-        INSTANCE.MAIN = m;
         m.FRAME.addMouseListener(INSTANCE);
         Thread t = new Thread(INSTANCE);
         t.start();
@@ -47,7 +45,7 @@ public class MouseInputs implements MouseListener, Runnable {
         if(!isLocked) {
             if (isRunning) {
                 for (Position p : POSITION) {
-                    if (p.isInRect(mouseEvent.getX(), mouseEvent.getY(), MAIN)) {
+                    if (p.isInRect(mouseEvent.getX(), mouseEvent.getY())) {
                         DECODER.get(p).press();
                     }
                 }
@@ -88,7 +86,7 @@ public class MouseInputs implements MouseListener, Runnable {
                 if (isRunning) {
                     Point point = MouseInfo.getPointerInfo().getLocation();
                     for (Position p : POSITION) {
-                        if (p.isInRect((int) point.getX(), (int) point.getY(), MAIN))
+                        if (p.isInRect((int) point.getX(), (int) point.getY()))
                             DECODER.get(p).overlap();
                         else
                             DECODER.get(p).unOverlap();

@@ -20,11 +20,11 @@ public class Frame implements IProperty {
     @Override
     public void runningProperty(Graphics g, Properties properties, Animation<?> text){
         g.setColor(colorState.getState(AnimationState.BACKGROUND));
-        g.fillRect(position.getX() * text.MASTER.DW, position.getY()* text.MASTER.DH,
-                position.getW()* text.MASTER.DW, position.getH()* text.MASTER.DH);
+        g.fillRect(position.getX() , position.getY(),
+                position.getW(), position.getH());
         g.setColor(colorState.getState(AnimationState.FRAME));
-        g.drawRect(position.getX() * text.MASTER.DW, position.getY() * text.MASTER.DH,
-                position.getW() * text.MASTER.DW, position.getH() * text.MASTER.DH);
+        g.drawRect(position.getX() , position.getY(),
+                position.getW() , position.getH());
     }
 
 

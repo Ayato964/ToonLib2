@@ -8,7 +8,7 @@ import java.awt.*;
 
 public class TestObject extends ToonObject {
     protected TestObject(int x, int y) {
-        super(new Position(x, y, 100, 100));
+        super(new Position(x, y, 50, 50));
     }
 
     @Override

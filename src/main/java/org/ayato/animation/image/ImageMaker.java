@@ -10,10 +10,10 @@ import java.util.Objects;
 
 public class ImageMaker {
     private static String basePath = "assets/ayato/textures/";
-    private Image editImage;
-    private BufferedImage original;
+    private BufferedImage editImage;
+    private final BufferedImage original;
 
-    private int tx = 0, ty = 0, tw, th;
+    private int tx = 0, ty = 0, cutW, cutH;
 
 
     public ImageMaker(String directory, String filename){
@@ -22,27 +22,27 @@ public class ImageMaker {
         try {
             original = ImageIO.read(Objects.requireNonNull(path));
             editImage = original;
-            tw = original.getWidth();
-            th = original.getHeight();
+            cutW = original.getWidth();
+            cutH = original.getHeight();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
     public ImageMaker(String directory, String filename, int w, int h){
         this(directory, filename);
-        tw = w;
-        th = h;
-        editImage = original.getSubimage(0, 0, w, h);
+        cutW = w;
+        cutH = h;
+        editImage = original.getSubimage(tx, ty, w, h);
     }
 
-    public Image getEditImage() {
+    public Image get() {
         return editImage;
     }
 
     public ImageMaker next(){
-        ty += th;
+        ty += cutH;
         try {
-            editImage = original.getSubimage(0, ty, tw, th);
+            editImage = original.getSubimage(tx, ty, cutW, cutH);
         }catch (RasterFormatException e){
             ty = 0;
             next();
@@ -53,7 +53,7 @@ public class ImageMaker {
         int c = 0;
         int count = 0;
         do {
-            c += th;
+            c += cutH;
             count ++;
         }while (c < original.getHeight());
         return count;
@@ -62,6 +62,6 @@ public class ImageMaker {
     public void reset() {
         tx = 0;
         ty = 0;
-        editImage = original.getSubimage(tx, ty, tw,th);
+        editImage = original.getSubimage(tx, ty, cutW, cutH);
     }
 }

@@ -1,6 +1,7 @@
 package org.ayato.animation;
 
 import org.ayato.animation.text.properties.*;
+import org.ayato.system.LunchScene;
 import org.ayato.util.LastRunningProperty;
 import org.ayato.util.Position;
 
@@ -20,15 +21,15 @@ public sealed abstract class Properties<T> implements DisplayAnimation<T> permit
     public boolean isFirst = true;
     protected Properties()
     {
-        this(0, 0);
+        this(new Position(0, 0, 0, 0));
     }
 
-    public Properties(int x, int y) {
+    public Properties(Position position) {
         properties = new ArrayList<>();
         init_properties = new ArrayList<>();
-        rx = x;
-        ry = y;
-        position = new Position(x,y, 0, 0);
+        rx = position.getNormalX();
+        ry = position.getNormalY();
+        this.position = position;
     }
     public void runProp(Graphics g, Animation<T> animation){
         if(isVisible.getAsBoolean()) {

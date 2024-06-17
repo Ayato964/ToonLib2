@@ -12,16 +12,24 @@ public class Position {
     private int x, y, w, h;
     private ArrayList<IntSupplier> sx = new ArrayList<>();
     private ArrayList<IntSupplier> sy = new ArrayList<>();
+    private LunchScene master;
     public Position(int x, int y, int w, int h){
         this.x = x;
         this.y = y;
         this.w = w;
         this.h = h;
+        master = LunchScene.getINSTANCE();
     }
     public int getX(){
-        return x + runAddon(sx, 0);
+        return (x + runAddon(sx, 0)) * master.DW;
     }
     public int getY(){
+        return (y + runAddon(sy, 0)) * master.DH;
+    }
+    public int getPrefabX(){
+        return x + runAddon(sx, 0);
+    }
+    public int getPrefabY(){
         return y + runAddon(sy, 0);
     }
     public int getNormalX(){
@@ -59,18 +67,16 @@ public class Position {
     }
 
     public int getW() {
-        return w;
+        return w * master.DW;
     }
 
     public int getH() {
-        return h;
+        return h * master.DH;
     }
 
-    public boolean isInRect(int mx, int my, LunchScene main){
-        int dw = isCalcInclude ? main.DW : 1;
-        int dh = isCalcInclude ? main.DH : 1;
-        return getX() * dw  <= mx && (getX() + w)  * dw  >= mx &&
-                getY() * dh <= my && (getY() + h) * dh >= my;
+    public boolean isInRect(int mx, int my){
+        return getX()  <= mx && (getX() + getW()) >= mx &&
+                getY() <= my && (getY() + getH()) >= my;
     }
     private int runAddon(ArrayList<IntSupplier> a, int c){
         if(!a.isEmpty())
