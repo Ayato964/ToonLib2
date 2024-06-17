@@ -4,13 +4,13 @@ import org.ayato.util.Display;
 import org.ayato.util.Position;
 
 import java.awt.*;
+import java.util.Random;
 
 public abstract class ToonObject implements Tick, Display {
     private final Position position;
-    private final LunchScene master;
-    protected ToonObject(Position position, LunchScene master) {
+    private final long serial = new Random().nextLong(0, 100000);
+    protected ToonObject(Position position) {
         this.position = position;
-        this.master = master;
     }
 
     @Override
@@ -21,6 +21,11 @@ public abstract class ToonObject implements Tick, Display {
     @Override
     public final void tick() {
         tick(position);
+    }
+
+    @Override
+    public long getSerialID() {
+        return serial;
     }
 
     protected abstract void display(Position position, Graphics g);

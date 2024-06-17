@@ -14,4 +14,5 @@ public interface Tick {
         }
     }
     default void tickClass(ArrayList<Tick> ticks){}
+    long getSerialID();
 }

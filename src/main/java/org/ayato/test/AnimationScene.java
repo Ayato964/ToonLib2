@@ -3,6 +3,7 @@ package org.ayato.test;
 import org.ayato.animation.Animation;
 import org.ayato.animation.MoveTo;
 import org.ayato.system.LunchScene;
+import org.ayato.system.ToonObject;
 import org.ayato.util.Display;
 import org.ayato.util.IBaseScene;
 import org.ayato.util.Position;
@@ -12,7 +13,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class AnimationScene implements IBaseScene {
+public class AnimationScene extends IBaseScene {
     private final Position position = new Position(0, 0, 100, 100);
 
     @Override
@@ -51,7 +52,7 @@ public class AnimationScene implements IBaseScene {
 
     @Override
     public void setupClass(ArrayList<Setup> setups) {
-        setups.add(new ButtonSetup(ModuleAnimationTest::new, null, "<", ">"));
+        setups.add(new ButtonSetup(ModuleAnimationTest::new, ToonObjectTest::new, "<", ">"));
     }
 
     @Override
@@ -59,4 +60,8 @@ public class AnimationScene implements IBaseScene {
 
     }
 
+    @Override
+    public ArrayList<ToonObject> getToonObjects() {
+        return null;
+    }
 }

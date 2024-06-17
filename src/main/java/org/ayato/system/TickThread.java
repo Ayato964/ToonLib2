@@ -1,5 +1,6 @@
 package org.ayato.system;
 
+import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public final class TickThread implements Runnable{
@@ -18,6 +19,18 @@ public final class TickThread implements Runnable{
     public void add(Tick t){
         ticks.add(t);
     }
+    public <T extends Tick> void addAll(ArrayList<T> objects){
+        for(Tick toon : objects){
+            boolean isEquals = false;
+            for(Tick t : ticks){
+                if(toon.getSerialID() == t.getSerialID()){
+                    isEquals = true;
+                }
+            }
+            if(!isEquals)
+                ticks.add(toon);
+        }
+    }
     @Override
     public void run() {
         while (isRunning){
@@ -31,5 +44,14 @@ public final class TickThread implements Runnable{
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    public int size() {
+
+        return ticks.size();
+    }
+
+    public void removeAll() {
+        ticks.clear();
     }
 }

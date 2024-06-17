@@ -1,6 +1,7 @@
 package org.ayato.test;
 
 import org.ayato.system.LunchScene;
+import org.ayato.system.ToonObject;
 import org.ayato.util.Display;
 import org.ayato.util.IBaseScene;
 import org.ayato.util.Setup;
@@ -9,7 +10,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class ModuleAnimationTest implements IBaseScene {
+public class ModuleAnimationTest extends IBaseScene {
 
     @Override
     public void display(Graphics g) {
@@ -32,5 +33,10 @@ public class ModuleAnimationTest implements IBaseScene {
     @Override
     public void tick() {
 
+    }
+
+    @Override
+    public ArrayList<ToonObject> getToonObjects() {
+        return null;
     }
 }

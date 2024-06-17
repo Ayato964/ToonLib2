@@ -4,7 +4,7 @@ import org.ayato.system.LunchScene;
 
 import java.util.ArrayList;
 
-public interface Setup extends SerialID{
+public interface Setup{
     abstract void setup(LunchScene scene);
 
     public default void runSetupClass(LunchScene scene){

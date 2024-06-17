@@ -3,6 +3,7 @@ package org.ayato.test;
 import org.ayato.animation.*;
 import org.ayato.animation.text.properties.CheckBox;
 import org.ayato.system.LunchScene;
+import org.ayato.system.ToonObject;
 import org.ayato.util.Display;
 import org.ayato.util.IBaseScene;
 import org.ayato.util.PropertiesSupplier;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Supplier;
 
-public class NewAnimationTest implements IBaseScene{
+public class NewAnimationTest extends IBaseScene{
     public static final Supplier<AnimationState> STATE =()-> new AnimationState(
             Color.WHITE,
             Color.BLUE,
@@ -48,6 +49,11 @@ public class NewAnimationTest implements IBaseScene{
     @Override
     public void tick() {
         count ++;
+    }
+
+    @Override
+    public ArrayList<ToonObject> getToonObjects() {
+        return null;
     }
 
     private class NormalAnimation implements Setup{

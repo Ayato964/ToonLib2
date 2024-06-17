@@ -4,8 +4,10 @@ import org.ayato.animation.image.ImageMaker;
 import org.ayato.util.Display;
 
 import java.awt.*;
+import java.util.Random;
 
 public class Background implements Display {
+    private final long serial = new Random().nextLong(0, 1000000);
     public BackgroundMode mode;
     private final LunchScene MASTER;
    // private ImageMaker bgImage;
@@ -30,6 +32,11 @@ public class Background implements Display {
         }
 
 
+    }
+
+    @Override
+    public long getSerialID() {
+        return serial;
     }
 
     public void setMode(BackgroundMode mode) {

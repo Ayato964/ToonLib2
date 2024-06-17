@@ -5,7 +5,7 @@ import org.ayato.system.DisplayThread;
 import java.awt.*;
 import java.util.ArrayList;
 
-public interface Display extends SerialID{
+public interface Display{
     abstract void display(Graphics g);
 
     default void runDisplayClass(DisplayThread disThread){
@@ -17,4 +17,5 @@ public interface Display extends SerialID{
         }
     }
     default void displayClass(ArrayList<Display> display){}
+    abstract long getSerialID();
 }

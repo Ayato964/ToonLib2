@@ -64,6 +64,7 @@ public final class LunchScene {
                 scene.runDisplayClass(SCENE);
                 scene.runTickClass(TICK);
                 scene.setToonObjectClass(this);
+                scene.setToonTick(this);
                 TICK.add(scene);
                 MY_SCENE = scene;
             });
@@ -71,6 +72,7 @@ public final class LunchScene {
         }else{
             SCENE.addEndTask(()->{
                 SCENE.removeDisplayAll();
+                TICK.removeAll();
                 SCENE.addDisplay(BACKGROUND);
                 MouseInputs.removeAll();
                 KeyInputs.removeAll();
@@ -80,6 +82,7 @@ public final class LunchScene {
                 scene.runDisplayClass(SCENE);
                 scene.runTickClass(TICK);
                 scene.setToonObjectClass(this);
+                scene.setToonTick(this);
                 MY_SCENE = scene;
             });
         }

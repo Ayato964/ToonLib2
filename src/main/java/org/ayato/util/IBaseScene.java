@@ -4,22 +4,50 @@ import org.ayato.system.LunchScene;
 import org.ayato.system.Tick;
 import org.ayato.system.ToonObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
-public interface IBaseScene extends Setup, Display, Tick {
-    public int SerialID = new Random().nextInt(100000, 10000000);
-    public default IBaseScene getInstance(){
-        return this;
+public abstract class IBaseScene implements Setup, Display, Tick {
+    private final long serial = new Random().nextLong(0, 1000000);
+    public final void setToonObjectClass(LunchScene scene){
+        ArrayList<ToonObject> objects = getToonObjects();
+
+        try {
+            setToonObjects(objects);
+        } catch (NullPointerException e) {
+            throw new NullPointerException("You're setting ToonObjects. But You don't declared container.\n " +
+                    "You need to declare container with getToonObjects().");
+        }
+        if(objects != null)
+            for(ToonObject o : objects){
+                scene.SCENE.addDisplay(o);
+                scene.TICK.add(o);
+            }
+    }
+    public void setToonTick(LunchScene scene){
+        scene.TICK.add(new Tick() {
+            @Override
+            public void tick() {
+                ArrayList<ToonObject> toons = getToonObjects();
+                if(toons != null){
+                    scene.TICK.addAll(toons);
+                    scene.SCENE.addAllDisplay(toons);
+                }
+            }
+
+            @Override
+            public long getSerialID() {
+                return -1;
+            }
+        });
     }
 
-    public default void setToonObjectClass(LunchScene scene){
-        ArrayList<ToonObject> objects = new ArrayList<>();
-        setToonObjects(objects);
-        for(ToonObject o : objects){
-            scene.SCENE.addDisplay(o);
-            scene.TICK.add(o);
-        }
+    @Override
+    public long getSerialID() {
+        return serial;
     }
-    default void setToonObjects(ArrayList<ToonObject> to){}
+
+    protected void setToonObjects(ArrayList<ToonObject> to) throws NullPointerException {}
+    protected abstract ArrayList<ToonObject> getToonObjects();
 }

@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class Move implements IProperty {
     private final int x, y;
-    boolean isEnd = false;
+    private boolean isEnd = false;
     public Move(int x1, int y1) {
         this.x = x1;
         this.y = y1;

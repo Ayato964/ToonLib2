@@ -98,4 +98,18 @@ public class DisplayThread {
         }
         return groups;
     }
+
+    public <T extends Display> void addAllDisplay(ArrayList<T> objects) {
+        for(Display toon : objects){
+            boolean isEquals = false;
+            for(Display d : displays){
+                if(toon.getSerialID() == d.getSerialID()){
+                    isEquals = true;
+                }
+            }
+            if(!isEquals) {
+                displays.add(toon);
+            }
+        }
+    }
 }
