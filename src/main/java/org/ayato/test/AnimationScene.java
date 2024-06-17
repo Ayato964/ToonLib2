@@ -4,14 +4,12 @@ import org.ayato.animation.Animation;
 import org.ayato.animation.MoveTo;
 import org.ayato.system.LunchScene;
 import org.ayato.system.ToonObject;
-import org.ayato.util.Display;
 import org.ayato.util.IBaseScene;
 import org.ayato.util.Position;
 import org.ayato.util.Setup;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class AnimationScene extends IBaseScene {
     private final Position position = new Position(0, 0, 100, 100);
@@ -38,7 +36,7 @@ public class AnimationScene extends IBaseScene {
 
         scene.addAnimation("Wait Test", NewAnimationTest.TEMPLATE.of(10, 20)
                 .pushMatrix()
-                .wait(()->position.getX() * scene.DW >= scene.FRAME.DESCTOP_BOUNDS.width)
+                .wait(()->position.getX()>= scene.FRAME.DESCTOP_BOUNDS.width)
                         .moveTo(40, 40, 200, MoveTo.VelocityFormat.CONSTANT)
                 .endMatrix());
 

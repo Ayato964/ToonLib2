@@ -65,6 +65,12 @@ public class NewAnimationTest extends IBaseScene{
             scene.addAnimation("Button" , TEMPLATE.of(100, 10)
                     .button(0, 0, 30, 15, STATE.get(), a->scene.addAnimation(button)));
             scene.addAnimation((Supplier<String>) () -> String.valueOf(NewAnimationTest.this.count), TEMPLATE.of(150, 10).displayInOrder(200));
+            scene.addAnimation("ChooseBox1", TEMPLATE.of(200, 10)
+                    .chooseBox(aBoolean -> System.out.println("1"), STATE.get(), Color.WHITE, CheckBox.Duration.LEFT)).setGroup("g1");
+            scene.addAnimation("ChooseBox2", TEMPLATE.of(260, 10)
+                    .chooseBox(aBoolean -> System.out.println("2"), STATE.get(), Color.WHITE, CheckBox.Duration.LEFT)).setGroup("g1");
+            scene.addAnimation("CheckBox", TEMPLATE.of(320, 10)
+                    .checkBox(aBoolean -> System.out.println("Check!"), STATE.get(), Color.WHITE, CheckBox.Duration.LEFT));
         }
     }
 

@@ -26,12 +26,11 @@ public class ChooseBox extends CheckBox{
         positionUpdate(properties.position, g, animation);
         groupID = animation.getGroup();
         g.setColor(state.getState(AnimationState.FRAME));
-        g.drawOval(position.getX() * animation.MASTER.DW, position.getY() * animation.MASTER.DH,
-                position.getW() * animation.MASTER.DW, position.getH() * animation.MASTER.DH);
+        g.drawOval(position.getX(), position.getY(), position.getW() , position.getH());
         if(isClicked){
             g.setColor(checkColor);
-            g.fillOval((position.getX() + 1) * animation.MASTER.DW,  (position.getY() + 1)* animation.MASTER.DH,
-                    (position.getW() -2)* animation.MASTER.DW, (position.getH() -2 )* animation.MASTER.DH);
+            g.fillOval(position.getX() + 1 * animation.MASTER.DW,  position.getY() + 1 * animation.MASTER.DH,
+                    position.getW() -2* animation.MASTER.DW, position.getH() -2 * animation.MASTER.DH);
         }
     }
 

@@ -4,25 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.17.0&#10;&#10;System&#10;- Animation.java&#10;　Animation&lt;A&gt;で保管されるオブジェクトはSupplierで管理されることになった。&#10;- Alpha値が変更されるプロパティにおいて、他のAnimationにも干渉してしまうバグを修正&#10;&#10;Properties&#10;- Sleep.java&#10;  pushMatrixにおいて、N秒間動作を停止する&#10;- Wait.java&#10;　PropertyMatrixにおいて、条件をクリアしないと次に進めなくする&#10;- Parent&#10;  Animation&lt;?&gt;もしくはPositionを引数にすることで、それを親とみなし、座標の動きを同期する&#10;&#10;REMOVED&#10;- Change.java&#10;- ChangeFunction.java&#10;- ChangeObjectModule.java&#10;- AnimationGroup.java&#10;- Event.java&#10;- Inheriting.java">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTestScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/test/help.png" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.17.47 &#10;&#10;System&#10;- Button.java&#10;  重なったとき、マウスカーソルが変化するようになった&#10;- LunchScene.java&#10;  シングルトーンデザインパターンを適用">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/ImageProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/ImageProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/Properties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/PropertiesComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/PropertiesComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/ImageMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/image/ImageMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/Background.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/LunchScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/ToonObjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/ToonObjectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/MouseInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/MouseInputs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/ayato/textures/test/65535.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/CheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/CheckBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/ChooseBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/text/properties/ChooseBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTestScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTestScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,19 +234,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="アプリケーション.TestMain" />
       <item itemvalue="Gradle.ToonLib2 [wrapper]" />
       <item itemvalue="Gradle.ToomLib2 [publish]" />
       <item itemvalue="Gradle.ToonLib2 [dependencies]" />
       <item itemvalue="Gradle.ToonLib2 [test]" />
-      <item itemvalue="アプリケーション.TestMain" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="アプリケーション.TestMain" />
         <item itemvalue="Gradle.ToonLib2 [wrapper]" />
         <item itemvalue="Gradle.ToonLib2 [test]" />
-        <item itemvalue="Gradle.ToomLib2 [publish]" />
         <item itemvalue="Gradle.ToonLib2 [dependencies]" />
+        <item itemvalue="Gradle.ToomLib2 [publish]" />
+        <item itemvalue="アプリケーション.TestMain" />
       </list>
     </recent_temporary>
   </component>
@@ -617,7 +605,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718382350689</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Ver.2.17.47 &#10;&#10;System&#10;- Button.java&#10;  重なったとき、マウスカーソルが変化するようになった&#10;- LunchScene.java&#10;  シングルトーンデザインパターンを適用">
+      <option name="closed" value="true" />
+      <created>1718624029181</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1718624029181</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -638,7 +634,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ver.2.6.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
     <MESSAGE value="Ver.2.7.0&#10;&#10;よりプログラムを書きやすくするため、簡略化及び最適化" />
     <MESSAGE value="Ver.2.8.6&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;&#10; AnimationList.javaを削除" />
     <MESSAGE value="Ver.2.8.7&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;&#10; AnimationList.javaを削除" />
@@ -663,6 +658,7 @@
     <MESSAGE value="Ver.2.16.13&#10;&#10;Properties&#10;- Parent&#10;  Animation&lt;?&gt;もしくはPositionを引数にすることで、それを親とみなし、座標の動きを同期する&#10;&#10;REMOVE&#10;- AnimationGroup.java&#10;- Event.java&#10;- Inheriting.java" />
     <MESSAGE value="Ver.2.16.18&#10;&#10;Properties&#10;- Sleep.java&#10;  pushMatrixにおいて、N秒間動作を停止する&#10;- Wait.java&#10;　PropertyMatrixにおいて、条件をクリアしないと次に進めなくする" />
     <MESSAGE value="Ver.2.17.0&#10;&#10;System&#10;- Animation.java&#10;　Animation&lt;A&gt;で保管されるオブジェクトはSupplierで管理されることになった。&#10;- Alpha値が変更されるプロパティにおいて、他のAnimationにも干渉してしまうバグを修正&#10;&#10;Properties&#10;- Sleep.java&#10;  pushMatrixにおいて、N秒間動作を停止する&#10;- Wait.java&#10;　PropertyMatrixにおいて、条件をクリアしないと次に進めなくする&#10;- Parent&#10;  Animation&lt;?&gt;もしくはPositionを引数にすることで、それを親とみなし、座標の動きを同期する&#10;&#10;REMOVED&#10;- Change.java&#10;- ChangeFunction.java&#10;- ChangeObjectModule.java&#10;- AnimationGroup.java&#10;- Event.java&#10;- Inheriting.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.17.0&#10;&#10;System&#10;- Animation.java&#10;　Animation&lt;A&gt;で保管されるオブジェクトはSupplierで管理されることになった。&#10;- Alpha値が変更されるプロパティにおいて、他のAnimationにも干渉してしまうバグを修正&#10;&#10;Properties&#10;- Sleep.java&#10;  pushMatrixにおいて、N秒間動作を停止する&#10;- Wait.java&#10;　PropertyMatrixにおいて、条件をクリアしないと次に進めなくする&#10;- Parent&#10;  Animation&lt;?&gt;もしくはPositionを引数にすることで、それを親とみなし、座標の動きを同期する&#10;&#10;REMOVED&#10;- Change.java&#10;- ChangeFunction.java&#10;- ChangeObjectModule.java&#10;- AnimationGroup.java&#10;- Event.java&#10;- Inheriting.java" />
+    <MESSAGE value="Ver.2.17.47 &#10;&#10;System&#10;- Button.java&#10;  重なったとき、マウスカーソルが変化するようになった&#10;- LunchScene.java&#10;  シングルトーンデザインパターンを適用" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.17.47 &#10;&#10;System&#10;- Button.java&#10;  重なったとき、マウスカーソルが変化するようになった&#10;- LunchScene.java&#10;  シングルトーンデザインパターンを適用" />
   </component>
 </project>

@@ -32,25 +32,24 @@ public class CheckBox implements IProperty, IListenerDecoder {
         Position p_pos = properties.position;
         positionUpdate(p_pos, g, animation);
         g.setColor(state.getState(AnimationState.FRAME));
-        g.drawRect(position.getX() * animation.MASTER.DW, position.getY() * animation.MASTER.DH,
-                position.getW() * animation.MASTER.DW, position.getH() * animation.MASTER.DW);
+        g.drawRect(position.getX(), position.getY(), position.getW() , position.getH());
         if(isClicked) {
             g.setColor(checkColor);
-            g.fillRect((position.getX() + 1) * animation.MASTER.DW, (position.getY() + 1) * animation.MASTER.DH,
-                    (position.getW() - 2) * animation.MASTER.DW, (position.getH() -2) * animation.MASTER.DW);
+            g.fillRect(position.getX() + 1 * animation.MASTER.DW, position.getY() + 1 * animation.MASTER.DH,
+                    position.getW() - 2 * animation.MASTER.DW, position.getH() -2 * animation.MASTER.DW);
         }
     }
     protected void positionUpdate(Position p_pos, Graphics g, Animation<?> animation){
         switch (duration){
             case RIGHT -> {
                 int newX = g.getFontMetrics().stringWidth((String) animation.mes);
-                position.setX(p_pos.getX()+ 2 + newX / animation.MASTER.DW);
-                position.setY(p_pos.getY());
+                position.setX(p_pos.getNormalX()+ 2 + newX / animation.MASTER.DW);
+                position.setY(p_pos.getNormalY());
 
             }
             case LEFT -> {
-                position.setX(p_pos.getX() - g.getFontMetrics().getHeight() / animation.MASTER.DH - 2);
-                position.setY(p_pos.getY());
+                position.setX(p_pos.getNormalX() - g.getFontMetrics().getHeight() / animation.MASTER.DH - 2);
+                position.setY(p_pos.getNormalY());
             }
         }
         position.setW(g.getFontMetrics().getHeight() / animation.MASTER.DH);
