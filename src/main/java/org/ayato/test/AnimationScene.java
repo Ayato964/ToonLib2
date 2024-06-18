@@ -3,15 +3,14 @@ package org.ayato.test;
 import org.ayato.animation.Animation;
 import org.ayato.animation.MoveTo;
 import org.ayato.system.LunchScene;
-import org.ayato.system.ToonObject;
-import org.ayato.util.IBaseScene;
+import org.ayato.util.BaseScene;
 import org.ayato.util.Position;
 import org.ayato.util.Setup;
 
 import java.awt.*;
 import java.util.ArrayList;
 
-public class AnimationScene extends IBaseScene {
+public class AnimationScene extends BaseScene {
     private final Position position = new Position(0, 0, 100, 100);
 
     @Override

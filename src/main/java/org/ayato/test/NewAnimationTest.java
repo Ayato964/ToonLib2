@@ -3,18 +3,15 @@ package org.ayato.test;
 import org.ayato.animation.*;
 import org.ayato.animation.text.properties.CheckBox;
 import org.ayato.system.LunchScene;
-import org.ayato.system.ToonObject;
-import org.ayato.util.Display;
-import org.ayato.util.IBaseScene;
+import org.ayato.util.BaseScene;
 import org.ayato.util.PropertiesSupplier;
 import org.ayato.util.Setup;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Supplier;
 
-public class NewAnimationTest extends IBaseScene{
+public class NewAnimationTest extends BaseScene {
     public static final Supplier<AnimationState> STATE =()-> new AnimationState(
             Color.WHITE,
             Color.BLUE,

@@ -3,14 +3,13 @@ package org.ayato.test;
 import org.ayato.animation.PropertiesComponent;
 import org.ayato.animation.image.ImageMaker;
 import org.ayato.system.LunchScene;
-import org.ayato.system.ToonObject;
-import org.ayato.util.IBaseScene;
+import org.ayato.util.BaseScene;
 import org.ayato.util.Setup;
 
 import java.awt.*;
 import java.util.ArrayList;
 
-public class ImageTestScene extends IBaseScene {
+public class ImageTestScene extends BaseScene {
 
     @Override
     public void tick() {

@@ -4,7 +4,7 @@ import org.ayato.animation.AnimationState;
 import org.ayato.animation.PropertiesComponent;
 import org.ayato.animation.TextProperties;
 import org.ayato.system.LunchScene;
-import org.ayato.util.IBaseScene;
+import org.ayato.util.BaseScene;
 import org.ayato.util.PropertiesSupplier;
 import org.ayato.util.Setup;
 
@@ -23,10 +23,10 @@ public class ButtonSetup implements Setup {
     public static final PropertiesSupplier<TextProperties> TEMPLATE =(x, y) -> PropertiesComponent.ofText(x, y)
             .color(Color.WHITE)
             .font("", Font.PLAIN, 1.5f);
-    private final Supplier<IBaseScene> BACK;
-    private final Supplier<IBaseScene> NEXT;
+    private final Supplier<BaseScene> BACK;
+    private final Supplier<BaseScene> NEXT;
     private final String b, n;
-    public ButtonSetup(Supplier<IBaseScene> back, Supplier<IBaseScene> next, String b, String n){
+    public ButtonSetup(Supplier<BaseScene> back, Supplier<BaseScene> next, String b, String n){
         BACK = back;
         NEXT = next;
         this.b = b;

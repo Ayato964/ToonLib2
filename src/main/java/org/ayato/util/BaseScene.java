@@ -4,12 +4,10 @@ import org.ayato.system.LunchScene;
 import org.ayato.system.Tick;
 import org.ayato.system.ToonObject;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public abstract class IBaseScene implements Setup, Display, Tick {
+public abstract class BaseScene implements Setup, Display, Tick {
     private final long serial = new Random().nextLong(0, 1000000);
     private final CopyOnWriteArrayList<ToonObject> objects = new CopyOnWriteArrayList<>();
     public final void setToonObjectClass(LunchScene scene){

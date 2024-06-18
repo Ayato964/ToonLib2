@@ -2,7 +2,6 @@ package org.ayato.system;
 
 import org.ayato.animation.Animation;
 import org.ayato.animation.Properties;
-import org.ayato.animation.image.ImageMaker;
 import org.ayato.util.*;
 
 import java.awt.*;
@@ -17,7 +16,7 @@ public final class LunchScene {
     public final Graphics       GRAPHIC;
     public final AnimationHandler HANDLER;
     public final Background     BACKGROUND;
-    public IBaseScene MY_SCENE;
+    public BaseScene MY_SCENE;
     public int DW;
     public int DH;
 
@@ -71,7 +70,7 @@ public final class LunchScene {
         return INSTANCE;
     }
 
-    public void changeScene(IBaseScene scene){
+    public void changeScene(BaseScene scene){
         if(MY_SCENE == null) {
             SCENE.addEndTask(()->{
                 SCENE.addDisplay(BACKGROUND);

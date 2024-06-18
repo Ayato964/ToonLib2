@@ -2,7 +2,7 @@ package org.ayato.test;
 
 import org.ayato.system.LunchScene;
 import org.ayato.system.ToonObject;
-import org.ayato.util.IBaseScene;
+import org.ayato.util.BaseScene;
 import org.ayato.util.Setup;
 
 import java.awt.*;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class ToonObjectTest extends IBaseScene {
+public class ToonObjectTest extends BaseScene {
     private int count = 0;
     @Override
     public void tick() {
