@@ -14,8 +14,8 @@ public class ChangeColor implements  IProperty, LastRunningProperty {
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
-        g.setColor(new Color(c.getRed(), c.getGreen(), c.getBlue(), g.getColor().getAlpha()));
+    public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> animation) {
+        og.setColor(new Color(c.getRed(), c.getGreen(), c.getBlue(), og.getColor().getAlpha()));
     }
 
 

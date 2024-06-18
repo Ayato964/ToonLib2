@@ -24,7 +24,7 @@ public class Button implements IProperty, IListenerDecoder {
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, Animation<?> text) {
+    public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> text) {
         if(isFirst){
             isFirst = false;
             //position.setYAddon(()->g.getFontMetrics().getHeight());
@@ -32,7 +32,7 @@ public class Button implements IProperty, IListenerDecoder {
             MouseInputs.add(transform, this);
         }
         if(frame != null)
-            frame.runningProperty(g, properties, text);
+            frame.runningProperty(og, g, properties, text);
     }
 
 

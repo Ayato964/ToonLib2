@@ -27,12 +27,13 @@ public class InputModule extends Animation<String> implements KeyListener {
             new Color(0, 0, 0, 190),
             new Color(0, 0, 0, 190)
     );
+    private int width, height;
     private final Consumer<String> ifPressEnter;
     private final PropertiesSupplier<TextProperties> INPUT_PROP = (x, y) ->
             PropertiesComponent.ofText(x, y)
                     .color(Color.WHITE)
                     .font("", Font.PLAIN, 1.0f)
-                    .button(0, 0, 20, 10, STATE, this::pressed);
+                    .button(0, 0, width, height, STATE, this::pressed);
 
     private void pressed(Button property) {
         isClicked = !isClicked;
@@ -59,8 +60,10 @@ public class InputModule extends Animation<String> implements KeyListener {
         //MASTER.FRAME.addKeyListener(this);
     }
 
-    public InputModule(LunchScene master, Supplier<String> a, TextProperties prop, Consumer<String> ifPressEnter) {
+    public InputModule(LunchScene master, Supplier<String> a, TextProperties prop, int width, int height, Consumer<String> ifPressEnter) {
         super(master, a, prop);
+        this.width = width;
+        this.height = height;
         this.properties = INPUT_PROP.of(prop.transform.getPosition().x(), prop.transform.getPosition().y()).copyAddon(prop);
         this.ifPressEnter = ifPressEnter;
         this.baseMessage = a.get();
@@ -101,13 +104,25 @@ public class InputModule extends Animation<String> implements KeyListener {
 
     @Override
     public void display(Graphics g) {
-        if (properties != null)
-            properties.runProp(g, this);
-        if(mes != null)
-            properties.run(MASTER,g, mes);
+        Graphics2D g2 = (Graphics2D) baseGraphics.getGraphics();
+        g2.setComposite(AlphaComposite.Clear);
+        g2.fillRect(0, 0, properties.transform.getW(), properties.transform.getH());
+        g2.setComposite(AlphaComposite.Src);
 
+
+
+        if (properties != null)
+            properties.runProp(g2, g, this);
+        if(mes != null)
+            properties.run(MASTER, g2, mes);
+
+        inputCursor.display(g2, mes, properties.transform.position);
+        g.drawImage(baseGraphics, properties.transform.getPosition().x(), properties.transform.getPosition().y(),
+                properties.transform.getW(), properties.transform.getH(), null);
         Color now = g.getColor();
         g.setColor(new Color(now.getRGB()));
-        inputCursor.display(g, mes, properties.transform.position);
+
+        Color now2 = g2.getColor();
+        g2.setColor(new Color(now2.getRGB()));
     }
 }

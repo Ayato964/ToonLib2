@@ -11,7 +11,7 @@ public class FadeOut extends TimeConverter{
     }
 
     @Override
-    protected void clockTick(Graphics g, Properties properties, Animation<?> animation, double secTime) {
+    protected void clockTick(Graphics2D g, Properties properties, Animation<?> animation, double secTime) {
         if (condition.getAsBoolean()) {
             switch (animation.mes) {
                 case String s -> {

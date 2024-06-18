@@ -10,12 +10,12 @@ public class AnimationHandler {
     public AnimationHandler(LunchScene scene){
         SCENE = scene;
     }
-    public InputModule createInputModule(String actionText, Consumer<String> pressEnter, TextProperties prop){
-        InputModule i = new InputModule(SCENE, ()->actionText, prop, pressEnter);
+    public InputModule createInputModule(String actionText, Consumer<String> pressEnter,int w, int h, TextProperties prop){
+        InputModule i = new InputModule(SCENE, ()->actionText, prop,w, h, pressEnter);
         return i;
     }
-    public InputModule addInputModule(String actionText, Consumer<String> pressEnter, TextProperties prop){
-        InputModule i = new InputModule(SCENE, ()->actionText, prop, pressEnter);
+    public InputModule addInputModule(String actionText, Consumer<String> pressEnter, int w, int h, TextProperties prop){
+        InputModule i = new InputModule(SCENE, ()->actionText, prop, w, h, pressEnter);
         SCENE.addAnimation(i);
         return i;
     }

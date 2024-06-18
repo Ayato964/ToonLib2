@@ -13,7 +13,7 @@ public class Wait implements IProperty {
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
+    public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> animation) {
 
     }
 

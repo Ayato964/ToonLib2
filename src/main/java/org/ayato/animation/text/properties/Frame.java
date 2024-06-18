@@ -19,7 +19,7 @@ public class Frame implements IProperty {
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, Animation<?> text){
+    public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> text){
         g.setColor(colorState.getState(AnimationState.BACKGROUND));
         Vector2D vec = transform.getPosition();
         g.fillRect(vec.x() , vec.y(), transform.getW(), transform.getH());

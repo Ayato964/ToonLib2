@@ -12,7 +12,7 @@ public class FadeIn extends TimeConverter implements LastRunningProperty {
     }
 
     @Override
-    protected void clockTick(Graphics g, Properties properties, Animation<?> animation, double progress) {
+    protected void clockTick(Graphics2D g, Properties properties, Animation<?> animation, double progress) {
         Color color = g.getColor();
         switch (animation.mes){
             case String s ->  g.setColor(new Color(color.getRed(), color.getGreen(), color.getBlue(), (int) (255 * progress)));

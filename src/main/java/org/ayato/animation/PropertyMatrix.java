@@ -22,9 +22,9 @@ public class PropertyMatrix<V extends Properties<?>> implements IProperty {
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
+    public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> animation) {
         if(init_properties != null) {
-            init_properties.runningProperty(g, properties, animation);
+            init_properties.runningProperty(og, g, properties, animation);
             if (init_properties.isEnd()) {
                 next(g, properties, animation);
             }

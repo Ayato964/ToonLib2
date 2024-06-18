@@ -18,7 +18,7 @@ public class InputCursor {
     }
     public void display(Graphics g, String str, Position position){
         if(isInputMode && isVisible) {
-            int x = position.getX(), y = position.getY();
+            int x = 0, y = 0;
             x += g.getFontMetrics().stringWidth(str);
             g.setColor(def);
             g.fillRect(x, y, 2 * MASTER.DW, g.getFontMetrics().getHeight());

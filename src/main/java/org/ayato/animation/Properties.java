@@ -28,10 +28,10 @@ public sealed abstract class Properties<T> implements DisplayAnimation<T> permit
         ry = transform.position.getNormalY();
         this.transform = transform;
     }
-    public void runProp(Graphics g, Animation<T> animation){
+    public void runProp(Graphics2D g2, Graphics g, Animation<T> animation){
         if(isVisible.getAsBoolean()) {
             for (IProperty p : init_properties)
-                p.runningProperty(g, this, animation);
+                p.runningProperty(g2, g, this, animation);
             if(isFirst) {
                 for (IProperty p : init_properties)
                     p.setupProperty(g, this, animation);

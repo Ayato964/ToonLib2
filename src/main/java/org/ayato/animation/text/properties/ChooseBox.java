@@ -18,13 +18,13 @@ public class ChooseBox extends CheckBox{
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
+    public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> animation) {
         if(isFirst) {
             this.animation = animation;
             isFirst = false;
         }
 
-        positionUpdate(properties.transform.position, g, animation);
+        positionUpdate(properties.transform.position, og, animation);
         groupID = animation.getGroup();
         g.setColor(state.getState(AnimationState.FRAME));
         g.drawOval(transform.getPosition().x(), transform.getPosition().y(), transform.getW() , transform.getH());

@@ -19,7 +19,7 @@ public class ModuleAnimationTest extends BaseScene {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
         scene.HANDLER.addInputModule("Input Here!!", s ->{
             scene.addAnimation(s, NewAnimationTest.TEMPLATE.of(0, 100).center());
-        }, NewAnimationTest.TEMPLATE.of(10, 10));
+        }, 70, 20, NewAnimationTest.TEMPLATE.of(10, 10));
     }
 
     @Override

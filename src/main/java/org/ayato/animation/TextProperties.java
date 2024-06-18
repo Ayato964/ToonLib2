@@ -4,17 +4,15 @@ import org.ayato.animation.text.properties.*;
 import org.ayato.animation.text.properties.Button;
 import org.ayato.animation.text.properties.Frame;
 import org.ayato.component.Transform;
-import org.ayato.component.Vector2D;
 import org.ayato.system.LunchScene;
 import org.ayato.component.Position;
 
 import java.awt.*;
-import java.util.Vector;
 import java.util.function.*;
 
 public final class TextProperties extends Properties<String>{
-    public TextProperties(int x, int y){
-        super(new Transform(x, y, 0, 0));
+    public TextProperties(int x, int y, int w, int h){
+        super(new Transform(x, y, w, h));
     }
 
     public TextProperties button(int bx, int by, int bw, int bh, AnimationState state, PropertyAction<Button> action){
@@ -82,7 +80,7 @@ public final class TextProperties extends Properties<String>{
         return this;
     }
     public TextProperties font(String font, int style, float size){
-        properties.add(0,()-> (g, properties, animation) -> g.setFont(animation.MASTER.getMakeFont(font, style, size)));
+        properties.add(0,()-> (og, g, properties, animation) -> og.setFont(animation.MASTER.getMakeFont(font, style, size)));
         return this;
     }
     public TextProperties frame(Transform transform, AnimationState state){
@@ -94,7 +92,7 @@ public final class TextProperties extends Properties<String>{
     public TextProperties size(int size){
         properties.add(()->new IProperty() {
             @Override
-            public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
+            public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> animation) {
                 g.setFont(animation.MASTER.getMakeFont("", Font.PLAIN, size));
             }
         });
@@ -124,7 +122,6 @@ public final class TextProperties extends Properties<String>{
 
     @Override
     public void run(LunchScene MASTER, Graphics g, String o) {
-        Vector2D vec = transform.getPosition();
-        g.drawString(o, vec.x(), vec.y() + g.getFontMetrics().getHeight());
+        g.drawString(o, 10, g.getFontMetrics().getHeight());
     }
 }

@@ -6,7 +6,6 @@ import org.ayato.animation.text.properties.IProperty;
 
 import java.awt.*;
 import java.util.function.BooleanSupplier;
-import java.util.function.Supplier;
 
 public class Gif implements IProperty {
     private final long loopTime;
@@ -17,7 +16,7 @@ public class Gif implements IProperty {
         loopTime = count;
     }
     @Override
-    public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
+    public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> animation) {
         Animation<ImageMaker> image = (Animation<ImageMaker>) animation;
 
         if(isFirst){

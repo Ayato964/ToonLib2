@@ -30,10 +30,10 @@ public class CheckBox implements IProperty, IListenerDecoder {
         KeyInputs.add(this);
     }
     @Override
-    public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
+    public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> animation) {
         Position p_pos = properties.transform.position;
         Vector2D vec = transform.getPosition();
-        positionUpdate(p_pos, g, animation);
+        positionUpdate(p_pos, og, animation);
         g.setColor(state.getState(AnimationState.FRAME));
         g.drawRect(vec.x(), vec.y(), transform.getW() , transform.getH());
         if(isClicked) {
@@ -42,7 +42,7 @@ public class CheckBox implements IProperty, IListenerDecoder {
                     transform.getW() - 2 * animation.MASTER.DW, transform.getH() -2 * animation.MASTER.DW);
         }
     }
-    protected void positionUpdate(Position p_pos, Graphics g, Animation<?> animation){
+    protected void positionUpdate(Position p_pos, Graphics2D g, Animation<?> animation){
         switch (duration){
             case RIGHT -> {
                 int newX = g.getFontMetrics().stringWidth((String) animation.mes);

@@ -11,7 +11,7 @@ public class Sleep extends TimeConverter {
 
 
     @Override
-    protected void clockTick(Graphics g, Properties properties, Animation<?> animation, double progress) {}
+    protected void clockTick(Graphics2D g, Properties properties, Animation<?> animation, double progress) {}
 
 
 }

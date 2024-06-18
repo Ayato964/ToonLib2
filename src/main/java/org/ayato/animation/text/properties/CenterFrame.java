@@ -20,7 +20,7 @@ public class CenterFrame implements IProperty {
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, Animation<?> text) {
+    public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> text) {
         int windowCenter = text.MASTER.FRAME.DESCTOP_BOUNDS.width / 2;
         int frameCenter = bw * text.MASTER.DW / 2;
         int bx = (windowCenter - frameCenter) / text.MASTER.DW;

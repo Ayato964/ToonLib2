@@ -16,7 +16,7 @@ public class Center implements IProperty{
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, Animation<?> text) {
+    public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> text) {
         if(isFirst){
             Animation<String> a = (Animation<String>) text;
             isFirst = false;

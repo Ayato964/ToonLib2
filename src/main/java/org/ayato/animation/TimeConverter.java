@@ -12,14 +12,14 @@ public abstract class TimeConverter implements IProperty {
     }
 
     @Override
-    public final void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
+    public final void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> animation) {
         double progress = (double) time / maxTime;
-        clockTick(g, properties, animation, progress);
+        clockTick(og, properties, animation, progress);
         if(time <= maxTime)
             time++;
     }
 
-    protected abstract void clockTick(Graphics g, Properties properties, Animation<?> animation, double progress);
+    protected abstract void clockTick(Graphics2D g, Properties properties, Animation<?> animation, double progress);
 
     @Override
     public boolean isEnd() {

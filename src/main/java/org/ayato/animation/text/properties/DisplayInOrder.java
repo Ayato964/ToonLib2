@@ -2,7 +2,6 @@ package org.ayato.animation.text.properties;
 
 import org.ayato.animation.Animation;
 import org.ayato.animation.Properties;
-import org.ayato.animation.TimeConverter;
 import org.ayato.util.ITimeCounter;
 import org.ayato.util.TimeCounter;
 
@@ -37,7 +36,7 @@ public class DisplayInOrder implements ITimeCounter, IProperty {
     }
 
     @Override
-    public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
+    public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> animation) {
         Animation<String> animation1 = (Animation<String>) animation;
         if(!arrangeText.isEmpty() && !isEnd)
             animation1.setViewObject(arrangeText.toString());

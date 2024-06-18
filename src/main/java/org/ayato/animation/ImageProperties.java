@@ -42,7 +42,6 @@ public final class ImageProperties extends Properties<ImageMaker> {
 
     @Override
     public void run(LunchScene MASTER, Graphics g, ImageMaker o) {
-        Vector2D vec = transform.getPosition();
-        g.drawImage(o.get(), vec.x(), vec.y(), transform.getW(), transform.getH(), null);
+        g.drawImage(o.get(), 0, 0, transform.getW(), transform.getH(), null);
     }
 }
