@@ -1,6 +1,6 @@
 package org.ayato.animation;
 
-import org.ayato.util.Position;
+import org.ayato.component.Position;
 
 import java.awt.*;
 
@@ -18,15 +18,15 @@ public class MoveTo extends TimeConverter{
     @Override
     public void setupProperty(Graphics g, Properties<?> properties, Animation<?> animation) {
         super.setupProperty(g, properties, animation);
-        dx = properties.position.getNormalX();
-        dy = properties.position.getNormalY();
+        dx = properties.transform.position.getNormalX();
+        dy = properties.transform.position.getNormalY();
         currentX = Math.abs(x - dx);
         currentY = Math.abs(y - dy);
     }
 
     @Override
     protected void clockTick(Graphics g, Properties properties, Animation<?> animation, double progress) {
-        Position position = properties.position;
+        Position position = properties.transform.position;
         switch (format) {
             case CURVE-> {
                 position.setX((int) (position.getNormalX() + (x - position.getNormalX()) * progress));

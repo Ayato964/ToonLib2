@@ -14,8 +14,8 @@ public class Move implements IProperty {
 
     @Override
     public void runningProperty(Graphics g, Properties properties, Animation<?> animation) {
-        properties.position.setX(x);
-        properties.position.setY(y);
+        properties.transform.position.setX(x);
+        properties.transform.position.setY(y);
         isEnd = true;
     }
 

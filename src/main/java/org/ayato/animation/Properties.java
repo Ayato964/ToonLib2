@@ -1,35 +1,32 @@
 package org.ayato.animation;
 
 import org.ayato.animation.text.properties.*;
-import org.ayato.system.LunchScene;
+import org.ayato.component.Transform;
 import org.ayato.util.LastRunningProperty;
-import org.ayato.util.Position;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.function.BooleanSupplier;
-import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public sealed abstract class Properties<T> implements DisplayAnimation<T> permits TextProperties, ImageProperties{
     public int rx, ry;
-    public Position position;
+    public Transform transform;
     protected final ArrayList<Supplier<IProperty>> properties;
     protected final ArrayList<IProperty> init_properties;
     public BooleanSupplier isVisible;
     public boolean isFirst = true;
     protected Properties()
     {
-        this(new Position(0, 0, 0, 0));
+        this(new Transform(0, 0, 0, 0));
     }
 
-    public Properties(Position position) {
+    public Properties(Transform transform) {
         properties = new ArrayList<>();
         init_properties = new ArrayList<>();
-        rx = position.getNormalX();
-        ry = position.getNormalY();
-        this.position = position;
+        rx = transform.position.getNormalX();
+        ry = transform.position.getNormalY();
+        this.transform = transform;
     }
     public void runProp(Graphics g, Animation<T> animation){
         if(isVisible.getAsBoolean()) {
@@ -53,8 +50,8 @@ public sealed abstract class Properties<T> implements DisplayAnimation<T> permit
 
     public void init() {
         init_properties.clear();
-        position.setX(rx);
-        position.setY(ry);
+        transform.position.setX(rx);
+        transform.position.setY(ry);
         isVisible = isVisible != null ? isVisible : ()->true;
         ArrayList<LastRunningProperty> last = new ArrayList<>();
         for(Supplier<IProperty> sup : properties){

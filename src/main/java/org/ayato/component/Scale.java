@@ -19,4 +19,13 @@ public class Scale {
     public int getW() {
         return w * LunchScene.getINSTANCE().DW;
     }
+
+    public void setH(int h) {
+        this.h = h;
+    }
+
+    public void setW(int w) {
+        this.w = w;
+    }
+
 }

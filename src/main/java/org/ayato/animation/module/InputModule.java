@@ -61,7 +61,7 @@ public class InputModule extends Animation<String> implements KeyListener {
 
     public InputModule(LunchScene master, Supplier<String> a, TextProperties prop, Consumer<String> ifPressEnter) {
         super(master, a, prop);
-        this.properties = INPUT_PROP.of(prop.position.getX(), prop.position.getY()).copyAddon(prop);
+        this.properties = INPUT_PROP.of(prop.transform.getPosition().x(), prop.transform.getPosition().y()).copyAddon(prop);
         this.ifPressEnter = ifPressEnter;
         this.baseMessage = a.get();
         inputCursor = new InputCursor(20l, Color.WHITE, master);
@@ -108,6 +108,6 @@ public class InputModule extends Animation<String> implements KeyListener {
 
         Color now = g.getColor();
         g.setColor(new Color(now.getRGB()));
-        inputCursor.display(g, mes, properties.position);
+        inputCursor.display(g, mes, properties.transform.position);
     }
 }

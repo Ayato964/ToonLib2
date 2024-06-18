@@ -1,12 +1,8 @@
 package org.ayato.component;
 
-import org.ayato.system.LunchScene;
-import org.ayato.system.MyFrame;
 import org.ayato.system.Tick;
 import org.ayato.util.Display;
-import org.ayato.util.Position;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Random;

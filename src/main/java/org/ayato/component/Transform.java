@@ -1,7 +1,6 @@
 package org.ayato.component;
 
 import org.ayato.system.LunchScene;
-import org.ayato.util.Position;
 
 public class Transform {
     public final Position position;
@@ -9,7 +8,7 @@ public class Transform {
     public final Rotate rotate;
 
     public Transform(int x, int y, int w, int h){
-        this(new Position(x, y, w, h), new Scale(w, h), new Rotate());
+        this(new Position(x, y), new Scale(w, h), new Rotate());
     }
     public Transform(Position position){
         this(position, new Scale(), new Rotate());
@@ -33,5 +32,10 @@ public class Transform {
     }
     public int getH(){
         return scale.getH();
+    }
+
+    public boolean isCollision(int x, int y) {
+        return x >= position.getX() && x  <= position.getX() + scale.getW()
+                && y >= position.getY() && y <= position.getY() + scale.getH();
     }
 }

@@ -4,16 +4,16 @@ import org.ayato.component.Rotate;
 import org.ayato.component.Scale;
 import org.ayato.component.ToonObject;
 import org.ayato.component.Transform;
-import org.ayato.util.Position;
+import org.ayato.component.Position;
 
 import java.awt.*;
 
 public class TestObject extends ToonObject {
     protected TestObject(int x, int y) {
         super(new Transform(
-                new Position(x, y, 100, 100),
+                new Position(x, y),
                 new Scale(100, 100),
-                new Rotate(0)
+                new Rotate(30)
         ));
     }
 

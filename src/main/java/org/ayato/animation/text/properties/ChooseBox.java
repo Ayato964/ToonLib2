@@ -23,14 +23,15 @@ public class ChooseBox extends CheckBox{
             this.animation = animation;
             isFirst = false;
         }
-        positionUpdate(properties.position, g, animation);
+
+        positionUpdate(properties.transform.position, g, animation);
         groupID = animation.getGroup();
         g.setColor(state.getState(AnimationState.FRAME));
-        g.drawOval(position.getX(), position.getY(), position.getW() , position.getH());
+        g.drawOval(transform.getPosition().x(), transform.getPosition().y(), transform.getW() , transform.getH());
         if(isClicked){
             g.setColor(checkColor);
-            g.fillOval(position.getX() + 1 * animation.MASTER.DW,  position.getY() + 1 * animation.MASTER.DH,
-                    position.getW() -2* animation.MASTER.DW, position.getH() -2 * animation.MASTER.DH);
+            g.fillOval(transform.getPosition().x() + animation.MASTER.DW,  transform.getPosition().y() +  animation.MASTER.DH,
+                    transform.getW() -2* animation.MASTER.DW, transform.getH() -2 * animation.MASTER.DH);
         }
     }
 

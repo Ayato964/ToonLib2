@@ -3,19 +3,23 @@ package org.ayato.animation;
 import org.ayato.animation.text.properties.*;
 import org.ayato.animation.text.properties.Button;
 import org.ayato.animation.text.properties.Frame;
+import org.ayato.component.Transform;
+import org.ayato.component.Vector2D;
 import org.ayato.system.LunchScene;
-import org.ayato.util.Position;
+import org.ayato.component.Position;
 
 import java.awt.*;
+import java.util.Vector;
 import java.util.function.*;
 
 public final class TextProperties extends Properties<String>{
     public TextProperties(int x, int y){
-        super(new Position(x, y, 0, 0));
+        super(new Transform(x, y, 0, 0));
     }
 
     public TextProperties button(int bx, int by, int bw, int bh, AnimationState state, PropertyAction<Button> action){
-        Position p = new Position(bx, by, bw, bh).setXAddon(()->position.getNormalX()).setYAddon(()->position.getNormalY());
+        Transform p = new Transform(bx, by, bw, bh);
+        p.position.setXAddon(()-> transform.position.getNormalX()).setYAddon(()-> transform.position.getNormalY());
         Supplier<Frame> f = ()->new org.ayato.animation.text.properties.Frame(p, state);
         properties.add(()->new org.ayato.animation.text.properties.Button(p, action, f.get()));
         return this;
@@ -30,7 +34,7 @@ public final class TextProperties extends Properties<String>{
     }
 
     public TextProperties centerFrame(int bw, int bh, Supplier<Color> frameCol, Color backColor){
-        properties.add(()->new CenterFrame(position.getY(), bw, bh, frameCol, backColor));
+        properties.add(()->new CenterFrame(transform.getPosition().y(), bw, bh, frameCol, backColor));
         return this;
     }
     public TextProperties color(Color color){
@@ -81,9 +85,9 @@ public final class TextProperties extends Properties<String>{
         properties.add(0,()-> (g, properties, animation) -> g.setFont(animation.MASTER.getMakeFont(font, style, size)));
         return this;
     }
-    public TextProperties frame(Position position, AnimationState state){
+    public TextProperties frame(Transform transform, AnimationState state){
 
-        properties.add(0, ()->new Frame(position, state));
+        properties.add(0, ()->new Frame(transform, state));
         return this;
     }
 
@@ -110,18 +114,17 @@ public final class TextProperties extends Properties<String>{
         return matrix;
     }
     public TextProperties parent(Position position){
-        this.position.setXAddon(position::getPrefabX);
-        this.position.setYAddon(position::getPrefabY);
+        transform.position.addAddon(position);
         return this;
     }
     public TextProperties parent(Animation<?> animation){
-        position.setXAddon(animation.properties.position::getNormalX);
-        position.setYAddon(animation.properties.position::getNormalY);
+        transform.position.addAddon(animation.properties.transform.position);
         return this;
     }
 
     @Override
     public void run(LunchScene MASTER, Graphics g, String o) {
-        g.drawString(o, position.getX(), position.getY() + g.getFontMetrics().getHeight());
+        Vector2D vec = transform.getPosition();
+        g.drawString(o, vec.x(), vec.y() + g.getFontMetrics().getHeight());
     }
 }

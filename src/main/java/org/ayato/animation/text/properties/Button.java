@@ -3,24 +3,22 @@ package org.ayato.animation.text.properties;
 import org.ayato.animation.AnimationState;
 import org.ayato.animation.Properties;
 import org.ayato.animation.Animation;
+import org.ayato.component.Transform;
 import org.ayato.system.LunchScene;
 import org.ayato.util.IListenerDecoder;
 import org.ayato.util.KeyInputs;
 import org.ayato.util.MouseInputs;
-import org.ayato.util.Position;
 
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 public class Button implements IProperty, IListenerDecoder {
-    Position position;
+    Transform transform;
     PropertyAction<Button> action;
     final Frame frame;
     private boolean isFirst = true;
 
-    public Button(Position position, PropertyAction<Button> action, Frame frame) {
-        this.position = position;
+    public Button(Transform transform, PropertyAction<Button> action, Frame frame) {
+        this.transform = transform;
         this.action = action;
         this.frame = frame;
     }
@@ -31,7 +29,7 @@ public class Button implements IProperty, IListenerDecoder {
             isFirst = false;
             //position.setYAddon(()->g.getFontMetrics().getHeight());
             KeyInputs.add(this);
-            MouseInputs.add(position, this);
+            MouseInputs.add(transform, this);
         }
         if(frame != null)
             frame.runningProperty(g, properties, text);

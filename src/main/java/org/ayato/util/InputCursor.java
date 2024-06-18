@@ -1,5 +1,6 @@
 package org.ayato.util;
 
+import org.ayato.component.Position;
 import org.ayato.system.LunchScene;
 
 import java.awt.*;

@@ -1,6 +1,7 @@
 package org.ayato.animation;
 
-import org.ayato.util.Position;
+import org.ayato.component.Position;
+import org.ayato.component.Transform;
 
 public class PropertiesComponent {
     public static TextProperties ofText(){
@@ -15,7 +16,7 @@ public class PropertiesComponent {
     }
 
     public static ImageProperties ofImage(int i, int i1, int i2, int i3) {
-        return new ImageProperties(new Position(i, i1, i2, i3));
+        return new ImageProperties(new Transform(i, i1, i2, i3));
     }
 
 }

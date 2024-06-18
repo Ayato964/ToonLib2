@@ -1,5 +1,7 @@
 package org.ayato.util;
 
+import org.ayato.component.Position;
+import org.ayato.component.Transform;
 import org.ayato.system.LunchScene;
 
 import java.awt.*;
@@ -9,24 +11,23 @@ import java.util.HashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class MouseInputs implements MouseListener, Runnable {
-    private static final HashMap<Position, IListenerDecoder> DECODER = new HashMap<>();
-    private static final CopyOnWriteArrayList<Position> POSITION = new CopyOnWriteArrayList<>();
+    private static final HashMap<Transform, IListenerDecoder> DECODER = new HashMap<>();
+    private static final CopyOnWriteArrayList<Transform> TRANSFORMS = new CopyOnWriteArrayList<>();
     private static final MouseInputs INSTANCE = new MouseInputs();
     private boolean isRunning = false;
     private boolean isLocked = false;
-    private Position lockPos;
     public static void init(LunchScene m){
         INSTANCE.isRunning = true;
         m.FRAME.addMouseListener(INSTANCE);
         Thread t = new Thread(INSTANCE);
         t.start();
     }
-    public static void add(Position position, IListenerDecoder dec){
-        POSITION.add(position);
-        DECODER.put(position, dec);
+    public static void add(Transform transform, IListenerDecoder dec){
+        TRANSFORMS.add(transform);
+        DECODER.put(transform, dec);
     }
     public static void remove(Position p){
-        POSITION.remove(p);
+        TRANSFORMS.remove(p);
         DECODER.remove(p);
     }
     public static void setLock(boolean b){
@@ -34,8 +35,8 @@ public class MouseInputs implements MouseListener, Runnable {
     }
 
     public static void removeAll() {
-        for(Position p : POSITION){
-            POSITION.remove(p);
+        for(Transform p : TRANSFORMS){
+            TRANSFORMS.remove(p);
         }
         DECODER.clear();
     }
@@ -44,8 +45,8 @@ public class MouseInputs implements MouseListener, Runnable {
     public void mouseClicked(MouseEvent mouseEvent) {
         if(!isLocked) {
             if (isRunning) {
-                for (Position p : POSITION) {
-                    if (p.isInRect(mouseEvent.getX(), mouseEvent.getY())) {
+                for (Transform p : TRANSFORMS) {
+                    if (p.isCollision(mouseEvent.getX(), mouseEvent.getY())) {
                         DECODER.get(p).press();
                     }
                 }
@@ -85,8 +86,8 @@ public class MouseInputs implements MouseListener, Runnable {
             if(!isLocked) {
                 if (isRunning) {
                     Point point = MouseInfo.getPointerInfo().getLocation();
-                    for (Position p : POSITION) {
-                        if (p.isInRect((int) point.getX(), (int) point.getY()))
+                    for (Transform p : TRANSFORMS) {
+                        if (p.isCollision((int) point.getX(), (int) point.getY()))
                             DECODER.get(p).overlap();
                         else
                             DECODER.get(p).unOverlap();
