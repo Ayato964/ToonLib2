@@ -2,7 +2,7 @@ package org.ayato.util;
 
 import org.ayato.system.LunchScene;
 import org.ayato.system.Tick;
-import org.ayato.system.ToonObject;
+import org.ayato.component.ToonObject;
 
 import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;

@@ -1,7 +1,7 @@
 package org.ayato.test;
 
 import org.ayato.system.LunchScene;
-import org.ayato.system.ToonObject;
+import org.ayato.component.ToonObject;
 import org.ayato.util.BaseScene;
 import org.ayato.util.Setup;
 

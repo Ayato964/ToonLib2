@@ -46,12 +46,12 @@ public class Position {
         y = dy;
         return this;
     }
-
+    @Deprecated
     public Position setW(int w) {
         this.w = w;
         return this;
     }
-
+    @Deprecated
     public Position setH(int h) {
         this.h = h;
         return this;
@@ -65,11 +65,11 @@ public class Position {
         sy.add(s);
         return  this;
     }
-
+    @Deprecated
     public int getW() {
         return w * master.DW;
     }
-
+    @Deprecated
     public int getH() {
         return h * master.DH;
     }
