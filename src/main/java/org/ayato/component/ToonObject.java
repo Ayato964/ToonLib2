@@ -14,15 +14,29 @@ import java.util.Random;
 public abstract class ToonObject implements Tick, Display {
     private final Transform transform;
     private final long serial = new Random().nextLong(0, 100000);
+    private final BufferedImage paint;
+    private final int masterW = 1000, masterH = 1000;
     protected ToonObject(Transform transform) {
         this.transform = transform;
-        MyFrame f = LunchScene.getINSTANCE().FRAME;
+        paint = new BufferedImage(masterW, masterH, BufferedImage.TYPE_INT_ARGB);
     }
+
 
     @Override
     public final void display(Graphics g) {
+        Graphics2D g2 = (Graphics2D) paint.getGraphics(); // child graphic
+        objectBackgroundClear(g2);
 
-        display(transform, g);
+        g2.rotate(transform.rotate.getRadian());
+        display(g2, masterW / 2, masterH / 2);
+        Vector2D pos = transform.getPosition();
+        g.drawImage(paint, pos.x(), pos.y(), transform.getW(), transform.getH(), null);
+
+    }
+    private void objectBackgroundClear(Graphics2D g2){
+        g2.setColor(new Color(0, 0, 0, 0));
+        g2.fillRect(0, 0, masterW, masterH);
+
     }
 
     @Override
@@ -35,6 +49,6 @@ public abstract class ToonObject implements Tick, Display {
         return serial;
     }
 
-    protected abstract void display(Transform transform, Graphics g);
+    protected abstract void display(Graphics2D g, int centerX, int centerY);
     protected abstract void tick(Transform transform);
 }

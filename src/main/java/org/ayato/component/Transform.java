@@ -21,7 +21,7 @@ public class Transform {
         this.rotate = rotate;
     }
     public Vector2D getPosition(){
-        return new Vector2D(position.getX(), position.getY());
+        return new Vector2D(position.getX(),position.getY());
     }
     public Vector2D getPositionAdd(int ax, int ay){
         Vector2D newV = new Vector2D( ax * LunchScene.getINSTANCE().DW, ay * LunchScene.getINSTANCE().DH);

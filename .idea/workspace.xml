@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.18.10&#10;&#10;System&#10;- IBaseScene.javaから　BaseSceneに名前を変更">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/component/Rotate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/component/Scale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/component/Transform.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/component/Vector2D.java" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.18.20&#10;&#10;ToonObject.java&#10;- Transform.java&#10;  座標や大きさ、角度を計算するクラス&#10;- Rotate.java&#10;  角度を計算するクラス&#10;- Scale.java &#10;  スケールを計算するクラス&#10;- Vector2D.java&#10;  2次元の値を格納する">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/ToonObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/component/ToonObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/component/ToonObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/component/ToonObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/component/Transform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/component/Transform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/ToonObjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/ToonObjectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/BaseScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/BaseScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/Position.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -620,7 +614,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718676474670</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Ver.2.18.20&#10;&#10;ToonObject.java&#10;- Transform.java&#10;  座標や大きさ、角度を計算するクラス&#10;- Rotate.java&#10;  角度を計算するクラス&#10;- Scale.java &#10;  スケールを計算するクラス&#10;- Vector2D.java&#10;  2次元の値を格納する">
+      <option name="closed" value="true" />
+      <created>1718690112359</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1718690112359</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -641,7 +643,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ver.2.8.6&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;&#10; AnimationList.javaを削除" />
     <MESSAGE value="Ver.2.8.7&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;&#10; AnimationList.javaを削除" />
     <MESSAGE value="Ver.2.8.13&#10;&#10;以下のコンポーネントを削除&#10;AbstractAnimations.java&#10;AnimationComponent.java&#10;AnimationList.java" />
     <MESSAGE value="Ver.2.9.0&#10;&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;AnimationList.javaを削除&#10;Fontのサイズを相対的にした&#10;&#10;以下のコンポーネントを削除&#10;AbstractAnimations.java&#10;AnimationComponent.java&#10;AnimationList.java" />
@@ -666,6 +667,7 @@
     <MESSAGE value="Ver.2.17.0&#10;&#10;System&#10;- Animation.java&#10;　Animation&lt;A&gt;で保管されるオブジェクトはSupplierで管理されることになった。&#10;- Alpha値が変更されるプロパティにおいて、他のAnimationにも干渉してしまうバグを修正&#10;&#10;Properties&#10;- Sleep.java&#10;  pushMatrixにおいて、N秒間動作を停止する&#10;- Wait.java&#10;　PropertyMatrixにおいて、条件をクリアしないと次に進めなくする&#10;- Parent&#10;  Animation&lt;?&gt;もしくはPositionを引数にすることで、それを親とみなし、座標の動きを同期する&#10;&#10;REMOVED&#10;- Change.java&#10;- ChangeFunction.java&#10;- ChangeObjectModule.java&#10;- AnimationGroup.java&#10;- Event.java&#10;- Inheriting.java" />
     <MESSAGE value="Ver.2.18.0&#10;&#10;System&#10;&#10;- Setup.java&#10;  メソッドの名前と役割を最適化&#10;- GUIがToonObjectよりも前に必ず表示されるようになった&#10;- Position.java&#10;  ToonLibで作成されたFrame内でのオブジェクトの座標を全て管理できるようになった&#10;- Button.java&#10;  重なったとき、マウスカーソルが変化するようになった&#10;- LunchScene.java&#10;  シングルトーンデザインパターンを適用&#10;- ToonObject.javaをイニシャライズするシステムを追加&#10;- Tick.java&#10;  1秒間に1000回実行する定期実行関数を作成&#10;- TickThread.java&#10;  Tickを管理するスレッドクラス&#10;&#10;TOONOBJECT&#10;&#10;ToonObject.java&#10;- 継承することで、ToonLibでそのオブジェクトを管理できるようになる" />
     <MESSAGE value="Ver.2.18.10&#10;&#10;System&#10;- IBaseScene.javaから　BaseSceneに名前を変更" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.18.10&#10;&#10;System&#10;- IBaseScene.javaから　BaseSceneに名前を変更" />
+    <MESSAGE value="Ver.2.18.20&#10;&#10;ToonObject.java&#10;- Transform.java&#10;  座標や大きさ、角度を計算するクラス&#10;- Rotate.java&#10;  角度を計算するクラス&#10;- Scale.java &#10;  スケールを計算するクラス&#10;- Vector2D.java&#10;  2次元の値を格納する" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.18.20&#10;&#10;ToonObject.java&#10;- Transform.java&#10;  座標や大きさ、角度を計算するクラス&#10;- Rotate.java&#10;  角度を計算するクラス&#10;- Scale.java &#10;  スケールを計算するクラス&#10;- Vector2D.java&#10;  2次元の値を格納する" />
   </component>
 </project>

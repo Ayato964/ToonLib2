@@ -11,19 +11,18 @@ import java.awt.*;
 public class TestObject extends ToonObject {
     protected TestObject(int x, int y) {
         super(new Transform(
-                new Position(x, y, 30, 30),
-                new Scale(30, 30),
-                new Rotate(60)
+                new Position(x, y, 100, 100),
+                new Scale(100, 100),
+                new Rotate(0)
         ));
     }
 
     @Override
-    protected void display(Transform transform, Graphics g) {
+    protected void display(Graphics2D g, int centerX, int centerY) {
         g.setColor(Color.WHITE);
-        g.fillOval(transform.getPosition().x(), transform.getPosition().y(), transform.getW(), transform.getH());
-        g.fillRect(transform.getPositionAdd(40, 0).x(),
-                transform.getPositionAdd(40, 0).y(),
-                transform.getW(), transform.getH());
+
+        g.fillRect(centerX - 100, centerY - 100, 200, 200);
+        g.fillRect(centerX + 100, centerY, 200, 200);
     }
 
     @Override
