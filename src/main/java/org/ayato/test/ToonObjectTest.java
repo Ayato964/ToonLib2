@@ -32,12 +32,12 @@ public class ToonObjectTest extends IBaseScene {
     }
 
     @Override
-    public void setupClass(ArrayList<Setup> setups) {
+    public void setupUIClass(ArrayList<Setup> setups) {
         setups.add(new ButtonSetup(AnimationScene::new, ImageTestScene::new, "<", ">"));
     }
 
     @Override
-    public void setup(LunchScene scene) {
+    public void createUI(LunchScene scene) {
 
     }
 }

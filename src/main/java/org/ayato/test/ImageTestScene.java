@@ -23,7 +23,7 @@ public class ImageTestScene extends IBaseScene {
     }
 
     @Override
-    public void setup(LunchScene scene) {
+    public void createUI(LunchScene scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
         scene.addAnimation(new ImageMaker("test", "help"), PropertiesComponent.ofImage(20, 20, 50, 50)
                 .button(action->{
@@ -34,7 +34,7 @@ public class ImageTestScene extends IBaseScene {
     }
 
     @Override
-    public void setupClass(ArrayList<Setup> setups) {
+    public void setupUIClass(ArrayList<Setup> setups) {
         setups.add(new ButtonSetup(ToonObjectTest::new, NewAnimationTest::new, "<",">"));
     }
 }

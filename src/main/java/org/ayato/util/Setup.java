@@ -5,15 +5,15 @@ import org.ayato.system.LunchScene;
 import java.util.ArrayList;
 
 public interface Setup{
-    abstract void setup(LunchScene scene);
+    abstract void createUI(LunchScene scene);
 
     public default void runSetupClass(LunchScene scene){
         ArrayList<Setup> setups = new ArrayList<>();
         setups.add(this);
-        setupClass(setups);
+        setupUIClass(setups);
         for(Setup s : setups)
-            s.setup(scene);
+            s.createUI(scene);
     }
 
-    default void setupClass(ArrayList<Setup> setups){}
+    default void setupUIClass(ArrayList<Setup> setups){}
 }

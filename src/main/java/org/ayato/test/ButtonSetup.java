@@ -33,7 +33,7 @@ public class ButtonSetup implements Setup {
         this.n = n;
     }
     @Override
-    public void setup(LunchScene scene) {
+    public void createUI(LunchScene scene) {
         if(BACK != null)
             scene.addAnimation(b, TEMPLATE.of(10, 180)
                 .button(0, 0, 20, 20, STATE.get(), a->scene.changeScene(BACK.get())));

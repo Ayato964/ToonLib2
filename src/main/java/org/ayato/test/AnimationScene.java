@@ -20,7 +20,7 @@ public class AnimationScene extends IBaseScene {
     }
 
     @Override
-    public void setup(LunchScene scene) {
+    public void createUI(LunchScene scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
         scene.addAnimation("Move", NewAnimationTest.TEMPLATE.of(10, 100)
                 .pushMatrix()
@@ -49,7 +49,7 @@ public class AnimationScene extends IBaseScene {
     }
 
     @Override
-    public void setupClass(ArrayList<Setup> setups) {
+    public void setupUIClass(ArrayList<Setup> setups) {
         setups.add(new ButtonSetup(ModuleAnimationTest::new, ToonObjectTest::new, "<", ">"));
     }
 

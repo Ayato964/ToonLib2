@@ -18,7 +18,7 @@ public class ModuleAnimationTest extends IBaseScene {
     }
 
     @Override
-    public void setup(LunchScene scene) {
+    public void createUI(LunchScene scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
         scene.HANDLER.addInputModule("Input Here!!", s ->{
             scene.addAnimation(s, NewAnimationTest.TEMPLATE.of(0, 100).center());
@@ -26,7 +26,7 @@ public class ModuleAnimationTest extends IBaseScene {
     }
 
     @Override
-    public void setupClass(ArrayList<Setup> setups) {
+    public void setupUIClass(ArrayList<Setup> setups) {
         setups.add(new ButtonSetup(NewAnimationTest::new, AnimationScene::new, "<", ">"));
     }
 

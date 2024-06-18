@@ -34,13 +34,13 @@ public class NewAnimationTest extends IBaseScene{
     }
 
     @Override
-    public void setup(LunchScene scene) {
+    public void createUI(LunchScene scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
 
     }
 
     @Override
-    public void setupClass(ArrayList<Setup> setups) {
+    public void setupUIClass(ArrayList<Setup> setups) {
         setups.add(new NormalAnimation());
         setups.add(new AnimationSetup());
         setups.add(new ButtonSetup(null, ModuleAnimationTest::new, "<", ">"));
@@ -54,7 +54,7 @@ public class NewAnimationTest extends IBaseScene{
     private class NormalAnimation implements Setup{
 
         @Override
-        public void setup(LunchScene scene) {
+        public void createUI(LunchScene scene) {
             Animation<String> button = scene.createAnimation("Selected!!(Center)", TEMPLATE.of(0, 50).center());
             scene.addAnimation("Normal", TEMPLATE.of(10, 10));
             scene.addAnimation("Button" , TEMPLATE.of(100, 10)
@@ -71,7 +71,7 @@ public class NewAnimationTest extends IBaseScene{
 
     private static final class AnimationSetup implements Setup{
         @Override
-        public void setup(LunchScene scene) {
+        public void createUI(LunchScene scene) {
             scene.addAnimation("FadeIn", TEMPLATE.of(10, 100).fadeIn(300));
             scene.addAnimation("FadeOut", TEMPLATE.of(50, 100).fadeOut(300));
 
