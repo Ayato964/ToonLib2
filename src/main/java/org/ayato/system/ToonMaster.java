@@ -9,8 +9,33 @@ import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Supplier;
 
+/**
+ * ToonMaster is master class of ToonLib.
+ * It's singleton class.<br>
+ * At first. please run the {@code create()} method.<br>
+ * At second. Please create class to extends {@code BaseScene} class.<br>
+ * At third. Please add UI and Toon2DObject as needed.<br>
+ * And finally. Please enjoy coding with ToonLib2!
+ * @author Ayato
+ * @see ToonMaster#create(String, boolean)
+ * @see ToonMaster#create(String, int, int)
+ * @see BaseScene
+ * @see Animation
+ * @see org.ayato.component.ToonObject
+ *
+ */
 public final class ToonMaster {
+    /**
+     *  SCENE manages objects that inherit from the {@code Display} interface.<br>
+     * @see DisplayThread
+     * @see Animation
+     * @see org.ayato.component.ToonObject
+     * @see BaseScene
+     * @apiNote 0.1.0
+     */
     public  final DisplayThread SCENE;
+
+
     public  final TickThread TICK;
     public  final MyFrame       FRAME;
     public final Graphics       GRAPHIC;
@@ -55,11 +80,28 @@ public final class ToonMaster {
         TimeCounter.init();
         TICK = TickThread.INSTANCE;
     }
+
+    /**
+     * This method can create {@code ToonMaster} class only one.
+     * @see ToonMaster
+     * @param title Enter your game name.
+     * @param isFull Do you want fullscreen
+     * @return This class.
+     */
     public static ToonMaster create(String title, boolean isFull){
         if(INSTANCE == null)
             INSTANCE = new ToonMaster(title, isFull);
         return INSTANCE;
     }
+
+    /**
+     * This method can create {@code ToonMaster} class only one.
+     * @param title Enter your game name.
+     * @param w frame width
+     * @param h frame height
+     * @return this class
+     * @see ToonMaster
+     */
     public static ToonMaster create(String title, int w, int h){
         if(INSTANCE != null)
             INSTANCE = new ToonMaster(title, w, h);
