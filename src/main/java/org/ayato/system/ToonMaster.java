@@ -22,7 +22,7 @@ import java.util.function.Supplier;
  * @see BaseScene
  * @see Animation
  * @see org.ayato.component.ToonObject
- *
+ * @since 0.0.0
  */
 public final class ToonMaster {
     /**
@@ -31,7 +31,7 @@ public final class ToonMaster {
      * @see Animation
      * @see org.ayato.component.ToonObject
      * @see BaseScene
-     * @apiNote 0.1.0
+     * @since  0.1.0
      */
     public  final DisplayThread SCENE;
 
