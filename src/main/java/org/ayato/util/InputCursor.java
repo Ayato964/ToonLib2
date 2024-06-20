@@ -1,7 +1,7 @@
 package org.ayato.util;
 
 import org.ayato.component.Position;
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 
 import java.awt.*;
 
@@ -10,8 +10,8 @@ public class InputCursor {
     private boolean isVisible = true;
     private long count = 0, maxDisplayTime;
     private Color def;
-    private final LunchScene MASTER;
-    public InputCursor(long displayTime, Color defColor, LunchScene master){
+    private final ToonMaster MASTER;
+    public InputCursor(long displayTime, Color defColor, ToonMaster master){
         def = defColor;
         MASTER = master;
         maxDisplayTime = displayTime;

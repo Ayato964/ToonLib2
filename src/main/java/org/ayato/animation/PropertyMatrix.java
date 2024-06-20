@@ -17,8 +17,8 @@ public class PropertyMatrix<V extends Properties<?>> implements IProperty {
     }
 
     @Override
-    public void setupProperty(Graphics g, Properties<?> properties, Animation<?> animation) {
-        next(g, properties, animation);
+    public void setupProperty(Graphics2D o2, Graphics g, Properties<?> properties, Animation<?> animation) {
+        next(o2, g, properties, animation);
     }
 
     @Override
@@ -26,14 +26,14 @@ public class PropertyMatrix<V extends Properties<?>> implements IProperty {
         if(init_properties != null) {
             init_properties.runningProperty(og, g, properties, animation);
             if (init_properties.isEnd()) {
-                next(g, properties, animation);
+                next(og,g, properties, animation);
             }
         }
     }
-    private void next(Graphics g, Properties<?> properties, Animation<?> animation){
+    private void next(Graphics2D g2, Graphics g, Properties<?> properties, Animation<?> animation){
         if(runningNextIndex < this.properties.size()) {
             init_properties = this.properties.get(runningNextIndex).get();
-            init_properties.setupProperty(g, properties, animation);
+            init_properties.setupProperty(g2, g, properties, animation);
             runningNextIndex++;
         }
     }
@@ -54,6 +54,10 @@ public class PropertyMatrix<V extends Properties<?>> implements IProperty {
     }
     public PropertyMatrix<V> moveTo(int x, int y, long second, MoveTo.VelocityFormat format){
         properties.add(()->new MoveTo(x, y, second, format));
+        return this;
+    }
+    public PropertyMatrix<V> rotate(int rad){
+        properties.add(()->new Rotate(rad));
         return this;
     }
 

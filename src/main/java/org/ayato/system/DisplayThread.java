@@ -13,17 +13,17 @@ public class DisplayThread {
     private final VoidSupplier sup;
     private final CopyOnWriteArrayList<Display> displays;
     private final CopyOnWriteArrayList<Display> GUIS = new CopyOnWriteArrayList<>();
-    private final LunchScene MASTER;
+    private final ToonMaster MASTER;
     private final CopyOnWriteArrayList<VoidSupplier> endTask;
     public final int SLEEP_TIME = 10;
-    private DisplayThread(VoidSupplier voidSupplier, LunchScene scene){
+    private DisplayThread(VoidSupplier voidSupplier, ToonMaster scene){
         thread = new Thread(this::run);
         sup = voidSupplier;
         displays = new CopyOnWriteArrayList<>();
         MASTER = scene;
         endTask = new CopyOnWriteArrayList<>();
     }
-    public static DisplayThread runThread(VoidSupplier supplier, LunchScene scene){
+    public static DisplayThread runThread(VoidSupplier supplier, ToonMaster scene){
         DisplayThread t = new DisplayThread(supplier, scene);
         t.thread.start();
         return t;

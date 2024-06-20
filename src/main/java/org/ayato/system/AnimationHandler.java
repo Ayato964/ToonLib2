@@ -6,8 +6,8 @@ import org.ayato.animation.module.InputModule;
 import java.util.function.Consumer;
 
 public class AnimationHandler {
-    private final LunchScene SCENE;
-    public AnimationHandler(LunchScene scene){
+    private final ToonMaster SCENE;
+    public AnimationHandler(ToonMaster scene){
         SCENE = scene;
     }
     public InputModule createInputModule(String actionText, Consumer<String> pressEnter,int w, int h, TextProperties prop){

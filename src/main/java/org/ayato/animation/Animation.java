@@ -2,23 +2,19 @@ package org.ayato.animation;
 
 import org.ayato.animation.text.properties.IProperty;
 import org.ayato.system.BaseAbstractObject;
-import org.ayato.system.ComponentTag;
-import org.ayato.system.LunchScene;
-import org.ayato.util.Display;
+import org.ayato.system.ToonMaster;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.util.function.BooleanSupplier;
 import java.util.function.Supplier;
 
 public class Animation<T> extends BaseAbstractObject {
     public final Supplier<T> baseObject;
     public T mes;
-    public final LunchScene MASTER;
+    public final ToonMaster MASTER;
     protected Properties<T> properties;
     protected BufferedImage baseGraphics;
-    public Animation(LunchScene master, Supplier<T> base,  Properties<T> prop){
+    public Animation(ToonMaster master, Supplier<T> base, Properties<T> prop){
         baseObject = base;
         mes = base.get();
         MASTER = master;

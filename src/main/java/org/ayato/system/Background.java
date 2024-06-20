@@ -9,10 +9,10 @@ import java.util.Random;
 public class Background implements Display {
     private final long serial = new Random().nextLong(0, 1000000);
     public BackgroundMode mode;
-    private final LunchScene MASTER;
+    private final ToonMaster MASTER;
    // private ImageMaker bgImage;
 
-    public Background(LunchScene scene){
+    public Background(ToonMaster scene){
         MASTER = scene;
         //bgImage = new ImageMaker("title/background", 256, 144);
         mode = BackgroundMode.COLOR;

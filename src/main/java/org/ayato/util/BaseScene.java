@@ -1,6 +1,6 @@
 package org.ayato.util;
 
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 import org.ayato.system.Tick;
 import org.ayato.component.ToonObject;
 
@@ -10,7 +10,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public abstract class BaseScene implements Setup, Display, Tick {
     private final long serial = new Random().nextLong(0, 1000000);
     private final CopyOnWriteArrayList<ToonObject> objects = new CopyOnWriteArrayList<>();
-    public final void setToonObjectClass(LunchScene scene){
+    public final void setToonObjectClass(ToonMaster scene){
         setToonObjects(objects);
         for(ToonObject o : objects){
             scene.SCENE.addDisplay(o);
@@ -20,13 +20,13 @@ public abstract class BaseScene implements Setup, Display, Tick {
 
     protected final void addObject(ToonObject toonObject){
         objects.add(toonObject);
-        LunchScene.getINSTANCE().SCENE.addDisplay(toonObject);
-        LunchScene.getINSTANCE().TICK.add(toonObject);
+        ToonMaster.getINSTANCE().SCENE.addDisplay(toonObject);
+        ToonMaster.getINSTANCE().TICK.add(toonObject);
     }
     protected final void  deleteObject(ToonObject object){
         objects.remove(object);
-        LunchScene.getINSTANCE().SCENE.removeDisplay(object);
-        LunchScene.getINSTANCE().TICK.remove(object);
+        ToonMaster.getINSTANCE().SCENE.removeDisplay(object);
+        ToonMaster.getINSTANCE().TICK.remove(object);
     }
     @Override
     public long getSerialID() {

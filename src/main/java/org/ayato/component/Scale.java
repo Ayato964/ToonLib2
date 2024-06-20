@@ -1,6 +1,6 @@
 package org.ayato.component;
 
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 
 public class Scale {
     private int w, h;
@@ -13,11 +13,11 @@ public class Scale {
     }
 
     public int getH() {
-        return h * LunchScene.getINSTANCE().DH;
+        return h * ToonMaster.getINSTANCE().DH;
     }
 
     public int getW() {
-        return w * LunchScene.getINSTANCE().DW;
+        return w * ToonMaster.getINSTANCE().DW;
     }
 
     public void setH(int h) {

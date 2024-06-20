@@ -2,7 +2,7 @@ package org.ayato.test;
 
 import org.ayato.animation.*;
 import org.ayato.animation.text.properties.CheckBox;
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 import org.ayato.util.BaseScene;
 import org.ayato.util.PropertiesSupplier;
 import org.ayato.util.Setup;
@@ -31,7 +31,7 @@ public class NewAnimationTest extends BaseScene {
     }
 
     @Override
-    public void createUI(LunchScene scene) {
+    public void createUI(ToonMaster scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
 
     }
@@ -51,7 +51,7 @@ public class NewAnimationTest extends BaseScene {
     private class NormalAnimation implements Setup{
 
         @Override
-        public void createUI(LunchScene scene) {
+        public void createUI(ToonMaster scene) {
             Animation<String> button = scene.createAnimation("Selected!!(Center)", TEMPLATE.of(0, 50).center());
             scene.addAnimation("Normal", TEMPLATE.of(10, 10));
             scene.addAnimation("Button" , TEMPLATE.of(100, 10)
@@ -68,7 +68,7 @@ public class NewAnimationTest extends BaseScene {
 
     private static final class AnimationSetup implements Setup{
         @Override
-        public void createUI(LunchScene scene) {
+        public void createUI(ToonMaster scene) {
             scene.addAnimation("FadeIn", TEMPLATE.of(10, 100).fadeIn(300));
             scene.addAnimation("FadeOut", TEMPLATE.of(50, 100).fadeOut(300));
 
@@ -78,7 +78,9 @@ public class NewAnimationTest extends BaseScene {
                     .endMatrix());
             scene.addAnimation("DisplayInorder", TEMPLATE.of(150, 100)
                     .displayInOrder(200));
-
+            scene.addAnimation("Rotate", TEMPLATE.of(200, 100)
+                    .rotate(70)
+            );
 
         }
     }

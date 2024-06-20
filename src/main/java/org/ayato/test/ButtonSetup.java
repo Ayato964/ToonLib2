@@ -3,7 +3,7 @@ package org.ayato.test;
 import org.ayato.animation.AnimationState;
 import org.ayato.animation.PropertiesComponent;
 import org.ayato.animation.TextProperties;
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 import org.ayato.util.BaseScene;
 import org.ayato.util.PropertiesSupplier;
 import org.ayato.util.Setup;
@@ -33,7 +33,7 @@ public class ButtonSetup implements Setup {
         this.n = n;
     }
     @Override
-    public void createUI(LunchScene scene) {
+    public void createUI(ToonMaster scene) {
         if(BACK != null)
             scene.addAnimation(b, TEMPLATE.of(10, 180)
                 .button(0, 0, 20, 20, STATE.get(), a->scene.changeScene(BACK.get())));

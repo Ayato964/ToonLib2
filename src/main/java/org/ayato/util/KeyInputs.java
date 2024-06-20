@@ -1,13 +1,9 @@
 package org.ayato.util;
 
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.util.HashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -22,7 +18,7 @@ public class KeyInputs extends KeyAdapter implements Runnable {
     private KeyInputs() {
     }
 
-    public static void init(LunchScene scene) {
+    public static void init(ToonMaster scene) {
         scene.FRAME.addKeyListener(INSTANCE);
         KEY.put(KeyEvent.VK_UP, false);
         KEY.put(KeyEvent.VK_DOWN, false);

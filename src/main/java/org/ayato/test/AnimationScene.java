@@ -2,7 +2,7 @@ package org.ayato.test;
 
 import org.ayato.animation.Animation;
 import org.ayato.animation.MoveTo;
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 import org.ayato.util.BaseScene;
 import org.ayato.component.Position;
 import org.ayato.util.Setup;
@@ -19,7 +19,7 @@ public class AnimationScene extends BaseScene {
     }
 
     @Override
-    public void createUI(LunchScene scene) {
+    public void createUI(ToonMaster scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
         scene.addAnimation("Move", NewAnimationTest.TEMPLATE.of(10, 100)
                 .pushMatrix()

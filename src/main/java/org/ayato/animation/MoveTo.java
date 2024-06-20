@@ -16,8 +16,8 @@ public class MoveTo extends TimeConverter{
     }
 
     @Override
-    public void setupProperty(Graphics g, Properties<?> properties, Animation<?> animation) {
-        super.setupProperty(g, properties, animation);
+    public void setupProperty(Graphics2D o2, Graphics g, Properties<?> properties, Animation<?> animation) {
+        super.setupProperty(o2, g, properties, animation);
         dx = properties.transform.position.getNormalX();
         dy = properties.transform.position.getNormalY();
         currentX = Math.abs(x - dx);

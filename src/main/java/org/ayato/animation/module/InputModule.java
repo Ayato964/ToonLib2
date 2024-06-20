@@ -2,7 +2,7 @@ package org.ayato.animation.module;
 
 import org.ayato.animation.*;
 import org.ayato.animation.text.properties.Button;
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 import org.ayato.util.InputCursor;
 import org.ayato.util.KeyInputs;
 import org.ayato.util.MouseInputs;
@@ -60,7 +60,7 @@ public class InputModule extends Animation<String> implements KeyListener {
         //MASTER.FRAME.addKeyListener(this);
     }
 
-    public InputModule(LunchScene master, Supplier<String> a, TextProperties prop, int width, int height, Consumer<String> ifPressEnter) {
+    public InputModule(ToonMaster master, Supplier<String> a, TextProperties prop, int width, int height, Consumer<String> ifPressEnter) {
         super(master, a, prop);
         this.width = width;
         this.height = height;

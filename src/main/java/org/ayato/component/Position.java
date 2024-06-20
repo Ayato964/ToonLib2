@@ -1,6 +1,6 @@
 package org.ayato.component;
 
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 
 import java.util.ArrayList;
 import java.util.function.IntSupplier;
@@ -10,11 +10,11 @@ public class Position {
     private int x, y;
     private ArrayList<IntSupplier> sx = new ArrayList<>();
     private ArrayList<IntSupplier> sy = new ArrayList<>();
-    private LunchScene master;
+    private ToonMaster master;
     public Position(int x, int y){
         this.x = x;
         this.y = y;
-        master = LunchScene.getINSTANCE();
+        master = ToonMaster.getINSTANCE();
     }
     public int getX(){
         return (x + runAddon(sx, 0)) * master.DW;

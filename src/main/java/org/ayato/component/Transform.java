@@ -1,6 +1,6 @@
 package org.ayato.component;
 
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 
 public class Transform {
     public final Position position;
@@ -23,7 +23,7 @@ public class Transform {
         return new Vector2D(position.getX(),position.getY());
     }
     public Vector2D getPositionAdd(int ax, int ay){
-        Vector2D newV = new Vector2D( ax * LunchScene.getINSTANCE().DW, ay * LunchScene.getINSTANCE().DH);
+        Vector2D newV = new Vector2D( ax * ToonMaster.getINSTANCE().DW, ay * ToonMaster.getINSTANCE().DH);
 
         return rotate.transRotate(newV).add(position.getX(), position.getY());
     }

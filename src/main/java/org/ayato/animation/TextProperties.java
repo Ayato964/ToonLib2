@@ -4,7 +4,7 @@ import org.ayato.animation.text.properties.*;
 import org.ayato.animation.text.properties.Button;
 import org.ayato.animation.text.properties.Frame;
 import org.ayato.component.Transform;
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 import org.ayato.component.Position;
 
 import java.awt.*;
@@ -90,12 +90,7 @@ public final class TextProperties extends Properties<String>{
     }
 
     public TextProperties size(int size){
-        properties.add(()->new IProperty() {
-            @Override
-            public void runningProperty(Graphics2D og, Graphics g, Properties properties, Animation<?> animation) {
-                g.setFont(animation.MASTER.getMakeFont("", Font.PLAIN, size));
-            }
-        });
+        properties.add(()-> (og, g, properties, animation) -> g.setFont(animation.MASTER.getMakeFont("", Font.PLAIN, size)));
         return this;
     }
     public TextProperties ifView(BooleanSupplier how){
@@ -119,9 +114,13 @@ public final class TextProperties extends Properties<String>{
         transform.position.addAddon(animation.properties.transform.position);
         return this;
     }
+    public TextProperties rotate(int r){
+        properties.add(()-> new Rotate(r));
+        return this;
+    }
 
     @Override
-    public void run(LunchScene MASTER, Graphics g, String o) {
+    public void run(ToonMaster MASTER, Graphics g, String o) {
         g.drawString(o, 10, g.getFontMetrics().getHeight());
     }
 }

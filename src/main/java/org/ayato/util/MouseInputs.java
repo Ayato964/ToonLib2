@@ -2,7 +2,7 @@ package org.ayato.util;
 
 import org.ayato.component.Position;
 import org.ayato.component.Transform;
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -16,7 +16,7 @@ public class MouseInputs implements MouseListener, Runnable {
     private static final MouseInputs INSTANCE = new MouseInputs();
     private boolean isRunning = false;
     private boolean isLocked = false;
-    public static void init(LunchScene m){
+    public static void init(ToonMaster m){
         INSTANCE.isRunning = true;
         m.FRAME.addMouseListener(INSTANCE);
         Thread t = new Thread(INSTANCE);

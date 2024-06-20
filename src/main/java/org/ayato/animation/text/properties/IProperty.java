@@ -9,7 +9,7 @@ public interface IProperty{
 
     void runningProperty(Graphics2D og, Graphics g, Properties properties,  Animation<?> animation);
 
-    default void setupProperty(Graphics g, Properties<?> properties, Animation<?> animation){}
+    default void setupProperty(Graphics2D o2,Graphics g, Properties<?> properties, Animation<?> animation){}
 
     default boolean isEnd(){
         return true;

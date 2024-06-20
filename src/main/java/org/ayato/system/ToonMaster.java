@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Supplier;
 
-public final class LunchScene {
+public final class ToonMaster {
     public  final DisplayThread SCENE;
     public  final TickThread TICK;
     public  final MyFrame       FRAME;
@@ -22,8 +22,8 @@ public final class LunchScene {
 
     public final int FONT_BASE_SIZE;
 
-    private static LunchScene INSTANCE;
-    private LunchScene(String title, boolean isFull){
+    private static ToonMaster INSTANCE;
+    private ToonMaster(String title, boolean isFull){
         FRAME = new MyFrame(title, isFull);
         DW = (int) FRAME.DESCTOP_BOUNDS.getWidth() / 400;
         DH =(int) FRAME.DESCTOP_BOUNDS.getHeight() / 200;
@@ -38,7 +38,7 @@ public final class LunchScene {
         TimeCounter.init();
         TICK = TickThread.INSTANCE;
     }
-    private LunchScene(String str, int dw, int dh){
+    private ToonMaster(String str, int dw, int dh){
         FRAME = new MyFrame(str, false);
         FRAME.setSize(dw, dh);
         DW = (int) FRAME.DESCTOP_BOUNDS.getWidth() / 400;
@@ -55,18 +55,18 @@ public final class LunchScene {
         TimeCounter.init();
         TICK = TickThread.INSTANCE;
     }
-    public static LunchScene create(String title, boolean isFull){
+    public static ToonMaster create(String title, boolean isFull){
         if(INSTANCE == null)
-            INSTANCE = new LunchScene(title, isFull);
+            INSTANCE = new ToonMaster(title, isFull);
         return INSTANCE;
     }
-    public static LunchScene create(String title, int w, int h){
+    public static ToonMaster create(String title, int w, int h){
         if(INSTANCE != null)
-            INSTANCE = new LunchScene(title, w, h);
+            INSTANCE = new ToonMaster(title, w, h);
         return INSTANCE;
     }
 
-    public static LunchScene getINSTANCE() {
+    public static ToonMaster getINSTANCE() {
         return INSTANCE;
     }
 

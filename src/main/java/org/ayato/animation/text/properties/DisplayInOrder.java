@@ -17,7 +17,7 @@ public class DisplayInOrder implements ITimeCounter, IProperty {
     }
 
     @Override
-    public void setupProperty(Graphics g, Properties<?> properties, Animation<?> animation) {
+    public void setupProperty(Graphics2D o2, Graphics g, Properties<?> properties, Animation<?> animation) {
         if(animation.mes instanceof String){
             Animation<String> newAnimation = (Animation<String>) animation;
             baseText = newAnimation.mes;

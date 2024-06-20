@@ -1,9 +1,5 @@
 package org.ayato.util;
 
-import org.ayato.system.DisplayThread;
-import org.ayato.system.LunchScene;
-
-import java.util.ArrayList;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class TimeCounter implements  Runnable {

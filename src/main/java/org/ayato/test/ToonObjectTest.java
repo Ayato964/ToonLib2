@@ -1,6 +1,6 @@
 package org.ayato.test;
 
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 import org.ayato.component.ToonObject;
 import org.ayato.util.BaseScene;
 import org.ayato.util.Setup;
@@ -37,7 +37,7 @@ public class ToonObjectTest extends BaseScene {
     }
 
     @Override
-    public void createUI(LunchScene scene) {
+    public void createUI(ToonMaster scene) {
 
     }
 }

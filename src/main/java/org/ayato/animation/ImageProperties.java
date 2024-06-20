@@ -5,9 +5,7 @@ import org.ayato.animation.image.ImageMaker;
 import org.ayato.animation.text.properties.Button;
 import org.ayato.animation.text.properties.PropertyAction;
 import org.ayato.component.Transform;
-import org.ayato.component.Vector2D;
-import org.ayato.system.LunchScene;
-import org.ayato.component.Position;
+import org.ayato.system.ToonMaster;
 
 import java.awt.*;
 import java.util.function.BooleanSupplier;
@@ -41,7 +39,7 @@ public final class ImageProperties extends Properties<ImageMaker> {
     }
 
     @Override
-    public void run(LunchScene MASTER, Graphics g, ImageMaker o) {
+    public void run(ToonMaster MASTER, Graphics g, ImageMaker o) {
         g.drawImage(o.get(), 0, 0, transform.getW(), transform.getH(), null);
     }
 }

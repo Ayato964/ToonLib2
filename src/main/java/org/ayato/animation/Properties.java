@@ -34,7 +34,7 @@ public sealed abstract class Properties<T> implements DisplayAnimation<T> permit
                 p.runningProperty(g2, g, this, animation);
             if(isFirst) {
                 for (IProperty p : init_properties)
-                    p.setupProperty(g, this, animation);
+                    p.setupProperty(g2, g, this, animation);
                 isFirst = false;
             }
         }

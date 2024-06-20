@@ -4,7 +4,7 @@ import org.ayato.animation.AnimationState;
 import org.ayato.animation.Properties;
 import org.ayato.animation.Animation;
 import org.ayato.component.Transform;
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 import org.ayato.util.IListenerDecoder;
 import org.ayato.util.KeyInputs;
 import org.ayato.util.MouseInputs;
@@ -41,7 +41,7 @@ public class Button implements IProperty, IListenerDecoder {
     public void overlap() {
         if(frame != null)
             frame.colorState.setState(AnimationState.OVERLAP);
-        LunchScene.getINSTANCE().FRAME.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        ToonMaster.getINSTANCE().FRAME.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
     }
 
     @Override
@@ -53,6 +53,6 @@ public class Button implements IProperty, IListenerDecoder {
     public void unOverlap() {
         if(frame != null)
             frame.colorState.setState(AnimationState.DEFAULT);
-        LunchScene.getINSTANCE().FRAME.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+        ToonMaster.getINSTANCE().FRAME.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
     }
 }

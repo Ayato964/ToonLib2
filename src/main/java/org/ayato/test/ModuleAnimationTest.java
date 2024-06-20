@@ -1,6 +1,6 @@
 package org.ayato.test;
 
-import org.ayato.system.LunchScene;
+import org.ayato.system.ToonMaster;
 import org.ayato.util.BaseScene;
 import org.ayato.util.Setup;
 
@@ -15,7 +15,7 @@ public class ModuleAnimationTest extends BaseScene {
     }
 
     @Override
-    public void createUI(LunchScene scene) {
+    public void createUI(ToonMaster scene) {
         scene.BACKGROUND.mode.setColor(Color.BLACK);
         scene.HANDLER.addInputModule("Input Here!!", s ->{
             scene.addAnimation(s, NewAnimationTest.TEMPLATE.of(0, 100).center());
