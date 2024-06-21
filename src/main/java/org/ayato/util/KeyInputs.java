@@ -24,6 +24,7 @@ public class KeyInputs extends KeyAdapter implements Runnable {
         KEY.put(KeyEvent.VK_DOWN, false);
         KEY.put(KeyEvent.VK_LEFT, false);
         KEY.put(KeyEvent.VK_RIGHT, false);
+        KEY.put(KeyEvent.VK_SPACE, false);
         INSTANCE.ID = -1;
         Thread thread = new Thread(INSTANCE);
         thread.start();
@@ -60,6 +61,9 @@ public class KeyInputs extends KeyAdapter implements Runnable {
                     keyEvent.getKeyCode() == KeyEvent.VK_ENTER))
                 LISTENERS.get(ID).press();
         }
+
+        for(IListenerDecoder ild : LISTENERS)
+            ild.KeyTyped(keyEvent);
 
     }
 
