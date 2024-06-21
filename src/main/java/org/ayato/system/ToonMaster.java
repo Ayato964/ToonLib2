@@ -35,10 +35,34 @@ public final class ToonMaster {
      */
     public  final DisplayThread SCENE;
 
-
+    /**
+     * TICK manages objects that inherit from tne {@code Tick} interface.<br>
+     * @see BaseScene
+     * @see org.ayato.component.ToonObject
+     * @since 2.17.0
+     */
     public  final TickThread TICK;
+    /**
+     * FRAME manages objects that inherit from the {@code JFrame} class.<br>
+     * you can import the {@code MouseListener} class and {@code KeyListener} class here if you needed.<br>
+     * But you can default use {@code MouseInputs} class and {@code KeyInputs} class.<br>
+     * Please see documents it if you want to know it.
+     * @see java.awt.event.MouseListener
+     * @see java.awt.event.KeyListener
+     * @see MouseInputs
+     * @see KeyInputs
+     * @since 0.2.0
+     */
     public  final MyFrame       FRAME;
+    /**
+     * It's a main Graphics. if display your custom object, You can add it here.
+     */
     public final Graphics       GRAPHIC;
+    /**
+     * HANDLER manages customized Animation class.<br>
+     * @see org.ayato.animation.module.InputModule
+     * @since 2.9.35
+     */
     public final AnimationHandler HANDLER;
     public final Background     BACKGROUND;
     public BaseScene MY_SCENE;
