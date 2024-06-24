@@ -18,12 +18,12 @@ public abstract class BaseScene implements Setup, Display, Tick {
         }
     }
 
-    protected final void addObject(ToonObject toonObject){
+    public final void addObject(ToonObject toonObject){
         objects.add(toonObject);
         ToonMaster.getINSTANCE().SCENE.addDisplay(toonObject);
         ToonMaster.getINSTANCE().TICK.add(toonObject);
     }
-    protected final void  deleteObject(ToonObject object){
+    public final void  deleteObject(ToonObject object){
         objects.remove(object);
         ToonMaster.getINSTANCE().SCENE.removeDisplay(object);
         ToonMaster.getINSTANCE().TICK.remove(object);
