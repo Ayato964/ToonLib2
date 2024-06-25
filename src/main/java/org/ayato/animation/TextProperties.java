@@ -120,7 +120,8 @@ public final class TextProperties extends Properties<String>{
     }
 
     @Override
-    public void run(ToonMaster MASTER, Graphics g, String o) {
-        g.drawString(o, 10, g.getFontMetrics().getHeight());
+    public void run(Graphics g, String o, int cX, int cY) {
+        //g.fillRect(0, 0, cX, cY);
+        g.drawString(o, cX, cY + g.getFontMetrics().getHeight());
     }
 }

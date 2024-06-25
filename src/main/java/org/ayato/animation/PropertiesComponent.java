@@ -12,7 +12,7 @@ public class PropertiesComponent {
         return new TextProperties(x, y, w, h);
     }
     public static TextProperties ofText(int x, int y) {
-        return ofText(x, y, 200, 200);
+        return ofText(x, y, 400, 400);
     }
     public static ImageProperties ofImage(){
         return ofImage(0, 0, 0, 0);

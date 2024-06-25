@@ -114,7 +114,7 @@ public class InputModule extends Animation<String> implements KeyListener {
         if (properties != null)
             properties.runProp(g2, g, this);
         if(mes != null)
-            properties.run(MASTER, g2, mes);
+            properties.run(g2, mes, baseGraphics.getWidth() / 2, baseGraphics.getHeight() / 2);
 
         inputCursor.display(g2, mes, properties.transform.position);
         g.drawImage(baseGraphics, properties.transform.getPosition().x(), properties.transform.getPosition().y(),

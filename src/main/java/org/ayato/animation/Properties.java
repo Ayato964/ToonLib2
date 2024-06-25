@@ -10,7 +10,7 @@ import java.util.function.BooleanSupplier;
 import java.util.function.Supplier;
 
 public sealed abstract class Properties<T> implements DisplayAnimation<T> permits TextProperties, ImageProperties{
-    public int rx, ry;
+    public float rx, ry;
     public Transform transform;
     protected final ArrayList<Supplier<IProperty>> properties;
     protected final ArrayList<IProperty> init_properties;

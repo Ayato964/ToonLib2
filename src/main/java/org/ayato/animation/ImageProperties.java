@@ -39,7 +39,7 @@ public final class ImageProperties extends Properties<ImageMaker> {
     }
 
     @Override
-    public void run(ToonMaster MASTER, Graphics g, ImageMaker o) {
+    public void run(Graphics g, ImageMaker o, int cX, int cY) {
         g.drawImage(o.get(), 0, 0, transform.getW(), transform.getH(), null);
     }
 }

@@ -79,7 +79,7 @@ public class NewAnimationTest extends BaseScene {
             scene.addAnimation("DisplayInorder", TEMPLATE.of(150, 100)
                     .displayInOrder(200));
             scene.addAnimation("Rotate", TEMPLATE.of(200, 100)
-                    .rotate(70)
+                    .rotate(30)
             );
 
         }

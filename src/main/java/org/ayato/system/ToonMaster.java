@@ -64,7 +64,14 @@ public final class ToonMaster {
      * @since 2.9.35
      */
     public final AnimationHandler HANDLER;
+    /**
+     * BACKGROUND is the background drawn at the very back of the displayed frame.
+     * @since 0.1.0
+     */
     public final Background     BACKGROUND;
+    /**
+     * MY_SCENE is {@code BaseScene} class drawn now.
+     */
     public BaseScene MY_SCENE;
     public int DW;
     public int DH;
@@ -132,6 +139,12 @@ public final class ToonMaster {
         return INSTANCE;
     }
 
+    /**
+     * {@code ToonMaster} class is singleton pattern.<br>
+     * You can get ToonMaster class if call this method.
+     * @return ToonMaster
+     * @see ToonMaster
+     */
     public static ToonMaster getINSTANCE() {
         return INSTANCE;
     }

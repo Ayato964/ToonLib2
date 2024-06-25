@@ -1,6 +1,7 @@
 package org.ayato.animation;
 
 import org.ayato.animation.text.properties.IProperty;
+import org.ayato.component.Vector2D;
 import org.ayato.system.BaseAbstractObject;
 import org.ayato.system.ToonMaster;
 
@@ -37,7 +38,8 @@ public class Animation<T> extends BaseAbstractObject {
             if(mes != null)
                 runGraphics(g2);
 
-            g.drawImage(baseGraphics, properties.transform.getPosition().x(), properties.transform.getPosition().y(),
+            Vector2D vec = properties.transform.getPosition();
+            g.drawImage(baseGraphics, vec.x() - baseGraphics.getWidth() / 2, vec.y() - baseGraphics.getHeight() / 2,
                 properties.transform.getW(), properties.transform.getH(), null);
 
             Color now = g.getColor();
@@ -48,7 +50,7 @@ public class Animation<T> extends BaseAbstractObject {
 
     }
     protected void runGraphics(Graphics2D g2){
-        properties.run(MASTER, g2, mes);
+        properties.run(g2, mes, baseGraphics.getWidth() / 2, baseGraphics.getHeight() / 2);
     }
     public <A extends IProperty> A getPropertyClass(Class<A> cls){
         A a = null;

@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class MoveTo extends TimeConverter{
     private final int x, y;
-    private int dx, dy, currentX, currentY;
+    private float dx, dy, currentX, currentY;
     private final VelocityFormat format;
     public MoveTo(int x, int y, long maxTime, VelocityFormat format1) {
         super(maxTime);

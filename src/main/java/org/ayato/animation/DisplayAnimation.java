@@ -5,5 +5,5 @@ import org.ayato.system.ToonMaster;
 import java.awt.*;
 
 public interface DisplayAnimation<T> {
-    abstract void run(ToonMaster MASTER, Graphics g, T o);
+    abstract void run(Graphics g, T o, int centerX, int centerY);
 }
