@@ -8,6 +8,7 @@ public final class TickThread implements Runnable{
     public static final TickThread INSTANCE = new TickThread();
     private boolean isRunning = true;
     private final CopyOnWriteArrayList<Tick> ticks = new CopyOnWriteArrayList<>();
+    public static int RATE = 1;
     private TickThread(){
         Thread n = new Thread(this);
         n.start();
@@ -39,7 +40,7 @@ public final class TickThread implements Runnable{
                     tick.tick();
 
             try {
-                Thread.sleep(1);
+                Thread.sleep(RATE);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
