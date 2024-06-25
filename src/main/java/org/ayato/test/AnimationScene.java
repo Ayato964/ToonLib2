@@ -45,6 +45,12 @@ public class AnimationScene extends BaseScene {
                 .parent(position));
         scene.addAnimation("ParentPosition2", NewAnimationTest.TEMPLATE.of(10, 150)
                 .parent(position));
+        scene.addAnimation("RotateTest", NewAnimationTest.TEMPLATE.of(300, 100)
+                .rotateTo(30, 200)
+                .pushMatrix()
+                .moveTo(290, 100, 150, MoveTo.VelocityFormat.CONSTANT)
+                .endMatrix()
+        );
     }
 
     @Override

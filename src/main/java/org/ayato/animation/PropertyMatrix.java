@@ -60,6 +60,10 @@ public class PropertyMatrix<V extends Properties<?>> implements IProperty {
         properties.add(()->new Rotate(rad));
         return this;
     }
+    public PropertyMatrix<V> rotateTo(int r, long time){
+        properties.add(()-> new RotateTo(r, time));
+        return this;
+    }
 
     public PropertyMatrix<V> sleep(long time){
         properties.add(()->new Sleep(time));

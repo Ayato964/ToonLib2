@@ -81,6 +81,9 @@ public class NewAnimationTest extends BaseScene {
             scene.addAnimation("Rotate", TEMPLATE.of(200, 100)
                     .rotate(30)
             );
+            scene.addAnimation("RotateTo", TEMPLATE.of(250, 100)
+                    .rotateTo(40, 200)
+            );
 
         }
     }

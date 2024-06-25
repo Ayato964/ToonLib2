@@ -20,8 +20,8 @@ public class MoveTo extends TimeConverter{
         super.setupProperty(o2, g, properties, animation);
         dx = properties.transform.position.getNormalX();
         dy = properties.transform.position.getNormalY();
-        currentX = Math.abs(x - dx);
-        currentY = Math.abs(y - dy);
+        currentX = x - dx;
+        currentY = y - dy;
     }
 
     @Override

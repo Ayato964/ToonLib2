@@ -118,6 +118,10 @@ public final class TextProperties extends Properties<String>{
         properties.add(()-> new Rotate(r));
         return this;
     }
+    public TextProperties rotateTo(int r, long time){
+        properties.add(()-> new RotateTo(r, time));
+        return this;
+    }
 
     @Override
     public void run(Graphics g, String o, int cX, int cY) {
