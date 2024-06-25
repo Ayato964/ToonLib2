@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 public abstract class ToonObject implements Tick, Display {
-    private final Transform transform;
+    protected final Transform transform;
     private final long serial = new Random().nextLong(0, 100000);
     private final BufferedImage paint;
     private final int masterW = 1000, masterH = 1000;
@@ -24,7 +24,7 @@ public abstract class ToonObject implements Tick, Display {
         objectBackgroundClear(g2);
 
         g2.rotate(transform.rotate.getRadian());
-        display(g2, masterW / 2, masterH / 2);
+        display(g2, masterW / 2, masterH / 2, masterW, masterH);
         Vector2D pos = transform.getPosition();
         g.drawImage(paint, pos.x(), pos.y(), transform.getW(), transform.getH(), null);
 
@@ -45,6 +45,6 @@ public abstract class ToonObject implements Tick, Display {
         return serial;
     }
 
-    protected abstract void display(Graphics2D g, int centerX, int centerY);
+    protected abstract void display(Graphics2D g, int centerX, int centerY, int masterW, int masterH);
     protected abstract void tick(Transform transform);
 }

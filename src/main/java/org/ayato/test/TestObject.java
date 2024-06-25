@@ -18,7 +18,7 @@ public class TestObject extends ToonObject {
     }
 
     @Override
-    protected void display(Graphics2D g, int centerX, int centerY) {
+    protected void display(Graphics2D g, int centerX, int centerY, int masterW, int masterH) {
         g.setColor(Color.WHITE);
 
         g.fillRect(centerX - 100, centerY - 100, 200, 200);
