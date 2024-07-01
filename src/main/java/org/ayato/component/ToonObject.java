@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 public abstract class ToonObject implements Tick, Display {
-    protected final Transform transform;
+    public final Transform transform;
     private final long serial = new Random().nextLong(0, 100000);
     private final BufferedImage paint;
     private final int masterW = 1000, masterH = 1000;
