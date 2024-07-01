@@ -2,6 +2,8 @@ package org.ayato.test;
 
 import org.ayato.animation.*;
 import org.ayato.animation.text.properties.CheckBox;
+import org.ayato.system.BaseBackground;
+import org.ayato.system.Layer;
 import org.ayato.system.ToonMaster;
 import org.ayato.util.BaseScene;
 import org.ayato.util.PropertiesSupplier;
@@ -32,8 +34,15 @@ public class NewAnimationTest extends BaseScene {
 
     @Override
     public void createUI(ToonMaster scene) {
-        scene.BACKGROUND.mode.setColor(Color.BLACK);
-
+        scene.setBackground(new BaseBackground() {
+            @Override
+            public void setLayer(ArrayList<Layer> layers) {
+                layers.add((g, width, height) -> {
+                    g.setColor(Color.BLACK);
+                    g.fillRect(0, 0, width, height);
+                });
+            }
+        });
     }
 
     @Override

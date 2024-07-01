@@ -23,7 +23,6 @@ public class ImageTestScene extends BaseScene {
 
     @Override
     public void createUI(ToonMaster scene) {
-        scene.BACKGROUND.mode.setColor(Color.BLACK);
         scene.addAnimation(new ImageMaker("test", "help"), PropertiesComponent.ofImage(20, 20, 50, 50)
                 .button(action->{
                     System.out.println("He llo");

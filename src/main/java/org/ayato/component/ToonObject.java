@@ -32,7 +32,6 @@ public abstract class ToonObject implements Tick, Display {
     private void objectBackgroundClear(Graphics2D g2){
         g2.setColor(new Color(0, 0, 0, 0));
         g2.fillRect(0, 0, masterW, masterH);
-
     }
 
     @Override

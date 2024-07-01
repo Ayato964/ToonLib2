@@ -86,7 +86,7 @@ public final class ToonMaster {
         FONT_BASE_SIZE = (DW * 5 + DH * 5) / 2;
 
         GRAPHIC = FRAME.g;
-        BACKGROUND = new Background(this);
+        BACKGROUND = Background.getINSTANCE();
         SCENE = DisplayThread.runThread(null, this);
         HANDLER = new AnimationHandler(this);
         KeyInputs.init(this);
@@ -103,7 +103,7 @@ public final class ToonMaster {
 
 
         GRAPHIC = FRAME.g;
-        BACKGROUND = new Background(this);
+        BACKGROUND = Background.getINSTANCE();
         SCENE = DisplayThread.runThread(null, this);
         HANDLER = new AnimationHandler(this);
         KeyInputs.init(this);
@@ -237,6 +237,9 @@ public final class ToonMaster {
                     correct.add((Display) g);
         }
         return correct;
+    }
+    public void setBackground(BaseBackground background){
+        BACKGROUND.setBackground(background);
     }
 
 

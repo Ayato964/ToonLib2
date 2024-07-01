@@ -20,7 +20,6 @@ public class AnimationScene extends BaseScene {
 
     @Override
     public void createUI(ToonMaster scene) {
-        scene.BACKGROUND.mode.setColor(Color.BLACK);
         scene.addAnimation("Move", NewAnimationTest.TEMPLATE.of(10, 100)
                 .pushMatrix()
                     .fadeIn(300)

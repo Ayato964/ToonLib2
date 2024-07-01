@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.19.95&#10;&#10;System&#10;- Position.java&#10; Positionの座標がfloatで管理されるようになった。&#10; &#10;New Property&#10;- Rotate.java&#10; 指定した角度までアニメーションオブジェクトを瞬時に回転させる">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/RotateTo.java" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.19.81">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/BaseBackground.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/Layer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/MoveTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/MoveTo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/PropertyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/PropertyMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/animation/TextProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/component/ToonObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/component/ToonObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/Background.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/ToonMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/ToonMaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTestScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTestScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/ModuleAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/ModuleAnimationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +65,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -409,30 +413,6 @@
       <option name="project" value="LOCAL" />
       <updated>1712905029517</updated>
     </task>
-    <task id="LOCAL-00025" summary="Ver.2.8.7&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;&#10; AnimationList.javaを削除">
-      <option name="closed" value="true" />
-      <created>1713554559780</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1713554559780</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Ver.2.8.13&#10;&#10;以下のコンポーネントを削除&#10;AbstractAnimations.java&#10;AnimationComponent.java&#10;AnimationList.java">
-      <option name="closed" value="true" />
-      <created>1713593868512</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1713593868512</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Ver.2.9.0&#10;&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;AnimationList.javaを削除&#10;Fontのサイズを相対的にした&#10;&#10;以下のコンポーネントを削除&#10;AbstractAnimations.java&#10;AnimationComponent.java&#10;AnimationList.java">
-      <option name="closed" value="true" />
-      <created>1713596968991</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1713596968991</updated>
-    </task>
     <task id="LOCAL-00028" summary="Ver.2.9.2">
       <option name="closed" value="true" />
       <created>1713597085534</created>
@@ -617,15 +597,39 @@
       <option name="project" value="LOCAL" />
       <updated>1718943959736</updated>
     </task>
-    <task id="LOCAL-00051" summary="Ver.2.19.95&#10;&#10;System&#10;- Position.java&#10; Positionの座標がfloatで管理されるようになった。&#10; &#10;New Property&#10;- Rotate.java&#10; 指定した角度までアニメーションオブジェクトを瞬時に回転させる">
+    <task id="LOCAL-00051" summary="Ver.2.19.71&#10;&#10;IListenerDecoder.java&#10;- キーがタイプされたときに呼び出される　keyTypedをdefault属性で追加">
       <option name="closed" value="true" />
-      <created>1719332454858</created>
+      <created>1718949359769</created>
       <option name="number" value="00051" />
       <option name="presentableId" value="LOCAL-00051" />
       <option name="project" value="LOCAL" />
-      <updated>1719332454858</updated>
+      <updated>1718949359769</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Ver.2.19.73&#10;&#10;System&#10;- BaseScene.addObject をpublicにした&#10;- BaseScene.deleteObject をpublicにした">
+      <option name="closed" value="true" />
+      <created>1719197899355</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1719197899355</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Ver.2.19.74&#10;&#10;System&#10;- BaseScene.addObject をpublicにした&#10;- BaseScene.deleteObject をpublicにした">
+      <option name="closed" value="true" />
+      <created>1719198003970</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1719198003970</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Ver.2.19.78&#10;&#10;System&#10;- ToonObject.transformをprotectedにした">
+      <option name="closed" value="true" />
+      <created>1719294718318</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1719294718318</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -646,9 +650,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ver.2.9.0&#10;&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;AnimationList.javaを削除&#10;Fontのサイズを相対的にした&#10;&#10;以下のコンポーネントを削除&#10;AbstractAnimations.java&#10;AnimationComponent.java&#10;AnimationList.java" />
-    <MESSAGE value="Ver.2.9.2" />
-    <MESSAGE value="Ver.2.9.13&#10;&#10;以下のコンポーネントを一時的に削除&#10;AnimationSequentialOrder.java&#10;FadeIn.java&#10;Order.java&#10;TimerPropertyForText.java" />
     <MESSAGE value="Ver.2.9.13&#10;&#10;Properties.java&#10;* 表示位置をPosition.javaで管理するようになった。" />
     <MESSAGE value="Ver.2.9.21&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる" />
     <MESSAGE value="Ver.2.9.46&#10;&#10;Position.java&#10;x, yの変数をIntegerSupplierからintに変更" />
@@ -670,7 +671,10 @@
     <MESSAGE value="Ver.2.18.10&#10;&#10;System&#10;- IBaseScene.javaから　BaseSceneに名前を変更" />
     <MESSAGE value="Ver.2.18.20&#10;&#10;ToonObject.java&#10;- Transform.java&#10;  座標や大きさ、角度を計算するクラス&#10;- Rotate.java&#10;  角度を計算するクラス&#10;- Scale.java &#10;  スケールを計算するクラス&#10;- Vector2D.java&#10;  2次元の値を格納する" />
     <MESSAGE value="Ver.2.19.67" />
-    <MESSAGE value="Ver.2.19.95&#10;&#10;System&#10;- Position.java&#10; Positionの座標がfloatで管理されるようになった。&#10; &#10;New Property&#10;- Rotate.java&#10; 指定した角度までアニメーションオブジェクトを瞬時に回転させる" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.19.95&#10;&#10;System&#10;- Position.java&#10; Positionの座標がfloatで管理されるようになった。&#10; &#10;New Property&#10;- Rotate.java&#10; 指定した角度までアニメーションオブジェクトを瞬時に回転させる" />
+    <MESSAGE value="Ver.2.19.71&#10;&#10;IListenerDecoder.java&#10;- キーがタイプされたときに呼び出される　keyTypedをdefault属性で追加" />
+    <MESSAGE value="Ver.2.19.73&#10;&#10;System&#10;- BaseScene.addObject をpublicにした&#10;- BaseScene.deleteObject をpublicにした" />
+    <MESSAGE value="Ver.2.19.74&#10;&#10;System&#10;- BaseScene.addObject をpublicにした&#10;- BaseScene.deleteObject をpublicにした" />
+    <MESSAGE value="Ver.2.19.78&#10;&#10;System&#10;- ToonObject.transformをprotectedにした" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.19.78&#10;&#10;System&#10;- ToonObject.transformをprotectedにした" />
   </component>
 </project>

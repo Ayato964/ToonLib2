@@ -16,10 +16,10 @@ public class ModuleAnimationTest extends BaseScene {
 
     @Override
     public void createUI(ToonMaster scene) {
-        scene.BACKGROUND.mode.setColor(Color.BLACK);
         scene.HANDLER.addInputModule("Input Here!!", s ->{
             scene.addAnimation(s, NewAnimationTest.TEMPLATE.of(0, 100).center());
         }, 70, 20, NewAnimationTest.TEMPLATE.of(10, 10));
+
     }
 
     @Override
