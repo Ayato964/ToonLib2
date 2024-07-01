@@ -38,4 +38,10 @@ public class Transform {
         return x >= position.getX() && x  <= position.getX() + scale.getW()
                 && y >= position.getY() && y <= position.getY() + scale.getH();
     }
+    public boolean isCollision(Transform transform){
+        return position.getX() < transform.position.getX() + transform.scale.getW() &&
+                position.getX() + getW() > transform.position.getX() &&
+                position.getY() < transform.position.getY() + transform.getH()
+                && position.getY() + getH() > transform.position.getY();
+    }
 }

@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'org.ayato'
-version '2.20.0'
+version '2.20.4'
 
 repositories {
     mavenCentral()

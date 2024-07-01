@@ -33,5 +33,8 @@ public abstract class BaseScene implements Setup, Display, Tick {
         return serial;
     }
 
+    public CopyOnWriteArrayList<ToonObject> getObjects() {
+        return objects;
+    }
     protected void setToonObjects(CopyOnWriteArrayList<ToonObject> to) {}
 }

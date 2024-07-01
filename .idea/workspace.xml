@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.19.81">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/BaseBackground.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/Layer.java" afterDir="false" />
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.20.0&#10;&#10;Animation&#10;- Animation.java&#10;  アニメーションで生成されるオブジェクトが、傾きを考慮す津ようになった。&#10;Background.java&#10;  - 背景描画システムをリニューアル&#10;BaseBackground.java&#10;  - Sceneの背景を作成する抽象クラス&#10;Layer.java&#10;  - 背景を実際に描画するインターフェイス">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/component/ToonObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/component/ToonObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/Background.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/system/ToonMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/system/ToonMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/AnimationScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTestScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/ImageTestScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/ModuleAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/ModuleAnimationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/NewAnimationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/TestObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/component/Transform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/component/Transform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/util/BaseScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/util/BaseScene.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -413,22 +405,6 @@
       <option name="project" value="LOCAL" />
       <updated>1712905029517</updated>
     </task>
-    <task id="LOCAL-00028" summary="Ver.2.9.2">
-      <option name="closed" value="true" />
-      <created>1713597085534</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1713597085534</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Ver.2.9.13&#10;&#10;以下のコンポーネントを一時的に削除&#10;AnimationSequentialOrder.java&#10;FadeIn.java&#10;Order.java&#10;TimerPropertyForText.java">
-      <option name="closed" value="true" />
-      <created>1713611740658</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1713611740658</updated>
-    </task>
     <task id="LOCAL-00030" summary="Ver.2.9.13&#10;&#10;Properties.java&#10;* 表示位置をPosition.javaで管理するようになった。">
       <option name="closed" value="true" />
       <created>1713612909878</created>
@@ -629,7 +605,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719294718318</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Ver.2.19.113&#10;&#10;Background.java&#10;  - 背景描画システムをリニューアル&#10;BaseBackground.java&#10;  - Sceneの背景を作成する抽象クラス&#10;Layer.java&#10;  - 背景を実際に描画するインターフェイス">
+      <option name="closed" value="true" />
+      <created>1719801854091</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1719801854091</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Ver.2.20.0&#10;&#10;Animation&#10;- Animation.java&#10;  アニメーションで生成されるオブジェクトが、傾きを考慮す津ようになった。&#10;Background.java&#10;  - 背景描画システムをリニューアル&#10;BaseBackground.java&#10;  - Sceneの背景を作成する抽象クラス&#10;Layer.java&#10;  - 背景を実際に描画するインターフェイス">
+      <option name="closed" value="true" />
+      <created>1719801954653</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1719801954653</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -650,8 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ver.2.9.13&#10;&#10;Properties.java&#10;* 表示位置をPosition.javaで管理するようになった。" />
-    <MESSAGE value="Ver.2.9.21&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる" />
     <MESSAGE value="Ver.2.9.46&#10;&#10;Position.java&#10;x, yの変数をIntegerSupplierからintに変更" />
     <MESSAGE value="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。" />
     <MESSAGE value="Ver.2.10.7" />
@@ -675,6 +665,8 @@
     <MESSAGE value="Ver.2.19.73&#10;&#10;System&#10;- BaseScene.addObject をpublicにした&#10;- BaseScene.deleteObject をpublicにした" />
     <MESSAGE value="Ver.2.19.74&#10;&#10;System&#10;- BaseScene.addObject をpublicにした&#10;- BaseScene.deleteObject をpublicにした" />
     <MESSAGE value="Ver.2.19.78&#10;&#10;System&#10;- ToonObject.transformをprotectedにした" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.19.78&#10;&#10;System&#10;- ToonObject.transformをprotectedにした" />
+    <MESSAGE value="Ver.2.19.113&#10;&#10;Background.java&#10;  - 背景描画システムをリニューアル&#10;BaseBackground.java&#10;  - Sceneの背景を作成する抽象クラス&#10;Layer.java&#10;  - 背景を実際に描画するインターフェイス" />
+    <MESSAGE value="Ver.2.20.0&#10;&#10;Animation&#10;- Animation.java&#10;  アニメーションで生成されるオブジェクトが、傾きを考慮す津ようになった。&#10;Background.java&#10;  - 背景描画システムをリニューアル&#10;BaseBackground.java&#10;  - Sceneの背景を作成する抽象クラス&#10;Layer.java&#10;  - 背景を実際に描画するインターフェイス" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.20.0&#10;&#10;Animation&#10;- Animation.java&#10;  アニメーションで生成されるオブジェクトが、傾きを考慮す津ようになった。&#10;Background.java&#10;  - 背景描画システムをリニューアル&#10;BaseBackground.java&#10;  - Sceneの背景を作成する抽象クラス&#10;Layer.java&#10;  - 背景を実際に描画するインターフェイス" />
   </component>
 </project>
