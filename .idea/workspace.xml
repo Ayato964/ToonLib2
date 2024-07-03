@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.20.4&#10;&#10;Transform.java&#10;  -Transform同士での衝突を判定できるようになった。">
+    <list default="true" id="338ae8a0-947a-45d0-a8e7-01ac8aaae771" name="変更" comment="Ver.2.19.95&#10;&#10;System&#10;- Position.java&#10; Positionの座標がfloatで管理されるようになった。&#10; &#10;New Property&#10;- Rotate.java&#10; 指定した角度までアニメーションオブジェクトを瞬時に回転させる">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ayato/test/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ayato/main/TestMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +57,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -403,6 +405,54 @@
       <option name="project" value="LOCAL" />
       <updated>1712905029517</updated>
     </task>
+    <task id="LOCAL-00025" summary="Ver.2.8.7&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;&#10; AnimationList.javaを削除">
+      <option name="closed" value="true" />
+      <created>1713554559780</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1713554559780</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Ver.2.8.13&#10;&#10;以下のコンポーネントを削除&#10;AbstractAnimations.java&#10;AnimationComponent.java&#10;AnimationList.java">
+      <option name="closed" value="true" />
+      <created>1713593868512</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1713593868512</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Ver.2.9.0&#10;&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;AnimationList.javaを削除&#10;Fontのサイズを相対的にした&#10;&#10;以下のコンポーネントを削除&#10;AbstractAnimations.java&#10;AnimationComponent.java&#10;AnimationList.java">
+      <option name="closed" value="true" />
+      <created>1713596968991</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1713596968991</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Ver.2.9.2">
+      <option name="closed" value="true" />
+      <created>1713597085534</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1713597085534</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Ver.2.9.13&#10;&#10;以下のコンポーネントを一時的に削除&#10;AnimationSequentialOrder.java&#10;FadeIn.java&#10;Order.java&#10;TimerPropertyForText.java">
+      <option name="closed" value="true" />
+      <created>1713611740658</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1713611740658</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Ver.2.9.13&#10;&#10;Properties.java&#10;* 表示位置をPosition.javaで管理するようになった。">
+      <option name="closed" value="true" />
+      <created>1713612909878</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1713612909878</updated>
+    </task>
     <task id="LOCAL-00031" summary="Ver.2.9.21&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる">
       <option name="closed" value="true" />
       <created>1713621342050</created>
@@ -563,63 +613,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718943959736</updated>
     </task>
-    <task id="LOCAL-00051" summary="Ver.2.19.71&#10;&#10;IListenerDecoder.java&#10;- キーがタイプされたときに呼び出される　keyTypedをdefault属性で追加">
+    <task id="LOCAL-00051" summary="Ver.2.19.95&#10;&#10;System&#10;- Position.java&#10; Positionの座標がfloatで管理されるようになった。&#10; &#10;New Property&#10;- Rotate.java&#10; 指定した角度までアニメーションオブジェクトを瞬時に回転させる">
       <option name="closed" value="true" />
-      <created>1718949359769</created>
+      <created>1719332454858</created>
       <option name="number" value="00051" />
       <option name="presentableId" value="LOCAL-00051" />
       <option name="project" value="LOCAL" />
-      <updated>1718949359769</updated>
+      <updated>1719332454858</updated>
     </task>
-    <task id="LOCAL-00052" summary="Ver.2.19.73&#10;&#10;System&#10;- BaseScene.addObject をpublicにした&#10;- BaseScene.deleteObject をpublicにした">
-      <option name="closed" value="true" />
-      <created>1719197899355</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1719197899355</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Ver.2.19.74&#10;&#10;System&#10;- BaseScene.addObject をpublicにした&#10;- BaseScene.deleteObject をpublicにした">
-      <option name="closed" value="true" />
-      <created>1719198003970</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1719198003970</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Ver.2.19.78&#10;&#10;System&#10;- ToonObject.transformをprotectedにした">
-      <option name="closed" value="true" />
-      <created>1719294718318</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1719294718318</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Ver.2.19.113&#10;&#10;Background.java&#10;  - 背景描画システムをリニューアル&#10;BaseBackground.java&#10;  - Sceneの背景を作成する抽象クラス&#10;Layer.java&#10;  - 背景を実際に描画するインターフェイス">
-      <option name="closed" value="true" />
-      <created>1719801854091</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1719801854091</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Ver.2.20.0&#10;&#10;Animation&#10;- Animation.java&#10;  アニメーションで生成されるオブジェクトが、傾きを考慮す津ようになった。&#10;Background.java&#10;  - 背景描画システムをリニューアル&#10;BaseBackground.java&#10;  - Sceneの背景を作成する抽象クラス&#10;Layer.java&#10;  - 背景を実際に描画するインターフェイス">
-      <option name="closed" value="true" />
-      <created>1719801954653</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1719801954653</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Ver.2.20.4&#10;&#10;Transform.java&#10;  -Transform同士での衝突を判定できるようになった。">
-      <option name="closed" value="true" />
-      <created>1719818314058</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1719818314058</updated>
-    </task>
-    <option name="localTasksCounter" value="58" />
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -640,6 +642,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ver.2.9.0&#10;&#10;&#10;システム&#10;Button.java&#10;＊Windowsでキー操作ができなかった不具合を修正&#10;AnimationList.javaを削除&#10;Fontのサイズを相対的にした&#10;&#10;以下のコンポーネントを削除&#10;AbstractAnimations.java&#10;AnimationComponent.java&#10;AnimationList.java" />
+    <MESSAGE value="Ver.2.9.2" />
+    <MESSAGE value="Ver.2.9.13&#10;&#10;以下のコンポーネントを一時的に削除&#10;AnimationSequentialOrder.java&#10;FadeIn.java&#10;Order.java&#10;TimerPropertyForText.java" />
+    <MESSAGE value="Ver.2.9.13&#10;&#10;Properties.java&#10;* 表示位置をPosition.javaで管理するようになった。" />
+    <MESSAGE value="Ver.2.9.21&#10;&#10;AnimationGroup.java&#10;複数のアニメーションオブジェクトを一括で操ることができる" />
+    <MESSAGE value="Ver.2.9.46&#10;&#10;Position.java&#10;x, yの変数をIntegerSupplierからintに変更" />
     <MESSAGE value="Ver.2.9.49&#10;&#10;&#10;Util&#10;&#10;RegistoryList.java, RegistoryObject.java&#10;Supplierの情報をIDといっしょに管理。" />
     <MESSAGE value="Ver.2.10.7" />
     <MESSAGE value="Ver.2.13.16&#10;&#10;&#10;util&#10; * LastRunningProperty.java&#10;   プロパティの実行順を静的に最後にしたい場合のインタフェース&#10;&#10;Properties&#10; * FadeIn.java&#10;   文字列が時間に応じてフェードインしてくれる。&#10;&#10;TimeConverter.java&#10;* 時間軸から任意の数値に変換するクラス" />
@@ -658,13 +666,7 @@
     <MESSAGE value="Ver.2.18.10&#10;&#10;System&#10;- IBaseScene.javaから　BaseSceneに名前を変更" />
     <MESSAGE value="Ver.2.18.20&#10;&#10;ToonObject.java&#10;- Transform.java&#10;  座標や大きさ、角度を計算するクラス&#10;- Rotate.java&#10;  角度を計算するクラス&#10;- Scale.java &#10;  スケールを計算するクラス&#10;- Vector2D.java&#10;  2次元の値を格納する" />
     <MESSAGE value="Ver.2.19.67" />
-    <MESSAGE value="Ver.2.19.71&#10;&#10;IListenerDecoder.java&#10;- キーがタイプされたときに呼び出される　keyTypedをdefault属性で追加" />
-    <MESSAGE value="Ver.2.19.73&#10;&#10;System&#10;- BaseScene.addObject をpublicにした&#10;- BaseScene.deleteObject をpublicにした" />
-    <MESSAGE value="Ver.2.19.74&#10;&#10;System&#10;- BaseScene.addObject をpublicにした&#10;- BaseScene.deleteObject をpublicにした" />
-    <MESSAGE value="Ver.2.19.78&#10;&#10;System&#10;- ToonObject.transformをprotectedにした" />
-    <MESSAGE value="Ver.2.19.113&#10;&#10;Background.java&#10;  - 背景描画システムをリニューアル&#10;BaseBackground.java&#10;  - Sceneの背景を作成する抽象クラス&#10;Layer.java&#10;  - 背景を実際に描画するインターフェイス" />
-    <MESSAGE value="Ver.2.20.0&#10;&#10;Animation&#10;- Animation.java&#10;  アニメーションで生成されるオブジェクトが、傾きを考慮す津ようになった。&#10;Background.java&#10;  - 背景描画システムをリニューアル&#10;BaseBackground.java&#10;  - Sceneの背景を作成する抽象クラス&#10;Layer.java&#10;  - 背景を実際に描画するインターフェイス" />
-    <MESSAGE value="Ver.2.20.4&#10;&#10;Transform.java&#10;  -Transform同士での衝突を判定できるようになった。" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.20.4&#10;&#10;Transform.java&#10;  -Transform同士での衝突を判定できるようになった。" />
+    <MESSAGE value="Ver.2.19.95&#10;&#10;System&#10;- Position.java&#10; Positionの座標がfloatで管理されるようになった。&#10; &#10;New Property&#10;- Rotate.java&#10; 指定した角度までアニメーションオブジェクトを瞬時に回転させる" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ver.2.19.95&#10;&#10;System&#10;- Position.java&#10; Positionの座標がfloatで管理されるようになった。&#10; &#10;New Property&#10;- Rotate.java&#10; 指定した角度までアニメーションオブジェクトを瞬時に回転させる" />
   </component>
 </project>
