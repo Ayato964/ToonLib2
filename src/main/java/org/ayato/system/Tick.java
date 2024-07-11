@@ -2,7 +2,7 @@ package org.ayato.system;
 
 import java.util.ArrayList;
 
-public interface Tick {
+public interface Tick extends Serial, ComponentTag, ComponentGroup {
     void tick();
 
     default void runTickClass(TickThread disThread){
@@ -14,5 +14,6 @@ public interface Tick {
         }
     }
     default void tickClass(ArrayList<Tick> ticks){}
+    @Override
     long getSerialID();
 }

@@ -3,10 +3,13 @@ package org.ayato.animation.text.properties;
 import org.ayato.animation.Animation;
 import org.ayato.animation.AnimationState;
 import org.ayato.animation.Properties;
+import org.ayato.system.ToonMaster;
+import org.ayato.util.ArrayUtils;
 import org.ayato.util.Display;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 
 public class ChooseBox extends CheckBox{
@@ -48,7 +51,7 @@ public class ChooseBox extends CheckBox{
     }
 
     private void unCheckOtherChooseBox() {
-        ArrayList<Display> displays = animation.MASTER.getComponentsGroupID(groupID);
+        ArrayList<Display> displays = ArrayUtils.searchObjectForGroup(ToonMaster.getINSTANCE().SCENE.getDisplay(), groupID);
         for(Display d : displays){
             if(d instanceof Animation<?> animation1){
                 if(!animation1.equals(animation)) {

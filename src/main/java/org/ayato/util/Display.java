@@ -1,11 +1,14 @@
 package org.ayato.util;
 
+import org.ayato.system.ComponentGroup;
+import org.ayato.system.ComponentTag;
 import org.ayato.system.DisplayThread;
+import org.ayato.system.Serial;
 
 import java.awt.*;
 import java.util.ArrayList;
 
-public interface Display{
+public interface Display extends Serial, ComponentTag, ComponentGroup {
     abstract void display(Graphics g);
 
     default void runDisplayClass(DisplayThread disThread){
@@ -17,5 +20,4 @@ public interface Display{
         }
     }
     default void displayClass(ArrayList<Display> display){}
-    abstract long getSerialID();
 }

@@ -5,8 +5,10 @@ import org.ayato.component.Scale;
 import org.ayato.component.ToonObject;
 import org.ayato.component.Transform;
 import org.ayato.component.Position;
+import org.ayato.system.ComponentGroup;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public class TestObject extends ToonObject {
     protected TestObject(int x, int y) {

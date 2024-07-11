@@ -1,17 +1,22 @@
 package org.ayato.component;
 
+import org.ayato.system.ComponentGroup;
+import org.ayato.system.ComponentTag;
 import org.ayato.system.Tick;
 import org.ayato.util.Display;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 import java.util.Random;
 
-public abstract class ToonObject implements Tick, Display {
+public abstract class ToonObject implements Tick, Display, ComponentGroup, ComponentTag {
     public final Transform transform;
     private final long serial = new Random().nextLong(0, 100000);
     private final BufferedImage paint;
     private final int masterW = 1000, masterH = 1000;
+    private String group;
+    private ArrayList<String> tags;
     protected ToonObject(Transform transform) {
         this.transform = transform;
         paint = new BufferedImage(masterW, masterH, BufferedImage.TYPE_INT_ARGB);
@@ -42,6 +47,22 @@ public abstract class ToonObject implements Tick, Display {
     @Override
     public long getSerialID() {
         return serial;
+    }
+
+    @Override
+    public ComponentGroup setGroup(String str) {
+        group = str;
+        return this;
+    }
+
+    @Override
+    public String getGroup() {
+        return group;
+    }
+
+    @Override
+    public ArrayList<String> getTagsList() {
+        return tags;
     }
 
     protected abstract void display(Graphics2D g, int centerX, int centerY, int masterW, int masterH);

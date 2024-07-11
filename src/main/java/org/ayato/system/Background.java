@@ -10,7 +10,8 @@ final class Background implements Display {
     private final long serial = new Random().nextLong(0, 1000000);
     private static final Background INSTANCE = new Background();
     private BaseBackground background;
-
+    private String groupID;
+    private ArrayList<String> tags = new ArrayList<>();
     private Background(){
         /*
         background = new BaseBackground() {
@@ -43,5 +44,21 @@ final class Background implements Display {
     @Override
     public long getSerialID() {
         return serial;
+    }
+
+    @Override
+    public ComponentGroup setGroup(String str) {
+        groupID = str;
+        return this;
+    }
+
+    @Override
+    public String getGroup() {
+        return groupID;
+    }
+
+    @Override
+    public ArrayList<String> getTagsList() {
+        return tags;
     }
 }

@@ -208,36 +208,6 @@ public final class ToonMaster {
     public Font getMakeFont(String fontName, int style, float size){
         return new Font(fontName, style, (int) (FONT_BASE_SIZE * size));
     }
-    public <T> ArrayList<T> getComponentsClass(Class<T> serch){
-        ArrayList<T> arrays = new ArrayList<>();
-        CopyOnWriteArrayList<Display> dis = SCENE.getDisplay();
-        for(Display d : dis){
-            if(serch.isInstance(d)){
-                arrays.add((T) d);
-            }
-        }
-        return arrays;
-    }
-    public ArrayList<Display> getComponentsTag(String... tag){
-        ArrayList<Display> correct = new ArrayList<>();
-        ArrayList<ComponentTag> tags = SCENE.getTagComponents();
-        for(ComponentTag t : tags){
-            if(t.isFindTags(tag)){
-                correct.add((Display) t);
-            }
-        }
-        return correct;
-    }
-    public ArrayList<Display> getComponentsGroupID(String id){
-        ArrayList<Display> correct = new ArrayList<>();
-        ArrayList<ComponentGroup> groups = SCENE.getGroupComponent();
-        for(ComponentGroup g : groups){
-            if(g.getGroup() != null)
-                if(g.isGroup(id))
-                    correct.add((Display) g);
-        }
-        return correct;
-    }
     public void setBackground(BaseBackground background){
         BACKGROUND.setBackground(background);
     }
