@@ -29,7 +29,8 @@ public class NewAnimationTest extends BaseScene {
     private int count = 0;
     @Override
     public void display(Graphics g) {
-
+        g.setColor(Color.WHITE);
+        g.fillRect(count / 2, 0, 100, 100);
     }
 
     @Override
@@ -55,6 +56,7 @@ public class NewAnimationTest extends BaseScene {
     @Override
     public void tick() {
         count ++;
+
     }
 
     private class NormalAnimation implements Setup{
@@ -93,7 +95,12 @@ public class NewAnimationTest extends BaseScene {
             scene.addAnimation("RotateTo", TEMPLATE.of(250, 100)
                     .rotateTo(40, 200)
             );
-
+            scene.addAnimation("LockTest", TEMPLATE.of(300, 100)
+                    .button(0, 0, 20, 10, STATE.get(), a->{
+                        scene.TICK.isLocked = !scene.TICK.isLocked;
+                    })
+            );
+            scene.TICK.setLockStatesForTags(true, "unlocked");
         }
     }
 }

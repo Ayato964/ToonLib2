@@ -9,7 +9,7 @@ public final class TickThread implements Runnable{
 
     public static final TickThread INSTANCE = new TickThread();
     private boolean isRunning = true;
-    private boolean isLocked = false;
+    public boolean isLocked = false;
     private final CopyOnWriteArrayList<Tick> ticks = new CopyOnWriteArrayList<>();
     public static int RATE = 1;
     private final CopyOnWriteArrayList<Tick> LOCK_LIST = new CopyOnWriteArrayList<>();
@@ -56,33 +56,23 @@ public final class TickThread implements Runnable{
         }
     }
     public void setLockStatesForTags(boolean isException, String... tags){
-        for(Tick t : ticks){
-            if(t instanceof ComponentTag tag){
-                if(!isException && tag.isFindTags(tags)){
+        ArrayList<Tick> lock_list = ArrayUtils.searchObjectForTag(ticks, tags);
+        setLockList(isException, lock_list);
+    }
+    public void setLockStatesForGroup(boolean isException, String group){
+        ArrayList<Tick> lock_list = ArrayUtils.searchObjectForGroup(ticks, group);
+        setLockList(isException, lock_list);
+    }
+    private void setLockList(boolean isException, ArrayList<Tick> lock_list){
+        if(!isException)
+            LOCK_LIST.addAll(lock_list);
+        else{
+            for(Tick t: ticks){
+                if(!ArrayUtils.isFindObject(t, lock_list))
                     LOCK_LIST.add(t);
-                }
-                if(isException && !tag.isFindTags(tags)){
-                    LOCK_LIST.add(t);
-                }
             }
         }
     }
-    public void setLockStatesForGroup(boolean isException, String group){
-        for(Tick t : ticks)
-            if(t instanceof ComponentGroup gp) {
-                if (gp.isGroup(group) && !isException)
-                    LOCK_LIST.add(t);
-                if(!gp.isGroup(group) && isException)
-                    LOCK_LIST.add(t);
-            }
-    }
-    public void lock() {
-    }
-
-    public void unLock() {
-    }
-
-
 
     public int size() {
 
@@ -97,4 +87,8 @@ public final class TickThread implements Runnable{
         ticks.remove(object);
     }
 
+    public void clearLockConfig() {
+        isLocked = false;
+        LOCK_LIST.clear();
+    }
 }

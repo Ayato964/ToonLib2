@@ -153,9 +153,9 @@ public final class ToonMaster {
         if(MY_SCENE == null) {
             SCENE.addEndTask(()->{
                 SCENE.addDisplay(BACKGROUND);
+                scene.runTickClass(TICK);
                 scene.runSetupClass(this);
                 scene.runDisplayClass(SCENE);
-                scene.runTickClass(TICK);
                 scene.setToonObjectClass(this);
                 TICK.add(scene);
                 MY_SCENE = scene;
@@ -165,14 +165,15 @@ public final class ToonMaster {
             SCENE.addEndTask(()->{
                 SCENE.removeDisplayAll();
                 TICK.removeAll();
+                TICK.clearLockConfig();
                 SCENE.addDisplay(BACKGROUND);
                 MouseInputs.removeAll();
                 KeyInputs.removeAll();
                 TimeCounter.removeAll();
 
+                scene.runTickClass(TICK);
                 scene.runSetupClass(this);
                 scene.runDisplayClass(SCENE);
-                scene.runTickClass(TICK);
                 scene.setToonObjectClass(this);
                 MY_SCENE = scene;
             });

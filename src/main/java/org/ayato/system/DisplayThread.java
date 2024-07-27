@@ -53,17 +53,11 @@ public class DisplayThread {
             endTask.clear();
         }
     }
-    public ArrayList<ComponentTag> getTagComponents(){
-        ArrayList<ComponentTag> tags = new ArrayList<>();
-        for(Display d : displays){
-            if(d instanceof ComponentTag){
-                tags.add((ComponentTag) d);
-            }
-        }
-        return tags;
-    }
     public CopyOnWriteArrayList<Display> getDisplay(){
         return displays;
+    }
+    public CopyOnWriteArrayList<Display> getGUI(){
+        return GUIS;
     }
     public void addDisplay(Display display){
             switch (display){
@@ -86,20 +80,7 @@ public class DisplayThread {
         GUIS.clear();
     }
 
-    public ArrayList<ComponentGroup> getGroupComponent() {
-        ArrayList<ComponentGroup> groups = new ArrayList<>();
-        for(Display dd : displays){
-            if(dd instanceof  ComponentGroup){
-                groups.add((ComponentGroup) dd);
-            }
-        }
-        for(Display dd : GUIS){
-            if(dd instanceof  ComponentGroup){
-                groups.add((ComponentGroup) dd);
-            }
-        }
-        return groups;
-    }
+
 
     public <T extends Display> void addAllDisplay(ArrayList<T> objects) {
         for(Display toon : objects){

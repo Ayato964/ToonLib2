@@ -51,7 +51,7 @@ public class ChooseBox extends CheckBox{
     }
 
     private void unCheckOtherChooseBox() {
-        ArrayList<Display> displays = ArrayUtils.searchObjectForGroup(ToonMaster.getINSTANCE().SCENE.getDisplay(), groupID);
+        ArrayList<Display> displays = ArrayUtils.searchObjectForGroup(ToonMaster.getINSTANCE().SCENE.getGUI(), groupID);
         for(Display d : displays){
             if(d instanceof Animation<?> animation1){
                 if(!animation1.equals(animation)) {
